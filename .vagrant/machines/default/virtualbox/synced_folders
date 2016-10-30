@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/caripekerja":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/caripekerja","hostpath":"/Users/satrya/Documents/repo/caripekerja","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/satrya/Documents/repo/caripekerja","disabled":false,"__vagrantfile":true}}}
