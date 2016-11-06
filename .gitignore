@@ -6,4 +6,5 @@ Homestead.json
 Homestead.yaml
 .env
 Vagrantfile
-.vagrant/
+.vagrant/*
+.DS_Store
