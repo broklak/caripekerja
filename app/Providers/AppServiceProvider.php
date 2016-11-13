@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->getViewName();
     }
 
     /**
@@ -23,6 +25,17 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        if ($this->app->environment() == 'local') {
+            $this->app->register('Hesto\MultiAuth\MultiAuthServiceProvider');
+        }
+    }
+
+    protected function getViewName() {
+        View::composer('*', function($view){
+
+            View::share('view_name', $view->getName());
+            View::share('js_name', 'js.'.$view->getName());
+
+        });
     }
 }

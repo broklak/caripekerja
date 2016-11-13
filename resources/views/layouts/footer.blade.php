@@ -1,136 +1,76 @@
 <footer id="footer">
-
-    <div class="text-box box">
-
-        <h4>About Jobs Alert</h4>
-
-        <p>Person usually begins a job by becoming an employee, volunteering, or starting a business. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa quae.</p>
-
-    </div>
-
-    <div class="box">
-
-        <h4>Keywords by Role</h4>
-
-        <ul>
-
-            <li><a href="#">Administrator</a></li>
-
-            <li><a href="#">Accounts Officer</a></li>
-
-            <li><a href="#">PHP Developer</a></li>
-
-            <li><a href="#">UI/UX Designer</a></li>
-
-            <li><a href="#">Project Manager</a></li>
-
-            <li><a href="#">Public Relation Officer</a></li>
-
-        </ul>
-
-    </div>
-
-    <div class="box">
-
-        <h4>Keywords by Skills</h4>
-
-        <ul>
-
-            <li><a href="#">Administrator</a></li>
-
-            <li><a href="#">Accounts Officer</a></li>
-
-            <li><a href="#">PHP Developer</a></li>
-
-            <li><a href="#">UI/UX Designer</a></li>
-
-            <li><a href="#">Project Manager</a></li>
-
-            <li><a href="#">Public Relation Officer</a></li>
-
-        </ul>
-
-    </div>
-
-    <div class="box">
-
-        <h4>Keywords by Location</h4>
-
-        <ul>
-
-            <li><a href="#">Administrator</a></li>
-
-            <li><a href="#">Accounts Officer</a></li>
-
-            <li><a href="#">PHP Developer</a></li>
-
-            <li><a href="#">UI/UX Designer</a></li>
-
-            <li><a href="#">Project Manager</a></li>
-
-            <li><a href="#">Public Relation Officer</a></li>
-
-        </ul>
-
-    </div>
-
-    <div class="box">
-
-        <h4>Keywords by Market</h4>
-
-        <ul>
-
-            <li><a href="#">Administrator</a></li>
-
-            <li><a href="#">Accounts Officer</a></li>
-
-            <li><a href="#">PHP Developer</a></li>
-
-            <li><a href="#">UI/UX Designer</a></li>
-
-            <li><a href="#">Project Manager</a></li>
-
-            <li><a href="#">Public Relation Officer</a></li>
-
-        </ul>
-
-    </div>
-
-    <form action="#">
-
-        <h4>Subscribe for Latest Jobs Alerts</h4>
-
-        <input type="text" placeholder="Name" required>
-
-        <input type="text" placeholder="Email" required>
-
-        <input type="submit" value="Subscribe Alerts">
-
-    </form>
-
-    <div class="container">
-
-        <div class="bottom-row"> <strong class="copyrights">JobInn &copy; 2016, All Rights Reserved, Design &amp; Developed By: <a href="http://crunchpress.com/" target="_blank">CrunchPress</a></strong>
-
-            <div class="footer-social">
-
-                <ul>
-
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-
-                    <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-
-                </ul>
-
+    <!-- top footer area start -->
+    <div class="top-footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4">
+                    <div class="single-snap-footer">
+                        <div class="snap-footer-title">
+                            <h4>TENTANG KAMI</h4>
+                        </div>
+                        <div class="cakewalk-footer-content">
+                            <p class="footer-des">Caripekerja.com adalah mitra pencari kerja untuk usaha kecil dan menengah....</p>
+                            <a href="" class="read-more">Baca selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="single-snap-footer">
+                        <div class="snap-footer-title">
+                            <h4>INFORMASI</h4>
+                        </div>
+                        <div class="cakewalk-footer-content">
+                            <ul>
+                                <li><a href="">Tentang Kami</a></li>
+                                <li><a href="">Kontak Kami</a></li>
+                                <li><a href="">Kebijakan Privasi</a></li>
+                                <li><a href="">Syarat dan Ketentuan</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="single-snap-footer">
+                        <div class="snap-footer-title">
+                            <h4>KONTAK KAMI</h4>
+                        </div>
+                        <div class="cakewalk-footer-content">
+                            <ul>
+                                <li><a href="mailto::ask@caripekerja.com"><i aria-hidden="true" class="fa fa-envelope"></i> ask@caripekerja.com</a></li>
+                                <li><i aria-hidden="true" class="fa fa-phone"></i> 021-78182929</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 hidden-sm">
+                    <div class="single-snap-footer">
+                        <div class="snap-footer-title">
+                            <h4>IKUTI</h4>
+                        </div>
+                        <div class="cakewalk-footer-content social-footer">
+                            <ul>
+                                <li><a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a><span> Facebook</span></li>
+                                <li><a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a><span> Google Plus</span></li>
+                                <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a><span> Twitter</span></li>
+                                <li><a href="https://youtube.com/" target="_blank"><i class="fa fa-youtube-play"></i></a><span> Youtube</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
-
     </div>
+    <!-- top footer area end -->
 
+    <!-- footer address area start -->
+    <div class="address-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <address>Copyright &copy; 2016 PT.Sumber Daya Pekerja</address>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer address area end -->
 </footer>
-@stack("footer");

@@ -23,7 +23,6 @@
 <!--WRAPPER START-->
 
 <div id="wrapper">
-
     <!--HEADER START-->
 
     @section("header")
@@ -32,9 +31,11 @@
 
     <!--HEADER END-->
 
-    @section("slider")
-        @include("home.slider")
-    @show
+    @if($view_name == 'home.index')
+        @section("slider")
+            @include("home.slider")
+        @show
+    @endif
 
     <!--MAIN START-->
 

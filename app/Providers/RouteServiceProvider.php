@@ -39,7 +39,28 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
+        $this->mapEmployerRoutes();
+
         //
+    }
+
+    /**
+     * Define the "employer" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * @return void
+     */
+    protected function mapEmployerRoutes()
+    {
+        Route::group([
+            'middleware' => ['web', 'employer', 'auth:employer'],
+            'prefix' => 'employer',
+            'as' => 'employer.',
+            'namespace' => $this->namespace,
+        ], function ($router) {
+            require base_path('routes/employer.php');
+        });
     }
 
     /**

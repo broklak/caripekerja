@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Libraries\LayoutManager;
+use Illuminate\Support\Facades\Auth;
 
 
 class HomeController extends Controller {

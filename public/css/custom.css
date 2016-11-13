@@ -125,6 +125,10 @@ body {
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
 }
+
+a {
+	cursor: pointer;
+}
 /*************************************************************WRAPPER START*************************************************************/
 
 #wrapper {
@@ -172,7 +176,7 @@ body {
 	overflow: hidden;
 }
 .theme-style-1 a.btn-style-1:hover {
-	color: #000;
+	color: #fff;
 }
 .theme-style-1 a.btn-style-1:hover:before {
 	opacity: 1;
@@ -187,7 +191,7 @@ body {
 	top: -3px;
 	width: 35%;
 	height: 100%;
-	background-color: #ffc107;
+	background-color: #888;
 	z-index: -1;
 	transform: rotate(-33deg) scaleY(1);
 	transition: all 0.3s ease-in;
@@ -1919,7 +1923,7 @@ strong.logo-2 {
 .price-table {
 	float: left;
 	width: 100%;
-	background-image: url(../images/price-style-1-img-1.png);
+	background-image: url(../images/bg/price-bg.png);
 	background-repeat: no-repeat;
 	background-position: left top;
 	background-size: cover;
@@ -1950,6 +1954,7 @@ strong.logo-2 {
 	width: 312px;
 	background: #fff;
 	border-radius: 3px;
+	margin-right: 20px;
 	padding: 20px 0 30px 0;
 	border: 1px solid #ccc;
 	box-sizing: border-box;
@@ -1989,7 +1994,7 @@ strong.logo-2 {
 	-webkit-box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.1);
 }
 .theme-style-1 .price-table .box-colo-2 {
-	border-radius: 0px 0 3px 3px;
+	border-radius: 0px 0 1px 1px;
 }
 .price-table .box strong.amount:before {
 	content: '';
@@ -2005,7 +2010,7 @@ strong.logo-2 {
 	right: 0;
 	top: 0;
 	width: 5px;
-	height: 42px;
+	height: 0px;
 }
 .price-table .box strong.amount span {
 	font-weight: 300;
@@ -2070,7 +2075,7 @@ strong.logo-2 {
 	float: left;
 	width: 100%;
 	padding: 80px 0 0 0;
-	background-image: url(../images/testimonials-bg.png);
+	background-image: url(../images/bg/testimonials-bg.png);
 	background-repeat: no-repeat;
 	background-position: left top;
 	background-size: cover;
@@ -2492,6 +2497,10 @@ strong.logo-2 {
 	background: #ffc107;
 	color: #fff;
 }
+
+.post-section h2 {
+	text-align: center;
+}
 /****************************************************POST AREA END****************************************************/
 
 
@@ -2502,7 +2511,7 @@ strong.logo-2 {
 	float: left;
 	width: 100%;
 	border-top: 1px solid #ccc;
-	padding: 50px 50px 30px 50px;
+	padding: 20px 50px 0 20px;
 }
 #footer .box {
 	float: left;
@@ -2613,10 +2622,124 @@ strong.logo-2 {
 	text-align: center;
 	line-height: 30px;
 	font-size: 16px;
-	color: #fff;
+	color: #888;
 }
 .footer-social ul li a:hover {
 	background: #dc4a38;
+}
+
+/* LAVORO FOOTER */
+
+.top-footer-area, .info-footer {
+	padding: 30px 0 20px 0;
+}
+
+.top-footer-area ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.top-footer-area ul li {
+	padding: 5px 0 0 0;
+	display: block;
+	overflow: hidden;
+}
+.top-footer-area ul li:first-child {
+	padding: 0;
+}
+
+.top-footer-area ul li a {
+	text-decoration: none;
+	font: 400 15px/15px 'Roboto', sans-serif;
+	display: block;
+}
+
+.snap-footer-title h4 {
+	font-size: 13px;
+	color: #1b8af3;
+	margin-bottom: 25px;
+}
+.cakewalk-footer-content p {
+	color: #888;
+	line-height: 24px;
+	width: 90%;
+}
+.cakewalk-footer-content .read-more{
+	color: #888;
+}
+.cakewalk-footer-content .read-more:hover{color: #1b8af3;}
+.cakewalk-footer-content ul li a{
+	line-height: 30px;
+	font-size: 14px;
+	color: #888;
+}
+.cakewalk-footer-content ul li a:hover{color:#c2a476;}
+.infof-icon {
+	float: left;
+	margin-right: 15px;
+	margin-top: 3px;
+}
+.infof-icon i {
+	width: 30px;
+	height: 30px;
+	border: 1px solid #c2a476;
+	border-radius: 3px;
+	font-size: 18px;
+	color: #fff;
+	line-height: 28px;
+	text-align: center;
+}
+.info-footer {
+	border-top: 1px solid #4c4b4b;
+}
+.info-footer h3 {
+	font-weight: 400;
+	font-size: 12px;
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 3px;
+}
+.info-footer p {
+	font-size: 12px;
+	color: #ccc;
+}
+.single-bannerfooter {
+	border-right: 1px solid #363636;
+}
+.last-single{border: 0;}
+.single-bannerfooter a:hover {
+	opacity: 0.6;
+}
+.address-footer {
+	clear: both;
+}
+.address-footer address {
+	margin-top: 3px;
+	float: left;
+	margin-bottom: 0;
+	font-family: Montserrat;
+	font-weight: 400;
+	font-size: 14px;
+	color: #888;
+}
+.address-footer address a{color: #c3a376;}
+.address-footer address a:hover{color: #ffffff;}
+.social-footer ul li {
+	color: #888;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.social-footer ul li a{
+	width: 21px;
+	height: 21px;
+	text-align: center;
+	line-height: 21px;
+	color: #888;
+	font-size: 12px;
+	border: 1px solid #555;
+	border-radius: 3px;
+	margin-right: 15px;
+	display: inline-block;
 }
 /**************************************************FOOTER END**************************************************/
 
@@ -3237,7 +3360,7 @@ strong.logo-2 {
 	border-right: 1px solid #ccc;
 	padding: 3px 10px 0 0;
 }
-.signup-section .holder input[type="text"] {
+.signup-section .holder input[type="text"], .signup-section .holder input[type="password"] {
 	float: left;
 	width: 100%;
 	height: 45px;
@@ -3336,6 +3459,11 @@ select option {
 	position: absolute;
 	left: -3000px;
 }
+
+input[type="radio"] {
+	float: left;
+}
+
 /*Checkboxes*/
 
 .checkboxArea, .checkboxAreaChecked {
@@ -4312,7 +4440,7 @@ select option {
 .resum-form h4 {
 	margin: 0 0 10px 0;
 }
-.resum-form input[type="text"] {
+.resum-form input[type="text"], .resum-form input[type="password"] {
 	float: left;
 	width: 100%;
 	height: 43px;
@@ -4387,6 +4515,14 @@ select option {
 	padding: 30px 0 0 0;
 	border-top: 1px solid #ccc;
 }
+
+.resum-form .head-register {
+	float: left;
+	width: 100%;
+	/*margin: 30px 0 0 0;*/
+	padding: 30px 0 0 0;
+}
+
 .resum-form input[type="submit"] {
 	float: left;
 	border-radius: 3px;
@@ -4401,6 +4537,7 @@ select option {
 .resum-form input[type="submit"]:hover {
 	background: #ffc107;
 }
+
 .text-editor-box {
 	float: left;
 	width: 100%;
@@ -4541,3 +4678,74 @@ TRANSITION-FOR-IMAGES {
 
 
 /****************************************************TRANSITION CSS END****************************************************/
+
+/****************************************************ADDITIONAL CUSTOM CSS START****************************************************/
+
+
+.text-center {
+	text-align: center;
+}
+
+.text-center i {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.carakerja h2{
+	margin-bottom: 30px;
+}
+
+.logo-text {
+	color: #1b8af3;
+}
+
+#arrow-cara-1, #arrow-cara-2 {
+	display: block;
+}
+
+.login-as-tabs {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+	margin-bottom: 30px;
+	padding: 0;
+}
+
+.login-as {
+	text-align: center;
+}
+
+.login-as-tabs > li:first-child {
+	border-right: none;
+}
+
+.login-as-tabs .li-click.active {
+	background-color: #1b8af3;
+	color: #fff;
+}
+
+.opt-log {
+	margin-top: 40px;
+	left: 5%;
+	right: 5%;
+}
+
+.login-as-tabs .li-click {
+	float: none;
+	display: table-cell;
+	width: 50%;
+	padding: 15px;
+	font-size: 16px;
+	font-weight: 900;
+	margin: 0px;
+	border: 1px solid #666;
+	text-align: center;
+	cursor: pointer;
+	background-color: #fff;
+	-webkit-transition: background-color ease-out;
+	-moz-transition: background-color ease-out;
+	-o-transition: background-color ease-out;
+	transition: background-color ease-out;
+}
+
+/****************************************************ADDITIONAL CUSTOM CSS END****************************************************/

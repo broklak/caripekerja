@@ -25,4 +25,5 @@
 <!--CUSTOM JS-->
 
 <script src="{{ asset("js") }}/custom.js"></script>
-@stack("js")
+
+@includeIf($js_name)

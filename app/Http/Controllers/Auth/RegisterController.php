@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Province;
 use App\User;
 use Validator;
 use App\Http\Controllers\Controller;
@@ -27,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -37,6 +38,7 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+        $this->middleware('employer.guest');
     }
 
     /**
@@ -49,8 +51,14 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
+            'email' => 'required|email|max:255|unique:workers',
             'password' => 'required|min:6|confirmed',
+            'phone'     => 'required',
+            'gender'     => 'required',
+            'degree'     => 'required',
+            'city'      => 'required',
+            'birthdate' => 'required',
+            'marital'   => 'required'
         ]);
     }
 
@@ -66,6 +74,24 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'phone'     => $data['phone'],
+            'gender'     => $data['gender'],
+            'degree'     => $data['degree'],
+            'city'      => $data['city'],
+            'birthdate' => $data['birthdate'],
+            'marital'   => $data['marital']
         ]);
+    }
+
+    /**
+     * Show the application registration form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showRegistrationForm()
+    {
+        $data['province'] = Province::all();
+        $data['degree'] = config('static.educationDegree');
+        return view('auth.register', $data);
     }
 }

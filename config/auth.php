@@ -18,6 +18,8 @@ return [
         'passwords' => 'users',
     ],
 
+    'table' => 'workers',
+
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
@@ -36,6 +38,11 @@ return [
     */
 
     'guards' => [
+        'employer' => [
+            'driver' => 'session',
+            'provider' => 'employers',
+        ],
+
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
@@ -65,15 +72,15 @@ return [
     */
 
     'providers' => [
+        'employers' => [
+            'driver' => 'eloquent',
+            'model' => App\Employer::class,
+        ],
+
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
-
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
     ],
 
     /*
@@ -92,6 +99,12 @@ return [
     */
 
     'passwords' => [
+        'employers' => [
+            'provider' => 'employers',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+
         'users' => [
             'provider' => 'users',
             'table' => 'password_resets',

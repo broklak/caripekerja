@@ -6,27 +6,26 @@
 
     <!--POPULAR JOB CATEGORIES START-->
 
-    <section class="popular-categories">
+    <section id="listing" class="popular-categories">
 
         <div class="container">
 
             <div class="clearfix">
 
-                <h2>Popular Jobs Categories</h2>
+                <h2>Pilihan Profesi Pekerja</h2>
 
-                <a href="#" class="btn-style-1">Explore All Jobs</a> </div>
+                <a href="#" class="btn-style-1">Lihat Semua Kategori Pekerja</a>
+            </div>
 
             <div class="row">
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div class="box"> <img src="{{ asset("images") }}/categories-icon-1.png" alt="img">
+                    <div class="box">
 
-                        <h4><a href="#">Art, Design &amp; Multimedia</a></h4>
+                        <h4><a href="#">Baby Sitter</a></h4>
 
-                        <strong>6,213 Jobs</strong>
-
-                        <p>Available in Design &amp; Multimedia</p>
+                        <strong>6,213 Pekerjaan</strong>
 
                     </div>
 
@@ -34,13 +33,11 @@
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div class="box"> <img src="{{ asset("images") }}/categories-icon-2.png" alt="img">
+                    <div class="box">
 
-                        <h4><a href="#">Restaurant, Food, Hotels</a></h4>
+                        <h4><a href="#">Sopir</a></h4>
 
-                        <strong>3,750 Jobs</strong>
-
-                        <p>Available in Restaurant &amp; Hotels</p>
+                        <strong>3,750 Pekerjaan</strong>
 
                     </div>
 
@@ -48,13 +45,11 @@
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div class="box"> <img src="{{ asset("images") }}/categories-icon-3.png" alt="img">
+                    <div class="box">
 
-                        <h4><a href="#">Transporation</a></h4>
+                        <h4><a href="#">Pelayan</a></h4>
 
-                        <strong>1,265 Jobs</strong>
-
-                        <p>Available in Transportation</p>
+                        <strong>1,265 Pekerjaan</strong>
 
                     </div>
 
@@ -62,13 +57,11 @@
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div class="box"> <img src="{{ asset("images") }}/categories-icon-4.png" alt="img">
+                    <div class="box">
 
-                        <h4><a href="#">Healthcare &amp; Medicine</a></h4>
+                        <h4><a href="#">Penjaga Toko</a></h4>
 
-                        <strong>5,913 Jobs</strong>
-
-                        <p>Available in Medical</p>
+                        <strong>5,913 Pekerjaan</strong>
 
                     </div>
 
@@ -76,13 +69,11 @@
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div class="box"> <img src="{{ asset("images") }}/categories-icon-5.png" alt="img">
+                    <div class="box">
 
-                        <h4><a href="#">Software &amp; Development</a></h4>
+                        <h4><a href="#">Admin</a></h4>
 
-                        <strong>7,418 Jobs</strong>
-
-                        <p>Available in IT</p>
+                        <strong>7,418 Pekerjaan</strong>
 
                     </div>
 
@@ -90,13 +81,11 @@
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div class="box"> <img src="{{ asset("images") }}/categories-icon-6.png" alt="img">
+                    <div class="box">
 
-                        <h4><a href="#">Accounting &amp; Finance</a></h4>
+                        <h4><a href="#">Buruh Pabrik</a></h4>
 
-                        <strong>8,045 Jobs</strong>
-
-                        <p>Available in Accounts &amp; Finance</p>
+                        <strong>8,045 Pekerjaan</strong>
 
                     </div>
 
@@ -104,13 +93,11 @@
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div class="box"> <img src="{{ asset("images") }}/categories-icon-7.png" alt="img">
+                    <div class="box">
 
-                        <h4><a href="#">Education &amp; Academia</a></h4>
+                        <h4><a href="#">Satpam</a></h4>
 
-                        <strong>3,891 Jobs</strong>
-
-                        <p>Available in Education</p>
+                        <strong>3,891 Pekerjaan</strong>
 
                     </div>
 
@@ -118,13 +105,59 @@
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div class="box"> <img src="{{ asset("images") }}/categories-icon-8.png" alt="img">
+                    <div class="box">
 
-                        <h4><a href="#">Construction, Engineering</a></h4>
+                        <h4><a href="#">Montir</a></h4>
 
-                        <strong>9,942 Jobs</strong>
+                        <strong>9,942 Pekerjaan</strong>
 
-                        <p>Available in Architect</p>
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+
+                    <div class="box">
+
+                        <h4><a href="#">Kurir</a></h4>
+
+                        <strong>9,942 Pekerjaan</strong>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+
+                    <div class="box">
+
+                        <h4><a href="#">Juru Masak</a></h4>
+
+                        <strong>3.123 Pekerjaan</strong>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+
+                    <div class="box">
+
+                        <h4><a href="#">Kuli Bangunan</a></h4>
+
+                        <strong>1.212 Pekerjaan</strong>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+
+                    <div class="box">
+
+                        <h4><a href="#">Office Boy / Girl</a></h4>
+
+                        <strong>1.212 Pekerjaan</strong>
 
                     </div>
 
@@ -138,312 +171,46 @@
 
     <!--POPULAR JOB CATEGORIES END-->
 
+    <!--CARA KERJA AREA START-->
 
+    <section id="how-it-works" class="post-section padd-tb">
 
-    <!--RECENT JOB SECTION START-->
+        <div class="container carikerja">
 
-    <section class="recent-row padd-tb">
-
-        <div class="container">
+            <h2 style="margin-bottom: 50px">Bagaimana cara kerjanya?</h2>
 
             <div class="row">
 
-                <div class="col-md-9 col-sm-8">
-
-                    <div id="content-area">
-
-                        <h2>Recent Hot Jobs</h2>
-
-                        <ul id="myList">
-
-                            <li>
-
-                                <div class="box">
-
-                                    <div class="thumb"><a href="#"><img src="{{ asset("images") }}/recent-job-thumb-1.jpg" alt="img"></a></div>
-
-                                    <div class="text-col">
-
-                                        <h4><a href="#">Marketing Graphic Design / 2D Artist</a></h4>
-
-                                        <p>Design Communication Studio</p>
-
-                                        <a href="#" class="text"><i class="fa fa-map-marker"></i>Moorgate, London</a> <a href="#" class="text"><i class="fa fa-calendar"></i>Dec 30, 2015 - Feb 20, 2016 </a> </div>
-
-                                    <strong class="price"><i class="fa fa-money"></i>$4000 - $5000</strong> <a href="#" class="btn-1 btn-color-1 ripple">Part Time</a> </div>
-
-                            </li>
-
-                            <li>
-
-                                <div class="box">
-
-                                    <div class="thumb"><a href="#"><img src="{{ asset("images") }}/recent-job-thumb-2.jpg" alt="img"></a></div>
-
-                                    <div class="text-col">
-
-                                        <h4><a href="#">Public Relation Executive Manager</a></h4>
-
-                                        <p>Life Insurance LLC</p>
-
-                                        <a href="#" class="text"><i class="fa fa-map-marker"></i>Nationwide</a> <a href="#" class="text"><i class="fa fa-calendar"></i>Dec 30, 2015 - Feb 20, 2016 </a> </div>
-
-                                    <strong class="price"><i class="fa fa-money"></i>$7000 - $7500</strong> <a href="#" class="btn-1 btn-color-2 ripple">Full Time</a> </div>
-
-                            </li>
-
-                            <li>
-
-                                <div class="box">
-
-                                    <div class="thumb"><a href="#"><img src="{{ asset("images") }}/recent-job-thumb-3.jpg" alt="img"></a></div>
-
-                                    <div class="text-col">
-
-                                        <h4><a href="#">Instructor Classroom Head</a></h4>
-
-                                        <p>School of Design and Multimedia</p>
-
-                                        <a href="#" class="text"><i class="fa fa-map-marker"></i>Nationwide</a> <a href="#" class="text"><i class="fa fa-calendar"></i>Dec 30, 2015 - Feb 20, 2016 </a> </div>
-
-                                    <strong class="price"><i class="fa fa-money"></i>$30/hr - $40/hr</strong> <a href="#" class="btn-1 btn-color-3 ripple">Freelance</a> </div>
-
-                            </li>
-
-                            <li>
-
-                                <div class="box">
-
-                                    <div class="thumb"><a href="#"><img src="{{ asset("images") }}/recent-job-thumb-4.jpg" alt="img"></a></div>
-
-                                    <div class="text-col">
-
-                                        <h4><a href="#">Technical Database Engineer</a></h4>
-
-                                        <p>Datebase Management Company</p>
-
-                                        <a href="#" class="text"><i class="fa fa-map-marker"></i>Nationwide</a> <a href="#" class="text"><i class="fa fa-calendar"></i>Dec 30, 2015 - Feb 20, 2016 </a> </div>
-
-                                    <strong class="price"><i class="fa fa-money"></i>$2200 - $3000</strong> <a href="#" class="btn-1 btn-color-4 ripple">Contract</a> </div>
-
-                            </li>
-
-                            <li>
-
-                                <div class="box">
-
-                                    <div class="thumb"><a href="#"><img src="{{ asset("images") }}/recent-job-thumb-5.jpg" alt="img"></a></div>
-
-                                    <div class="text-col">
-
-                                        <h4><a href="#">Marketing Graphic Design / 2D Artist</a></h4>
-
-                                        <p>Design Communication Studio</p>
-
-                                        <a href="#" class="text"><i class="fa fa-map-marker"></i>Nationwide</a> <a href="#" class="text"><i class="fa fa-calendar"></i>Dec 30, 2015 - Feb 20, 2016 </a> </div>
-
-                                    <strong class="price"><i class="fa fa-money"></i>$4000 - $5000</strong> <a href="#" class="btn-1 btn-color-1 ripple">Part Time</a> </div>
-
-                            </li>
-
-                            <li>
-
-                                <div class="box">
-
-                                    <div class="thumb"><a href="#"><img src="{{ asset("images") }}/recent-job-thumb-2.jpg" alt="img"></a></div>
-
-                                    <div class="text-col">
-
-                                        <h4><a href="#">Public Relation Executive Manager</a></h4>
-
-                                        <p>Life Insurance LLC</p>
-
-                                        <a href="#" class="text"><i class="fa fa-map-marker"></i>Nationwide</a> <a href="#" class="text"><i class="fa fa-calendar"></i>Dec 30, 2015 - Feb 20, 2016 </a> </div>
-
-                                    <strong class="price"><i class="fa fa-money"></i>$7000 - $7500</strong> <a href="#" class="btn-1 btn-color-2 ripple">Full Time</a> </div>
-
-                            </li>
-
-                            <li>
-
-                                <div class="box">
-
-                                    <div class="thumb"><a href="#"><img src="{{ asset("images") }}/recent-job-thumb-3.jpg" alt="img"></a></div>
-
-                                    <div class="text-col">
-
-                                        <h4><a href="#">Instructor Classroom Head</a></h4>
-
-                                        <p>School of Design and Multimedia</p>
-
-                                        <a href="#" class="text"><i class="fa fa-map-marker"></i>Nationwide</a> <a href="#" class="text"><i class="fa fa-calendar"></i>Dec 30, 2015 - Feb 20, 2016 </a> </div>
-
-                                    <strong class="price"><i class="fa fa-money"></i>$30/hr - $40/hr</strong> <a href="#" class="btn-1 btn-color-3 ripple">Freelance</a> </div>
-
-                            </li>
-
-                            <li>
-
-                                <div class="box">
-
-                                    <div class="thumb"><a href="#"><img src="{{ asset("images") }}/recent-job-thumb-4.jpg" alt="img"></a></div>
-
-                                    <div class="text-col">
-
-                                        <h4><a href="#">Technical Database Engineer</a></h4>
-
-                                        <p>Datebase Management Company</p>
-
-                                        <a href="#" class="text"><i class="fa fa-map-marker"></i>Nationwide</a> <a href="#" class="text"><i class="fa fa-calendar"></i>Dec 30, 2015 - Feb 20, 2016 </a> </div>
-
-                                    <strong class="price"><i class="fa fa-money"></i>$2200 - $3000</strong> <a href="#" class="btn-1 btn-color-4 ripple">Contract</a> </div>
-
-                            </li>
-
-                            <li>
-
-                                <div class="box">
-
-                                    <div class="thumb"><a href="#"><img src="{{ asset("images") }}/recent-job-thumb-2.jpg" alt="img"></a></div>
-
-                                    <div class="text-col">
-
-                                        <h4><a href="#">Public Relation Executive Manager</a></h4>
-
-                                        <p>Life Insurance LLC</p>
-
-                                        <a href="#" class="text"><i class="fa fa-map-marker"></i>Nationwide</a> <a href="#" class="text"><i class="fa fa-calendar"></i>Dec 30, 2015 - Feb 20, 2016 </a> </div>
-
-                                    <strong class="price"><i class="fa fa-money"></i>$7000 - $7500</strong> <a href="#" class="btn-1 btn-color-2 ripple">Full Time</a> </div>
-
-                            </li>
-
-                            <li>
-
-                                <div class="box">
-
-                                    <div class="thumb"><a href="#"><img src="{{ asset("images") }}/recent-job-thumb-3.jpg" alt="img"></a></div>
-
-                                    <div class="text-col">
-
-                                        <h4><a href="#">Instructor Classroom Head</a></h4>
-
-                                        <p>School of Design and Multimedia</p>
-
-                                        <a href="#" class="text"><i class="fa fa-map-marker"></i>Nationwide</a> <a href="#" class="text"><i class="fa fa-calendar"></i>Dec 30, 2015 - Feb 20, 2016 </a> </div>
-
-                                    <strong class="price"><i class="fa fa-money"></i>$30/hr - $40/hr</strong> <a href="#" class="btn-1 btn-color-3 ripple">Freelance</a> </div>
-
-                            </li>
-
-                            <li>
-
-                                <div class="box">
-
-                                    <div class="thumb"><a href="#"><img src="{{ asset("images") }}/recent-job-thumb-4.jpg" alt="img"></a></div>
-
-                                    <div class="text-col">
-
-                                        <h4><a href="#">Technical Database Engineer</a></h4>
-
-                                        <p>Datebase Management Company</p>
-
-                                        <a href="#" class="text"><i class="fa fa-map-marker"></i>Nationwide</a> <a href="#" class="text"><i class="fa fa-calendar"></i>Dec 30, 2015 - Feb 20, 2016 </a> </div>
-
-                                    <strong class="price"><i class="fa fa-money"></i>$2200 - $3000</strong> <a href="#" class="btn-1 btn-color-4 ripple">Contract</a> </div>
-
-                            </li>
-
-                            <li>
-
-                                <div class="box">
-
-                                    <div class="thumb"><a href="#"><img src="{{ asset("images") }}/recent-job-thumb-1.jpg" alt="img"></a></div>
-
-                                    <div class="text-col">
-
-                                        <h4><a href="#">Marketing Graphic Design / 2D Artist</a></h4>
-
-                                        <p>Design Communication Studio</p>
-
-                                        <a href="#" class="text"><i class="fa fa-map-marker"></i>Moorgate, London</a> <a href="#" class="text"><i class="fa fa-calendar"></i>Dec 30, 2015 - Feb 20, 2016 </a> </div>
-
-                                    <strong class="price"><i class="fa fa-money"></i>$4000 - $5000</strong> <a href="#" class="btn-1 btn-color-1 ripple">Part Time</a> </div>
-
-                            </li>
-
-                            <li>
-
-                                <div class="box">
-
-                                    <div class="thumb"><a href="#"><img src="{{ asset("images") }}/recent-job-thumb-2.jpg" alt="img"></a></div>
-
-                                    <div class="text-col">
-
-                                        <h4><a href="#">Public Relation Executive Manager</a></h4>
-
-                                        <p>Life Insurance LLC</p>
-
-                                        <a href="#" class="text"><i class="fa fa-map-marker"></i>Nationwide</a> <a href="#" class="text"><i class="fa fa-calendar"></i>Dec 30, 2015 - Feb 20, 2016 </a> </div>
-
-                                    <strong class="price"><i class="fa fa-money"></i>$7000 - $7500</strong> <a href="#" class="btn-1 btn-color-2 ripple">Full Time</a> </div>
-
-                            </li>
-
-                            <li>
-
-                                <div class="box">
-
-                                    <div class="thumb"><a href="#"><img src="{{ asset("images") }}/recent-job-thumb-3.jpg" alt="img"></a></div>
-
-                                    <div class="text-col">
-
-                                        <h4><a href="#">Instructor Classroom Head</a></h4>
-
-                                        <p>School of Design and Multimedia</p>
-
-                                        <a href="#" class="text"><i class="fa fa-map-marker"></i>Nationwide</a> <a href="#" class="text"><i class="fa fa-calendar"></i>Dec 30, 2015 - Feb 20, 2016 </a> </div>
-
-                                    <strong class="price"><i class="fa fa-money"></i>$30/hr - $40/hr</strong> <a href="#" class="btn-1 btn-color-3 ripple">Freelance</a> </div>
-
-                            </li>
-
-                        </ul>
-
-                        <div id="loadMore"> <a href="#" class="load-more"><i class="fa fa-user"></i>Load More Jobs</a></div>
-
+                <div class="col-md-3 col-sm-3">
+                    <div class="text-center">
+                        <h4>Cari Pekerja</h4>
+                        <i class="fa fa-search fa-3x"></i>
+                        <p>Pilih profesi pekerja yang anda cari</p>
                     </div>
-
                 </div>
 
-                <div class="col-md-3 col-sm-4">
+                <div id="arrow-cara-1" class="col-md-1 col-sm-1">
+                    <i class="fa fa-long-arrow-right fa-3x"></i>
+                </div>
 
-                    <h2>Featured Jobs</h2>
+                <div class="col-md-3 col-sm-3">
+                    <div class="text-center">
+                        <h4>Pilih Pekerja</h4>
+                        <i class="fa fa-hand-pointer-o fa-3x"></i>
+                        <p>Masukkan kriteria pekerja yang anda mau</p>
+                    </div>
+                </div>
 
-                    <aside>
+                <div id="arrow-cara-2" class="col-md-1 col-sm-1">
+                    <i class="fa fa-long-arrow-right fa-3x"></i>
+                </div>
 
-                        <div class="sidebar">
-
-                            <div class="box">
-
-                                <div class="thumb"> <a href="#"><img src="{{ asset("images") }}/features-img-1.jpg" alt="img"></a>
-
-                                    <div class="caption"><img src="{{ asset("images") }}/envato-text.png" alt="envato"></div>
-
-                                </div>
-
-                                <div class="text-box"> <a href="#" class="btn-time">Part Time</a>
-
-                                    <h4><a href="#">UI/UX Visual Designers</a></h4>
-
-                                    <a href="#" class="text"><i class="fa fa-map-marker"></i>Moorgate, London</a> <a href="#" class="text"><i class="fa fa-calendar"></i>Dec 22, 2015 - Mar 17, 2016 </a> <strong class="price"><i class="fa fa-money"></i>$4000 - $5000</strong> <a href="#" class="btn-apply">Apply for this Job</a> </div>
-
-                            </div>
-
-                        </div>
-
-                    </aside>
-
+                <div class="col-md-4 col-sm-4">
+                    <div class="text-center">
+                        <h4>Hubungi Pekerja</h4>
+                        <i class="fa fa-phone fa-3x"></i>
+                        <p>Dapatkan kontak pekerja mulai dari Rp.2.000 / kontak</p>
+                    </div>
                 </div>
 
             </div>
@@ -452,203 +219,138 @@
 
     </section>
 
-    <!--RECENT JOB SECTION END-->
+    <!--CARA KERJA AREA END-->
 
+    <!--PRICE TABLE STYLE 1 START-->
 
-
-    <!--CALL TO ACTION SECTION START-->
-
-    <section class="call-action-section">
+    <section class="price-table" id="pricing">
 
         <div class="container">
 
-            <div class="text-box">
+            <h2>Paket Top Up</h2>
 
-                <h2>Better Results with Standardized Hiring Process</h2>
+            <div class="box">
 
-                <p>Your quality of hire increases when you treat everyone fairly and equally. Having multiple recruiters
+                <h4>BASIC</h4>
 
-                    working on your hiring is beneficial.</p>
+                <strong class="amount"><span>Rp.</span>100.000</strong>
+
+                <ul>
+
+                    <li>untuk 20 kontak</li>
+
+                    <li>Rp.5000 / Kontak</li>
+
+                </ul>
+
+                <a href="#" class="btn-choose btn-color-2">Beli Sekarang</a>
+            </div>
+
+            <div class="box">
+
+                <div class="head">Populer</div>
+
+                <h4>BRONZE</h4>
+
+                <strong class="amount"><span>Rp.</span>200.000</strong>
+
+                <ul>
+
+                    <li>untuk 80 kontak</li>
+
+                    <li>Rp.2500 / Kontak</li>
+
+                </ul>
+
+                <a href="#" style="background: #f44336;" class="btn-choose btn-color-2">Beli Sekarang</a>
+            </div>
+
+            <div class="box">
+
+                <h4>SILVER</h4>
+
+                <strong class="amount"><span>Rp.</span>500.000</strong>
+
+                <ul>
+
+                    <li>untuk 250 kontak</li>
+
+                    <li>Rp.2000 / Kontak</li>
+
+                </ul>
+
+                <a href="#" class="btn-choose btn-color-2">Beli Sekarang</a>
+            </div>
+
+            <div class="box">
+
+                <h4>PLATINUM</h4>
+
+                <strong class="amount"><span>Rp.</span>800.000</strong>
+
+                <ul>
+
+                    <li>untuk 650 kontak</li>
+
+                    <li>Rp.1500 / Kontak</li>
+
+                </ul>
+
+                <a href="#" class="btn-choose btn-color-2">Beli Sekarang</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--PRICE TABLE STYLE 1 END-->
+
+    <!--KEUNTUNGAN AREA START-->
+
+    <section class="post-section padd-tb">
+
+        <div class="container">
+
+            <h2>Manfaat menggunakan <label class="logo-text">caripekerja.com</label></h2>
+
+            <div class="row">
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="text-center">
+                        <i class="fa fa-clock-o fa-5x"></i>
+                        <h5>Hemat Waktu</h5>
+                        <p>Dapatkan pekerja dalam waktu yang singkat</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="text-center">
+                        <i class="fa fa-money fa-5x"></i>
+                        <h5>Hemat Uang</h5>
+                        <p>Dapatkan kontak pekerja mulai dari Rp.2.000 / kontak</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="text-center">
+                        <i class="fa fa-users fa-5x"></i>
+                        <h5>Hemat Tenaga</h5>
+                        <p>Dapatkan pekerja yang sesuai dengan kriteria anda</p>
+                    </div>
+                </div>
 
             </div>
 
-            <a href="#" class="btn-get">Get Registered &amp; Try Now</a> </div>
-
-    </section>
-
-    <!--CALL TO ACTION SECTION END-->
-
-
-
-    <!--PRICE TABLE STYLE 1 START-->
-
-    <section class="price-table">
-
-        <div class="container">
-
-            <h2>Job Plans &amp; Pricing</h2>
-
-            <div class="box">
-
-                <h4>Free Package</h4>
-
-                <strong class="amount"><span>$</span>29.00<sub>/mo</sub></strong>
-
-                <ul>
-
-                    <li>Jobs are posted for 30 days</li>
-
-                    <li>One Time Fee</li>
-
-                    <li>This Plan Includes 1 Job</li>
-
-                    <li>Non-Highlighted Post</li>
-
-                    <li>Posted For 30 Days</li>
-
-                </ul>
-
-                <a href="#" class="btn-choose btn-color-2">Choose Plan</a> </div>
-
-            <div class="box box-colo-2">
-
-                <div class="head">Most Popular</div>
-
-                <h4>Starter Package</h4>
-
-                <strong class="amount"><span>$</span>59.00<sub>/mo</sub></strong>
-
-                <ul>
-
-                    <li>Unlimited number of jobs</li>
-
-                    <li>Jobs are posted for 90 days</li>
-
-                    <li>One Time Fee</li>
-
-                    <li>This Plan Includes 50 Jobs</li>
-
-                    <li>Highlighted Job Post</li>
-
-                    <li>Posted For 60 Days</li>
-
-                </ul>
-
-                <a href="#" class="btn-choose btn-color-2">Choose Plan</a> </div>
-
-            <div class="box box-colo-3">
-
-                <h4>Enterprise</h4>
-
-                <strong class="amount"><span>$</span>79.00<sub>/mo</sub></strong>
-
-                <ul>
-
-                    <li>Jobs are posted for 150 day</li>
-
-                    <li>One Time Fee</li>
-
-                    <li>This Plan Includes Unlimited Jobs</li>
-
-                    <li>Featured or Highlighted Post</li>
-
-                    <li>Posted For 120 Days</li>
-
-                </ul>
-
-                <a href="#" class="btn-choose btn-color-2">Choose Plan</a> </div>
-
         </div>
 
     </section>
 
-    <!--PRICE TABLE STYLE 1 END-->
-
-
-
-    <!--PRICE TABLE STYLE 1 START-->
-
-    <section class="price-table price-table-2">
-
-        <div class="container">
-
-            <h2>Resume Plans &amp; Pricing</h2>
-
-            <div class="box">
-
-                <h4>Free Package</h4>
-
-                <strong class="amount"><span>$</span>29.00<sub>/mo</sub></strong>
-
-                <ul>
-
-                    <li>One Time Fee</li>
-
-                    <li>Allows 1 Resume Posting</li>
-
-                    <li>Non-Highlighted Post</li>
-
-                    <li>Visible To All Employers</li>
-
-                </ul>
-
-                <a href="#" class="btn-choose btn-color-2">Choose Plan</a> </div>
-
-            <div class="box box-colo-2">
-
-                <div class="head">Most Popular</div>
-
-                <h4>Starter Package</h4>
-
-                <strong class="amount"><span>$</span>59.00<sub>/mo</sub></strong>
-
-                <ul>
-
-                    <li>One Time Fee</li>
-
-                    <li>Posted For One Year</li>
-
-                    <li>Allows 1 Resume Posting</li>
-
-                    <li>Featured Highlighted Resume</li>
-
-                    <li>Visible To All Employers</li>
-
-                </ul>
-
-                <a href="#" class="btn-choose btn-color-2">Choose Plan</a> </div>
-
-            <div class="box box-colo-3">
-
-                <h4>Enterprise</h4>
-
-                <strong class="amount"><span>$</span>79.00<sub>/mo</sub></strong>
-
-                <ul>
-
-                    <li>One Time Fee</li>
-
-                    <li>Shown For 190 Days</li>
-
-                    <li>Allows 1 Resume Posting</li>
-
-                    <li>Featured Highlighted Resume</li>
-
-                </ul>
-
-                <a href="#" class="btn-choose btn-color-2">Choose Plan</a> </div>
-
-        </div>
-
-    </section>
-
-    <!--PRICE TABLE STYLE 1 END-->
-
+    <!--KEUNTUNGAN AREA END-->
 
 
     <!--TESTIOMONIALS SECTION START-->
 
-    <section class="testimonials-section">
+    <section id="testimonial" class="testimonials-section">
 
         <div class="container">
 
@@ -658,25 +360,11 @@
 
                     <div class="holder">
 
-                        <div class="thumb"><img src="{{ asset("images") }}/testo-img.png" alt="img"></div>
+                        <div class="thumb"><img src="{{ asset("images/testi") }}/testo-img.png" alt="img"></div>
 
-                        <div class="text-box"> <em>One morning, when John Doe woke from troubled dreams, he found himself transformed in his Collaboratively administrate empowered markets via plug-and-play networks. Donec volutpat enim at interdum pretium. Vestibulum ante ipsum primis.</em>
+                        <div class="text-box"> <em>Calon karyawan yang ada di caripekerja.com memiliki kapabilitas yang sesuai dengan data yang ditampilkan di website nya </em>
 
-                            <ul class="testimonials-rating">
-
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-
-                                <li><a href="#"><i class="fa fa-star-o"></i></a></li>
-
-                            </ul>
-
-                            <strong class="name">John Doe</strong> <span class="post">Database Manager</span> </div>
+                            <strong class="name">Ahmad Nuzirwan</strong> <span class="post">Supervisor Gudang Carrefour</span> </div>
 
                     </div>
 
@@ -686,25 +374,11 @@
 
                     <div class="holder">
 
-                        <div class="thumb"><img src="{{ asset("images") }}/testo-img.png" alt="img"></div>
+                        <div class="thumb"><img src="{{ asset("images/testi") }}/testo-img.png" alt="img"></div>
 
-                        <div class="text-box"> <em>One morning, when John Doe woke from troubled dreams, he found himself transformed in his Collaboratively administrate empowered markets via plug-and-play networks. Donec volutpat enim at interdum pretium. Vestibulum ante ipsum primis.</em>
+                        <div class="text-box"> <em>Cara baru dalam mendapatkan pekerja yang sesuai dengan ekspektasi</em>
 
-                            <ul class="testimonials-rating">
-
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-
-                                <li><a href="#"><i class="fa fa-star-o"></i></a></li>
-
-                            </ul>
-
-                            <strong class="name">John Doe</strong> <span class="post">Database Manager</span> </div>
+                            <strong class="name">Alief Nochtavio</strong> <span class="post">Pemilik Restoran SariNusa</span> </div>
 
                     </div>
 
@@ -718,26 +392,6 @@
 
         <section class="client-logo-row">
 
-            <div class="holder">
-
-                <ul>
-
-                    <li><img src="{{ asset("images") }}/logo/logo-1.png" alt="img"></li>
-
-                    <li><img src="{{ asset("images") }}/logo/logo-2.png" alt="img"></li>
-
-                    <li><img src="{{ asset("images") }}/logo/logo-3.png" alt="img"></li>
-
-                    <li><img src="{{ asset("images") }}/logo/logo-4.png" alt="img"></li>
-
-                    <li><img src="{{ asset("images") }}/logo/logo-5.png" alt="img"></li>
-
-                    <li><img src="{{ asset("images") }}/logo/logo-6.png" alt="img"></li>
-
-                </ul>
-
-            </div>
-
         </section>
 
         <!--CLIENTS SECTION END-->
@@ -747,86 +401,8 @@
     <!--TESTIOMONIALS SECTION END-->
 
 
-
-    <!--POST AREA START-->
-
-    <section class="post-section padd-tb">
-
-        <div class="container">
-
-            <div class="row">
-
-                <div class="col-md-4 col-sm-4">
-
-                    <div class="post-box">
-
-                        <div class="frame"><a href="#"><img src="{{ asset("images") }}/blog/post-img-1.jpg" alt="img"></a></div>
-
-                        <div class="text-box"> <strong class="date"><i class="fa fa-calendar"></i>Mar 17, 2016</strong>
-
-                            <h4><a href="#">Middle Class jobs are being replaced
-
-                                    by burger-flipping, retail sales.</a></h4>
-
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa quae.</p>
-
-                            <div class="thumb"><a href="#"><img src="{{ asset("images") }}/admin-img.jpg" alt="img"></a></div>
-
-                            <strong class="name"><span>By</span> Anna Smith</strong> </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-4 col-sm-4">
-
-                    <div class="post-box">
-
-                        <div class="frame"><a href="#"><img src="{{ asset("images") }}/blog/post-img-2.jpg" alt="img"></a></div>
-
-                        <div class="text-box"> <strong class="date"><i class="fa fa-calendar"></i>Feb 20, 2016 </strong>
-
-                            <h4><a href="#">There are many variations of passage
-
-                                    of Lorem Ipsum available.</a></h4>
-
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa quae.</p>
-
-                            <div class="thumb"><a href="#"><img src="{{ asset("images") }}/admin-img.jpg" alt="img"></a></div>
-
-                            <strong class="name"><span>By</span> Anna Smith</strong> </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-4 col-sm-4">
-
-                    <div class="post-box">
-
-                        <div class="frame"><a href="#"><img src="{{ asset("images") }}/blog/post-img-3.jpg" alt="img"></a></div>
-
-                        <div class="text-box"> <strong class="date"><i class="fa fa-calendar"></i>Feb 09, 2016</strong>
-
-                            <h4><a href="#">But I must explain to you how all this
-
-                                    mistaken idea of denouncing pleasure.</a></h4>
-
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa quae.</p>
-
-                            <div class="thumb"><a href="#"><img src="{{ asset("images") }}/admin-img.jpg" alt="img"></a></div>
-
-                            <strong class="name"><span>By</span> Anna Smith</strong> </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
+    <section>
 
     </section>
 
-    <!--POST AREA END-->
 @endsection

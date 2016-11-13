@@ -3,4 +3,3 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Cari Pekerja</title>
-@stack("meta")

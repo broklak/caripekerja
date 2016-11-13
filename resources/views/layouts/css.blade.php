@@ -1,3 +1,4 @@
+
 <!--CUSTOM CSS-->
 
 <link href="{{ asset("css") }}/custom.css" rel="stylesheet" type="text/css">
@@ -25,4 +26,3 @@
 <!--SCROLL FOR SIDEBAR NAVIGATION-->
 
 <link href="{{ asset("css") }}/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css">
-@stack("css")
