@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Helpers\GlobalHelper;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,7 +19,12 @@ class RedirectIfNotEmployer
 	public function handle($request, Closure $next, $guard = 'employer')
 	{
 	    if (!Auth::guard($guard)->check()) {
-	        return redirect('/');
+			$message = 'Silahkan masuk sebagai UKM untuk mengakses';
+			return redirect(route('login'))
+				->withInput(['role' => 'employer'])
+				->withErrors([
+					'role' => $message,
+				]);
 	    }
 
 	    return $next($request);

@@ -17,11 +17,14 @@ class CreateTableJobs extends Migration
             $table->increments('id');
             $table->integer('employer_id');
             $table->string('title', 100);
-            $table->text('description');
-            $table->integer('region');
-            $table->string('closing_date');
-            $table->tinyInteger('type');
-            $table->integer('status');
+            $table->text('description')->nullable();
+            $table->integer('city');
+            $table->string('minimum_degree')->nullable();
+            $table->integer('gender')->comment('1:Must Male, 2=Must Female')->nullable();
+            $table->date('closing_date')->nullable();
+            $table->integer('salary')->nullable();
+            $table->tinyInteger('type')->comment('1:full time, 2 : Part time');
+            $table->integer('status')->comment('0:Not Active, 1 : Active');
             $table->timestamps();
         });
     }

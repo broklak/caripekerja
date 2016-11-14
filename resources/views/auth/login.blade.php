@@ -25,13 +25,14 @@
         <div class="holder">
 
             <div class="thumb"><img src="{{asset('images')}}/bg/signup.png" alt="img"></div>
-
             <h2 class="login-as">Masuk Sebagai</h2>
 
             <ul class="login-as-tabs">
                 <li id="as-pekerja" class="li-click @if(old('role') == 'worker' || old('role') == null) active @endif" role="presentation">PEKERJA</li>
                 <li id="as-ukm" class="li-click @if(old('role') == 'employer') active @endif">UKM</li>
             </ul>
+
+            {!! session('displayMessage') !!}
 
             @if (count($errors) > 0)
                 <div class="alert alert-danger">
@@ -48,7 +49,7 @@
 
                 <div class="input-box"> <i class="fa fa-user"></i>
 
-                    <input type="text" name="email" value="{{old('email')}}" placeholder="Nomor Telepon">
+                    <input type="text" name="email" value="{{old('email')}}" placeholder="Email">
 
                 </div>
 
@@ -62,13 +63,15 @@
 
                     <input id="id3" type="checkbox" />
 
-                    <strong>Remember Me</strong> </div>
+                    <strong>Ingatkan Akun Saya</strong> </div>
 
                 <input type="hidden" name="role" value="worker">
 
-                <input type="submit" value="Sign up">
+                <input type="submit" value="Masuk">
 
-                <a href="#" class="login">Forgot your Password</a>
+                <div style="clear: both">
+                    <a href="#" class="login">Lupa Password</a>
+                </div>
 
             </form>
 
@@ -93,9 +96,13 @@
 
                 <input type="hidden" name="role" value="employer">
 
-                <input type="submit" value="Sign up">
+                <input type="submit" value="Masuk">
 
-                <a href="#" class="login">Forgot your Password</a>
+                <div style="clear: both">
+                    <a href="#" class="login">Lupa Password</a>
+                </div>
+
+
 
             </form>
                 <!--EMPLOYER LOGIN END-->

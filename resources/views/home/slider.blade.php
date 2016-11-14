@@ -43,8 +43,8 @@
             </form>
 
             <div class="btn-row">
-                <a href="job-seekers.html"><i class="fa fa-user"></i>Saya cari pekerjaan</a>
-                <a href="employers.html"><i class="fa fa-building-o"></i>Saya butuh pekerja</a>
+                <a href="{{route('job-list')}}"><i class="fa fa-user"></i>Saya cari pekerjaan</a>
+                <a href="{{route('worker-list')}}"><i class="fa fa-building-o"></i>Saya butuh pekerja</a>
             </div>
 
         </div>

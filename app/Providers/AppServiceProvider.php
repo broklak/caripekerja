@@ -34,7 +34,8 @@ class AppServiceProvider extends ServiceProvider
         View::composer('*', function($view){
 
             View::share('view_name', $view->getName());
-            View::share('js_name', 'js.'.$view->getName());
+            View::share('js_name', 'sites/js.'.$view->getName());
+            View::share('css_name', 'sites/css.'.$view->getName());
 
         });
     }

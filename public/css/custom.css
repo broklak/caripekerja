@@ -191,7 +191,6 @@ a {
 	top: -3px;
 	width: 35%;
 	height: 100%;
-	background-color: #888;
 	z-index: -1;
 	transform: rotate(-33deg) scaleY(1);
 	transition: all 0.3s ease-in;
@@ -547,7 +546,7 @@ strong.logo a {
 	top: -3px;
 	width: 35%;
 	height: 100%;
-	background-color: #ffc107;
+	background-color: #00796b;
 	z-index: -1;
 	transform: rotate(-33deg) scaleY(1);
 	transition: all 0.3s ease-in;
@@ -584,7 +583,7 @@ strong.logo a {
 }
 .browse-job-section a.btn-brows {
 	float: right;
-	background: #ffc107;
+	background: #00796b;
 	padding: 10px 25px;
 	border-radius: 3px;
 	font: 900 14px/14px 'Roboto', sans-serif;
@@ -766,7 +765,7 @@ strong.logo a {
 	top: -3px;
 	width: 35%;
 	height: 100%;
-	background-color: #ffc107;
+	background-color: #00796b;
 	z-index: -1;
 	transform: rotate(-33deg) scaleY(1);
 	transition: all 0.3s ease-in;
@@ -1322,11 +1321,10 @@ strong.logo-2 {
 }
 #content-area .box .text-col {
 	float: left;
-	width: 77%;
+	width: 100%;
 }
 #content-area .box .text-col .hold {
 	float: left;
-	width: 375px;
 }
 #content-area .box .text-col .hold p {
 	color: #888;
@@ -1354,10 +1352,9 @@ strong.logo-2 {
 	padding: 0 6px 0 0;
 }
 #content-area .box strong.price {
-	font: 700 18px/18px 'Roboto', sans-serif;
 	color: #222;
 	float: left;
-	padding: 24px 0 0 50px;
+	padding: 10px 0 0 0;
 }
 .job-detail #content-area .box strong.price {
 	padding: 10px 0 0 0;
@@ -1480,7 +1477,7 @@ strong.logo-2 {
 	top: -3px;
 	width: 35%;
 	height: 100%;
-	background-color: #ffc107;
+	background-color: #00796b;
 	z-index: -1;
 	transform: rotate(-33deg) scaleY(1);
 	transition: all 0.3s ease-in;
@@ -1503,7 +1500,16 @@ strong.logo-2 {
 	text-align: center;
 }
 #myList li {
-	display: none;
+	width: 23%;
+	float: left;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+#myListWorker li {
+	width: 48%;
+	float: left;
+	margin-left: 5px;
 }
 .ink {
 	display: block;
@@ -1828,7 +1834,7 @@ strong.logo-2 {
 }
 .related-people ul li:hover strong.name a {
 	text-decoration: none;
-	color: #ffc107;
+	color: #00796b;
 }
 .related-people .text-box span {
 	font: 400 13px/13px 'Roboto', sans-serif;
@@ -1891,7 +1897,7 @@ strong.logo-2 {
 }
 .call-action-section a.btn-get:hover {
 	color: #fff;
-	border: 1px solid #ffc107;
+	border: 1px solid #00796b;
 }
 .call-action-section a.btn-get:hover:before {
 	opacity: 1;
@@ -1906,7 +1912,7 @@ strong.logo-2 {
 	top: -3px;
 	width: 35%;
 	height: 100%;
-	background-color: #ffc107;
+	background-color: #00796b;
 	z-index: -1;
 	transform: rotate(-33deg) scaleY(1);
 	transition: all 0.3s ease-in;
@@ -2272,7 +2278,7 @@ strong.logo-2 {
 	content: "\f10d";
 	font-family: FontAwesome;
 	font-size: 36px;
-	color: #ffc107;
+	color: #00796b;
 	position: absolute;
 	left: -60px;
 	top: 0;
@@ -2494,7 +2500,7 @@ strong.logo-2 {
 	border: 0;
 }
 .post-section .comment-form form input[type="submit"]:hover {
-	background: #ffc107;
+	background: #00796b;
 	color: #fff;
 }
 
@@ -3268,7 +3274,7 @@ strong.logo-2 {
 }
 .testimonials-style-3 .col .fa {
 	display: block;
-	color: #ffc107;
+	color: #00796b;
 	font-size: 48px;
 	padding: 0 0 20px 0;
 }
@@ -3495,7 +3501,7 @@ input[type="radio"] {
 	border-radius: 3px;
 }
 .signup-section .holder input[type="submit"]:hover {
-	background: #ffc107;
+	background: #00796b;
 }
 .upload-box {
 	float: left;
@@ -3528,7 +3534,7 @@ input[type="radio"] {
 	cursor: pointer;
 }
 .upload-box .btn-file:hover {
-	background: #ffc107;
+	background: #00796b;
 }
 .upload-box .btn-file input[type=file] {
 	position: absolute;
@@ -3567,7 +3573,7 @@ input[type="radio"] {
 	text-decoration: none;
 }
 .signup-section .holder em a:hover {
-	color: #ffc107;
+	color: #00796b;
 }
 .signup-section .holder a.login {
 	font: italic 400 14px/14px 'Roboto', sans-serif;
@@ -3718,7 +3724,7 @@ input[type="radio"] {
 	border-radius: 3px;
 }
 .contact-form input[type="Submit"]:hover {
-	background: #ffc107;
+	background: #00796b;
 }
 .address-box {
 	float: left;
@@ -3774,7 +3780,7 @@ input[type="radio"] {
 	padding: 12px 0 0 0;
 }
 .address-box address a:hover {
-	color: #ffc107;
+	color: #00796b;
 }
 .accordion-style-1 {
 	float: left;
@@ -3797,7 +3803,7 @@ input[type="radio"] {
 .candidates-search-bar {
 	float: left;
 	width: 100%;
-	background: #fff;
+	background: #f5f5f5;
 	padding: 30px 0;
 }
 .candidates-search-bar form {
@@ -3830,7 +3836,7 @@ input[type="radio"] {
 	width: 100%;
 }
 .candidates-search-bar form button[type="submit"]:hover {
-	background: #ffc107;
+	background: #00796b;
 	color: #fff;
 }
 .resumes-section {
@@ -3878,7 +3884,7 @@ input[type="radio"] {
 	padding: 0 6px 0 0;
 }
 .resumes-section a.load-more::before {
-	background-color: #ffc107;
+	background-color: #00796b;
 	content: "";
 	height: 100%;
 	left: -12px;
@@ -3925,7 +3931,7 @@ input[type="radio"] {
 	color: #888;
 }
 .resumes-content .box .text-box strong a:hover {
-	color: #ffc107;
+	color: #00796b;
 	text-decoration: none;
 }
 .resumes-content .box .text-box span.price {
@@ -3955,7 +3961,7 @@ input[type="radio"] {
 	padding: 0 6px 0 0;
 }
 .tags a:hover {
-	color: #ffc107;
+	color: #00796b;
 }
 .btn-row {
 	float: left;
@@ -3978,7 +3984,7 @@ input[type="radio"] {
 .btn-row a.contact {
 	float: left;
 	padding: 10px 20px;
-	background: #8bc34a;
+	background: #00796b;;
 	font: 900 14px/14px 'Roboto', sans-serif;
 	color: #fff;
 	border-radius: 3px;
@@ -4117,7 +4123,7 @@ input[type="radio"] {
 	width: 78%;
 }
 .progress-box .progress-bar {
-	background-color: #ffc107;
+	background-color: #00796b;
 	box-shadow: none;
 	color: #fff;
 	float: left;
@@ -4222,10 +4228,10 @@ input[type="radio"] {
 	position: relative;
 }
 .alphabets-row .col:hover span {
-	background: #ffc107;
+	background: #00796b;
 }
 .alphabets-row .col:hover:before {
-	background: #ffc107;
+	background: #00796b;
 }
 .alphabets-row .col:before {
 	content: '';
@@ -4535,7 +4541,7 @@ input[type="radio"] {
 	border-radius: 3px;
 }
 .resum-form input[type="submit"]:hover {
-	background: #ffc107;
+	background: #00796b;
 }
 
 .text-editor-box {
@@ -4746,6 +4752,15 @@ TRANSITION-FOR-IMAGES {
 	-moz-transition: background-color ease-out;
 	-o-transition: background-color ease-out;
 	transition: background-color ease-out;
+}
+
+.user-icon {
+	width: 44px;
+	height: 44px;
+}
+
+.related-people label {
+	margin-left: 5px;
 }
 
 /****************************************************ADDITIONAL CUSTOM CSS END****************************************************/

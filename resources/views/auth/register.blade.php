@@ -21,7 +21,7 @@
 
             </div>
 
-            <a href="#" class="btn-style-1"><i class="fa fa-sign-in"></i>Masuk</a> </div>
+            <a href="{{url('/login')}}" class="btn-style-1"><i class="fa fa-sign-in"></i>Masuk</a> </div>
 
     </div>
 

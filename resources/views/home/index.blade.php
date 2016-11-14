@@ -8,13 +8,15 @@
 
     <section id="listing" class="popular-categories">
 
+        {!! session('displayMessage') !!}
+
         <div class="container">
 
             <div class="clearfix">
 
                 <h2>Pilihan Profesi Pekerja</h2>
 
-                <a href="#" class="btn-style-1">Lihat Semua Kategori Pekerja</a>
+                <a href="{{route('worker-list')}}" class="btn-style-1">Lihat Semua Kategori Pekerja</a>
             </div>
 
             <div class="row">

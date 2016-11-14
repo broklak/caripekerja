@@ -18,23 +18,11 @@
 
                     <ul class="nav navbar-nav" id="nav">
 
-                        <li><a href="#listing">Pencari Kerja</a>
+                        <li><a href="{{route('job-list')}}">Lowongan Kerja</a></li>
 
-                            <ul>
+                        <li><a href="{{route('worker-list')}}">Butuh Pekerja</a></li>
 
-                                <li><a href="#listing">Baby Sitter</a></li>
-
-                                <li><a href="#listing">Asisten Rumah Tangga</a></li>
-
-                                <li><a href="#listing">Sopir</a></li>
-
-                            </ul>
-
-                        </li>
-
-                        <li><a href="#">Pemilik Usaha</a></li>
-
-                        <li><a href="#pricing">Paket</a></li>
+                        <li><a href="{{route('job-create')}}">Buat Lowongan</a></li>
 
                         <li><a href="#testimonial">Testimonial</a></li>
 
@@ -64,17 +52,13 @@
 
                 <div class="dropdown">
 
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <img src="{{ asset("images/user") }}/user-img.png" alt="img"></button>
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <img src="{{ asset("images") }}/bg/signup.png" class="user-icon" alt="img"></button>
 
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 
-                        <li><a href="#">{{$authUser['name']}}</a></li>
+                        <li><a href="#">Akun Saya</a></li>
 
-                        <li><a href="#">Change Password</a></li>
-
-                        <li><a href="#">Edit Profile</a></li>
-
-                        <li><a href="{{url('/logout')}}">Log off</a></li>
+                        <li><a href="{{url('/keluar')}}">Log off</a></li>
 
                     </ul>
 
@@ -90,9 +74,9 @@
 
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
 
-                        <li> <a href="{{url('/login')}}" class="login-round"><i class="fa fa-sign-in"></i></a> <a href="#" class="btn-login">Masuk</a> </li>
+                        <li> <a href="{{url('/masuk')}}" class="login-round"><i class="fa fa-sign-in"></i></a> <a href="{{url('/masuk')}}" class="btn-login">Masuk</a> </li>
 
-                        <li> <a href="{{url('/register')}}" class="login-round"><i class="fa fa-user-plus"></i></a> <a href="{{url('/register')}}" class="btn-login">Daftar</a> </li>
+                        <li> <a href="{{url('/daftar')}}" class="login-round"><i class="fa fa-user-plus"></i></a> <a href="{{url('/daftar')}}" class="btn-login">Daftar</a> </li>
 
                     </ul>
 

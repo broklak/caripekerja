@@ -78,7 +78,7 @@ class RegisterController extends Controller
             'gender'     => $data['gender'],
             'degree'     => $data['degree'],
             'city'      => $data['city'],
-            'birthdate' => $data['birthdate'],
+            'birthdate' => date('Y-m-d', strtotime($data['birthdate'])),
             'marital'   => $data['marital']
         ]);
     }

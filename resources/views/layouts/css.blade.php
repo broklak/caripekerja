@@ -26,3 +26,5 @@
 <!--SCROLL FOR SIDEBAR NAVIGATION-->
 
 <link href="{{ asset("css") }}/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css">
+
+@includeIf($css_name)
