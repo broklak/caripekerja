@@ -2,9 +2,11 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Facades\Auth;
+use App\Helpers\GlobalHelper;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
+use App\Libraries\LayoutManager;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -15,7 +17,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->getViewName();
+        View::composer('*', function($view){
+            $this->getViewName($view);
+        });
     }
 
     /**
@@ -30,13 +34,14 @@ class AppServiceProvider extends ServiceProvider
         }
     }
 
-    protected function getViewName() {
-        View::composer('*', function($view){
+    protected function getViewName($view) {
+        View::share('view_name', $view->getName());
+        View::share('js_name', 'sites/js.'.$view->getName());
+        View::share('css_name', 'sites/css.'.$view->getName());
+        View::share('banner_title', $this->formatUrlToTitle(Route::current()->uri()));
+    }
 
-            View::share('view_name', $view->getName());
-            View::share('js_name', 'sites/js.'.$view->getName());
-            View::share('css_name', 'sites/css.'.$view->getName());
-
-        });
+    protected function formatUrlToTitle ($url) {
+        return strtoupper(str_replace('-', ' ', $url));
     }
 }

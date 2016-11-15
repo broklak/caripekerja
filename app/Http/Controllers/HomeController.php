@@ -8,6 +8,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\GlobalHelper;
 use App\Http\Controllers\Controller;
 use App\Libraries\LayoutManager;
 use Illuminate\Support\Facades\Auth;
@@ -18,6 +19,7 @@ class HomeController extends Controller {
 
 
     public function index () {
+        GlobalHelper::setNoBanner();
         return view('home.index');
     }
 

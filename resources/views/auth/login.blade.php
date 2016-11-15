@@ -3,21 +3,7 @@
 @section('content')
 
 
-        <!--SIGNUP SECTION START-->
-
-<!--INNER BANNER START-->
-
-<section id="inner-banner">
-
-    <div class="container">
-
-        <h1>Masuk ke Akun Anda</h1>
-
-    </div>
-
-</section>
-
-<!--INNER BANNER END-->
+<!--SIGNUP SECTION START-->
 
 <section class="signup-section">
 

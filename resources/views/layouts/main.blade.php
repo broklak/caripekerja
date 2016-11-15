@@ -29,6 +29,12 @@
         @include("layouts.header")
     @show
 
+    <!--BANNER START-->
+    @if($banner_title != null)
+        @include('layouts.banner')
+    @endif
+    <!--BANNER END-->
+
     <!--HEADER END-->
 
     @if($view_name == 'home.index')
