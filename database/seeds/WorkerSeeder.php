@@ -26,6 +26,7 @@ class WorkerSeeder extends Seeder
                 'degree'        => $obj->degree,
                 'city'        => $obj->city,
                 'birthdate'          => $obj->birthdate,
+                'verified'          => 0,
                 'marital'        => $obj->marital
             ]);
         }

@@ -73,9 +73,9 @@
 
                 <div class="col-md-6 col-sm-6">
 
-                    <label>Email </label>
+                    <label>Nomor HP *</label>
 
-                    <input name="email" value="{{old('email')}}" type="text" placeholder="Email">
+                    <input name="phone" value="{{old('phone')}}" type="text" placeholder="Nomor HP">
 
                 </div>
 
@@ -97,90 +97,9 @@
 
                 <div class="col-md-6 col-sm-6">
 
-                    <label>Nomor HP *</label>
+                    <label>Kode Referal</label>
 
-                    <input name="phone" value="{{old('phone')}}" type="text" placeholder="Nomor HP">
-
-                </div>
-
-                <div class="col-md-6 col-sm-6">
-
-                    <label>Tanggal Lahir *</label>
-
-                    <input name="birthdate" id="datepicker" type="text" placeholder="Tanggal Lahir">
-
-                </div>
-
-                <div class="col-md-6 col-sm-6">
-
-                    <label>Status *</label>
-
-                    <div style="float: left;width: 50%">
-                        <input style="margin-right: 10px" type="radio" @if(old('marital') == '1') checked="checked" @endif name="marital" value="1" id="yes"> <label for="yes">Menikah</label>
-                    </div>
-
-                    <div style="float:right;width: 50%;">
-                        <input style="margin-right: 10px;" type="radio" name="marital" @if(old('marital') == '2') checked="checked" @endif value="2" id="no"> <label for="no">Belum Menikah</label>
-                    </div>
-
-                    <div class="clearfix"></div>
-
-                </div>
-
-                <div class="col-md-6 col-sm-6">
-
-                    <label>Jenis Kelamin *</label>
-
-                    <div style="float: left;width: 50%">
-                        <input style="margin-right: 10px" type="radio" @if(old('gender') == '1') checked="checked" @endif name="gender" value="1" id="male"> <label for="male">Laki - Laki</label>
-                    </div>
-
-                    <div style="float:right;width: 50%;">
-                        <input style="margin-right: 10px;" type="radio" @if(old('gender') == '2') checked="checked" @endif name="gender" value="2" id="female"> <label for="female">Perempuan</label>
-                    </div>
-
-                    <div class="clearfix"></div>
-
-                </div>
-
-                <div style="clear: both"></div>
-
-                <div class="col-md-6 col-sm-6">
-
-                    <label>Pendidikan Terakhir *</label>
-
-                    <div class="selector">
-
-                        <select name="degree" class="full-width">
-
-                            <option disabled selected>Pilih Pendidikan Terakhir</option>
-
-                            @foreach ($degree as $key => $row)
-                                <option @if(old('degree') == $row) selected="selected" @endif>{{$row}}</option>
-                            @endforeach
-
-                        </select>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-6 col-sm-6">
-
-                    <label>Kota Tempat Tinggal *</label>
-                    <div class="selector">
-
-                        <select name="city" class="full-width">
-
-                            <option disabled selected>Pilih Kota Tempat Tinggal</option>
-
-                            @foreach ($province as $rowProvince)
-                                <option @if(old('city') == $rowProvince['id']) selected="selected" @endif value="{{$rowProvince['id']}}">{{$rowProvince['name']}}</option>
-                            @endforeach
-
-                        </select>
-
-                    </div>
+                    <input name="referral_code" type="text" value="{{old('referral_code')}}" placeholder="Kode referral (bila ada)">
 
                 </div>
 
@@ -250,60 +169,9 @@
 
                 <div class="col-md-6 col-sm-6">
 
-                    <label>Nama Pemilik</label>
+                    <label>Kode Referal</label>
 
-                    <input name="name_owner" value="{{old('name_owner')}}" type="text" placeholder="Nama Pemilik Usaha">
-
-                </div>
-
-                <div class="col-md-6 col-sm-6">
-
-                    <label>Nomor HP *</label>
-
-                    <input name="phone" value="{{old('phone')}}" type="text" placeholder="Nomor HP">
-
-                </div>
-
-                <div class="col-md-6 col-sm-6">
-
-                    <label>Bidang Usaha </label>
-
-                    <input name="category" value="{{old('category')}}" type="text" placeholder="Contoh : Restoran, Toko Pakaian, Konveksi">
-
-                </div>
-
-                <div class="col-md-6 col-sm-6">
-
-                    <label>Kota Tempat Usaha *</label>
-                    <div class="selector">
-
-                        <select name="city" class="full-width">
-
-                            <option disabled selected>Pilih Kota Tempat Usaha</option>
-
-                            @foreach ($province as $rowProvince)
-                                <option @if(old('city') == $rowProvince['id']) selected="selected" @endif value="{{$rowProvince['id']}}">{{$rowProvince['name']}}</option>
-                            @endforeach
-
-                        </select>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-6 col-sm-6">
-
-                    <label>Alamat Lengkap Tempat Usaha *</label>
-
-                    <textarea name="address">{{old('address')}}</textarea>
-
-                </div>
-
-                <div class="col-md-6 col-sm-6">
-
-                    <label>Deskripsi Singkat Usaha Anda </label>
-
-                    <textarea name="description">{{old('description')}}</textarea>
+                    <input name="referral_code" type="text" placeholder="Kode referral (bila ada)">
 
                 </div>
 

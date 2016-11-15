@@ -52,12 +52,6 @@ class RegisterController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:employers',
             'password' => 'required|min:6|confirmed',
-            'name_owner'     => 'required',
-            'address'     => 'required',
-            'phone'     => 'required',
-            'city'      => 'required',
-            'description' => 'required',
-            'category' => 'required',
         ]);
     }
 
@@ -73,12 +67,6 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
-            'name_owner'     => $data['name_owner'],
-            'address'     =>  $data['address'],
-            'phone'     => $data['phone'],
-            'city'      => $data['city'],
-            'description' => $data['description'],
-            'ukm_category' => $data['category'],
         ]);
     }
 

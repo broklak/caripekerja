@@ -35,7 +35,7 @@
 
                 <div class="input-box"> <i class="fa fa-user"></i>
 
-                    <input type="text" name="email" value="{{old('email')}}" placeholder="Email">
+                    <input type="text" name="phone" value="{{old('phone')}}" placeholder="Nomor Handphone">
 
                 </div>
 

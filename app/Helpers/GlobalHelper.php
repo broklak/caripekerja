@@ -25,11 +25,10 @@ class GlobalHelper
         return $money;
     }
 
-    public static function setNoBanner ($config = array()) {
+    public static function setNoBanner () {
         View::composer('*', function(){
             View::share('banner_title', null);
         });
-
     }
 }
 

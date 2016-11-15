@@ -42,6 +42,10 @@ class AppServiceProvider extends ServiceProvider
     }
 
     protected function formatUrlToTitle ($url) {
+        if(strpos($url, '/')) {
+           $cutUrlPos = strpos($url, '/');
+           $url = substr($url, 0, $cutUrlPos);
+        }
         return strtoupper(str_replace('-', ' ', $url));
     }
 }
