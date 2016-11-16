@@ -67,21 +67,7 @@
             </div>
         @else
             <div class="dropdown-box">
-
-                <div class="dropdown">
-
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <img src="{{ asset("images") }}/option-icon.png" alt="img"> </button>
-
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-
-                        <li> <a href="{{url('/masuk')}}" class="login-round"><i class="fa fa-sign-in"></i></a> <a href="{{url('/masuk')}}" class="btn-login">Masuk</a> </li>
-
-                        <li> <a href="{{url('/daftar')}}" class="login-round"><i class="fa fa-user-plus"></i></a> <a href="{{url('/daftar')}}" class="btn-login">Daftar</a> </li>
-
-                    </ul>
-
-                </div>
-
+                <span><a href="{{route('login')}}">Masuk</a></span> | <span><a href="{{route('register')}}">Daftar</a></span>
             </div>
         @endif
 

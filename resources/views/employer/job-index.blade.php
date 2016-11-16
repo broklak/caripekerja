@@ -44,54 +44,60 @@
 
         </section>
 
-    <section class="recent-row padd-tb">
+        <section class="recent-row padd-tb">
 
-        <div class="container">
+            <div class="container">
 
-            <div class="row">
+                <div class="row">
 
-                {!! session('displayMessage') !!}
+                    <div class="col-md-12 col-sm-8">
 
-                <div class="col-md-12 col-sm-8">
+                        <div id="content-area">
 
-                    <div id="content-area">
+                            <h2>Menampilkan Seluruh Pekerjaan</h2>
 
                             <ul id="myList">
 
                                 @foreach ($list as $row)
 
-                                <li>
+                                    <li style="display: list-item;">
 
-                                    <div class="box">
+                                        <div class="box">
 
-                                        <div class="thumb hide"><a href="#"><img src="images/recent-job-thumb-4.jpg" alt="img"></a></div>
+                                            <div class="thumb"><a href="#"><img src="images/recent-job-thumb-1.jpg" alt="img"></a></div>
 
-                                        <div class="text-col">
+                                            <div class="text-col">
 
-                                            <div class="hold">
+                                                <div class="hold">
 
-                                                <h4><a href="#">{{$row['title']}}</a></h4>
+                                                    <h4><a href="#">{{$row['title']}}</a></h4>
 
-                                                <a href="#" class="text"><i class="fa fa-map-marker"></i>Jakarta</a> <a href="#" class="text hide"><i class="fa fa-calendar"></i>Dec 30, 2015 - Feb 20, 2016 </a> </div>
+                                                    <p>Waktu Kerja : Senin - Minggu (Libur 1 hari). Fasilitas : Gaji, Uang Makan</p>
 
-                                        </div>
+                                                    <a href="#" class="text"><i class="fa fa-map-marker"></i>Jakarta, Ragunan</a>
+                                                    <a href="#" class="text"><i class="fa fa-calendar"></i>Oct 30, 2016 - Nov 30, 2016 </a> </div>
 
-                                        <strong class="price"><i class="fa fa-money"></i>{{\App\Helpers\GlobalHelper::moneyFormat($row['salary'])}}</strong> <a onClick="alert('Kami sedang melanjutkan pengembangan fitur ini')" href="#" class="btn-1 btn-color-4 ripple">Lamar</a> </div>
+                                            </div>
 
-                                </li>
+                                            <strong class="price"><i class="fa fa-money"></i>{{\App\Helpers\GlobalHelper::moneyFormat($row['salary_min'])}} - {{\App\Helpers\GlobalHelper::moneyFormat($row['salary_max'])}}</strong>
+                                            <a href="#" onclick="alert('Kami sedang memgembangkan fitur ini')" class="btn-1 btn-color-1 ripple">Lamar Pekerjaan</a> </div>
+
+                                    </li>
 
                                 @endforeach
 
                             </ul>
 
+                        </div>
+
                     </div>
+
+
 
                 </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 @endsection

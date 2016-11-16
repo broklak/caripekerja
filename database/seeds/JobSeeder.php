@@ -26,7 +26,8 @@ class JobSeeder extends Seeder
                 'minimum_degree' => $obj->minimum_degree,
                 'gender'        => $obj->gender,
                 'closing_date'  => $obj->closing_date,
-                'salary'        => $obj->salary,
+                'salary_min'        => $obj->salary_min,
+                'salary_max'        => $obj->salary_max,
                 'type'          => $obj->type,
                 'status'        => $obj->status
             ]);

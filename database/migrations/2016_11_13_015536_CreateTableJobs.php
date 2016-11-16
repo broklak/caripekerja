@@ -22,7 +22,8 @@ class CreateTableJobs extends Migration
             $table->string('minimum_degree')->nullable();
             $table->integer('gender')->comment('1:Must Male, 2=Must Female')->nullable();
             $table->date('closing_date')->nullable();
-            $table->integer('salary')->nullable();
+            $table->integer('salary_min');
+            $table->integer('salary_max');
             $table->tinyInteger('type')->comment('1:full time, 2 : Part time');
             $table->integer('status')->comment('0:Not Active, 1 : Active');
             $table->timestamps();

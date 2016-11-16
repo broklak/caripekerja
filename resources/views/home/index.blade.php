@@ -27,7 +27,7 @@
 
                         <h4><a href="#">Baby Sitter</a></h4>
 
-                        <strong>6,213 Pekerjaan</strong>
+                        <strong>0 Pekerja</strong>
 
                     </div>
 
@@ -39,7 +39,7 @@
 
                         <h4><a href="#">Sopir</a></h4>
 
-                        <strong>3,750 Pekerjaan</strong>
+                        <strong>0 Pekerja</strong>
 
                     </div>
 
@@ -51,7 +51,7 @@
 
                         <h4><a href="#">Pelayan</a></h4>
 
-                        <strong>1,265 Pekerjaan</strong>
+                        <strong>0 Pekerja</strong>
 
                     </div>
 
@@ -63,7 +63,7 @@
 
                         <h4><a href="#">Penjaga Toko</a></h4>
 
-                        <strong>5,913 Pekerjaan</strong>
+                        <strong>0 Pekerja</strong>
 
                     </div>
 
@@ -75,7 +75,7 @@
 
                         <h4><a href="#">Admin</a></h4>
 
-                        <strong>7,418 Pekerjaan</strong>
+                        <strong>0 Pekerja</strong>
 
                     </div>
 
@@ -87,7 +87,7 @@
 
                         <h4><a href="#">Buruh Pabrik</a></h4>
 
-                        <strong>8,045 Pekerjaan</strong>
+                        <strong>0 Pekerja</strong>
 
                     </div>
 
@@ -99,7 +99,7 @@
 
                         <h4><a href="#">Satpam</a></h4>
 
-                        <strong>3,891 Pekerjaan</strong>
+                        <strong>0 Pekerja</strong>
 
                     </div>
 
@@ -111,7 +111,7 @@
 
                         <h4><a href="#">Montir</a></h4>
 
-                        <strong>9,942 Pekerjaan</strong>
+                        <strong>0 Pekerja</strong>
 
                     </div>
 
@@ -123,7 +123,7 @@
 
                         <h4><a href="#">Kurir</a></h4>
 
-                        <strong>9,942 Pekerjaan</strong>
+                        <strong>0 Pekerja</strong>
 
                     </div>
 
@@ -135,7 +135,7 @@
 
                         <h4><a href="#">Juru Masak</a></h4>
 
-                        <strong>3.123 Pekerjaan</strong>
+                        <strong>0 Pekerja</strong>
 
                     </div>
 
@@ -147,7 +147,7 @@
 
                         <h4><a href="#">Kuli Bangunan</a></h4>
 
-                        <strong>1.212 Pekerjaan</strong>
+                        <strong>0 Pekerja</strong>
 
                     </div>
 
@@ -159,7 +159,7 @@
 
                         <h4><a href="#">Office Boy / Girl</a></h4>
 
-                        <strong>1.212 Pekerjaan</strong>
+                        <strong>0 Pekerja</strong>
 
                     </div>
 

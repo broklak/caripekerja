@@ -12,7 +12,7 @@
 
             <div class="col-md-9 col-sm-8">
 
-                <div class="resumes-content">
+                <div class="resumes-content worker-detail">
 
                     <div class="box">
 
@@ -28,7 +28,7 @@
 
                             <div class="tags">Satpam, Supir</div>
 
-                            <div class="btn-row"> <a href="" class="contact">Lihat Profil Lengkap</a> </div>
+                            <div class="btn-row"> <a href="" class="contact">Hubungi Pekerja</a> </div>
 
                         </div>
 

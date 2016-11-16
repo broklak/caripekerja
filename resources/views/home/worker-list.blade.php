@@ -50,47 +50,13 @@
 
         <div class="row">
 
-            <div class="col-md-9 col-sm-8">
-
-                <div class="resumes-content">
-
-                    <h2>Menampilkan Seluruh Pekerja</h2>
-
-                    @foreach ($list as $row)
-
-                        <div class="box">
-
-                            <div class="frame"><a href="#"><img src="{{asset('images')}}/user/no-image.png" alt="img"></a></div>
-
-                                <div class="text-box">
-
-                                    <h2>{{$row['name']}}</h2>
-
-                                    <h5>27 Tahun, Sudah Menikah</h5>
-
-                                    <div class="clearfix"> <strong><i class="fa fa-map-marker"></i>Jakarta</strong></div>
-
-                                    <div class="tags">Satpam, Supir</div>
-
-                                    <div class="btn-row"> <a href="{{route('worker-detail', ['workerId' => $row['id']])}}" class="contact">Lihat Profil</a> </div>
-
-                                </div>
-
-                        </div>
-
-                    @endforeach
-
-                </div>
-
-            </div>
-
             <div class="col-md-3 col-sm-4">
 
                 <h2>Filter Pekerja</h2>
 
                 <aside>
 
-                    <div class="sidebar">
+                    <div class="sidebar" style="margin-bottom: 20px">
 
                         <div class="related-people">
 
@@ -117,6 +83,40 @@
                     </div>
 
                 </aside>
+
+            </div>
+
+            <div class="col-md-9 col-sm-8">
+
+                <div class="resumes-content">
+
+                    <h2>Menampilkan Seluruh Pekerja</h2>
+
+                    @foreach ($list as $row)
+
+                        <div class="box">
+
+                            <div class="frame"><a href="{{route('worker-detail', ['workerId' => $row['id']])}}"><img src="{{asset('images')}}/user/no-image.png" alt="img"></a></div>
+
+                                <div class="text-box">
+
+                                    <h3><a href="{{route('worker-detail', ['workerId' => $row['id']])}}">{{$row['name']}}</a></h3>
+
+                                    <h5>27 Tahun, Sudah Menikah</h5>
+
+                                    <div class="clearfix"> <strong><i class="fa fa-map-marker"></i>Jakarta</strong></div>
+
+                                    <div class="tags">Satpam, Supir</div>
+
+                                    <div class="btn-row"> <a href="{{route('worker-detail', ['workerId' => $row['id']])}}" class="contact">Lihat Profil</a> </div>
+
+                                </div>
+
+                        </div>
+
+                    @endforeach
+
+                </div>
 
             </div>
 

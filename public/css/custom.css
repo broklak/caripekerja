@@ -1037,6 +1037,11 @@ strong.logo-2 {
 	float: left;
 	margin: 20px 0 0 0;
 }
+
+.dropdown-box span {
+	font-size: 14px;
+	font-weight: 900;
+}
 .dropdown-box .btn {
 	border: 0;
 	border-radius: 0;
@@ -1321,7 +1326,7 @@ strong.logo-2 {
 }
 #content-area .box .text-col {
 	float: left;
-	width: 100%;
+	width: 77%;
 }
 #content-area .box .text-col .hold {
 	float: left;
@@ -1352,9 +1357,10 @@ strong.logo-2 {
 	padding: 0 6px 0 0;
 }
 #content-area .box strong.price {
+	font: 700 18px/18px 'Roboto', sans-serif;
 	color: #222;
 	float: left;
-	padding: 10px 0 0 0;
+	padding: 24px 0 0 50px;
 }
 .job-detail #content-area .box strong.price {
 	padding: 10px 0 0 0;
@@ -1498,12 +1504,6 @@ strong.logo-2 {
 #loadMore {
 	display: block;
 	text-align: center;
-}
-#myList li {
-	width: 23%;
-	float: left;
-	margin-left: 20px;
-	margin-bottom: 20px;
 }
 
 #myListWorker li {
@@ -3848,21 +3848,48 @@ input[type="radio"] {
 	float: left;
 	width: 100%;
 }
+
+.resumes-content {
+	float: left;
+	width: 100%;
+}
+
+
 .resumes-content #loadMore {
 	padding: 30px 0 0 0;
 	overflow: hidden;
 	clear: both;
 }
 .resumes-content .box {
+	text-align: center;
 	float: left;
-	width: 100%;
-	padding: 30px;
-	margin: 0 0 10px 0;
+	padding: 10px;
+	margin: 0px 5px 15px 15px;
 	background: #fff;
 	box-shadow: 0 2px 6px 0 rgba(0,0,0,0.15);
 	-moz-box-shadow: 0 2px 6px 0 rgba(0,0,0,0.15);
 	-webkit-box-shadow: 0 2px 6px 0 rgba(0,0,0,0.15);
 }
+
+.worker-detail .box {
+	width: 100%;
+	text-align: left;
+	margin: 0px 5px 15px 0;
+}
+
+.worker-detail .box .frame {
+	float: left;
+}
+
+.worker-detail .box .text-box {
+	margin-left: 30px;
+	float: left;
+}
+
+.resumes-content .box .btn-row {
+	padding-bottom: 10px;
+}
+
 .resumes-section a.load-more {
 	background: #fff none repeat scroll 0 0;
 	border: 1px solid #ccc;
@@ -3906,8 +3933,7 @@ input[type="radio"] {
 	width: 100%;
 }
 .resumes-content .box .frame {
-	float: left;
-	margin: 0 30px 0 0;
+	/*margin: 0 30px 0 0;*/
 }
 .resumes-content .box .text-box {
 	overflow: hidden;
@@ -3919,7 +3945,7 @@ input[type="radio"] {
 	margin: 0 0 15px 0;
 }
 .resumes-content .box .text-box strong {
-	float: left;
+	/*float: left;*/
 	font: 400 13px/13px 'Roboto', sans-serif;
 	color: #888;
 	padding: 0 20px 0 0;
@@ -3982,7 +4008,6 @@ input[type="radio"] {
 	font-size: 16px;
 }
 .btn-row a.contact {
-	float: left;
 	padding: 10px 20px;
 	background: #00796b;;
 	font: 900 14px/14px 'Roboto', sans-serif;
