@@ -12,7 +12,7 @@
 
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
 
-                    <strong class="logo"><a href="{{url('/')}}"><img style="width: 200px" src="{{ asset("images") }}/logocp.png" alt="logo"></a></strong> </div>
+                    <strong class="logo"><a href="{{url('/')}}"><img style="width: 200px" src="{{ asset("images") }}/logocpbeta.png" alt="logo"></a></strong> </div>
 
                 <div id="navbar" style="margin-top: 40px" class="collapse navbar-collapse">
 
