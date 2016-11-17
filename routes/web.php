@@ -47,4 +47,5 @@ Route::get('profil-pekerja/{workerId}', 'HomeController@workerDetail')->name('wo
 
 // MYACCOUNT
 Route::get('akun-saya', 'UserController@myAccount')->name('myaccount-index');
+Route::post('update-profile', 'UserController@update');
 

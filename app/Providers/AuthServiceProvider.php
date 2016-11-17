@@ -40,6 +40,7 @@ class AuthServiceProvider extends ServiceProvider
 
         View::share('isLogged', $authData['isLogged']);
         View::share('authUser', $authData['authData']);
+        View::share('authRole', $authData['authRole']);
     }
 
     private function checkAuthRole () {
@@ -49,13 +50,15 @@ class AuthServiceProvider extends ServiceProvider
         if($worker || $employer) {
             return array(
                 'isLogged'  => true,
-                'authData'  => ($worker) ? $worker : $employer
+                'authData'  => ($worker) ? $worker : $employer,
+                'authRole'  => ($worker) ? 'worker' : 'employer'
             );
         }
 
         return array(
             'isLogged'  => false,
-            'authData'  => null
+            'authData'  => null,
+            'authRole'  => 'guest'
         );
     }
 }

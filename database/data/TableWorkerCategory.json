@@ -1,0 +1,18 @@
+[
+  {"id":1, "name":"Babysitter", "url":"babysitter"},
+  {"id":2, "name":"Asisten Rumah Tangga", "url":"art"},
+  {"id":3, "name":"sopir", "url":"sopir"},
+  {"id":4, "name":"Juru Masak", "url":"juru-masak"},
+  {"id":5, "name":"Pelayan", "url":"pelayan"},
+  {"id":6, "name":"Penjaga Toko", "url":"jaga-toko"},
+  {"id":7, "name":"Kasir", "url":"kasir"},
+  {"id":8, "name":"Admin", "url":"admin"},
+  {"id":9, "name":"Penjahit", "url":"penjahit"},
+  {"id":10, "name":"Office Boy / Girl", "url":"ob-og"},
+  {"id":11, "name":"Buruh Pabrik", "url":"buruh-pabrik"},
+  {"id":12, "name":"Kuli Bangunan", "url":"kuli-bangunan"},
+  {"id":13, "name":"Tukang Kayu", "url":"tukang-kayu"},
+  {"id":14, "name":"Kurir", "url":"kurir"},
+  {"id":15, "name":"Montir", "url":"montir"},
+  {"id":16, "name":"Satpam", "url":"satpam"}
+]

@@ -37,7 +37,7 @@
                         <div class="cakewalk-footer-content">
                             <ul>
                                 <li><a href="mailto::info@caripekerja.com"><i aria-hidden="true" class="fa fa-envelope"></i> info@caripekerja.com</a></li>
-                                <li><i aria-hidden="true" class="fa fa-phone"></i> +62 821 2363 9999</li>
+                                <li><i aria-hidden="true" class="fa fa-phone"></i> +62 877 8023 3123</li>
                             </ul>
                         </div>
                     </div>

@@ -48,11 +48,12 @@
     <div class="user-option-col">
 
         @if($isLogged)
-            <div class="thumb">
 
-                <div class="dropdown">
+                <div class="dropdown-box">
 
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <img src="{{ asset("images") }}/bg/signup.png" class="user-icon" alt="img"></button>
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <span class="hi-user">Selamat Datang, {{$authUser['name']}}</span>
+                    </button>
 
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 
@@ -64,7 +65,7 @@
 
                 </div>
 
-            </div>
+
         @else
             <div class="dropdown-box">
                 <span><a href="{{route('login')}}">Masuk</a></span> | <span><a href="{{route('register')}}">Daftar</a></span>

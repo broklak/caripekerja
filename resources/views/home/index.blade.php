@@ -23,143 +23,119 @@
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div class="box">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/babysitter.png')}}')" class="box bg-pekerja">
 
                         <h4><a href="#">Baby Sitter</a></h4>
 
-                        <strong>0 Pekerja</strong>
-
                     </div>
 
                 </div>
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div class="box">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/sopir.png')}}')" class="box bg-pekerja">
 
                         <h4><a href="#">Sopir</a></h4>
 
-                        <strong>0 Pekerja</strong>
-
                     </div>
 
                 </div>
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div class="box">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/pelayan.png')}}')" class="box bg-pekerja">
 
                         <h4><a href="#">Pelayan</a></h4>
 
-                        <strong>0 Pekerja</strong>
-
                     </div>
 
                 </div>
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div class="box">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/jagatoko.png')}}')" class="box bg-pekerja">
 
                         <h4><a href="#">Penjaga Toko</a></h4>
 
-                        <strong>0 Pekerja</strong>
-
                     </div>
 
                 </div>
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div class="box">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/admin.png')}}')" class="box bg-pekerja">
 
                         <h4><a href="#">Admin</a></h4>
 
-                        <strong>0 Pekerja</strong>
-
                     </div>
 
                 </div>
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div class="box">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/buruh.png')}}')" class="box bg-pekerja">
 
                         <h4><a href="#">Buruh Pabrik</a></h4>
 
-                        <strong>0 Pekerja</strong>
-
                     </div>
 
                 </div>
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div class="box">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/satpam.png')}}')" class="box bg-pekerja">
 
                         <h4><a href="#">Satpam</a></h4>
 
-                        <strong>0 Pekerja</strong>
-
                     </div>
 
                 </div>
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div class="box">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/montir.png')}}')" class="box bg-pekerja">
 
                         <h4><a href="#">Montir</a></h4>
 
-                        <strong>0 Pekerja</strong>
-
                     </div>
 
                 </div>
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div class="box">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/kurir.png')}}')" class="box bg-pekerja">
 
                         <h4><a href="#">Kurir</a></h4>
 
-                        <strong>0 Pekerja</strong>
-
                     </div>
 
                 </div>
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div class="box">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/koki.png')}}')" class="box bg-pekerja">
 
                         <h4><a href="#">Juru Masak</a></h4>
 
-                        <strong>0 Pekerja</strong>
-
                     </div>
 
                 </div>
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div class="box">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/kuli.png')}}')" class="box bg-pekerja">
 
                         <h4><a href="#">Kuli Bangunan</a></h4>
 
-                        <strong>0 Pekerja</strong>
-
                     </div>
 
                 </div>
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div class="box">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/ob.png')}}')" class="box bg-pekerja">
 
                         <h4><a href="#">Office Boy / Girl</a></h4>
-
-                        <strong>0 Pekerja</strong>
 
                     </div>
 
@@ -292,7 +268,7 @@
 
                 <ul>
 
-                    <li>untuk 650 kontak</li>
+                    <li>untuk 600 kontak</li>
 
                     <li>Rp.1500 / Kontak</li>
 

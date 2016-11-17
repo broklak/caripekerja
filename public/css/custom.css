@@ -4788,4 +4788,13 @@ TRANSITION-FOR-IMAGES {
 	margin-left: 5px;
 }
 
+.bg-pekerja h4 a {
+	color: #fff;
+}
+
+.multiple-select {
+	width: 100%;
+	border: #ccc solid 1px;
+}
+
 /****************************************************ADDITIONAL CUSTOM CSS END****************************************************/
