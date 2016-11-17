@@ -49,7 +49,7 @@ class JobController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function (Request $request)
+    public function store(Request $request)
     {
         $this->validate($request, [
             'title' => 'required|max:255',

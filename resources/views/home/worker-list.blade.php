@@ -129,7 +129,7 @@
 
                                     <h5>{{\App\Helpers\GlobalHelper::getAgeByBirthdate($row['birthdate'])}} Tahun</h5>
 
-                                    <div class="clearfix"> <strong><i class="fa fa-map-marker"></i>{{\App\Province::find($row['city'])->name}}</strong></div>
+                                    <div class="clearfix"> <strong><i class="fa fa-map-marker"></i>{{\App\Helpers\GlobalHelper::getCityName($row['city'])}}</strong></div>
 
                                     <div class="btn-row"> <a href="{{route('worker-detail', ['workerId' => $row['id']])}}" class="contact">Lihat Profil</a> </div>
 

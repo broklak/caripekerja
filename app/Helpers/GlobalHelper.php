@@ -55,6 +55,14 @@ class GlobalHelper
         return self::getUserProfilPath($role, $image);
     }
 
+    public static function getCityName($city_id) {
+        if($city_id == null) {
+            return 'Belum Terdaftar';
+        }
+
+        return \App\Province::find($city_id)->name;
+    }
+
     public static function getUserProfilPath($role, $image) {
         return asset('images/profil/'.$role.'/'.$image);
     }
