@@ -53,7 +53,8 @@ class JobController extends Controller
     {
         $this->validate($request, [
             'title' => 'required|max:255',
-            'salary' => 'numeric',
+            'salary_min' => 'numeric|required',
+            'salary_max' => 'numeric|required',
             'degree' => 'required',
             'city' => 'required',
             'gender' => 'required',
@@ -62,7 +63,8 @@ class JobController extends Controller
 
         Job::create([
                 'title'             => $request->input('title'),
-                'salary'            => $request->input('salary'),
+                'salary_min'        => $request->input('salary_min'),
+                'salary_max'        => $request->input('salary_max'),
                 'employer_id'       => $this->_employer['id'],
                 'minimum_degree'    => $request->input('degree'),
                 'city'              => $request->input('city'),

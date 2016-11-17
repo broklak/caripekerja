@@ -12,7 +12,7 @@ class Job extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'employer_id', 'salary', 'minimum_degree', 'gender', 'closing_date', 'type', 'status', 'description', 'city'
+        'title', 'employer_id', 'salary_min', 'salary_max', 'minimum_degree', 'gender', 'closing_date', 'type', 'status', 'description', 'city'
     ];
 
 }

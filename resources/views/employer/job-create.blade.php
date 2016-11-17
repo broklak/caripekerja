@@ -40,9 +40,11 @@
 
                 <div class="col-md-6 col-sm-6">
 
-                    <label>Gaji Minimum</label>
+                    <label>Gaji</label>
 
-                    <input name="salary" value="{{old('salary')}}" type="text" placeholder="Isi hanya dengan angka nominal">
+                    <input name="salary_min" style="width: 48%;margin-right: 10px" value="{{old('salary_min')}}" type="text" placeholder="Gaji minimal. Isi dengan angka">
+
+                    <input name="salary_max" style="width: 48%" value="{{old('salary_max')}}" type="text" placeholder="Gaji maksimal. Isi dengan angka">
 
                 </div>
 
