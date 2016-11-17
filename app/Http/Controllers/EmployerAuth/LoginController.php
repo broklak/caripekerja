@@ -28,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    public $redirectTo = '/';
+    protected $redirectTo = '/akun-saya';
 
     /**
      * Create a new controller instance.
@@ -53,18 +53,6 @@ class LoginController extends Controller
             ->withErrors([
                 $this->username() => Lang::get('auth.failed'),
             ]);
-    }
-
-    /**
-     * The user has been authenticated.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  mixed  $user
-     * @return mixed
-     */
-    protected function authenticated(Request $request, $user)
-    {
-        return redirect()->intended('home');
     }
 
     /**

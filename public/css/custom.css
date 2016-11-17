@@ -4314,7 +4314,7 @@ input[type="radio"] {
 .resume-process {
 	float: left;
 	width: 100%;
-	background: #fff;
+	background: #f5f5f5;
 	border-bottom: 1px solid #ccc;
 }
 .resume-process h2 {

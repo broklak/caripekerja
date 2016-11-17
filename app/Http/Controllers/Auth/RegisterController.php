@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Province;
-use App\User;
+use App\ReferralTransaction;
 use Validator;
+use App\Province;
+use App\Referral;
+use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -28,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/akun-saya';
 
     /**
      * Create a new controller instance.
@@ -49,11 +51,14 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        return Validator::make($data, [
-            'name' => 'required|max:255',
+        $validator = Validator::make($data, [
+            'name' => 'required|max:100|min:3',
             'password' => 'required|min:6|confirmed',
             'phone'     => 'required|numeric|unique:workers',
+            'referral_code' => 'sometimes|exists:'.env('DB_CONNECTION').'.referral,code'
         ]);
+
+        return $validator;
     }
 
     /**
@@ -64,12 +69,35 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $createUser = User::create([
             'name' => $data['name'],
             'password' => bcrypt($data['password']),
             'phone'     => $data['phone'],
             'referral_code' => $data['referral_code']
         ]);
+
+        if($createUser) {
+            // CREATE REFERRAL IF USER IS INSERTED
+            Referral::create([
+                'user_id'   => $createUser->id,
+                'user_type' => 1, // 1 FOR WORKER
+                'code'      => Referral::referralCodeFormat($userType = 1, $createUser->name)
+            ]);
+
+            // CHECK IF REFERRAL CODE IS INSERTED
+            if($data['referral_code'] != '') {
+                $referralOwner = Referral::where('code', $createUser->referral_code)->first();
+
+                ReferralTransaction::create([
+                    'code'   =>  $createUser->referral_code,
+                    'user_type' => 1,
+                    'referral_owner' => $referralOwner['user_id'],
+                    'referral_user' => $createUser->id
+                ]);
+            }
+        }
+
+        return $createUser;
     }
 
     /**

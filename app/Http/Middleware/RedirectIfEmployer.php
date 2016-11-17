@@ -18,7 +18,7 @@ class RedirectIfEmployer
 	public function handle($request, Closure $next, $guard = 'employer')
 	{
 	    if (Auth::guard($guard)->check()) {
-	        return redirect('/');
+	        return redirect('/akun-saya');
 	    }
 
 	    return $next($request);

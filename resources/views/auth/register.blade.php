@@ -171,7 +171,7 @@
 
                     <label>Kode Referal</label>
 
-                    <input name="referral_code" type="text" placeholder="Kode referral (bila ada)">
+                    <input name="referral_code" type="text" value="{{old('referral_code')}}" placeholder="Kode referral (bila ada)">
 
                 </div>
 

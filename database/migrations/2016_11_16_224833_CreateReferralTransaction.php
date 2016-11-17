@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableReferral extends Migration
+class CreateReferralTransaction extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateTableReferral extends Migration
      */
     public function up()
     {
-        Schema::create('referral', function (Blueprint $table) {
+        //
+        Schema::create('referral_transaction', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('code')->unique();
-            $table->integer('user_id');
+            $table->string('code');
             $table->integer('user_type')->comment('1:worker, 2:ukm');
+            $table->integer('referral_owner')->comment('user that own referral code');
+            $table->integer('referral_user')->comment('user that user referral code');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreateTableReferral extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('referral');
+        //
     }
 }

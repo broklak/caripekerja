@@ -4,6 +4,8 @@ namespace App\Http\Controllers\EmployerAuth;
 
 use App\Employer;
 use Validator;
+use App\Referral;
+use App\ReferralTransaction;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Auth;
@@ -28,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/akun-saya';
 
     /**
      * Create a new controller instance.
@@ -52,6 +54,7 @@ class RegisterController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:employers',
             'password' => 'required|min:6|confirmed',
+            'referral_code' => 'sometimes|exists:'.env('DB_CONNECTION').'.referral,code'
         ]);
     }
 
@@ -63,11 +66,35 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return Employer::create([
+        $createEmployer = Employer::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'referral_code' => $data['referral_code']
         ]);
+
+        if($createEmployer) {
+            // CREATE REFERRAL IF USER IS INSERTED
+            Referral::create([
+                'user_id'   => $createEmployer->id,
+                'user_type' => 2, // 1 FOR WORKER
+                'code'      => Referral::referralCodeFormat($userType = 2, $createEmployer->name)
+            ]);
+
+            // CHECK IF REFERRAL CODE IS INSERTED
+            if($data['referral_code'] != '') {
+                $referralOwner = Referral::where('code', $createEmployer->referral_code)->first();
+
+                ReferralTransaction::create([
+                    'code'   =>  $createEmployer->referral_code,
+                    'user_type' => 2,
+                    'referral_owner' => $referralOwner['user_id'],
+                    'referral_user' => $createEmployer->id
+                ]);
+            }
+        }
+
+        return $createEmployer;
     }
 
     /**
