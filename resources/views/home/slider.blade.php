@@ -10,37 +10,7 @@
 
         <div class="holder">
 
-            <h1>Cari Pekerjaan atau Butuh Pekerja</h1>
-
-            <form action="#">
-
-                <div class="container">
-
-                    <div class="row">
-
-                        <div class="col-md-6 col-sm-6">
-
-                            <input type="text" placeholder="Masukkan Nama Pekerjaan">
-
-                        </div>
-
-                        <div class="col-md-5 col-sm-5">
-
-                            <input type="text" placeholder="Masukkan Nama Daerah">
-
-                        </div>
-
-                        <div class="col-md-1 col-sm-1">
-
-                            <button type="submit"><i class="fa fa-search"></i></button>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </form>
+            <h1>CariPekerja adalah Mitra Pencari Pekerja untuk Usaha Kecil dan Menengah</h1>
 
             <div class="btn-row">
                 <a href="{{route('job-list')}}"><i class="fa fa-user"></i>Saya cari pekerjaan</a>

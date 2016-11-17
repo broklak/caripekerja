@@ -364,7 +364,7 @@ strong.logo a {
 	position: relative;
 	overflow: hidden;
 	width: 100%;
-	height: 400px;
+	height: 300px;
 }
 .kenburnsy .slide {
 	position: absolute;
@@ -4472,7 +4472,7 @@ input[type="radio"] {
 	margin: 0 0 10px 0;
 }
 .resum-form input[type="text"], .resum-form input[type="password"] {
-	float: left;
+	/*float: left;*/
 	width: 100%;
 	height: 43px;
 	border: 1px solid #ccc;
@@ -4796,5 +4796,11 @@ TRANSITION-FOR-IMAGES {
 	width: 100%;
 	border: #ccc solid 1px;
 }
+
+.resumes-content .box .text-box h3 {
+	font-size: 18px;
+}
+
+
 
 /****************************************************ADDITIONAL CUSTOM CSS END****************************************************/
