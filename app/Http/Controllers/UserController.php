@@ -68,7 +68,7 @@ class UserController extends Controller
                 'birthdate' => 'required',
                 'exp'       => 'required',
                 'category'   => 'required',
-                'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+                'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5020'
             ]);
 
             $worker = User::find($workerId);
@@ -100,7 +100,7 @@ class UserController extends Controller
                 'category' => 'required|max:100',
                 'name_owner' => 'required|max:100',
                 'description' => 'required|max:200',
-                'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+                'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5020'
             ]);
 
             $employer = Employer::find($employerId);
