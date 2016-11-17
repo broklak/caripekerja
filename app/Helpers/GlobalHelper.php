@@ -47,12 +47,12 @@ class GlobalHelper
         });
     }
 
-    public static function setUserImage ($role,$image) {
+    public static function setUserImage ($image) {
         if($image == null || '') {
             return asset('images/user/no-image.png');
         }
 
-        return self::getUserProfilPath($role, $image);
+        return self::getUserProfilPath($image);
     }
 
     public static function getCityName($city_id) {
@@ -63,8 +63,8 @@ class GlobalHelper
         return \App\Province::find($city_id)->name;
     }
 
-    public static function getUserProfilPath($role, $image) {
-        return asset('images/profil/'.$role.'/'.$image);
+    public static function getUserProfilPath($image) {
+        return asset('images/profil/worker/'.$image);
     }
 }
 

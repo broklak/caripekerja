@@ -121,7 +121,7 @@
 
                         <div class="box">
 
-                            <div class="frame"><a href="{{route('worker-detail', ['workerId' => $row['id']])}}"><img style="width: 165px;height: 150px" src="{{\App\Helpers\GlobalHelper::setUserImage($authRole,$row['photo_profile'])}}" alt="img"></a></div>
+                            <div class="frame"><a href="{{route('worker-detail', ['workerId' => $row['id']])}}"><img style="width: 165px;height: 150px" src="{{\App\Helpers\GlobalHelper::setUserImage($row['photo_profile'])}}" alt="img"></a></div>
 
                                 <div class="text-box">
 
