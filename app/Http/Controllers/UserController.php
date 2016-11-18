@@ -10,6 +10,8 @@ use App\Referral;
 use App\Province;
 use App\Helpers\GlobalHelper;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -83,6 +85,7 @@ class UserController extends Controller
 
             if($request->photo) {
                 $imageName = $this->_role . '-' . $this->_authData['id'] .'.'.$request->photo->getClientOriginalExtension();
+                Storage::delete(public_path('images/profil/'.$this->_role.'/'.$imageName));
                 $request->photo->move(public_path('images/profil/'.$this->_role.'/'), $imageName);
                 $worker->photo_profile = $imageName;
             }
@@ -114,6 +117,7 @@ class UserController extends Controller
 
             if($request->photo) {
                 $imageName = $this->_role . '-' . $this->_authData['id'] .'.'.$request->photo->getClientOriginalExtension();
+                Storage::delete(public_path('images/profil/'.$this->_role.'/'.$imageName));
                 $request->photo->move(public_path('images/profil/'.$this->_role.'/'), $imageName);
                 $employer->photo_profile = $imageName;
             }
