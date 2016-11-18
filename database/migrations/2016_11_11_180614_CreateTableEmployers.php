@@ -20,7 +20,7 @@ class CreateTableEmployers extends Migration
             $table->string('password');
             $table->string('phone', 75)->nullable();
             $table->string('name_owner', 100)->nullable();
-            $table->string('ukm_category', 10)->nullable();
+            $table->string('ukm_category', 100)->nullable();
             $table->string('city', 100)->nullable();
             $table->text('address')->nullable();
             $table->text('description')->nullable();
