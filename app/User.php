@@ -53,7 +53,7 @@ class User extends Authenticatable
         }
 
         if($criteria['status'] != 0) {
-            $status = ['status', '=', $criteria['status']];
+            $status = ['marital', '=', $criteria['status']];
             array_push($where,$status);
         }
 
