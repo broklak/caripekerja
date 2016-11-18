@@ -13,9 +13,10 @@ use App\Http\Controllers\Controller;
 use App\Libraries\LayoutManager;
 use App\Province;
 use App\WorkerCategory;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use App\User;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 
 
 class HomeController extends Controller {
@@ -26,24 +27,25 @@ class HomeController extends Controller {
         return view('home.index');
     }
 
-    public function workerList () {
-        $data['category'] = WorkerCategory::all();
-        $data['province'] = Province::all();
-        $data['list'] = User::all();
-        $data['degree'] = config('static.educationDegree');
-        $data['max_exp'] = 30;
-        return view('home.worker-list', $data);
-    }
-
     /**
      * Search
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function workerSearch (Request $request) {
+    public function workerList (Request $request) {
+        $param = $request->input();
 
-        return $this->workerList();
+        $list = (empty($param)) ? User::all() : User::search($param);
+
+        $data['category'] = WorkerCategory::all();
+        $data['province'] = Province::all();
+        $data['list'] = $list;
+        $data['degree'] = config('static.educationDegree');
+        $data['max_exp'] = 30;
+        $data['param'] = $param;
+
+        return view('home.worker-list', $data);
     }
 
     /**

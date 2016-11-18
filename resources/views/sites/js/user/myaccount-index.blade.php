@@ -7,7 +7,8 @@
 <script>
     $( "#datepicker" ).datepicker({
         changeMonth: true,
-        changeYear: true
+        changeYear: true,
+        yearRange : "1970:{{date('Y')}}"
     });
 </script>
 

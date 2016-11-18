@@ -14,7 +14,7 @@
 
                 <h2>Filter Pekerja</h2>
 
-                <form method="post" action="{{url('/filter-pekerja')}}">
+                <form method="post" action="{{route('worker-list')}}">
                     {{csrf_field()}}
                     <aside>
 
@@ -27,7 +27,7 @@
                                         <option value="0">Semua Profesi</option>
 
                                         @foreach($category as $key => $row)
-                                            <option value="{{$row['id']}}">{{$row['name']}}</option>
+                                            <option @if(isset($param['category']) && $param['category'] == $row['id']) selected @endif value="{{$row['id']}}">{{$row['name']}}</option>
                                         @endforeach
 
                                     </select>
@@ -42,8 +42,8 @@
 
                                         <option value="0">Semua Gender</option>
 
-                                        <option value="1">Pria</option>
-                                        <option value="2">Wanita</option>
+                                        <option @if(isset($param['gender']) && $param['gender'] == 1) selected @endif value="1">Pria</option>
+                                        <option @if(isset($param['gender']) && $param['gender'] == 2) selected @endif value="2">Wanita</option>
 
                                     </select>
                                 </div>
@@ -57,7 +57,7 @@
                                     <option value="0">Semua Kota</option>
 
                                     @foreach ($province as $rowProvince)
-                                        <option value="{{$rowProvince['id']}}">{{$rowProvince['name']}}</option>
+                                        <option @if(isset($param['city']) && $param['city'] == $rowProvince['id']) selected @endif value="{{$rowProvince['id']}}">{{$rowProvince['name']}}</option>
                                     @endforeach>
 
                                 </select>
@@ -71,8 +71,8 @@
 
                                     <option value="0">Semua Status</option>
 
-                                    <option value="1">Menikah</option>
-                                    <option value="2">Belum Menikah</option>
+                                    <option @if(isset($param['status']) && $param['status'] == 1) selected @endif value="1">Menikah</option>
+                                    <option @if(isset($param['status']) && $param['status'] == 2) selected @endif value="2">Belum Menikah</option>
 
                                 </select>
                             </div>
@@ -86,7 +86,7 @@
                                     <option value="0">Semua Latar Pendidikan Terakhir</option>
 
                                     @foreach ($degree as $key => $row)
-                                        <option>{{$row}}</option>
+                                        <option @if(isset($param['degree']) && $param['degree'] == $row) selected @endif>{{$row}}</option>
                                     @endforeach>
 
                                 </select>
@@ -94,12 +94,12 @@
                         </div>
 
                         <div class="resum-form sidebar" style="margin-bottom: 20px;width: 100%;margin: 0;background: none">
-                            <input type="text" name="min_exp" class="full-width" placeholder="Berapa Tahun Pengalaman">
+                            <input type="text" name="exp" value="{{ isset($param['exp']) ? $param['exp'] : '' }}" class="full-width" placeholder="Berapa Tahun Pengalaman">
                         </div>
 
                         <div class="resum-form sidebar" style="margin-bottom: 20px;width: 100%;margin: 0;background: none">
-                            <input style="width: 48%;float: left;margin-right: 10px" type="text" name="min_exp" placeholder="Umur Min" class="full-width">
-                            <input style="width: 48%" type="text" name="max_exp" placeholder="Umur Max" class="full-width">
+                            <input style="width: 48%;float: left;margin-right: 10px" type="text" name="min_age" value="{{ isset($param['min_age']) ? $param['min_age'] : '' }}" placeholder="Umur Min" class="full-width">
+                            <input style="width: 48%" type="text" name="max_age" placeholder="Umur Max" value="{{ isset($param['max_age']) ? $param['max_age'] : '' }}" class="full-width">
                         </div>
 
                         <div class="resum-form sidebar" style="margin-bottom: 20px;width: 50%;text-align: center;float: none">

@@ -43,8 +43,8 @@ Route::get('lowongan-kerja', 'JobController@index')->name('job-list');
 
 // WORKER
 Route::get('daftar-pekerja', 'HomeController@workerList')->name('worker-list');
+Route::post('daftar-pekerja', 'HomeController@workerList')->name('worker-list');
 Route::get('profil-pekerja/{workerId}', 'HomeController@workerDetail')->name('worker-detail');
-Route::post('filter-pekerja', 'HomeController@workerSearch')->name('worker-search');
 
 // MYACCOUNT
 Route::get('akun-saya', 'UserController@myAccount')->name('myaccount-index');
