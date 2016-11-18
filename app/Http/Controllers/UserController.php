@@ -84,7 +84,7 @@ class UserController extends Controller
             $worker->category = implode(',', $request->input('category'));
 
             if($request->photo) {
-                $imageName = $this->_role . '-' . $this->_authData['id'] .'.'.$request->photo->getClientOriginalExtension();
+                $imageName = $this->_role . '-' . $this->_authData['id'] .'.'.strtolower($request->photo->getClientOriginalExtension());
                 Storage::delete(public_path('images/profil/'.$this->_role.'/'.$imageName));
                 $request->photo->move(public_path('images/profil/'.$this->_role.'/'), $imageName);
                 $worker->photo_profile = $imageName;
@@ -116,7 +116,7 @@ class UserController extends Controller
             $employer->description = $request->input('description');
 
             if($request->photo) {
-                $imageName = $this->_role . '-' . $this->_authData['id'] .'.'.$request->photo->getClientOriginalExtension();
+                $imageName = $this->_role . '-' . $this->_authData['id'] .'.'.strtolower($request->photo->getClientOriginalExtension());
                 Storage::delete(public_path('images/profil/'.$this->_role.'/'.$imageName));
                 $request->photo->move(public_path('images/profil/'.$this->_role.'/'), $imageName);
                 $employer->photo_profile = $imageName;
