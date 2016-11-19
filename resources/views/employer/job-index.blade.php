@@ -64,7 +64,7 @@
 
                                         <div class="box">
 
-                                            <div class="thumb"><a href="#"><img src="images/recent-job-thumb-1.jpg" alt="img"></a></div>
+                                            <div class="thumb-jobs"><a href="#"><img src="{{\App\Helpers\GlobalHelper::setEmployerImage($row['employerPhoto'])}}" alt="img"></a></div>
 
                                             <div class="text-col">
 
@@ -72,10 +72,12 @@
 
                                                     <h4><a href="#">{{$row['title']}}</a></h4>
 
-                                                    <p>Waktu Kerja : Senin - Minggu (Libur 1 hari). Fasilitas : Gaji, Uang Makan</p>
+                                                    <h5>{{$row['employerName']}}</h5>
 
-                                                    <a href="#" class="text"><i class="fa fa-map-marker"></i>Jakarta, Ragunan</a>
-                                                    <a href="#" class="text"><i class="fa fa-calendar"></i>Oct 30, 2016 - Nov 30, 2016 </a> </div>
+                                                    <p>{{empty($row['description']) ? 'Tidak ada deskripsi' : $row['description']}}</p>
+
+                                                    <a href="#" class="text"><i class="fa fa-map-marker"></i>{{$row['provinceName']}}</a>
+                                                    <a href="#" class="text"><i class="fa fa-calendar"></i>Diposting {{\App\Helpers\GlobalHelper::getHowLongTime($row['created_at'])}}</a> </div>
 
                                             </div>
 

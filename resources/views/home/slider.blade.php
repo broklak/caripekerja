@@ -10,7 +10,7 @@
 
         <div class="holder">
 
-            <h1>CariPekerja adalah Mitra Pencari Pekerja untuk Usaha Kecil dan Menengah</h1>
+            <h1>CariPekerja adalah Mitra Pencari Pekerja untuk <br> Usaha Kecil dan Menengah</h1>
 
             <div class="btn-row">
                 <a href="{{route('job-list')}}"><i class="fa fa-user"></i>Saya cari pekerjaan</a>

@@ -10,6 +10,13 @@
         changeYear: true,
         yearRange : "1970:{{date('Y')}}"
     });
+
+    $('option').mousedown(function(e) {
+        e.preventDefault();
+        jQuery(this).prop('selected', jQuery(this).prop('selected') ? false : true);
+        return false;
+    });
+
 </script>
 
 <!--SELECT JS-->

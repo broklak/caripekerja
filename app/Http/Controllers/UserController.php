@@ -35,7 +35,7 @@ class UserController extends Controller
         $data['category'] = WorkerCategory::all();
         $data['province'] = Province::all();
         $data['degree'] = config('static.educationDegree');
-        $data['max_exp'] = 30;
+        $data['max_exp'] = 10;
 
         $role = ($this->_role == 'worker') ? 1 : 2;
         $referral = Referral::where('user_type', $role)
@@ -80,6 +80,7 @@ class UserController extends Controller
             $worker->city = $request->input('city');
             $worker->marital = $request->input('marital');
             $worker->years_experience = $request->input('exp');
+            $worker->email = $request->input('email');
             $worker->birthdate = date('Y-m-d H:i:s', strtotime($request->input('birthdate')));
             $worker->category = implode(',', $request->input('category'));
 

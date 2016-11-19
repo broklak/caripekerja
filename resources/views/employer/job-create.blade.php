@@ -32,11 +32,30 @@
 
                 <div class="col-md-6 col-sm-6">
 
+                    <label>Kategori Pekerja</label>
+                    <div class="selector">
+
+                        <select name="category" class="multiple-select">
+                            <option disabled selected>Pilih Profesi Pekerja</option>
+                            @foreach($category as $key => $row)
+                                <option @if(old('category') == $row['id']) selected="selected" @endif value="{{$row['id']}}">{{$row['name']}}</option>
+                            @endforeach
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-sm-6">
+
                     <label>Nama Pekerjaan *</label>
 
                     <input name="title" value="{{old('title')}}" type="text" placeholder="Contoh : Supir Pribadi, Penjaga Toko Di Mall, Juru Masak Restoran Chinese Food">
 
                 </div>
+
+                <div style="clear: both"></div>
 
                 <div class="col-md-6 col-sm-6">
 
@@ -121,6 +140,42 @@
                         </select>
 
                     </div>
+
+                </div>
+
+                <div class="col-md-6 col-sm-6">
+                    <label>Pengalaman Kerja Minimal *</label>
+                    <div class="selector">
+
+                        <select name="exp" class="full-width">
+
+                            @for($i=1; $i<= $max_exp;$i++)
+                                <option @if(old('exp') == $i) selected="selected" @endif value="{{$i}}">{{$i}} Tahun</option>
+                            @endfor
+
+                            <option @if(old('exp') > $max_exp) selected="selected" @endif value="100">Lebih dari 10 Tahun</option>
+                        </select>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6">
+
+                    <label>Tanggal Posting</label>
+
+                    <input name="start_date" style="width: 48%;margin-right: 10px" value="{{old('start_date')}}" type="text" placeholder="Tanggal Mulai" id="from">
+
+                    <input name="end_date" style="width: 48%" value="{{old('end_date')}}" type="text" placeholder="Tanggal Akhir" id="to">
+
+                </div>
+
+                <div class="col-md-6 col-sm-6">
+
+                    <label>Umur Pekerja</label>
+
+                    <input name="age_min" style="width: 48%;margin-right: 10px" value="{{old('age_min')}}" type="text" placeholder="Umur minimal. Isi dengan angka">
+
+                    <input name="age_max" style="width: 48%" value="{{old('age_max')}}" type="text" placeholder="Umur maksimal. Isi dengan angka">
 
                 </div>
 

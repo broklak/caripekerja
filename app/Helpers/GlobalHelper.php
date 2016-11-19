@@ -20,8 +20,8 @@ class GlobalHelper
     }
 
     public static function moneyFormat ($money) {
-        $currency = 'Rp.';
-        $money = $currency . number_format($money,0,',','.');
+        $currency = 'Rp ';
+        $money = $currency . number_format($money,0,',',',');
 
         return $money;
     }
@@ -55,6 +55,14 @@ class GlobalHelper
         return self::getUserProfilPath($image);
     }
 
+    public static function setEmployerImage ($image) {
+        if($image == null || '') {
+            return asset('images/user/no-image.png');
+        }
+
+        return self::getEmployerProfilPath($image);
+    }
+
     public static function getCityName($city_id) {
         if($city_id == null) {
             return 'Belum Terdaftar';
@@ -65,6 +73,31 @@ class GlobalHelper
 
     public static function getUserProfilPath($image) {
         return asset('images/profil/worker/'.$image);
+    }
+
+    public static function getEmployerProfilPath($image) {
+        return asset('images/profil/employer/'.$image);
+    }
+
+    public static function getHowLongTime ($date) {
+        $from = strtotime($date);
+        $now = time();
+
+        $diff = abs($now - $from);
+
+        $years = floor($diff / (365*60*60*24));
+        $months = floor(($diff - $years * 365*60*60*24) / (30*60*60*24));
+        $days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
+
+        if($days == 0) {
+            return 'hari ini';
+        }
+
+        if($days == 1) {
+            return 'kemarin';
+        }
+
+        return $days . ' hari yang lalu';
     }
 }
 

@@ -59,9 +59,17 @@
 
                 <div class="col-md-6 col-sm-6">
 
+                    <label>Email</label>
+
+                    <input name="email" value="{{$authData['email']}}" type="text" placeholder="Email">
+
+                </div>
+
+                <div class="col-md-6 col-sm-6">
+
                     <label>Tanggal Lahir *</label>
 
-                    <input name="birthdate" id="datepicker" value="{{date('m/d/Y', strtotime($authData['birthdate']))}}" type="text" placeholder="Tanggal Lahir">
+                    <input name="birthdate" id="datepicker" value="{{empty($authData['birthdate']) ? '' : date('m/d/Y', strtotime($authData['birthdate']))}}" type="text" placeholder="Tanggal Lahir">
 
                 </div>
 
@@ -85,7 +93,42 @@
 
                 </div>
 
+                <div class="col-md-6 col-sm-6">
 
+                    <label>Pengalaman Kerja</label>
+                    <div class="selector">
+
+                        <select name="exp" class="full-width">
+
+                            <option disabled selected>Berapa Tahun Sudah Bekerja</option>
+
+                            @for($i=1; $i<= $max_exp;$i++)
+                                <option @if($authData['years_experience'] == $i) selected="selected" @endif value="{{$i}}">{{$i}} Tahun</option>
+                            @endfor
+
+                            <option @if($authData['years_experience'] > $max_exp) selected="selected" @endif value="100">Lebih dari 10 Tahun</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div style="clear: both"></div>
+
+                <div class="col-md-6 col-sm-6">
+
+                    <label>Jenis Kelamin *</label>
+
+                    <div style="float: left;width: 50%">
+                        <input style="margin-right: 10px" type="radio" @if($authData['gender'] == '1') checked="checked" @endif name="gender" value="1" id="male"> <label for="male">Laki - Laki</label>
+                    </div>
+
+                    <div style="float:right;width: 50%;">
+                        <input style="margin-right: 10px;" type="radio" @if($authData['gender'] == '2') checked="checked" @endif name="gender" value="2" id="female"> <label for="female">Perempuan</label>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
 
                 <div class="col-md-6 col-sm-6">
 
@@ -105,17 +148,18 @@
 
                 <div class="col-md-6 col-sm-6">
 
-                    <label>Jenis Kelamin *</label>
+                    <label>Profesi Anda (Bisa pilih lebih dari 1)</label>
+                    <div>
 
-                    <div style="float: left;width: 50%">
-                        <input style="margin-right: 10px" type="radio" @if($authData['gender'] == '1') checked="checked" @endif name="gender" value="1" id="male"> <label for="male">Laki - Laki</label>
+                        <select multiple="multiple" name="category[]" class="multiple-select">
+                            @foreach($category as $key => $row)
+                                <option @if(in_array($row['id'], $selected_category)) selected="selected" @endif value="{{$row['id']}}">{{$row['name']}}</option>
+                            @endforeach
+
+                        </select>
+
                     </div>
 
-                    <div style="float:right;width: 50%;">
-                        <input style="margin-right: 10px;" type="radio" @if($authData['gender'] == '2') checked="checked" @endif name="gender" value="2" id="female"> <label for="female">Perempuan</label>
-                    </div>
-
-                    <div class="clearfix"></div>
                 </div>
 
                 <div class="col-md-6 col-sm-6">
@@ -137,40 +181,7 @@
 
                 </div>
 
-                <div class="col-md-6 col-sm-6">
-
-                    <label>Pengalaman Kerja</label>
-                    <div class="selector">
-
-                        <select name="exp" class="full-width">
-
-                            <option disabled selected>Berapa Tahun Sudah Bekerja</option>
-
-                            @for($i=1; $i<= $max_exp;$i++)
-                                <option @if($authData['years_experience'] == $i) selected="selected" @endif value="{{$i}}">{{$i}} Tahun</option>
-                            @endfor
-
-                        </select>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-6 col-sm-6">
-
-                    <label>Profesi Anda (Bisa pilih lebih dari 1)</label>
-                    <div>
-
-                        <select multiple="multiple" name="category[]" class="multiple-select">
-                            @foreach($category as $key => $row)
-                                <option @if(in_array($row['id'], $selected_category)) selected="selected" @endif value="{{$row['id']}}">{{$row['name']}}</option>
-                            @endforeach
-
-                        </select>
-
-                    </div>
-
-                </div>
+                <div style="margin-top: 20px;clear: both"></div>
 
                 <div class="col-md-6 col-sm-6">
 

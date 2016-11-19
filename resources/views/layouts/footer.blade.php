@@ -49,7 +49,7 @@
                         </div>
                         <div class="cakewalk-footer-content social-footer">
                             <ul>
-                                <li><a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a><span> Facebook</span></li>
+                                <li><span><a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i> Facebook</a> </span></li>
                                 <li><a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a><span> Google Plus</span></li>
                                 <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a><span> Twitter</span></li>
                                 <li><a href="https://youtube.com/" target="_blank"><i class="fa fa-youtube-play"></i></a><span> Youtube</span></li>

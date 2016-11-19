@@ -23,7 +23,17 @@
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/babysitter.png')}}')" class="box bg-pekerja">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/art.png')}}');background-size: cover" class="box bg-pekerja">
+
+                        <h4><a href="#">Asisten Rumah Tangga</a></h4>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/babysitter.png')}}');background-size: cover" class="box bg-pekerja">
 
                         <h4><a href="#">Baby Sitter</a></h4>
 
@@ -33,7 +43,7 @@
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/sopir.png')}}')" class="box bg-pekerja">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/sopir.png')}}');background-size: cover" class="box bg-pekerja">
 
                         <h4><a href="#">Sopir</a></h4>
 
@@ -43,7 +53,7 @@
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/pelayan.png')}}')" class="box bg-pekerja">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/pelayan.png')}}');background-size: cover" class="box bg-pekerja">
 
                         <h4><a href="#">Pelayan</a></h4>
 
@@ -53,7 +63,7 @@
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/jagatoko.png')}}')" class="box bg-pekerja">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/jagatoko.png')}}');background-size: cover" class="box bg-pekerja">
 
                         <h4><a href="#">Penjaga Toko</a></h4>
 
@@ -63,7 +73,7 @@
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/admin.png')}}')" class="box bg-pekerja">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/admin.png')}}');background-size: cover" class="box bg-pekerja">
 
                         <h4><a href="#">Admin</a></h4>
 
@@ -73,7 +83,7 @@
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/buruh.png')}}')" class="box bg-pekerja">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/buruh.png')}}');background-size: cover" class="box bg-pekerja">
 
                         <h4><a href="#">Buruh Pabrik</a></h4>
 
@@ -83,7 +93,7 @@
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/satpam.png')}}')" class="box bg-pekerja">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/satpam.png')}}');background-size: cover" class="box bg-pekerja">
 
                         <h4><a href="#">Satpam</a></h4>
 
@@ -93,7 +103,7 @@
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/montir.png')}}')" class="box bg-pekerja">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/montir.png')}}');background-size: cover" class="box bg-pekerja">
 
                         <h4><a href="#">Montir</a></h4>
 
@@ -103,7 +113,7 @@
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/kurir.png')}}')" class="box bg-pekerja">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/kurir.png')}}');background-size: cover" class="box bg-pekerja">
 
                         <h4><a href="#">Kurir</a></h4>
 
@@ -113,7 +123,7 @@
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/koki.png')}}')" class="box bg-pekerja">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/koki.png')}}');background-size: cover" class="box bg-pekerja">
 
                         <h4><a href="#">Juru Masak</a></h4>
 
@@ -123,7 +133,7 @@
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/kuli.png')}}')" class="box bg-pekerja">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/kuli.png')}}');background-size: cover" class="box bg-pekerja">
 
                         <h4><a href="#">Kuli Bangunan</a></h4>
 
@@ -133,9 +143,39 @@
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/ob.png')}}')" class="box bg-pekerja">
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/ob.png')}}');background-size: cover" class="box bg-pekerja">
 
                         <h4><a href="#">Office Boy / Girl</a></h4>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/tukang-kayu.png')}}');background-size: cover" class="box bg-pekerja">
+
+                        <h4><a href="#">Tukang Kayu</a></h4>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/penjahit.png')}}');background-size: cover" class="box bg-pekerja">
+
+                        <h4><a href="#">Penjahit</a></h4>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+
+                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/pemayet.png')}}');background-size: cover" class="box bg-pekerja">
+
+                        <h4><a href="#">Pemayet</a></h4>
 
                     </div>
 
@@ -211,7 +251,7 @@
 
                 <h4>BASIC</h4>
 
-                <strong class="amount"><span>Rp.</span>100.000</strong>
+                <strong class="amount"><span>Rp </span>100,000</strong>
 
                 <ul>
 
@@ -230,7 +270,7 @@
 
                 <h4>BRONZE</h4>
 
-                <strong class="amount"><span>Rp.</span>200.000</strong>
+                <strong class="amount"><span>Rp </span>200,000</strong>
 
                 <ul>
 
@@ -247,7 +287,7 @@
 
                 <h4>SILVER</h4>
 
-                <strong class="amount"><span>Rp.</span>500.000</strong>
+                <strong class="amount"><span>Rp </span>500,000</strong>
 
                 <ul>
 
@@ -264,7 +304,7 @@
 
                 <h4>PLATINUM</h4>
 
-                <strong class="amount"><span>Rp.</span>800.000</strong>
+                <strong class="amount"><span>Rp </span>800,000</strong>
 
                 <ul>
 

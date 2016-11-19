@@ -8,6 +8,6 @@
 
 return [
 
-  'educationDegree' => ['SD', 'SMP', 'SMA', 'S1']
+  'educationDegree' => ['SD', 'SMP', 'SMA / SMK', 'S1']
 
 ];

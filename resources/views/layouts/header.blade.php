@@ -12,23 +12,21 @@
 
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
 
-                    <strong class="logo"><a href="{{url('/')}}"><img style="width: 200px" src="{{ asset("images") }}/logocpbeta.png" alt="logo"></a></strong> </div>
+                    <strong class="logo"><a href="{{url('/')}}"><img style="width: 150px" src="{{ asset("images") }}/logocpbeta.png" alt="logo"></a></strong> </div>
 
-                <div id="navbar" style="margin-top: 40px" class="collapse navbar-collapse">
+                <div id="navbar" class="collapse navbar-collapse">
 
                     <ul class="nav navbar-nav" id="nav">
 
-                        <li><a href="{{route('job-list')}}">Lowongan Kerja</a></li>
+                        @if($authRole != 'employer') <li><a href="{{route('job-list')}}">Lowongan Kerja</a></li> @endif
 
-                        <li><a href="{{route('worker-list')}}">Butuh Pekerja</a></li>
+                        @if($authRole != 'worker') <li><a href="{{route('worker-list')}}">Cari Pekerja</a></li> @endif
 
-                        <li><a href="{{route('job-create')}}">Buat Lowongan</a></li>
+                        @if($authRole != 'worker') <li><a href="{{route('job-create')}}">Buat Lowongan</a></li> @endif
 
                         <li><a href="#testimonial">Testimonial</a></li>
 
                         <li><a href="#how-it-works">Cara Kerja</a></li>
-
-                        <li><a href="#">Kontak</a></li>
 
                     </ul>
 
@@ -45,14 +43,14 @@
 
 
     <!--USER OPTION COLUMN START-->
-    <div class="user-option-col">
+    <div class="user-option-col" style="margin-top: 20px">
 
         @if($isLogged)
 
                 <div class="dropdown-box">
 
                     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        <span class="hi-user">Selamat Datang, {{$authUser['name']}}</span>
+                        <span class="hi-user">Hi, {{$authUser['name']}} @if($authRole == 'employer') <a href="#" class="topup-link">| Topup</a> @endif </span>
                     </button>
 
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -68,7 +66,7 @@
 
         @else
             <div class="dropdown-box">
-                <span><a href="{{route('login')}}">Masuk</a></span> | <span><a href="{{route('register')}}">Daftar</a></span>
+                <span><a href="{{route('login')}}">Masuk</a></span> | <span><a href="{{route('register')}}">Daftar</a> <a style="margin-left: 20px" href="#" class="topup-link">TOP UP</a></span>
             </div>
         @endif
 

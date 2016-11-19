@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Province;;
 use App\Helpers\GlobalHelper;
 use Illuminate\Support\Facades\Auth;
+use App\WorkerCategory;
 
 class JobController extends Controller
 {
@@ -26,7 +27,7 @@ class JobController extends Controller
      */
     public function index()
     {
-        $data['list'] = Job::all();
+        $data['list'] = Job::getAll();
         return view('employer.job-index', $data);
     }
 
@@ -37,8 +38,10 @@ class JobController extends Controller
      */
     public function create()
     {
+        $data['category'] = WorkerCategory::all();
         $data['employer'] = $this->_employer;
         $data['degree'] = config('static.educationDegree');
+        $data['max_exp']    = 10;
         $data['province'] = Province::all();
         return view('employer.job-create', $data);
     }
@@ -59,6 +62,11 @@ class JobController extends Controller
             'city' => 'required',
             'gender' => 'required',
             'type' => 'required',
+            'age_min'   => 'numeric|required',
+            'age_max'   => 'numeric|required',
+            'start_date'   => 'required',
+            'end_date'   => 'required',
+            'category'   => 'required'
         ]);
 
         Job::create([
@@ -71,6 +79,11 @@ class JobController extends Controller
                 'gender'            => $request->input('gender'),
                 'type'              => $request->input('type'),
                 'description'       => $request->input('description'),
+                'age_min'           => $request->input('age_min'),
+                'age_max'           => $request->input('age_max'),
+                'start_date'        => date('Y-m-d', strtotime($request->input('start_date'))),
+                'end_date'          => date('Y-m-d', strtotime($request->input('end_date'))),
+                'category'          => $request->input('category'),
                 'status'            => 1 // SET AUTOMATICALLY ACTIVE FOR NOW
             ]
         );

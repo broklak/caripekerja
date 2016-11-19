@@ -1360,7 +1360,7 @@ strong.logo-2 {
 	font: 700 18px/18px 'Roboto', sans-serif;
 	color: #222;
 	float: left;
-	padding: 24px 0 0 50px;
+	padding: 24px 0 0 0;
 }
 .job-detail #content-area .box strong.price {
 	padding: 10px 0 0 0;
@@ -4792,6 +4792,10 @@ TRANSITION-FOR-IMAGES {
 	color: #fff;
 }
 
+.bg-pekerja {
+	background-repeat: no-repeat;
+}
+
 .multiple-select {
 	width: 100%;
 	border: #ccc solid 1px;
@@ -4801,6 +4805,23 @@ TRANSITION-FOR-IMAGES {
 	font-size: 18px;
 }
 
+.topup-link a:hover {
+	text-decoration: none;
+}
 
+.topup-link {
+	color: #fff;
+	background-color: #00796A;
+	padding: 10px;
+}
+
+.thumb-jobs {
+	float: right;
+}
+
+.thumb-jobs img {
+	height: 80px;
+	width: 80px;
+}
 
 /****************************************************ADDITIONAL CUSTOM CSS END****************************************************/
