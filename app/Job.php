@@ -20,7 +20,7 @@ class Job extends Model
         $table = 'jobs';
         $list = DB::table($table)
                 ->select('jobs.id', 'employers.name as employerName', 'employers.photo_profile as employerPhoto', 'title', 'jobs.description', 'province.name as provinceName', 'start_date', 'end_date', 'age_min', 'age_max', 'salary_min', 'salary_max', 'jobs.created_at')
-                ->where('status', 1)
+                ->where('jobs.status', 1)
                 ->join('employers', 'employers.id', '=', 'jobs.employer_id')
                 ->join('province', 'province.id', '=', 'jobs.city')->get();
 
