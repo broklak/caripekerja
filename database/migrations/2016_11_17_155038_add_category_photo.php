@@ -28,7 +28,7 @@ class AddCategoryPhoto extends Migration
     public function down()
     {
         Schema::table('workers', function (Blueprint $table) {
-            //
+            $table->dropColumn(['photo_ktp', 'photo_profile']);
         });
     }
 }

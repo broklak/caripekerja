@@ -29,6 +29,8 @@ class AddCategoryJob extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('jobs', function (Blueprint $table) {
+            $table->dropColumn(['age_min', 'age_max', 'start_date', 'end_date', 'category']);
+        });
     }
 }

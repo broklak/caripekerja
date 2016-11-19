@@ -16,15 +16,15 @@
 
                     <div class="box">
 
-                        <div class="frame"><a href="#"><img src="{{asset('images')}}/user/no-image.png" alt="img"></a></div>
+                        <div class="frame"><a href="#"><img src="{{\App\Helpers\GlobalHelper::setUserImage($detail['photo_profile'])}}" alt="img"></a></div>
 
                         <div class="text-box">
 
                             <h2>{{$detail['name']}}</h2>
 
-                            <h5>27 Tahun, Sudah Menikah</h5>
+                            <h5>{{\App\Helpers\GlobalHelper::getAgeByBirthdate($detail['birthdate'])}} Tahun, {{\App\Helpers\GlobalHelper::maritalStatus($detail['marital'])}}</h5>
 
-                            <div class="clearfix"> <strong><i class="fa fa-map-marker"></i>Jakarta</strong></div>
+                            <div class="clearfix"> <strong><i class="fa fa-map-marker"></i>{{\App\Helpers\GlobalHelper::getCityName($detail['city'])}}</strong></div>
 
                             <div class="tags">Satpam, Supir</div>
 
@@ -38,7 +38,7 @@
 
                         <h4>Tentang Saya</h4>
 
-                        <p>Jujur dan berdedikasi tinggi. Selalu profesional dalam bekerja</p>
+                        <p>{{empty($detail['description']) ? 'Belum ada deskripsi' : $detail['description']}}</p>
 
 
                     </div>

@@ -27,7 +27,7 @@ class AddPhoto extends Migration
     public function down()
     {
         Schema::table('employers', function (Blueprint $table) {
-            //
+            $table->dropColumn(['photo_ktp', 'photo_profile']);
         });
     }
 }
