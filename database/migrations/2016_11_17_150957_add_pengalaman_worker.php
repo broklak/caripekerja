@@ -26,7 +26,7 @@ class AddPengalamanWorker extends Migration
     public function down()
     {
         Schema::table('workers', function (Blueprint $table) {
-            //
+            $table->dropColumn('years_experience');
         });
     }
 }

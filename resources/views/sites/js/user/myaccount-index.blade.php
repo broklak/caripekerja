@@ -4,6 +4,10 @@
 
 <script src="{{ asset("js") }}/jquery-ui.min.js"></script>
 
+<!--Accordion JS-->
+
+<script src="{{ asset("js") }}/jquery.accordion.js"></script>
+
 <script>
     $( "#datepicker" ).datepicker({
         changeMonth: true,

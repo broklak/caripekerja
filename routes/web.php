@@ -40,6 +40,7 @@ Route::get('employer/password/reset/{token}', 'EmployerAuth\ResetPasswordControl
 Route::get('buat-lowongan', 'JobController@create')->name('job-create');
 Route::post('job/store/', 'JobController@store');
 Route::get('lowongan-kerja', 'JobController@index')->name('job-list');
+Route::get('lamar-kerja/{jobId}', 'UserController@applyJob')->name('job-apply');
 
 // WORKER
 Route::get('daftar-pekerja', 'HomeController@workerList')->name('worker-list');
@@ -48,5 +49,8 @@ Route::get('profil-pekerja/{workerId}', 'HomeController@workerDetail')->name('wo
 
 // MYACCOUNT
 Route::get('akun-saya', 'UserController@myAccount')->name('myaccount-index');
+Route::get('profil-saya', 'UserController@myProfile')->name('myaccount-profile');
 Route::post('update-profile', 'UserController@update');
+Route::post('add-exp', 'UserController@addExperience');
+Route::post('add-skill', 'UserController@addSkill');
 

@@ -4824,4 +4824,25 @@ TRANSITION-FOR-IMAGES {
 	width: 80px;
 }
 
+.button-link, .button-link:hover {
+	text-decoration: none;
+	padding: 15px 25px;
+	font-weight: 900;
+}
+
+.link-green, .link-green:hover {
+	background-color: #00796b;
+	color: #fff;
+}
+
+.link-blue, .link-blue:hover {
+	background-color:#1b8af3;
+	color: #fff;
+}
+
+.to-profile {
+	float: right;
+	margin-top: 15px;
+}
+
 /****************************************************ADDITIONAL CUSTOM CSS END****************************************************/

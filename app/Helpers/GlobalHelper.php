@@ -6,6 +6,7 @@ use App\WorkerCategory;
 use Illuminate\Http\Request;
 use App\Libraries\LayoutManager;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Auth;
 
 class GlobalHelper
 {
@@ -98,6 +99,48 @@ class GlobalHelper
         }
 
         return $days . ' hari yang lalu';
+    }
+
+    public static function skillLevel ($skill) {
+        if($skill == 25) {
+            return 'Pemula';
+        } else if($skill == 50) {
+            return 'Terbiasa';
+        } else if($skill == 75) {
+            return 'Terampil';
+        } else {
+            return 'Sangat Ahli';
+        }
+    }
+
+    public static function getAuthtype () {
+        $worker = Auth::user();
+        $employer = Auth::guard('employer')->user();
+
+        if($worker || $employer) {
+            return array(
+                'isLogged'  => true,
+                'authData'  => ($worker) ? $worker : $employer,
+                'role'      => ($worker) ? 'worker' : 'employer',
+            );
+        }
+
+        return array(
+            'isLogged'  => false,
+            'authData'  => null,
+            'role'      => null
+        );
+    }
+
+    public static function getWorkerCategory ($category) {
+        $category = explode(',', $category);
+
+        $arrCategory = array();
+        foreach ($category as $row) {
+            $arrCategory[] = WorkerCategory::find($row)->name;
+        }
+
+        return implode(', ', $arrCategory);
     }
 }
 

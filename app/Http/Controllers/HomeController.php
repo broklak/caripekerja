@@ -8,6 +8,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Employer;
 use App\Helpers\GlobalHelper;
 use App\Http\Controllers\Controller;
 use App\Libraries\LayoutManager;
@@ -56,7 +57,13 @@ class HomeController extends Controller {
      */
 
     public function workerDetail ($workerId) {
+        $auth = GlobalHelper::getAuthtype();
+        $authData = $auth['authData'];
+        $data['isOwner'] = ($auth['role'] == 'worker' && $workerId == $authData['id']) ? true : false;
         $data['detail'] = User::find($workerId);
+        $data['experience'] = json_decode($authData['experiences'], true);
+        $data['skill'] = json_decode($authData['skills'], true);
         return view('home.worker-detail', $data);
     }
+
 }

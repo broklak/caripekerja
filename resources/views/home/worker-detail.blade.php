@@ -12,11 +12,17 @@
 
             <div class="col-md-9 col-sm-8">
 
+                {!! session('displayMessage') !!}
+
                 <div class="resumes-content worker-detail">
 
                     <div class="box">
 
-                        <div class="frame"><a href="#"><img src="{{\App\Helpers\GlobalHelper::setUserImage($detail['photo_profile'])}}" alt="img"></a></div>
+                        <div class="to-profile">
+                            @if($isOwner) <a class="button-link link-blue" href="{{route('myaccount-index')}}">Ganti Profil</a> @endif
+                        </div>
+
+                        <div class="frame"><a href="#"><img style="width: 200px" src="{{\App\Helpers\GlobalHelper::setUserImage($detail['photo_profile'])}}" alt="img"></a></div>
 
                         <div class="text-box">
 
@@ -26,20 +32,11 @@
 
                             <div class="clearfix"> <strong><i class="fa fa-map-marker"></i>{{\App\Helpers\GlobalHelper::getCityName($detail['city'])}}</strong></div>
 
-                            <div class="tags">Satpam, Supir</div>
+                            <div class="tags">{{\App\Helpers\GlobalHelper::getWorkerCategory($detail['category'])}}</div>
 
-                            <div class="btn-row"> <a href="" class="contact">Hubungi Pekerja</a> </div>
+                            @if(!$isOwner) <div class="btn-row"> <a href="" class="contact">Hubungi Pekerja</a> </div> @endif
 
                         </div>
-
-                    </div>
-
-                    <div class="summary-box">
-
-                        <h4>Tentang Saya</h4>
-
-                        <p>{{empty($detail['description']) ? 'Belum ada deskripsi' : $detail['description']}}</p>
-
 
                     </div>
 
@@ -47,25 +44,18 @@
 
                         <h4>Pengalaman Kerja</h4>
 
-                        <div class="outer"> <strong class="title">Supir Blue Bird</strong>
+                        @foreach($experience as $rowExp)
 
-                            <div class="col"> <span>2010 - 2014</span>
+                            <div class="outer"> <strong class="title">{{$rowExp['role']}} di {{$rowExp['place']}}</strong>
 
-                                <p>Selalu mendapat rating yang baik dari penumpang</p>
+                                <div class="col"> <span>{{$rowExp['years']}} tahun</span>
 
-                            </div>
+                                    <p>{{$rowExp['desc']}}</p>
 
-                        </div>
-
-                        <div class="outer"> <strong class="title">Supir Grab</strong>
-
-                            <div class="col"> <span>2015 - 2016</span>
-
-                                <p>Tidak pernah bermasalah dengan penumpang</p>
+                                </div>
 
                             </div>
-
-                        </div>
+                        @endforeach
 
                     </div>
 
@@ -73,35 +63,19 @@
 
                         <h4>Keahlian</h4>
 
-                        <div class="progress-box"> <strong class="title">Menyetir</strong>
+                        @foreach($skill as $rowSkill)
 
-                            <div class="progress">
+                            <div class="progress-box"> <strong class="title">{{$rowSkill['name']}}</strong>
 
-                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 100%;"> <span> 100%</span> </div>
+                                <div class="progress">
 
-                            </div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: {{$rowSkill['level']}}%;"> <span> {{$rowSkill['level']}}</span> </div>
 
-                        </div>
-
-                        <div class="progress-box"> <strong class="title">Bela Diri</strong>
-
-                            <div class="progress">
-
-                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 80%;"> <span> 80%</span> </div>
+                                </div>
 
                             </div>
 
-                        </div>
-
-                        <div class="progress-box"> <strong class="title">Memasak</strong>
-
-                            <div class="progress">
-
-                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 70%;"> <span> 70%</span> </div>
-
-                            </div>
-
-                        </div>
+                        @endforeach
 
                 </div>
 

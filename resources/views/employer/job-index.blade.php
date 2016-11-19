@@ -82,7 +82,8 @@
                                             </div>
 
                                             <strong class="price"><i class="fa fa-money"></i>{{\App\Helpers\GlobalHelper::moneyFormat($row['salary_min'])}} - {{\App\Helpers\GlobalHelper::moneyFormat($row['salary_max'])}}</strong>
-                                            <a href="#" onclick="alert('Kami sedang memgembangkan fitur ini')" class="btn-1 btn-color-1 ripple">Lamar Pekerjaan</a> </div>
+                                            @if($authRole != 'employer') <a href="{{route('job-apply', ['jobId' => $row['id']])}}" onclick="return confirm('Anda akan melamar pekerjaan {{$row['title']}} di {{$row['employerName']}}. Lanjutkan Proses ?')" class="btn-1 btn-color-1 ripple">Lamar Pekerjaan</a> @endif
+                                        </div>
 
                                     </li>
 

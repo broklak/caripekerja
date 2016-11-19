@@ -49,10 +49,10 @@
                         </div>
                         <div class="cakewalk-footer-content social-footer">
                             <ul>
-                                <li><span><a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i> Facebook</a> </span></li>
-                                <li><a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a><span> Google Plus</span></li>
-                                <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a><span> Twitter</span></li>
-                                <li><a href="https://youtube.com/" target="_blank"><i class="fa fa-youtube-play"></i></a><span> Youtube</span></li>
+                                <li><a href="https://www.facebook.com/caripekerjacom/?fref=ts" target="_blank"><i class="fa fa-facebook"></i></a><span> Facebook</span></li>
+                                <li><a href="https://www.instagram.com/caripekerjacom" target="_blank"><i class="fa fa-instagram"></i></a><span> Instagram</span></li>
+                                <li><a href="https://twitter.com/caripekerjacom" target="_blank"><i class="fa fa-twitter"></i></a><span> Twitter</span></li>
+                                <li><a href="https://www.youtube.com/channel/UCk5Uk7urCtZ340mKm0IbZ6A" target="_blank"><i class="fa fa-youtube-play"></i></a><span> Youtube</span></li>
                             </ul>
                         </div>
                     </div>
