@@ -119,7 +119,7 @@ class UserController extends Controller
 
             if($request->photo) {
                 $imageName = $this->_role . '-' . $this->_authData['id'] .'.'.strtolower($request->photo->getClientOriginalExtension());
-                Storage::delete(public_path('images/profil/'.$this->_role.'/'.$imageName));
+                Storage::delete(public_path('images/profil/'.$this->_role.'/'.$worker['photo_profile']));
                 $request->photo->move(public_path('images/profil/'.$this->_role.'/'), $imageName);
                 $worker->photo_profile = $imageName;
             }
@@ -151,7 +151,7 @@ class UserController extends Controller
 
             if($request->photo) {
                 $imageName = $this->_role . '-' . $this->_authData['id'] .'.'.strtolower($request->photo->getClientOriginalExtension());
-                Storage::delete(public_path('images/profil/'.$this->_role.'/'.$imageName));
+                Storage::delete(public_path('images/profil/'.$this->_role.'/'.$employer['photo_profile']));
                 $request->photo->move(public_path('images/profil/'.$this->_role.'/'), $imageName);
                 $employer->photo_profile = $imageName;
             }
