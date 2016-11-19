@@ -189,7 +189,7 @@
 
                     <div class="frame"><img style="width: 200px;height: 200px" src="{{$image}}" alt="img"></div>
 
-                    <input type="file" name="photo" accept="image/*" capture="camera">
+                    <input type="file" name="photo" accept="image/*">
 
                 </div>
 
