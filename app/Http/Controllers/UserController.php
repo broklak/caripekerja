@@ -245,16 +245,16 @@ class UserController extends Controller
         $employer = Employer::find($employerId);
         $email = $employer['email'];
 
-//        JobApply::create([
-//           'worker_id'  => $workerId,
-//           'job_id'     => $jobId,
-//            'status'    => 0
-//        ]);
+        JobApply::create([
+           'worker_id'  => $workerId,
+           'job_id'     => $jobId,
+            'status'    => 0
+        ]);
 
 
         Mail::to($email)->send(new JobApplied($job, $employer, $this->_authData));
 
-        $message = GlobalHelper::setDisplayMessage('success', 'Sukses mengirim lamaran untuk pekerjaan'.$job['title']);
+        $message = GlobalHelper::setDisplayMessage('success', 'Sukses mengirim lamaran untuk pekerjaan '.$job['title']);
         return redirect(route('myaccount-profile'))->with('displayMessage', $message);
 
     }
