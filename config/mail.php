@@ -57,7 +57,7 @@ return [
 
     'from' => [
         'address' => 'info@caripekerja.com',
-        'name' => 'Cari Peker   ja',
+        'name' => 'Cari Pekerja',
     ],
 
     /*

@@ -254,7 +254,7 @@ class UserController extends Controller
 
         Mail::to($email)->send(new JobApplied($job, $employer, $this->_authData));
 
-        $message = GlobalHelper::setDisplayMessage('success', 'Sukses mengirim lamaran untuk pekerjaan '.$job['title']);
+        $message = GlobalHelper::setDisplayMessage('success', 'Sukses mengirim lamaran untuk pekerjaan '.$job['title']. 'di '.$employer['name']);
         return redirect(route('myaccount-profile'))->with('displayMessage', $message);
 
     }
