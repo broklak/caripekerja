@@ -137,7 +137,7 @@ class GlobalHelper
 
         $arrCategory = array();
         foreach ($category as $row) {
-            $arrCategory[] = WorkerCategory::find($row)->name;
+            $arrCategory[] = (isset(WorkerCategory::find($row)->name)) ? WorkerCategory::find($row)->name : null ;
         }
 
         return implode(', ', $arrCategory);

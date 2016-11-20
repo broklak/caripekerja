@@ -57,12 +57,12 @@ class HomeController extends Controller {
      */
 
     public function workerDetail ($workerId) {
-        $auth = GlobalHelper::getAuthtype();
-        $authData = $auth['authData'];
-        $data['isOwner'] = ($auth['role'] == 'worker' && $workerId == $authData['id']) ? true : false;
-        $data['detail'] = User::find($workerId);
-        $data['experience'] = json_decode($authData['experiences'], true);
-        $data['skill'] = json_decode($authData['skills'], true);
+        $authData = User::find($workerId);
+        $authDataGlobal = GlobalHelper::getAuthtype();
+        $data['isOwner'] = ($authDataGlobal['role'] == 'worker' && $authDataGlobal['authData']['id'] == $workerId) ? true : false;
+        $data['detail'] = $authData;
+        $data['experience'] = ($authData['experiences'] != null || $authData['experiences'] != '') ? json_decode($authData['experiences'], true) : array();
+        $data['skill'] = ($authData['skills'] != null || $authData['skills'] != '') ? json_decode($authData['skills'], true) : array();
         return view('home.worker-detail', $data);
     }
 
