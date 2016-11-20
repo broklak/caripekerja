@@ -28,7 +28,7 @@
 
                             <h2>{{$detail['name']}}</h2>
 
-                            @if($ownedByEmployer)
+                            @if((isset($ownedByEmployer) && $ownedByEmployer))
                                 <h5><b>Nomor Handphone : {{$detail['phone']}}</b></h5>
 
                                 <h5><b>Email : {{(empty($detail['email'])) ? 'Belum memiliki email' :$detail['email']}}</b></h5>
@@ -40,7 +40,7 @@
 
                             <div class="tags">{{\App\Helpers\GlobalHelper::getWorkerCategory($detail['category'])}}</div>
 
-                            @if($showCallButton) <div class="btn-row"> <a href="{{$callLink}}" onclick="{{$callConfirm}}" class="contact">Hubungi Pekerja</a> </div> @endif
+                            @if((isset($showCallButton) && $showCallButton)) <div class="btn-row"> <a href="{{$callLink}}" onclick="{{$callConfirm}}" class="contact">Hubungi Pekerja</a> </div> @endif
 
                         </div>
 
