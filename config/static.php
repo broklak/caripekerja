@@ -8,6 +8,8 @@
 
 return [
 
-  'educationDegree' => ['SD', 'SMP', 'SMA / SMK', 'S1']
+  'educationDegree' => ['SD', 'SMP', 'SMA / SMK', 'S1'],
+
+  'adminEmail'  => 'satrya.rangga91@gmail.com'
 
 ];

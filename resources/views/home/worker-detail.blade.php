@@ -28,13 +28,19 @@
 
                             <h2>{{$detail['name']}}</h2>
 
+                            @if($ownedByEmployer)
+                                <h5><b>Nomor Handphone : {{$detail['phone']}}</b></h5>
+
+                                <h5><b>Email : {{(empty($detail['email'])) ? 'Belum memiliki email' :$detail['email']}}</b></h5>
+                            @endif
+
                             <h5>{{\App\Helpers\GlobalHelper::getAgeByBirthdate($detail['birthdate'])}} Tahun, {{\App\Helpers\GlobalHelper::maritalStatus($detail['marital'])}}</h5>
 
                             <div class="clearfix"> <strong><i class="fa fa-map-marker"></i>{{\App\Helpers\GlobalHelper::getCityName($detail['city'])}}</strong></div>
 
                             <div class="tags">{{\App\Helpers\GlobalHelper::getWorkerCategory($detail['category'])}}</div>
 
-                            @if(!$isOwner) <div class="btn-row"> <a href="" class="contact">Hubungi Pekerja</a> </div> @endif
+                            @if($showCallButton) <div class="btn-row"> <a href="{{$callLink}}" onclick="{{$callConfirm}}" class="contact">Hubungi Pekerja</a> </div> @endif
 
                         </div>
 
@@ -44,18 +50,23 @@
 
                         <h4>Pengalaman Kerja</h4>
 
-                        @foreach($experience as $rowExp)
+                        @if(empty($experience))
+                            <p>Belum ada pengalaman kerja</p>
 
-                            <div class="outer"> <strong class="title">{{$rowExp['role']}} di {{$rowExp['place']}}</strong>
+                        @else
+                            @foreach($experience as $rowExp)
 
-                                <div class="col"> <span>{{$rowExp['years']}} tahun</span>
+                                <div class="outer"> <strong class="title">{{$rowExp['role']}} di {{$rowExp['place']}}</strong>
 
-                                    <p>{{$rowExp['desc']}}</p>
+                                    <div class="col"> <span>{{$rowExp['years']}} tahun</span>
+
+                                        <p>{{$rowExp['desc']}}</p>
+
+                                    </div>
 
                                 </div>
-
-                            </div>
-                        @endforeach
+                            @endforeach
+                        @endif
 
                     </div>
 
@@ -63,19 +74,26 @@
 
                         <h4>Keahlian</h4>
 
-                        @foreach($skill as $rowSkill)
+                        @if(empty($skill))
+                            <p>Belum ada keahlian</p>
 
-                            <div class="progress-box"> <strong class="title">{{$rowSkill['name']}}</strong>
+                        @else
 
-                                <div class="progress">
+                            @foreach($skill as $rowSkill)
 
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: {{$rowSkill['level']}}%;"> <span> {{$rowSkill['level']}}</span> </div>
+                                <div class="progress-box"> <strong class="title">{{$rowSkill['name']}}</strong>
+
+                                    <div class="progress">
+
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: {{$rowSkill['level']}}%;"> <span> {{$rowSkill['level']}}</span> </div>
+
+                                    </div>
 
                                 </div>
 
-                            </div>
+                            @endforeach
 
-                        @endforeach
+                        @endif
 
                 </div>
 

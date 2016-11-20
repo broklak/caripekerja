@@ -5,35 +5,6 @@
 <script src="{{ asset("js") }}/jquery-ui.min.js"></script>
 
 <script>
-//    var dateFormat = "mm/dd/yy",
-//            from = $( "#from" )
-//                    .datepicker({
-//                        defaultDate: "+1w",
-//                        changeMonth: true,
-//                        numberOfMonths: 1,
-//                    })
-//                    .on( "change", function() {
-//                        to.datepicker( "option", "minDate", "-10" );
-//                    }),
-//            to = $( "#to" ).datepicker({
-//                        defaultDate: "+30d",
-//                        changeMonth: true,
-//                        numberOfMonths: 1,
-//                    })
-//                    .on( "change", function() {
-//                        from.datepicker( "option", "maxDate", getDate( this ) );
-//                    });
-//
-//    function getDate( element ) {
-//        var date;
-//        try {
-//            date = $.datepicker.parseDate( dateFormat, element.value );
-//        } catch( error ) {
-//            date = null;
-//        }
-//
-//        return date;
-//    }
 
 $("#from").datepicker({
     defaultDate: new Date(),

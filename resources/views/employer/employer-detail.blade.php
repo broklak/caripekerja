@@ -12,6 +12,8 @@
 
             <div class="col-md-12 col-sm-8">
 
+                {!! session('displayMessage') !!}
+
                 <div class="resumes-content worker-detail">
 
                     <div class="box">

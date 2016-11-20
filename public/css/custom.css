@@ -4826,8 +4826,9 @@ TRANSITION-FOR-IMAGES {
 
 .button-link, .button-link:hover {
 	text-decoration: none;
-	padding: 15px 25px;
+	padding: 10px 25px;
 	font-weight: 900;
+	margin-left: 15px;
 }
 
 .link-green, .link-green:hover {

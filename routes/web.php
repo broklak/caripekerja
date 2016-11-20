@@ -54,3 +54,12 @@ Route::post('update-profile', 'UserController@update');
 Route::post('add-exp', 'UserController@addExperience');
 Route::post('add-skill', 'UserController@addSkill');
 
+//PAYMENT
+Route::get('topup', 'PaymentController@index')->name('topup-create');
+Route::get('konfirmasi-bayar', 'PaymentController@confirmTopup')->name('topup-confirm');
+Route::get('approve-topup', 'PaymentController@approvePayment')->name('topup-approve');
+Route::get('kontak-pekerja/{workerId}', 'PaymentController@contactWorker')->name('contact-worker');
+Route::post('topup-process', 'PaymentController@processTopup');
+Route::post('confirm-topup', 'PaymentController@processConfirmTopup');
+Route::post('approve-process', 'PaymentController@processApproveTopup');
+
