@@ -83,7 +83,7 @@ class PaymentController extends Controller
         Mail::to($this->_employer['email'])->send(new TopupRequested($package, $payment, $create, $this->_employer));
 
         $message = GlobalHelper::setDisplayMessage('success', "Silahkan melakukan <b>$bank</b> ke rekening <b>$accountNumber</b> atas nama <b>$accountName</b> sebesar <b>".GlobalHelper::moneyFormat($amount)."</b>. Silahkan cek inbox atau folder spam email anda untuk melihat detil transaksi. Terima Kasih");
-        return redirect(route('myaccount-profile'))->with('displayMessage', $message);
+        return redirect(route('topup-finished', ['topupId' => $create->id]))->with('displayMessage', $message);
 
     }
 
@@ -206,6 +206,31 @@ class PaymentController extends Controller
 
         $message = GlobalHelper::setDisplayMessage('success', "Selamat. Anda telah berhasil membuka data pekerja ini. Kuota telah berkurang 1.");
         return redirect(route('worker-detail', ['workerId' => $workerId]))->with('displayMessage', $message);
+    }
+
+    /**
+     * Show the sucess page after topup
+     *
+     * @param  int  $id
+     * @return Response
+     */
+
+    public function topupFinished ($topupId) {
+        $transaction = TopupTransaction::find($topupId);
+
+        if(!isset($transaction['id'])) {
+            $data['error'] = 'Data transaksi tidak ditemukan';
+            return view('payment.topup-finished', $data);
+        }
+
+        $data['topup'] = $transaction;
+        $data['employer'] = Employer::find($transaction['employer_id']);
+        $data['package'] = TopupPackage::find($transaction['package_id']);
+        $data['payment'] = PaymentMethod::find($transaction['payment_method_id']);
+
+//        var_dump($data['employer']); die;
+
+        return view('payment.topup-finished', $data);
     }
 
 }

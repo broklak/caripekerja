@@ -59,6 +59,7 @@ Route::get('topup', 'PaymentController@index')->name('topup-create');
 Route::get('konfirmasi-bayar', 'PaymentController@confirmTopup')->name('topup-confirm');
 Route::get('approve-topup', 'PaymentController@approvePayment')->name('topup-approve');
 Route::get('kontak-pekerja/{workerId}', 'PaymentController@contactWorker')->name('contact-worker');
+Route::get('topup-selesai/{topupId}', 'PaymentController@topupFinished')->name('topup-finished');
 Route::post('topup-process', 'PaymentController@processTopup');
 Route::post('confirm-topup', 'PaymentController@processConfirmTopup');
 Route::post('approve-process', 'PaymentController@processApproveTopup');

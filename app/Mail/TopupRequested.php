@@ -19,6 +19,7 @@ class TopupRequested extends Mailable
     public $package;
     public $topup;
     public $employer;
+
     /**
      * Create a new message instance.
      *

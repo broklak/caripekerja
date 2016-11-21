@@ -121,7 +121,7 @@
 
                         <div class="box">
 
-                            <div class="frame"><a href="{{route('worker-detail', ['workerId' => $row['id']])}}"><img style="width: 165px;height: 150px" src="{{\App\Helpers\GlobalHelper::setUserImage($row['photo_profile'])}}" alt="img"></a></div>
+                            <div class="frame"><a href="{{route('worker-detail', ['workerId' => $row['id']])}}"><img class="list-worker-image" src="{{\App\Helpers\GlobalHelper::setUserImage($row['photo_profile'])}}" alt="img"></a></div>
 
                                 <div class="text-box">
 
@@ -129,7 +129,7 @@
 
                                     <h5>{{\App\Helpers\GlobalHelper::getAgeByBirthdate($row['birthdate'])}} Tahun</h5>
 
-                                    <div class="clearfix"> <strong><i class="fa fa-map-marker"></i>{{\App\Helpers\GlobalHelper::getCityName($row['city'])}}</strong></div>
+                                    <div class="clearfix"> <strong class="city-name-list"><i class="fa fa-map-marker"></i>{{\App\Helpers\GlobalHelper::getCityName($row['city'])}}</strong></div>
 
                                     <div class="btn-row"> <a href="{{route('worker-detail', ['workerId' => $row['id']])}}" class="contact">Lihat Profil</a> </div>
 

@@ -1,5 +1,5 @@
 [
-  {"id":1, "name":"brasic", "price":"100000", "quota":"20"},
+  {"id":1, "name":"basic", "price":"100000", "quota":"20"},
   {"id":2, "name":"bronze", "price":"200000", "quota":"80"},
   {"id":3, "name":"silver", "price":"500000", "quota":"250"},
   {"id":4, "name":"platinum", "price":"800000", "quota":"600"}
