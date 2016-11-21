@@ -82,7 +82,7 @@ class User extends Authenticatable
         }
 
 
-        $list = DB::table($table)->where($where)->get();
+        $list = DB::table($table)->where($where)->orderBy('id', 'desc')->get();
 
         $worker = array();
         foreach($list as $user) {

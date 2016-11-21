@@ -3950,6 +3950,12 @@ input[type="radio"] {
 	color: #888;
 	padding: 0 20px 0 0;
 }
+
+.resumes-content .box .frame img {
+	width: 165px;
+	height: 150px;
+}
+
 .resumes-content .box .text-box strong .fa {
 	padding: 0 6px 0 0;
 }
@@ -4805,14 +4811,9 @@ TRANSITION-FOR-IMAGES {
 	font-size: 18px;
 }
 
-.topup-link a:hover {
-	text-decoration: none;
-}
-
 .topup-link {
-	color: #fff;
-	background-color: #00796A;
-	padding: 10px;
+	clear: both;
+	margin-top: 15px;
 }
 
 .thumb-jobs {

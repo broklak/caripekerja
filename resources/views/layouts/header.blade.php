@@ -52,7 +52,7 @@
                     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         <span class="hi-user">Hi, {{$authUser['name']}} @if($authRole == 'employer') | Anda memiliki {{$authUser['quota']}} Kuota @endif</span>
                     </button>
-                    @if($authRole == 'employer') <a href="{{route('topup-create')}}" class="button-link link-green">TOP UP</a> @endif
+                    @if($authRole == 'employer') <a href="{{route('topup-create')}}" class="button-link link-green topup-link">TOP UP</a> @endif
 
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 
@@ -67,7 +67,7 @@
 
         @else
             <div class="dropdown-box">
-                <span><a href="{{route('login')}}">Masuk</a></span> | <span><a href="{{route('register')}}">Daftar</a> <a href="{{route('topup-create')}}" class="button-link link-green">TOP UP</a></span>
+                <span><a href="{{route('login')}}">Masuk</a></span> | <span><a href="{{route('register')}}">Daftar</a> <a href="{{route('topup-create')}}" class="button-link link-green topup-link">TOP UP</a></span>
             </div>
         @endif
 

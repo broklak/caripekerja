@@ -38,7 +38,16 @@ class HomeController extends Controller {
     public function workerList (Request $request) {
         $param = $request->input();
 
-        $list = (empty($param)) ? User::all() : User::search($param);
+        $param['category'] = isset($param['category']) ? $param['category'] : null;
+        $param['gender'] = isset($param['gender']) ? $param['gender'] : null;
+        $param['city'] = isset($param['city']) ? $param['city'] : null;
+        $param['status'] = isset($param['status']) ? $param['status'] : null;
+        $param['exp'] = isset($param['exp']) ? $param['exp'] : null;
+        $param['degree'] = isset($param['degree']) ? $param['degree'] : null;
+        $param['min_age'] = isset($param['min_age']) ? $param['min_age'] : null;
+        $param['max_age'] = isset($param['max_age']) ? $param['max_age'] : null;
+
+        $list = User::search($param);
 
         $data['category'] = WorkerCategory::all();
         $data['province'] = Province::all();
