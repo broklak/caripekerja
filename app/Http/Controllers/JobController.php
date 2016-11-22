@@ -124,7 +124,7 @@ class JobController extends Controller
      */
     public function getEmployerJob () {
         $employerId = $this->_employer['id'];
-        $perPage = 10;
+        $perPage = 20;
         $param['employer_id'] = $employerId;
         $getJob = Job::getAll($param, $perPage);
 
