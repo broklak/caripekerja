@@ -152,6 +152,7 @@
                     <div>
 
                         <select multiple="multiple" name="category[]" class="multiple-select">
+                            <option disabled>Pilih Profesi</option>
                             @foreach($category as $key => $row)
                                 <option @if(in_array($row['id'], $selected_category)) selected="selected" @endif value="{{$row['id']}}">{{$row['name']}}</option>
                             @endforeach
