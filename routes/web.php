@@ -47,6 +47,10 @@ Route::get('daftar-pekerja', 'HomeController@workerList')->name('worker-list');
 Route::post('daftar-pekerja', 'HomeController@workerList')->name('worker-list');
 Route::get('profil-pekerja/{workerId}', 'HomeController@workerDetail')->name('worker-detail');
 
+//EMPLOYER
+Route::get('pekerja-saya', 'JobController@getShortlistedWorker')->name('owned-worker');
+Route::get('ganti-status-pekerja/{id}/{status}', 'JobController@processChangeStatusWorker')->name('change-worker-status');
+
 // MYACCOUNT
 Route::get('akun-saya', 'UserController@myAccount')->name('myaccount-index');
 Route::get('profil-saya', 'UserController@myProfile')->name('myaccount-profile');

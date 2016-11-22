@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Job;
+use App\WorkerTransaction;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Province;;
@@ -91,6 +92,32 @@ class JobController extends Controller
         $message = GlobalHelper::setDisplayMessage('success', 'Pekerjaan telah berhasil diposting');
         $request->session()->flash('displayMessage', $message);
         return redirect(route('job-list'));
+    }
+
+    /**
+     * Show owned worker
+     * @return \Illuminate\Http\Response
+     */
+    public function getShortlistedWorker () {
+        $employerId = $this->_employer['id'];
+        $data['worker'] = WorkerTransaction::getOwned($employerId);
+        return view('employer.owned-worker', $data);
+    }
+
+    /**
+     * change status of worker transction
+     *
+     * @param  int id, int  $status
+     * @return \Illuminate\Http\Response
+     */
+    public function processChangeStatusWorker ($id,$status) {
+        $worker = WorkerTransaction::find($id);
+        $worker->status = $status;
+
+        $worker->save();
+
+        $message = GlobalHelper::setDisplayMessage('success', 'Sukses menggganti status pekerja');
+        return redirect(route('owned-worker'))->with('displayMessage', $message);
     }
 
     /**

@@ -16,9 +16,9 @@
 
         <div class="option-box">
 
-            <a href="{{route('worker-list')}}"><div class="icon-box icon-colo-2"><i class="fa fa-search"></i></div></a>
+            <a href="{{route('owned-worker')}}"><div class="icon-box icon-colo-2"><i class="fa fa-search"></i></div></a>
 
-            <h4>Cari Pekerja</h4>
+            <h4>Lihat Pekerja Saya</h4>
 
         </div>
 

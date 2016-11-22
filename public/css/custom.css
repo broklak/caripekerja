@@ -4842,9 +4842,22 @@ TRANSITION-FOR-IMAGES {
 	color: #fff;
 }
 
+.link-red, .link-red:hover {
+	background-color:#f44336;
+	color: #fff;
+}
+
 .to-profile {
 	float: right;
 	margin-top: 15px;
+}
+
+.table tbody tr {
+	height: 50px;
+}
+
+.table tbody tr td a {
+	vertical-align: bottom;
 }
 
 /****************************************************ADDITIONAL CUSTOM CSS END****************************************************/
