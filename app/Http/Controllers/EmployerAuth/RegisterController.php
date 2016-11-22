@@ -70,7 +70,8 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
-            'referral_code' => $data['referral_code']
+            'referral_code' => $data['referral_code'],
+            'quota'     => 0
         ]);
 
         if($createEmployer) {
@@ -104,7 +105,7 @@ class RegisterController extends Controller
      */
     public function showRegistrationForm()
     {
-        return view('employer.auth.register');
+        return view('auth.register');
     }
 
     /**

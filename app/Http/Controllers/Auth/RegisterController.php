@@ -107,8 +107,6 @@ class RegisterController extends Controller
      */
     public function showRegistrationForm()
     {
-        $data['province'] = Province::all();
-        $data['degree'] = config('static.educationDegree');
-        return view('auth.register', $data);
+        return view('auth.register');
     }
 }
