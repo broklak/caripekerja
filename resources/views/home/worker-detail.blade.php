@@ -38,7 +38,7 @@
 
                             <div class="clearfix"> <strong><i class="fa fa-map-marker"></i>{{\App\Helpers\GlobalHelper::getCityName($detail['city'])}}</strong></div>
 
-                            <div class="tags">{{\App\Helpers\GlobalHelper::getWorkerCategory($detail['category'])}}</div>
+                            <div class="tags">{{($detail['gender'] == 1) ? str_replace('Babysitter,','', \App\Helpers\GlobalHelper::getWorkerCategory($detail['category'])) : \App\Helpers\GlobalHelper::getWorkerCategory($detail['category'])}}</div>
 
                             @if((isset($showCallButton) && $showCallButton)) <div class="btn-row"> <a href="{{$callLink}}" onclick="{{$callConfirm}}" class="contact">Hubungi Pekerja</a> </div> @endif
 
