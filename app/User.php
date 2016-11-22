@@ -57,7 +57,7 @@ class User extends Authenticatable
             array_push($where,$status);
         }
 
-        if(isset($criteria['degree']) && $criteria['degree'] != '') {
+        if(isset($criteria['degree']) && $criteria['degree'] != '0') {
             $degree = ['degree', '=', $criteria['degree']];
             array_push($where,$degree);
         }
