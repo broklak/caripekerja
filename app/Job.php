@@ -32,12 +32,12 @@ class Job extends Model
         }
 
         if(isset($criteria['min_salary']) && $criteria['min_salary'] != '') {
-            $salary = ['salary_min', '<=', $criteria['min_salary']];
+            $salary = ['salary_min', '>=', $criteria['min_salary']];
             array_push($where,$salary);
         }
 
         if(isset($criteria['max_salary']) && $criteria['max_salary'] != '') {
-            $salary = ['salary_max', '>=', $criteria['max_salary']];
+            $salary = ['salary_max', '<=', $criteria['max_salary']];
             array_push($where,$salary);
         }
 
