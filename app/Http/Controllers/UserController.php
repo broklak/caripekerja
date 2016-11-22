@@ -288,4 +288,14 @@ class UserController extends Controller
         $auth['middleware'] = 'user';
         return $auth;
     }
+
+    public function getAppliedJob () {
+        $perPage = 10;
+        $workerId = $this->_authData['id'];
+        $getAppliedJob = JobApply::getAppliedByWorker($workerId, $perPage);
+        $data['job'] = $getAppliedJob['job'];
+        $data['link'] = $getAppliedJob['link'];
+
+        return view('user.worker-applied-job', $data);
+    }
 }

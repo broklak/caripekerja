@@ -60,7 +60,9 @@
                         </div>
                     </div>
 
-                    <div id="cocok" class="tab-pane fade">
+                    {{--PEKERJA COCOK--}}
+
+                        <div id="cocok" class="tab-pane fade">
                         <h3>Pekerja yang cocok</h3>
                         <div class="table-responsive">
                             <table class="table">

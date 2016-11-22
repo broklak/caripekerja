@@ -38,18 +38,24 @@ Route::get('employer/password/reset/{token}', 'EmployerAuth\ResetPasswordControl
 
 // JOB
 Route::get('buat-lowongan', 'JobController@create')->name('job-create');
-Route::post('job/store/', 'JobController@store');
+Route::get('edit-lowongan/{jobId}', 'JobController@edit')->name('job-edit');
+Route::post('job/store', 'JobController@store');
+Route::post('job/update/{id}', 'JobController@update');
 Route::get('lowongan-kerja', 'JobController@index')->name('job-list');
+Route::post('lowongan-kerja', 'JobController@index')->name('job-list');
 Route::get('lamar-kerja/{jobId}', 'UserController@applyJob')->name('job-apply');
 
 // WORKER
 Route::get('daftar-pekerja', 'HomeController@workerList')->name('worker-list');
 Route::post('daftar-pekerja', 'HomeController@workerList')->name('worker-list');
 Route::get('profil-pekerja/{workerId}', 'HomeController@workerDetail')->name('worker-detail');
+Route::get('lamaran-saya', 'UserController@getAppliedJob')->name('worker-job');
 
 //EMPLOYER
 Route::get('pekerja-saya', 'JobController@getShortlistedWorker')->name('owned-worker');
+Route::get('lowongan-saya', 'JobController@getEmployerJob')->name('employer-job');
 Route::get('ganti-status-pekerja/{id}/{status}', 'JobController@processChangeStatusWorker')->name('change-worker-status');
+Route::get('ganti-status-lowongan/{id}/{status}', 'JobController@processChangeStatusApplication')->name('change-application-status');
 
 // MYACCOUNT
 Route::get('akun-saya', 'UserController@myAccount')->name('myaccount-index');

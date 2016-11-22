@@ -38,20 +38,13 @@ class HomeController extends Controller {
     public function workerList (Request $request) {
         $param = $request->input();
 
-        $param['category'] = isset($param['category']) ? $param['category'] : null;
-        $param['gender'] = isset($param['gender']) ? $param['gender'] : null;
-        $param['city'] = isset($param['city']) ? $param['city'] : null;
-        $param['status'] = isset($param['status']) ? $param['status'] : null;
-        $param['exp'] = isset($param['exp']) ? $param['exp'] : null;
-        $param['degree'] = isset($param['degree']) ? $param['degree'] : null;
-        $param['min_age'] = isset($param['min_age']) ? $param['min_age'] : null;
-        $param['max_age'] = isset($param['max_age']) ? $param['max_age'] : null;
-
-        $list = User::search($param);
+        $perPage = 20;
+        $list = User::search($param, $perPage);
 
         $data['category'] = WorkerCategory::all();
         $data['province'] = Province::all();
-        $data['list'] = $list;
+        $data['list'] = $list['worker'];
+        $data['link'] = $list['link'];
         $data['degree'] = config('static.educationDegree');
         $data['max_exp'] = 30;
         $data['param'] = $param;

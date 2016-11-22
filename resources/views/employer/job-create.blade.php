@@ -115,9 +115,9 @@
 
                             <option disabled selected>Pilih Gender Pekerja</option>
 
-                            <option value="0">Tidak ada batasan gender</option>
-                            <option value="1">Perempuan</option>
-                            <option value="2">Laki - Laki</option>
+                            <option @if(old('gender') == 0) selected="selected" @endif value="0">Tidak ada batasan gender</option>
+                            <option @if(old('gender') == 2) selected="selected" @endif value="2">Perempuan</option>
+                            <option @if(old('gender') == 1) selected="selected" @endif value="1">Laki - Laki</option>
 
                         </select>
 
@@ -134,8 +134,8 @@
 
                             <option disabled selected>Pilih Tipe Waktu Kerja</option>
 
-                            <option value="1">Full Time</option>
-                            <option value="2">Part Time</option>
+                            <option @if(old('type') == 1) selected="selected" @endif value="1">Full Time</option>
+                            <option @if(old('type') == 2) selected="selected" @endif value="2">Part Time</option>
 
                         </select>
 
@@ -185,7 +185,7 @@
 
                     <div class="text-editor-box">
 
-                        <textarea name="description"></textarea>
+                        <textarea name="description">{{old('description')}}</textarea>
 
                     </div>
 

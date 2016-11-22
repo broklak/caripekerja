@@ -117,27 +117,37 @@
 
                     <h2>Menampilkan Seluruh Pekerja</h2>
 
-                    @foreach ($list as $row)
+                    @if(!empty($list))
 
-                        <div class="box">
+                        @foreach ($list as $row)
 
-                            <div class="frame"><a href="{{route('worker-detail', ['workerId' => $row['id']])}}"><img class="list-worker-image" src="{{\App\Helpers\GlobalHelper::setUserImage($row['photo_profile'])}}" alt="img"></a></div>
+                            <div class="box">
 
-                                <div class="text-box">
+                                <div class="frame"><a href="{{route('worker-detail', ['workerId' => $row['id']])}}"><img class="list-worker-image" src="{{\App\Helpers\GlobalHelper::setUserImage($row['photo_profile'])}}" alt="img"></a></div>
 
-                                    <h3><a href="{{route('worker-detail', ['workerId' => $row['id']])}}">{{substr($row['name'],0,15)}}</a></h3>
+                                    <div class="text-box">
 
-                                    <h5>{{\App\Helpers\GlobalHelper::getAgeByBirthdate($row['birthdate'])}} Tahun</h5>
+                                        <h3><a href="{{route('worker-detail', ['workerId' => $row['id']])}}">{{substr($row['name'],0,15)}}</a></h3>
 
-                                    <div class="clearfix"> <strong class="city-name-list"><i class="fa fa-map-marker"></i>{{\App\Helpers\GlobalHelper::getCityName($row['city'])}}</strong></div>
+                                        <h5>{{\App\Helpers\GlobalHelper::getAgeByBirthdate($row['birthdate'])}} Tahun</h5>
 
-                                    <div class="btn-row"> <a href="{{route('worker-detail', ['workerId' => $row['id']])}}" class="contact">Lihat Profil</a> </div>
+                                        <div class="clearfix"> <strong class="city-name-list"><i class="fa fa-map-marker"></i>{{\App\Helpers\GlobalHelper::getCityName($row['city'])}}</strong></div>
 
-                                </div>
+                                        <div class="btn-row"> <a href="{{route('worker-detail', ['workerId' => $row['id']])}}" class="contact">Lihat Profil</a> </div>
 
-                        </div>
+                                    </div>
 
-                    @endforeach
+                            </div>
+
+                        @endforeach
+
+                    @else
+                        <p> Pekerja tidak ditemukan. Coba gunakan kriteria pencarian lain</p>
+                    @endif
+
+                    <div class="clearfix"></div>
+
+                    {{$link}}
 
                 </div>
 

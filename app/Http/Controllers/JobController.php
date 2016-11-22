@@ -22,13 +22,25 @@ class JobController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
+     * Search
      *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $data['list'] = Job::getAll();
+        $param = $request->input();
+
+        $perPage = 10;
+        $getJob = Job::getAll($param, $perPage);
+
+        $data['category'] = WorkerCategory::all();
+        $data['province'] = Province::all();
+        $data['degree'] = config('static.educationDegree');
+        $data['max_exp'] = 30;
+        $data['list'] = $getJob['job'];
+        $data['link'] = $getJob['link'];
+        $data['param'] = $param;
         return view('employer.job-index', $data);
     }
 
@@ -63,6 +75,7 @@ class JobController extends Controller
             'city' => 'required',
             'gender' => 'required',
             'type' => 'required',
+            'exp'   => 'required',
             'age_min'   => 'numeric|required',
             'age_max'   => 'numeric|required',
             'start_date'   => 'required',
@@ -79,6 +92,7 @@ class JobController extends Controller
                 'city'              => $request->input('city'),
                 'gender'            => $request->input('gender'),
                 'type'              => $request->input('type'),
+                'exp'               => $request->input('exp'),
                 'description'       => $request->input('description'),
                 'age_min'           => $request->input('age_min'),
                 'age_max'           => $request->input('age_max'),
@@ -91,7 +105,7 @@ class JobController extends Controller
 
         $message = GlobalHelper::setDisplayMessage('success', 'Pekerjaan telah berhasil diposting');
         $request->session()->flash('displayMessage', $message);
-        return redirect(route('job-list'));
+        return redirect(route('employer-job'));
     }
 
     /**
@@ -102,6 +116,21 @@ class JobController extends Controller
         $employerId = $this->_employer['id'];
         $data['worker'] = WorkerTransaction::getOwned($employerId);
         return view('employer.owned-worker', $data);
+    }
+
+    /**
+     * Show owned worker
+     * @return \Illuminate\Http\Response
+     */
+    public function getEmployerJob () {
+        $employerId = $this->_employer['id'];
+        $perPage = 10;
+        $param['employer_id'] = $employerId;
+        $getJob = Job::getAll($param, $perPage);
+
+        $data['job'] = $getJob['job'];
+        $data['link'] = $getJob['link'];
+        return view('employer.employer-job', $data);
     }
 
     /**
@@ -128,7 +157,31 @@ class JobController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data['category'] = WorkerCategory::all();
+        $data['employer'] = $this->_employer;
+        $data['degree'] = config('static.educationDegree');
+        $data['max_exp']    = 10;
+        $data['province'] = Province::all();
+        $data['job'] = Job::find($id);
+        return view('employer.job-edit', $data);
+    }
+
+    /**
+     * close application
+     *
+     * @param  int  $id, int $status
+     * @return \Illuminate\Http\Response
+     */
+    public function processChangeStatusApplication($id, $status)
+    {
+        $job = Job::find($id);
+
+        $job->status = $status;
+
+        $job->save();
+
+        $message = GlobalHelper::setDisplayMessage('success', 'Sukses menggganti status lowongan');
+        return redirect(route('employer-job'))->with('displayMessage', $message);
     }
 
     /**
@@ -140,7 +193,45 @@ class JobController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required|max:255',
+            'salary_min' => 'numeric|required',
+            'salary_max' => 'numeric|required',
+            'degree' => 'required',
+            'city' => 'required',
+            'gender' => 'required',
+            'type' => 'required',
+            'exp'   => 'numeric|required',
+            'age_min'   => 'numeric|required',
+            'age_max'   => 'numeric|required',
+            'start_date'   => 'required',
+            'end_date'   => 'required',
+            'category'   => 'required'
+        ]);
+
+        $job = Job::find($id);
+
+        $job->title = $request->input('title');
+        $job->description = $request->input('description');
+        $job->salary_min = $request->input('salary_min');
+        $job->salary_max = $request->input('salary_max');
+        $job->minimum_degree = $request->input('degree');
+        $job->city = $request->input('city');
+        $job->gender = $request->input('gender');
+        $job->type = $request->input('type');
+        $job->exp = $request->input('exp');
+        $job->age_min = $request->input('age_min');
+        $job->age_max = $request->input('age_max');
+        $job->start_date = date('Y-m-d', strtotime($request->input('start_date')));
+        $job->end_date = date('Y-m-d', strtotime($request->input('end_date')));
+        $job->category = $request->input('category');
+
+        $job->save();
+
+        $message = GlobalHelper::setDisplayMessage('success', 'Lowongan kerja berhasil diupdate');
+        $request->session()->flash('displayMessage', $message);
+        return redirect(route('employer-job'));
+
     }
 
     /**

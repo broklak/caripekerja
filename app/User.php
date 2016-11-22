@@ -33,61 +33,64 @@ class User extends Authenticatable
     /**
      * search worker
      */
-    public static function search ($criteria = array()) {
+    public static function search ($criteria = array(), $perPage = 10) {
         $table = 'workers';
         $where = array();
 
-        if($criteria['category'] != 0){
-            $category = ['category', 'like', $criteria['category']];
+        if(isset($criteria['category']) && $criteria['category'] != 0){
+            $category = ['category', 'like', '%'.$criteria['category'].'%'];
             array_push($where,$category);
         }
 
-        if($criteria['gender'] != 0) {
+        if(isset($criteria['gender']) && $criteria['gender'] != 0) {
             $gender = ['gender', '=', $criteria['gender']];
             array_push($where,$gender);
         }
 
-        if($criteria['city'] != 0) {
+        if(isset($criteria['city']) && $criteria['city'] != 0) {
             $city = ['city', '=', $criteria['city']];
             array_push($where,$city);
         }
 
-        if($criteria['status'] != 0) {
+        if(isset($criteria['status']) && $criteria['status'] != 0) {
             $status = ['marital', '=', $criteria['status']];
             array_push($where,$status);
         }
 
-        if($criteria['degree'] != 0) {
+        if(isset($criteria['degree']) && $criteria['degree'] != '') {
             $degree = ['degree', '=', $criteria['degree']];
             array_push($where,$degree);
         }
 
-        if($criteria['exp'] != 0) {
+        if(isset($criteria['exp']) && $criteria['exp'] != 0) {
             $exp = ['years_experience', '=', $criteria['exp']];
             array_push($where,$exp);
         }
 
-        if($criteria['min_age'] != '') {
+        if(isset($criteria['min_age']) && $criteria['min_age'] != '') {
             $yearBack = date('Y-m-d', strtotime("- ".$criteria['min_age']." years"));
 
             $age = ['birthdate', '<', $yearBack];
             array_push($where,$age);
         }
 
-        if($criteria['max_age'] != '') {
+        if(isset($criteria['max_age']) && $criteria['max_age'] != '') {
             $yearBack = date('Y-m-d', strtotime("- ".$criteria['max_age']." years"));
 
             $age = ['birthdate', '>', $yearBack];
             array_push($where,$age);
         }
 
-
-        $list = DB::table($table)->where($where)->orderBy('id', 'desc')->get();
+        $list = DB::table($table)->where($where)->orderBy('id', 'desc')->paginate($perPage);
 
         $worker = array();
         foreach($list as $user) {
             $worker[] = (array) $user;
         }
-        return $worker;
+
+        $data['link'] = $list->links();
+        $data['worker'] = $worker;
+
+        return $data;
     }
 }
