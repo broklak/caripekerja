@@ -42,7 +42,6 @@
                                 </thead>
                                 <tbody>
                                 @foreach($worker as $row)
-                                    @if($row->status == 1)
                                         <tr>
                                             <td>{{$row->name}}</td>
                                             <td>{{$row->phone}}</td>
@@ -53,7 +52,6 @@
                                                 <a href="{{route('change-worker-status', ['id' => $row->id, 'status' => 3])}}" class="button-link link-red">Tidak Cocok</a>
                                             </td>
                                         </tr>
-                                    @endif
                                 @endforeach
                                 </tbody>
                             </table>
