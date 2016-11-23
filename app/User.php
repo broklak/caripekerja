@@ -36,9 +36,10 @@ class User extends Authenticatable
     public static function search ($criteria = array(), $perPage = 10) {
         $table = 'workers';
         $where = array();
+        $whereRaw = '';
 
         if(isset($criteria['category']) && $criteria['category'] != 0){
-            $category = ['category', 'like', '%'.$criteria['category'].'%'];
+            $category = [DB::raw('CONCAT(",", category, ",")'), "like", "%,".$criteria['category'].",%"];
             array_push($where,$category);
         }
 
@@ -82,6 +83,10 @@ class User extends Authenticatable
         }
 
         $list = DB::table($table)->where($where)->orderBy('id', 'desc')->paginate($perPage);
+
+        $listsql = DB::table($table)->where($where)->orderBy('id', 'desc')->toSql();
+
+//        var_dump($listsql); die;
 
         $worker = array();
         foreach($list as $user) {
