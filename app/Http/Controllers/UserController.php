@@ -139,8 +139,8 @@ class UserController extends Controller
                 $new = array(
                     'place'     => $request->input('exp_place'),
                     'role'     => $request->input('exp_role'),
-                    'start_year'     => $request->input('exp_start_year'),
-                    'end_year'     => ($request->input('exp_end_year_now')) ? $request->input('exp_end_year_now') : $request->input('exp_end_year'),
+                    'start'     => $request->input('exp_start_year'),
+                    'end'     => ($request->input('exp_end_year_now')) ? $request->input('exp_end_year_now') : $request->input('exp_end_year'),
                     'desc'     => $request->input('exp_desc')
                 );
                 $experience[] = $new;

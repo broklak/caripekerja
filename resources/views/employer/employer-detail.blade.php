@@ -60,8 +60,6 @@
 
                             <div class="container">
 
-                                {!! session('displayMessage') !!}
-
                                 <div class="row">
 
                                     <div class="col-md-11 col-sm-8">
