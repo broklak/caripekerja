@@ -276,7 +276,7 @@
 
                                                 <label>Nama Sekolah</label>
 
-                                                <input type="text" placeholder="Contoh : Menyetir, Menjahit, Menjaga Anak" name="edu_name">
+                                                <input type="text" name="edu_name">
 
                                             </li>
 
@@ -342,7 +342,7 @@
 
                                                 <label>Nama Keahlian</label>
 
-                                                <input type="text" placeholder="">
+                                                <input type="text"  placeholder="Contoh : Menyetir, Menjahit, Menjaga Anak" name="skill_name">
 
                                             </li>
 
