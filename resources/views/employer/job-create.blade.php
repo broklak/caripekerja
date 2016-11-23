@@ -25,7 +25,7 @@
 
     <div class="container">
 
-        <form role="form" method="POST" action="{{ url('/job/store') }}">
+        <form role="form" method="POST" id="form-job-create" action="{{ url('/job/store') }}">
             {{ csrf_field() }}
 
             <div class="row">
@@ -185,7 +185,7 @@
 
                     <div class="text-editor-box">
 
-                        <textarea name="description">{{old('description')}}</textarea>
+                        <textarea id="description" name="description">{{old('description')}}</textarea>
 
                     </div>
 

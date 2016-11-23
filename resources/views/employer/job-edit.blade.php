@@ -25,7 +25,7 @@
 
         <div class="container">
 
-            <form role="form" method="POST" action="{{ url('/job/update/'.$job['id']) }}">
+            <form role="form" method="POST" id="form-job-create" action="{{ url('/job/update/'.$job['id']) }}">
                 {{ csrf_field() }}
 
                 <div class="row">
@@ -185,7 +185,7 @@
 
                         <div class="text-editor-box">
 
-                            <textarea name="description">{{$job['description']}}</textarea>
+                            <textarea id="description" name="description">{{$job['description']}}</textarea>
 
                         </div>
 
