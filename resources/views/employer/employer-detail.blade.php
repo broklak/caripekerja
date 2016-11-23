@@ -4,7 +4,7 @@
 
 @section('content')
 
-<section class="resumes-section padd-tb">
+<section class="resumes-section padd-tb job-detail">
 
     <div class="container">
 
@@ -120,13 +120,26 @@
 
                             </div>
                             <div style="clear: both"></div>
-                            {{$link}}
+
                         </section>
 
                     </div>
 
                 </div>
 
+        </div>
+    </div>
+
+</section>
+
+<section class="resumes-section">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-12 col-sm-8">
+                {{$link}}
+            </div>
         </div>
     </div>
 
