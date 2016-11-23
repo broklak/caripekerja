@@ -182,6 +182,205 @@
 
                 </div>
 
+                <div class="clearfix"></div>
+
+                {{--START ADDING EXPERIENCE--}}
+
+                <div class="row" style="margin-top: 25px">
+                    <div class="col-md-4 col-sm-6">
+
+                        <h2>Pengalaman Kerja</h2>
+
+                        <div class="cp_aaccordion-row">
+
+                            <div class="accordion_cp" id="section10"><span><i class="fa fa-chevron-right"></i></span>Tambah Pengalaman Kerja </div>
+
+                            <div class="contain_cp_accor">
+
+                                <div class="content_cp_accor">
+
+                                    <form method="post" action="{{url('/add-exp')}}">
+                                        {{csrf_field()}}
+                                        <ul>
+
+                                            <li>
+
+                                                <label>Perusahaan / Tempat Kerja</label>
+
+                                                <input type="text" placeholder="Tempat Kerja" name="exp_place">
+
+                                            </li>
+
+                                            <li>
+
+                                                <label>Kerja Sebagai</label>
+
+                                                <input type="text" placeholder="Sebagai" name="exp_role">
+
+                                            </li>
+
+                                            <li>
+
+                                                <label>Lama Bekerja</label>
+
+                                                <input style="width: 48%" type="text" placeholder="Tahun Mulai Kerja" name="exp_start_year">
+                                                <input style="width: 48%;padding-bottom: 0" type="text" placeholder="Tahun Akhir Kerja" name="exp_end_year">
+                                                <input style="margin-bottom: 20px;margin-right: 5px" type="checkbox" id="still_here" name="exp_end_year_now" value="{{date('Y')}}"><label style="display: inline" for="still_here">Masih bekerja disini</label>
+
+                                            </li>
+
+                                            <li>
+
+                                                <label>Deskripsi</label>
+
+                                                <textarea cols="10" rows="10" name="exp_desc" placeholder="Apa saja tugas dan pekerjaan yang dilakukan"></textarea>
+
+                                            </li>
+
+                                        </ul>
+
+                                        <div class="btn-col">
+
+                                            <input type="submit" value="Tambah Pengalaman">
+
+                                        </div>
+
+                                    </form>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+
+                        <h2>Pendidikan</h2>
+
+                        <div class="cp_aaccordion-row">
+
+                            <div class="accordion_cp" id="section10"><span><i class="fa fa-chevron-right"></i></span>Tambah Pendidikan </div>
+
+                            <div class="contain_cp_accor">
+
+                                <div class="content_cp_accor">
+
+                                    <form method="post" action="{{url('/add-edu')}}">
+                                        {{csrf_field()}}
+                                        <ul>
+
+                                            <li>
+
+                                                <label>Nama Sekolah</label>
+
+                                                <input type="text" placeholder="Contoh : Menyetir, Menjahit, Menjaga Anak" name="edu_name">
+
+                                            </li>
+
+                                            <li>
+
+                                                <label>Tingkat Pendidikan</label>
+
+                                                <div style="background-color: #fff" class="selector">
+
+                                                    <select name="edu_level" class="full-width">
+                                                        @foreach ($degree as $key => $row)
+                                                            <option>{{$row}}</option>
+                                                        @endforeach
+                                                    </select>
+
+                                                </div>
+
+                                            </li>
+
+                                            <li>
+
+                                                <label>Tahun Sekolah</label>
+
+                                                <input style="width: 48%" type="text" placeholder="Tahun Mulai Sekolah" name="edu_start_year">
+                                                <input style="width: 48%" type="text" placeholder="Tahun Akhir Sekolah" name="edu_end_year">
+
+                                            </li>
+
+                                        </ul>
+
+                                        <div class="btn-col">
+
+                                            <input type="submit" value="Tambah Pendidikan">
+
+                                        </div>
+
+                                    </form>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+
+                        <h2>Keahlian</h2>
+
+                        <div class="cp_aaccordion-row">
+
+                            <div class="accordion_cp" id="section10"><span><i class="fa fa-chevron-right"></i></span>Tambah Keahlian </div>
+
+                            <div class="contain_cp_accor">
+
+                                <div class="content_cp_accor">
+
+                                    <form method="post" action="{{url('/add-skill')}}">
+                                        {{csrf_field()}}
+                                        <ul>
+
+                                            <li>
+
+                                                <label>Nama Keahlian</label>
+
+                                                <input type="text" placeholder="">
+
+                                            </li>
+
+                                            <li>
+
+                                                <label>Tingkat Keahlian</label>
+
+                                                <div style="background-color: #fff" class="selector">
+
+                                                    <select name="skill_level" class="full-width">
+                                                        <option value="25">Pemula</option>
+                                                        <option value="50">Terbiasa</option>
+                                                        <option value="75">Terampil</option>
+                                                        <option value="100">Sangat Mahir</option>
+                                                    </select>
+
+                                                </div>
+
+                                            </li>
+
+                                        </ul>
+
+                                        <div class="btn-col">
+
+                                            <input type="submit" value="Tambah Keahlian">
+
+                                        </div>
+
+                                    </form>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
                 <div style="margin-top: 20px;clear: both"></div>
 
                 <div class="col-md-6 col-sm-6">
@@ -211,145 +410,6 @@
             </div>
 
         </form>
-
-        <div class="clearfix"></div>
-
-        {{--START ADDING EXPERIENCE--}}
-
-        <div class="row">
-            <div class="col-md-6 col-sm-6">
-
-                <h2>Pengalaman Kerja</h2>
-
-                <div class="cp_aaccordion-row">
-
-                    <div class="accordion_cp" id="section10"><span><i class="fa fa-chevron-right"></i></span>Tambah Pengalaman Kerja </div>
-
-                    <div class="contain_cp_accor">
-
-                        <div class="content_cp_accor">
-
-                            <form method="post" action="{{url('/add-exp')}}">
-                                {{csrf_field()}}
-                                <ul>
-
-                                    <li>
-
-                                        <label>Perusahaan / Tempat Kerja</label>
-
-                                        <input type="text" placeholder="Tempat Kerja" name="exp_place">
-
-                                    </li>
-
-                                    <li>
-
-                                        <label>Kerja Sebagai</label>
-
-                                        <input type="text" placeholder="Sebagai" name="exp_role">
-
-                                    </li>
-
-                                    <li>
-
-                                        <label>Lama Bekerja (Masukkan angka tahun)</label>
-
-                                        <input type="text" placeholder="Berapa Tahun" name="exp_years">
-
-                                    </li>
-
-                                    <li>
-
-                                        <label>Deskripsi</label>
-
-                                        <textarea cols="10" rows="10" name="exp_desc" placeholder="Apa saja tugas dan pekerjaan yang dilakukan"></textarea>
-
-                                    </li>
-
-                                </ul>
-
-                                <div class="btn-col">
-
-                                    <input type="submit" value="Tambah Pengalaman">
-
-                                </div>
-
-                            </form>
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                @foreach($experience as $rowExp)
-                    <p>{{$rowExp['role']}} di {{$rowExp['place']}} selama {{$rowExp['years']}} tahun.</p>
-                @endforeach
-
-            </div>
-
-            <div class="col-md-6 col-sm-6">
-
-                <h2>Keahlian</h2>
-
-                <div class="cp_aaccordion-row">
-
-                    <div class="accordion_cp" id="section10"><span><i class="fa fa-chevron-right"></i></span>Tambah Keahlian </div>
-
-                    <div class="contain_cp_accor">
-
-                        <div class="content_cp_accor">
-
-                            <form method="post" action="{{url('/add-skill')}}">
-                                {{csrf_field()}}
-                                <ul>
-
-                                    <li>
-
-                                        <label>Nama Keahlian</label>
-
-                                        <input type="text" placeholder="Contoh : Menyetir, Menjahit, Menjaga Anak" name="skill_name">
-
-                                    </li>
-
-                                    <li>
-
-                                        <label>Tingkat Keahlian</label>
-
-                                        <div style="background-color: #fff" class="selector">
-
-                                            <select name="skill_level" class="full-width">
-                                                <option value="25">Pemula</option>
-                                                <option value="50">Terbiasa</option>
-                                                <option value="75">Terampil</option>
-                                                <option value="100">Sangat Mahir</option>
-                                            </select>
-
-                                        </div>
-
-                                    </li>
-
-                                </ul>
-
-                                <div class="btn-col">
-
-                                    <input type="submit" value="Tambah Keahlian">
-
-                                </div>
-
-                            </form>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                @foreach($skill as $rowSkill)
-                    <p>{{$rowSkill['name']}} - Level {{\App\Helpers\GlobalHelper::skillLevel($rowSkill['level'])}}</p>
-                @endforeach
-
-            </div>
-        </div>
 
         <div class="clearfix" style="margin-top: 20px">
             <a class="button-link link-green" href="{{route('myaccount-profile')}}">Lihat Profil Saya</a>
@@ -421,9 +481,34 @@
 
                 <div class="col-md-6 col-sm-6">
 
+                    <label>Website</label>
+
+                    <input name="website" value="{{$authData['website']}}" type="text" placeholder="Website">
+
+                </div>
+
+                <div class="col-md-6 col-sm-6">
+
                     <label>Bidang Usaha </label>
 
                     <input name="category" value="{{$authData['ukm_category']}}" type="text" placeholder="Contoh : Restoran, Toko Pakaian, Konveksi">
+
+                </div>
+
+
+                <div class="col-md-6 col-sm-6">
+
+                    <label>Alamat Lengkap Tempat Usaha *</label>
+
+                    <textarea name="address">{{$authData['address']}}</textarea>
+
+                </div>
+
+                <div class="col-md-6 col-sm-6">
+
+                    <label>Deskripsi Singkat Usaha Anda </label>
+
+                    <textarea name="description">{{$authData['description']}}</textarea>
 
                 </div>
 
@@ -443,22 +528,6 @@
                         </select>
 
                     </div>
-
-                </div>
-
-                <div class="col-md-6 col-sm-6">
-
-                    <label>Alamat Lengkap Tempat Usaha *</label>
-
-                    <textarea name="address">{{$authData['address']}}</textarea>
-
-                </div>
-
-                <div class="col-md-6 col-sm-6">
-
-                    <label>Deskripsi Singkat Usaha Anda </label>
-
-                    <textarea name="description">{{$authData['description']}}</textarea>
 
                 </div>
 

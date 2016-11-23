@@ -63,6 +63,7 @@ Route::get('profil-saya', 'UserController@myProfile')->name('myaccount-profile')
 Route::post('update-profile', 'UserController@update');
 Route::post('add-exp', 'UserController@addExperience');
 Route::post('add-skill', 'UserController@addSkill');
+Route::post('add-edu', 'UserController@addEdu');
 
 //PAYMENT
 Route::get('topup', 'PaymentController@index')->name('topup-create');

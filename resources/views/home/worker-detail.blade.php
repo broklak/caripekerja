@@ -10,7 +10,7 @@
 
         <div class="row">
 
-            <div class="col-md-9 col-sm-8">
+            <div class="col-md-8 col-sm-8">
 
                 {!! session('displayMessage') !!}
 
@@ -58,11 +58,31 @@
 
                                 <div class="outer"> <strong class="title">{{$rowExp['role']}} di {{$rowExp['place']}}</strong>
 
-                                    <div class="col"> <span>{{$rowExp['years']}} tahun</span>
+                                    <div class="col"> <span>{{$rowExp['start']}} - {{$rowExp['end']}}</span>
 
                                         <p>{{$rowExp['desc']}}</p>
 
                                     </div>
+
+                                </div>
+                            @endforeach
+                        @endif
+
+                    </div>
+
+                    <div class="summary-box">
+
+                        <h4>Pendidikan</h4>
+
+                        @if(empty($edu))
+                            <p>Belum ada data pendidikan</p>
+
+                        @else
+                            @foreach($edu as $rowEdu)
+
+                                <div class="outer"> <strong class="title">{{$rowEdu['level']}} di {{$rowEdu['name']}}</strong>
+
+                                    <div class="col"> <span>{{$rowEdu['start']}} - {{$rowEdu['end']}}</span></div>
 
                                 </div>
                             @endforeach
@@ -100,9 +120,7 @@
             </div>
                 </div>
 
-            <div class="col-md-3 col-sm-4">
-
-                <h2>Pekerja Serupa</h2>
+            <div class="col-md-4 col-sm-4">
 
                 <aside>
 
@@ -114,25 +132,12 @@
 
                                 <li>
 
-                                    <div class="frame"><a href="#"><img src="images/resumes/related-img-4.jpg" alt="img"></a></div>
-
-                                    <div class="text-box"> <strong class="name"><a href="#">Ahmad Kadir</a></strong> <span><i class="fa fa-tags"></i>Supir</span> <span><i class="fa fa-map-marker"></i>Jakarta</span> </div>
-
-                                </li>
-
-                                <li>
-
-                                    <div class="frame"><a href="#"><img src="images/resumes/related-img-5.jpg" alt="img"></a></div>
-
-                                    <div class="text-box"> <strong class="name"><a href="#">Bayu Sakti</a></strong> <span><i class="fa fa-tags"></i>Supir</span> <span><i class="fa fa-map-marker"></i>Jakarta</span> </div>
-
-                                </li>
-
-                                <li>
-
-                                    <div class="frame"><a href="#"><img src="images/resumes/related-img-6.jpg" alt="img"></a></div>
-
-                                    <div class="text-box"> <strong class="name"><a href="#">Sulaeman</a></strong> <span><i class="fa fa-tags"></i>Supir</span> <span><i class="fa fa-map-marker"></i>Jakarta</span> </div>
+                                    <div class="text-box">
+                                        <h2>Verifikasi</h2>
+                                        <span><i @if($detail['data_verified'] == 0) style="color: #f44336" @endif class="fa fa-{{($detail['data_verified'] == 0) ? 'minus' : 'check'}}-square"></i> Data Diri {{($detail['data_verified'] == 0) ? 'Belum' : ''}} Terverifikasi</span>
+                                        <span><i @if($detail['contact_verified'] == 0) style="color: #f44336" @endif class="fa fa-{{($detail['contact_verified'] == 0) ? 'minus' : 'check'}}-square"></i> Kontak {{($detail['contact_verified'] == 0) ? 'Belum' : ''}} Terverifikasi</span>
+                                        <span><i @if($detail['exp_verified'] == 0) style="color: #f44336" @endif class="fa fa-{{($detail['exp_verified'] == 0) ? 'minus' : 'check'}}-square"></i> Pengalaman Kerja {{($detail['exp_verified'] == 0) ? 'Belum' : ''}} Terverifikasi</span>
+                                    </div>
 
                                 </li>
 

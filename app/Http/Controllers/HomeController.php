@@ -76,6 +76,7 @@ class HomeController extends Controller {
         $data['detail'] = $authData;
         $data['experience'] = ($authData['experiences'] != null || $authData['experiences'] != '') ? json_decode($authData['experiences'], true) : array();
         $data['skill'] = ($authData['skills'] != null || $authData['skills'] != '') ? json_decode($authData['skills'], true) : array();
+        $data['edu'] = ($authData['education'] != null || $authData['education'] != '') ? json_decode($authData['education'], true) : array();
         return view('home.worker-detail', $data);
     }
 

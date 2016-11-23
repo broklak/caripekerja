@@ -36,6 +36,14 @@ class UserController extends Controller
         $authData = $auth['authData'];
         $employerId = $authData['id'];
         $data['detail'] = Employer::find($employerId);
+
+        $perPage = 10;
+        $param['employer_id'] = $employerId;
+        $getJob = Job::getAll($param, $perPage);
+
+        $data['job'] = $getJob['job'];
+        $data['link'] = $getJob['link'];
+
         return view('employer.employer-detail', $data);
     }
 
@@ -47,6 +55,7 @@ class UserController extends Controller
         $data['detail'] = User::find($workerId);
         $data['experience'] = (empty($authData['experiences'])) ? array() : json_decode($authData['experiences'], true);
         $data['skill'] = (empty($authData['skills'])) ? array() : json_decode($authData['skills'], true);
+        $data['edu'] = (empty($authData['education'])) ? array() : json_decode($authData['education'], true);
         return view('home.worker-detail', $data);
     }
 
@@ -117,6 +126,29 @@ class UserController extends Controller
             $worker->birthdate = date('Y-m-d H:i:s', strtotime($request->input('birthdate')));
             $worker->category = implode(',', $request->input('category'));
 
+            if($request->input('exp_place') != '') {
+                $this->validate($request, [
+                    'exp_place' => 'required|max:100',
+                    'exp_role' => 'required|max:100',
+                    'exp_start_year' => 'required|max:15',
+                    'exp_desc' => 'required',
+                ]);
+
+                $experience = json_decode($worker['experiences'], true);
+
+                $new = array(
+                    'place'     => $request->input('exp_place'),
+                    'role'     => $request->input('exp_role'),
+                    'start_year'     => $request->input('exp_start_year'),
+                    'end_year'     => ($request->input('exp_end_year_now')) ? $request->input('exp_end_year_now') : $request->input('exp_end_year'),
+                    'desc'     => $request->input('exp_desc')
+                );
+                $experience[] = $new;
+
+                $worker->experiences = json_encode($experience);
+
+            }
+
             if($request->photo) {
                 $imageName = $this->_role . '-' . $this->_authData['id'] .'.'.strtolower($request->photo->getClientOriginalExtension());
                 Storage::delete(public_path('images/profil/'.$this->_role.'/'.$worker['photo_profile']));
@@ -132,6 +164,7 @@ class UserController extends Controller
             $this->validate($request, [
                 'name' => 'required|max:100',
                 'phone' => 'required|max:50',
+                'website' => 'required|max:75',
                 'city' => 'required',
                 'address' => 'required|max:255',
                 'category' => 'required|max:100',
@@ -148,6 +181,7 @@ class UserController extends Controller
             $employer->ukm_category = $request->input('category');
             $employer->name_owner = $request->input('name_owner');
             $employer->description = $request->input('description');
+            $employer->website = $request->input('website');
 
             if($request->photo) {
                 $imageName = $this->_role . '-' . $this->_authData['id'] .'.'.strtolower($request->photo->getClientOriginalExtension());
@@ -160,7 +194,7 @@ class UserController extends Controller
         }
 
         $message = GlobalHelper::setDisplayMessage('success', 'Sukses mengganti profil anda');
-        return redirect(route('myaccount-index'))->with('displayMessage', $message);
+        return redirect(route('myaccount-profile'))->with('displayMessage', $message);
     }
 
     /**
@@ -175,7 +209,8 @@ class UserController extends Controller
         $this->validate($request, [
             'exp_place' => 'required|max:100',
             'exp_role' => 'required|max:100',
-            'exp_years' => 'required|max:150',
+            'exp_start_year' => 'required|max:15',
+            'exp_end_year' => 'required|max:15',
             'exp_desc' => 'required',
         ]);
 
@@ -186,7 +221,8 @@ class UserController extends Controller
         $new = array(
             'place'     => $request->input('exp_place'),
             'role'     => $request->input('exp_role'),
-            'years'     => $request->input('exp_years'),
+            'start'     => $request->input('exp_start_year'),
+            'end'     => $request->input('exp_end_year'),
             'desc'     => $request->input('exp_desc')
         );
         $experience[] = $new;
@@ -200,7 +236,7 @@ class UserController extends Controller
     }
 
     /**
-     * Add worker experience
+     * Add worker skill
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -228,7 +264,43 @@ class UserController extends Controller
         $worker->save();
 
         $message = GlobalHelper::setDisplayMessage('success', 'Sukses menambah keahlian anda');
-        return redirect(route('myaccount-index'))->with('displayMessage', $message);
+        return redirect(route('myaccount-profile'))->with('displayMessage', $message);
+    }
+
+    /**
+     * Add worker education
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function addEdu (Request $request) {
+        $workerId = $this->_authData['id'];
+
+        $this->validate($request, [
+            'edu_name' => 'required|max:100',
+            'edu_level' => 'required',
+            'edu_start_year' => 'required',
+            'edu_end_year' => 'required',
+        ]);
+
+        $worker = User::find($workerId);
+
+        $edu = json_decode($worker['education'], true);
+
+        $new = array(
+            'name'     => $request->input('edu_name'),
+            'level'     => $request->input('edu_level'),
+            'start'     => $request->input('edu_start_year'),
+            'end'     => $request->input('edu_end_year'),
+        );
+        $edu[] = $new;
+
+        $worker->education = json_encode($edu);
+
+        $worker->save();
+
+        $message = GlobalHelper::setDisplayMessage('success', 'Sukses menambah pendidikan anda');
+        return redirect(route('myaccount-profile'))->with('displayMessage', $message);
     }
 
     /**

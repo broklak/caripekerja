@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'phone', 'gender', 'degree', 'city', 'birthdate', 'marital', 'verified', 'referral_code', 'years_experience'
+        'name', 'email', 'password', 'phone', 'gender', 'degree', 'city', 'birthdate', 'marital', 'verified', 'referral_code', 'years_experience','data_verified', 'contact_verified', 'exp_verified', 'education'
     ];
 
     /**
@@ -83,10 +83,6 @@ class User extends Authenticatable
         }
 
         $list = DB::table($table)->where($where)->orderBy('id', 'desc')->paginate($perPage);
-
-        $listsql = DB::table($table)->where($where)->orderBy('id', 'desc')->toSql();
-
-//        var_dump($listsql); die;
 
         $worker = array();
         foreach($list as $user) {

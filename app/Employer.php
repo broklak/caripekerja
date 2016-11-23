@@ -16,7 +16,7 @@ class Employer extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'name_owner', 'address', 'phone', 'city', 'description', 'ukm_category', 'verified', 'referral_code', 'quota'
+        'name', 'email', 'password', 'name_owner', 'address', 'phone', 'city', 'description', 'ukm_category', 'verified', 'referral_code', 'quota', 'website'
     ];
 
     /**
