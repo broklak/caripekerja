@@ -34,6 +34,10 @@ class JobController extends Controller
         $perPage = 10;
         $getJob = Job::getAll($param, $perPage);
 
+        $getAuth = GlobalHelper::getAuthtype();
+        $role = $getAuth['role'];
+
+        $data['isValidWorker'] = ($role == 'worker') ? true : false;
         $data['category'] = WorkerCategory::all();
         $data['province'] = Province::all();
         $data['degree'] = config('static.educationDegree');

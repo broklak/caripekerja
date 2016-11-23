@@ -21,7 +21,7 @@ class AddVerifiedWorker extends Migration
         });
 
         Schema::table('employers', function (Blueprint $table) {
-            $table->string('website');
+            $table->string('website')->nullable();
         });
 
     }
