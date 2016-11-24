@@ -78,10 +78,6 @@
 
                 <input type="submit" value="Masuk">
 
-                <div style="clear: both">
-                    <a href="#" class="login">Lupa Password</a>
-                </div>
-
             </form>
 
                 <!--WORKER LOGIN END-->
@@ -108,7 +104,7 @@
                 <input type="submit" value="Masuk">
 
                 <div style="clear: both">
-                    <a href="#" class="login">Lupa Password</a>
+                    <a href="{{route('employer-forget-password')}}" class="login">Lupa Password</a>
                 </div>
 
 
