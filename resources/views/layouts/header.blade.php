@@ -56,7 +56,7 @@
 
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 
-                        <li><a href="{{route('myaccount-index')}}">Akun Saya</a></li>
+                        <li><a href="{{route('myaccount-profile')}}">Akun Saya</a></li>
 
                         <li><a href="{{url('/keluar')}}">Log off</a></li>
 
