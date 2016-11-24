@@ -104,9 +104,11 @@
 
         <div class="option-box">
 
-            <div class="icon-box icon-colo-1"><i class="fa fa-lock"></i></div>
+            <a href="{{route('change-password')}}"><div class="icon-box icon-colo-1"><i class="fa fa-lock"></i></div>
 
-            <h4>Ganti Kata Sandi</h4>
+                <h4>Ganti Kata Sandi</h4>
+
+            </a>
 
         </div>
 

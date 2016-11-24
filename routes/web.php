@@ -61,6 +61,8 @@ Route::get('ganti-status-lowongan/{id}/{status}', 'JobController@processChangeSt
 Route::get('akun-saya', 'UserController@myAccount')->name('myaccount-index');
 Route::get('profil-saya', 'UserController@myProfile')->name('myaccount-profile');
 Route::post('update-profile', 'UserController@update');
+Route::get('ganti-password', 'UserController@changePassword')->name('change-password');
+Route::post('ganti-password', 'UserController@changePassword')->name('change-password');
 Route::post('add-exp', 'UserController@addExperience');
 Route::post('add-skill', 'UserController@addSkill');
 Route::post('add-edu', 'UserController@addEdu');

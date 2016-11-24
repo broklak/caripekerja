@@ -101,7 +101,7 @@
                                                     @if($isValidWorker)
                                                         {{\App\Helpers\GlobalHelper::moneyFormat($row['salary_min'])}} - {{\App\Helpers\GlobalHelper::moneyFormat($row['salary_max'])}}
                                                     @else
-                                                        Login sebagai pekerja untuk melihat gaji
+                                                        <a style="color: #000;font-size: 14px" href="{{route('login')}}">Masuk sebagai pekerja untuk melihat gaji</a>
                                                     @endif
                                                 </strong>
                                                 @if($authRole != 'employer') <a href="{{($authRole == 'worker') ? route('job-apply', ['jobId' => $row['id']]) : route('login')}}" onclick="@if($authRole == 'worker') return confirm('Anda akan melamar pekerjaan {{$row['title']}} di {{$row['employerName']}}. Lanjutkan Proses ?') @else alert('Silahkan login sebagai pekerja untuk melamar') @endif " class="btn-1 btn-color-1 ripple">Lamar Pekerjaan</a> @endif

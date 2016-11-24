@@ -2,6 +2,29 @@
 
 @section('content')
 
+<!--ACCOUNT OPTION SECTION START-->
+
+<section class="account-option">
+
+    <div class="container">
+
+        <div class="inner-box">
+
+            <div class="text-box">
+
+                <h4>Anda belum memiliki akun ?</h4>
+
+                <p>Klik link berikut untuk membuat akun Caripekerja. </p>
+
+            </div>
+
+            <a href="{{url('/daftar')}}" class="btn-style-1"><i class="fa fa-sign-in"></i>Daftar</a> </div>
+
+    </div>
+
+</section>
+
+<!--ACCOUNT OPTION SECTION END-->
 
 <!--SIGNUP SECTION START-->
 

@@ -14,6 +14,8 @@ use App\Province;
 use App\Helpers\GlobalHelper;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use App\Mail\OrderShipped;
 use Illuminate\Support\Facades\Mail;
@@ -90,6 +92,64 @@ class UserController extends Controller
         $data['image'] = ($this->_authData['photo_profile'] == null) ? asset('images').'/user/no-image.png' : asset('images') . '/profil/'.$this->_role . '/' . $this->_authData['photo_profile'];
 
         return view('user.myaccount-index', $data);
+    }
+
+    /**
+     * Display change password page
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function changePassword(Request $request) {
+        $submit = $request->input('submit');
+        $role = $this->_role;
+        $authId = $this->_authData['id'];
+        $authData = $this->_authData;
+
+        if($submit != null) {
+            $this->validate($request, [
+                'oldpass' => 'required:s',
+                'newpass' => 'required|min:6',
+                'conpass' => 'required|same:newpass',
+            ]);
+
+            $oldpass = $request->input('oldpass');
+            $newpass = $request->input('newpass');
+            $conpass = $request->input('conpass');
+
+            if($role == 'worker') {
+                $checkPass = Hash::check($oldpass, $authData['password']);
+
+                if(!$checkPass) {
+                    $message = GlobalHelper::setDisplayMessage('error', 'Password lama tidak sesuai');
+                    return redirect(route('change-password'))->with('displayMessage', $message);
+                }
+
+                $user = User::find($authId);
+
+                $user->password = bcrypt($newpass);
+
+                $user->save();
+            } else if($role == 'employer') {
+                $checkPass = Hash::check($oldpass, $authData['password']);
+
+                if(!$checkPass) {
+                    $message = GlobalHelper::setDisplayMessage('error', 'Password lama tidak sesuai');
+                    return redirect(route('change-password'))->with('displayMessage', $message);
+                }
+
+                $employer = Employer::find($authId);
+
+                $employer->password = bcrypt($newpass);
+
+                $employer->save();
+            }
+
+            $message = GlobalHelper::setDisplayMessage('success', 'Sukses mengganti password anda');
+            return redirect(route('change-password'))->with('displayMessage', $message);
+        }
+
+        $data['role'] = $role;
+        return view('user.change-password', $data);
     }
 
     /**
@@ -357,7 +417,7 @@ class UserController extends Controller
             return $auth;
         }
 
-        $auth['middleware'] = 'user';
+        $auth['middleware'] = 'worker';
         return $auth;
     }
 
