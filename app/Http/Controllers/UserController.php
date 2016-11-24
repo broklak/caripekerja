@@ -224,7 +224,7 @@ class UserController extends Controller
             $this->validate($request, [
                 'name' => 'required|max:100',
                 'phone' => 'required|max:50',
-                'website' => 'required|max:75',
+                'website' => 'max:75',
                 'city' => 'required',
                 'address' => 'required|max:255',
                 'category' => 'required|max:100',
