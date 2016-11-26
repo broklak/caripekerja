@@ -1,6 +1,6 @@
 [
   {"id":1, "name":"Babysitter", "url":"babysitter"},
-  {"id":2, "name":"Asisten Rumah Tangga", "url":"art"},
+  {"id":2, "name":"Asisten Rumah Tangga", "url":"asisten-rumah-tangga"},
   {"id":3, "name":"Sopir", "url":"sopir"},
   {"id":4, "name":"Juru Masak", "url":"juru-masak"},
   {"id":5, "name":"Pelayan", "url":"pelayan"},
@@ -14,5 +14,6 @@
   {"id":13, "name":"Tukang Kayu", "url":"tukang-kayu"},
   {"id":14, "name":"Kurir", "url":"kurir"},
   {"id":15, "name":"Montir", "url":"montir"},
-  {"id":16, "name":"Satpam", "url":"satpam"}
+  {"id":16, "name":"Satpam", "url":"satpam"},
+  {"id":17, "name":"Pemayet", "url":"pemayet"}
 ]

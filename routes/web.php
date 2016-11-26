@@ -48,8 +48,9 @@ Route::post('lowongan-kerja', 'JobController@index')->name('job-list');
 Route::get('lamar-kerja/{jobId}', 'UserController@applyJob')->name('job-apply');
 
 // WORKER
-Route::get('daftar-pekerja', 'HomeController@workerList')->name('worker-list');
-Route::post('daftar-pekerja', 'HomeController@workerList')->name('worker-list');
+Route::get('daftar-pekerja/', 'HomeController@workerList')->name('worker-list');
+Route::get('daftar-pekerja/{categoryUrl}', 'HomeController@workerList')->name('worker-list-category');
+Route::post('daftar-pekerja/', 'HomeController@workerList')->name('worker-list');
 Route::get('profil-pekerja/{workerId}', 'HomeController@workerDetail')->name('worker-detail');
 Route::get('lamaran-saya', 'UserController@getAppliedJob')->name('worker-job');
 

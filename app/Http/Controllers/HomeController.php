@@ -32,15 +32,27 @@ class HomeController extends Controller {
     /**
      * Search
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request  $request, string $categoryUrl
      * @return \Illuminate\Http\Response
      */
-    public function workerList (Request $request) {
+    public function workerList (Request $request, $categoryUrl = 'all') {
         $param = $request->input();
+        $categoryName = 'all';
+
+        if($categoryUrl != 'all') {
+            $getCategory = WorkerCategory::where('url', $categoryUrl)->first();
+            $param['category'] = (isset($getCategory['id'])) ? $getCategory['id'] : 0;
+        }
+
+        if(isset($param['category'])) {
+            $getCategoryName = WorkerCategory::find($param['category']);
+            $categoryName = (isset($getCategoryName['id'])) ? $getCategoryName['name'] : 'all';
+        }
 
         $perPage = 20;
         $list = User::search($param, $perPage);
 
+        $data['categoryTitle'] = $categoryName;
         $data['category'] = WorkerCategory::all();
         $data['province'] = Province::all();
         $data['list'] = $list['worker'];

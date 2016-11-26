@@ -23,163 +23,197 @@
 
                 <div class="col-md-3 col-sm-6">
 
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/art.png')}}');background-size: cover" class="box bg-pekerja">
+                    <a href="{{route('worker-list-category', ['url' => 'asisten-rumah-tangga'])}}">
+                        <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/art.png')}}');background-size: cover" class="box bg-pekerja">
 
-                        <h4><a href="#">Asisten Rumah Tangga</a></h4>
+                            <h4>Asisten Rumah Tangga</h4>
 
-                    </div>
-
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/babysitter.png')}}');background-size: cover" class="box bg-pekerja">
-
-                        <h4><a href="#">Baby Sitter</a></h4>
-
-                    </div>
+                        </div>
+                    </a>
 
                 </div>
 
-                <div class="col-md-3 col-sm-6">
 
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/sopir.png')}}');background-size: cover" class="box bg-pekerja">
+                <a href="{{route('worker-list-category', ['url' => 'babysitter'])}}">
+                    <div class="col-md-3 col-sm-6">
 
-                        <h4><a href="#">Sopir</a></h4>
+                        <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/babysitter.png')}}');background-size: cover" class="box bg-pekerja">
 
-                    </div>
+                            <h4>Baby Sitter</h4>
 
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/pelayan.png')}}');background-size: cover" class="box bg-pekerja">
-
-                        <h4><a href="#">Pelayan</a></h4>
+                        </div>
 
                     </div>
+                </a>
 
-                </div>
 
-                <div class="col-md-3 col-sm-6">
+                <a href="{{route('worker-list-category', ['url' => 'sopir'])}}">
+                    <div class="col-md-3 col-sm-6">
 
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/jagatoko.png')}}');background-size: cover" class="box bg-pekerja">
+                        <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/sopir.png')}}');background-size: cover" class="box bg-pekerja">
 
-                        <h4><a href="#">Penjaga Toko</a></h4>
+                            <h4>Sopir</h4>
 
-                    </div>
-
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/admin.png')}}');background-size: cover" class="box bg-pekerja">
-
-                        <h4><a href="#">Admin</a></h4>
+                        </div>
 
                     </div>
+                </a>
 
-                </div>
+                <a href="{{route('worker-list-category', ['url' => 'pelayan'])}}">
+                    <div class="col-md-3 col-sm-6">
 
-                <div class="col-md-3 col-sm-6">
+                        <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/pelayan.png')}}');background-size: cover" class="box bg-pekerja">
 
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/buruh.png')}}');background-size: cover" class="box bg-pekerja">
+                            <h4>Pelayan</h4>
 
-                        <h4><a href="#">Buruh Pabrik</a></h4>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/satpam.png')}}');background-size: cover" class="box bg-pekerja">
-
-                        <h4><a href="#">Satpam</a></h4>
+                        </div>
 
                     </div>
+                </a>
 
-                </div>
+                <a href="{{route('worker-list-category', ['url' => 'jaga-toko'])}}">
+                    <div class="col-md-3 col-sm-6">
 
-                <div class="col-md-3 col-sm-6">
+                        <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/jagatoko.png')}}');background-size: cover" class="box bg-pekerja">
 
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/montir.png')}}');background-size: cover" class="box bg-pekerja">
+                            <h4>Penjaga Toko</h4>
 
-                        <h4><a href="#">Montir</a></h4>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/kurir.png')}}');background-size: cover" class="box bg-pekerja">
-
-                        <h4><a href="#">Kurir</a></h4>
+                        </div>
 
                     </div>
+                </a>
 
-                </div>
+                <a href="{{route('worker-list-category', ['url' => 'admin'])}}">
+                    <div class="col-md-3 col-sm-6">
 
-                <div class="col-md-3 col-sm-6">
+                        <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/admin.png')}}');background-size: cover" class="box bg-pekerja">
 
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/koki.png')}}');background-size: cover" class="box bg-pekerja">
+                            <h4>Admin</h4>
 
-                        <h4><a href="#">Juru Masak</a></h4>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/kuli.png')}}');background-size: cover" class="box bg-pekerja">
-
-                        <h4><a href="#">Kuli Bangunan</a></h4>
+                        </div>
 
                     </div>
+                </a>
 
-                </div>
+                <a href="{{route('worker-list-category', ['url' => 'buruh-pabrik'])}}">
+                    <div class="col-md-3 col-sm-6">
 
-                <div class="col-md-3 col-sm-6">
+                        <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/buruh.png')}}');background-size: cover" class="box bg-pekerja">
 
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/ob.png')}}');background-size: cover" class="box bg-pekerja">
+                            <h4>Buruh Pabrik</h4>
 
-                        <h4><a href="#">Office Boy / Girl</a></h4>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/tukang-kayu.png')}}');background-size: cover" class="box bg-pekerja">
-
-                        <h4><a href="#">Tukang Kayu</a></h4>
+                        </div>
 
                     </div>
+                </a>
 
-                </div>
+                <a href="{{route('worker-list-category', ['url' => 'satpam'])}}">
+                    <div class="col-md-3 col-sm-6">
 
-                <div class="col-md-3 col-sm-6">
+                        <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/satpam.png')}}');background-size: cover" class="box bg-pekerja">
 
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/penjahit.png')}}');background-size: cover" class="box bg-pekerja">
+                            <h4>Satpam</h4>
 
-                        <h4><a href="#">Penjahit</a></h4>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-
-                    <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/pemayet.png')}}');background-size: cover" class="box bg-pekerja">
-
-                        <h4><a href="#">Pemayet</a></h4>
+                        </div>
 
                     </div>
+                </a>
 
-                </div>
+                <a href="{{route('worker-list-category', ['url' => 'montir'])}}">
+                    <div class="col-md-3 col-sm-6">
+
+                        <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/montir.png')}}');background-size: cover" class="box bg-pekerja">
+
+                            <h4>Montir</h4>
+
+                        </div>
+
+                    </div>
+                </a>
+
+                <a href="{{route('worker-list-category', ['url' => 'kurir'])}}">
+                    <div class="col-md-3 col-sm-6">
+
+                        <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/kurir.png')}}');background-size: cover" class="box bg-pekerja">
+
+                            <h4>Kurir</h4>
+
+                        </div>
+
+                    </div>
+                </a>
+
+                <a href="{{route('worker-list-category', ['url' => 'juru-masak'])}}">
+                    <div class="col-md-3 col-sm-6">
+
+                        <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/koki.png')}}');background-size: cover" class="box bg-pekerja">
+
+                            <h4>Juru Masak</h4>
+
+                        </div>
+
+                    </div>
+                </a>
+
+                <a href="{{route('worker-list-category', ['url' => 'kuli-bangunan'])}}">
+                    <div class="col-md-3 col-sm-6">
+
+                        <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/kuli.png')}}');background-size: cover" class="box bg-pekerja">
+
+                            <h4>Kuli Bangunan</h4>
+
+                        </div>
+
+                    </div>
+                </a>
+
+                <a href="{{route('worker-list-category', ['url' => 'ob-og'])}}">
+                    <div class="col-md-3 col-sm-6">
+
+                        <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/ob.png')}}');background-size: cover" class="box bg-pekerja">
+
+                            <h4>Office Boy / Girl</h4>
+
+                        </div>
+
+                    </div>
+                </a>
+
+                <a href="{{route('worker-list-category', ['url' => 'tukang-kayu'])}}">
+                    <div class="col-md-3 col-sm-6">
+
+                        <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/tukang-kayu.png')}}');background-size: cover" class="box bg-pekerja">
+
+                            <h4>Tukang Kayu</h4>
+
+                        </div>
+
+                    </div>
+                </a>
+
+                <a href="{{route('worker-list-category', ['url' => 'penjahit'])}}">
+                    <div class="col-md-3 col-sm-6">
+
+                        <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/penjahit.png')}}');background-size: cover" class="box bg-pekerja">
+
+                            <h4>Penjahit</h4>
+
+                        </div>
+
+                    </div>
+                </a>
+
+                <a href="{{route('worker-list-category', ['url' => 'pemayet'])}}">
+                    <div class="col-md-3 col-sm-6">
+
+                        <div style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url('{{asset('images/bg/bgpekerja/pemayet.png')}}');background-size: cover" class="box bg-pekerja">
+
+                            <h4>Pemayet</h4>
+
+                        </div>
+
+                    </div>
+                </a>
 
             </div>
 

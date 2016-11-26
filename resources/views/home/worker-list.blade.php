@@ -115,7 +115,15 @@
 
                 <div class="resumes-content">
 
-                    <h2>Menampilkan Seluruh Pekerja</h2>
+                    <h2>
+                        @if($categoryTitle == 'all')
+                            Menampilkan Seluruh Pekerja
+                        @elseif($categoryTitle != null)
+                            Menampilkan Profesi {{$categoryTitle}}
+                        @else
+                            Profesi Tidak Ditemukan
+                        @endif
+                    </h2>
 
                     @if(!empty($list))
 
