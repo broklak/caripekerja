@@ -1,7 +1,7 @@
 
 <!--CUSTOM CSS-->
 
-<link href="{{ asset("css") }}/custom.css?version1.1" rel="stylesheet" type="text/css">
+<link href="{{ asset("css") }}/custom.css?version1.2" rel="stylesheet" type="text/css">
 
 <!--BOOTSTRAP CSS-->
 

@@ -245,7 +245,7 @@
                     <i class="fa fa-long-arrow-right fa-3x"></i>
                 </div>
 
-                <div class="col-md-3 col-sm-3">
+                <div style="margin-left: 53px" class="col-md-3 col-sm-3">
                     <div class="text-center">
                         <h4>Pilih Pekerja</h4>
                         <i class="fa fa-hand-pointer-o fa-3x"></i>
@@ -257,7 +257,7 @@
                     <i class="fa fa-long-arrow-right fa-3x"></i>
                 </div>
 
-                <div class="col-md-4 col-sm-4">
+                <div style="width: 300px" class="col-md-4 col-sm-4">
                     <div class="text-center">
                         <h4>Hubungi Pekerja</h4>
                         <i class="fa fa-phone fa-3x"></i>
