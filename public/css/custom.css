@@ -213,6 +213,9 @@ a {
 strong.logo {
 	float: left;
 	margin: 0 0 0 20px;
+	background-color: #fff;
+	margin-top: -23px;
+	padding: 16px 0 10px 0;
 }
 strong.logo a {
 	display: block;
@@ -222,6 +225,7 @@ strong.logo a {
 .navigation-col {
 	float: left;
 	width: 100%;
+	margin-left: 10%;
 }
 .navigation-col .navbar-collapse {
 	padding: 0;
@@ -282,6 +286,7 @@ strong.logo a {
 #nav li a:before {
 	left: 0;
 	top: 0;
+	background-color: #fff;
 }
 #nav li a:after {
 	right: 0;
@@ -2650,9 +2655,11 @@ strong.logo-2 {
 	padding: 5px 0 0 0;
 	display: block;
 	overflow: hidden;
+	color: #fff;
 }
 .top-footer-area ul li:first-child {
 	padding: 0;
+	color: #fff;
 }
 
 .top-footer-area ul li a {
@@ -2663,24 +2670,24 @@ strong.logo-2 {
 
 .snap-footer-title h4 {
 	font-size: 13px;
-	color: #1b8af3;
+	color: #fff;
 	margin-bottom: 25px;
 }
 .cakewalk-footer-content p {
-	color: #888;
+	color: #fff;
 	line-height: 24px;
 	width: 90%;
 }
 .cakewalk-footer-content .read-more{
-	color: #888;
+	color: #fff;
 }
 .cakewalk-footer-content .read-more:hover{color: #1b8af3;}
 .cakewalk-footer-content ul li a{
 	line-height: 30px;
 	font-size: 14px;
-	color: #888;
+	color: #fff;
 }
-.cakewalk-footer-content ul li a:hover{color:#c2a476;}
+/*.cakewalk-footer-content ul li a:hover{color:#c2a476;}*/
 .infof-icon {
 	float: left;
 	margin-right: 15px;
@@ -2721,18 +2728,17 @@ strong.logo-2 {
 	clear: both;
 }
 .address-footer address {
-	margin-top: 3px;
-	float: left;
-	margin-bottom: 0;
-	font-family: Montserrat;
+	margin-top: 15px;
+	text-align: center;
+	margin-bottom: 10px;
 	font-weight: 400;
 	font-size: 14px;
-	color: #888;
+	color: #fff;
 }
 .address-footer address a{color: #c3a376;}
 .address-footer address a:hover{color: #ffffff;}
 .social-footer ul li {
-	color: #888;
+	color: #fff;
 	font-size: 14px;
 	margin-bottom: 10px;
 }
@@ -2741,7 +2747,7 @@ strong.logo-2 {
 	height: 21px;
 	text-align: center;
 	line-height: 21px;
-	color: #888;
+	color: #fff;
 	font-size: 12px;
 	border: 1px solid #555;
 	border-radius: 3px;
@@ -4667,7 +4673,7 @@ TRANSITION-FOR-IMAGES {
 	font-family: 'Roboto', sans-serif;
 }
 .padd-tb {
-	padding: 60px 0;
+	padding: 37px 0;
 }
 .padd-top {
 	padding: 60px 0 0 0;
@@ -4839,6 +4845,13 @@ TRANSITION-FOR-IMAGES {
 	color: #fff;
 }
 
+.link-white, .link-white:hover {
+	background-color: #fff;
+	color: #252525;
+	border: solid #333;
+	border-radius: 8px;
+}
+
 .link-blue, .link-blue:hover {
 	background-color:#1b8af3;
 	color: #fff;
@@ -4860,6 +4873,14 @@ TRANSITION-FOR-IMAGES {
 
 .table tbody tr td a {
 	vertical-align: bottom;
+}
+
+.navbar-header {
+	margin-top: -23px;
+}
+
+.home-custom {
+	position: absolute;
 }
 
 /****************************************************ADDITIONAL CUSTOM CSS END****************************************************/

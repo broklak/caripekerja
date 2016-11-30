@@ -1,13 +1,13 @@
 <!--INNER BANNER START-->
 
-<section id="inner-banner">
+{{--<section id="inner-banner">--}}
 
-    <div class="container">
+    {{--<div class="container">--}}
 
-        <h1>{{$banner_title}}</h1>
+        {{--<h1>{{$banner_title}}</h1>--}}
 
-    </div>
+    {{--</div>--}}
 
-</section>
+{{--</section>--}}
 
 <!--INNER BANNER END-->

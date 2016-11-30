@@ -66,7 +66,7 @@
     <div class="address-footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-xs-12">
+                <div class="col-md-12 col-xs-12">
                     <address>Copyright &copy; 2016 PT.Sumber Daya Pekerja</address>
                 </div>
             </div>

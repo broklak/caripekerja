@@ -2,11 +2,13 @@
 
     <div class="banner-outer">
 
-        <div style="height: 460px" id="banner" class="element kenburnsy">
-            <img src="{{ asset("images/bg") }}/banner-img-1.png" alt="banner">
+        <div style="height: @if(Request::url() === route('home')) 460px @else 119px @endif" id="banner" class="element kenburnsy">
+            @if(Request::url() === route('home'))
+                <img src="{{ asset("images/bg") }}/bg-new.png" alt="banner">
+            @endif
         </div>
 
-    <div class="container" style="position: absolute;margin-left: 10%">
+    <div class="container home-custom">
 
         <!--NAVIGATION START-->
 
@@ -18,17 +20,17 @@
 
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
 
-                    <strong style="background-color: #fff;margin-top: -23px;padding: 16px 0 10px 0;" class="logo"><a href="{{url('/')}}"><img style="width: 150px" src="{{ asset("images") }}/logocpbeta.png" alt="logo"></a></strong> </div>
+                    <strong style="" class="logo"><a href="{{url('/')}}"><img style="width: 150px" src="{{ asset("images") }}/logocpbeta.png" alt="logo"></a></strong> </div>
 
                 <div id="navbar" class="collapse navbar-collapse">
 
                     <ul class="nav navbar-nav" id="nav">
 
-                        @if($authRole != 'employer') <li><a style="color: #fff;" href="{{route('job-list')}}">Lowongan Kerja</a></li> @endif
+                        @if($authRole != 'employer') <li><a style="color: #fff;margin-top: 10px" href="{{route('job-list')}}">Lowongan Kerja</a></li> @endif
 
-                        @if($authRole != 'worker') <li><a style="color: #fff;" href="{{route('worker-list')}}">Cari Pekerja</a></li> @endif
+                        @if($authRole != 'worker') <li><a style="color: #fff;margin-top: 10px" href="{{route('worker-list')}}">Cari Pekerja</a></li> @endif
 
-                        @if($authRole != 'worker') <li><a style="color: #fff;" href="{{route('job-create')}}">Buat Lowongan</a></li> @endif
+                        @if($authRole != 'worker') <li><a style="color: #fff;margin-top: 10px" href="{{route('job-create')}}">Buat Lowongan</a></li> @endif
 
                     </ul>
 
@@ -54,7 +56,7 @@
                     <button style="color: #fff;background: none" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         <span class="hi-user">Hi, {{$authUser['name']}} @if($authRole == 'employer') | Anda memiliki {{$authUser['quota']}} Kuota @endif</span>
                     </button>
-                    @if($authRole == 'employer') <a href="{{route('topup-create')}}" class="button-link link-green topup-link">TOP UP</a> @endif
+                    @if($authRole == 'employer') <a href="{{route('topup-create')}}" class="button-link link-white topup-link">TOP UP</a> @endif
 
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 
@@ -70,11 +72,13 @@
         @else
             <div class="dropdown-box" style="color: #fff;">
                 <span><a  style="color: #fff;" href="{{route('login')}}">Masuk</a></span> | <span><a  style="color: #fff;" href="{{route('register')}}">Daftar</a>
-                <a  style="color: #fff;" href="{{route('topup-create')}}" class="button-link link-green topup-link">TOP UP</a></span>
+                <a  style="color: #fff;" href="{{route('topup-create')}}" class="button-link link-white topup-link">TOP UP</a></span>
             </div>
         @endif
 
     </div>
+
+        @if(Request::url() === route('home'))
 
         <div style="margin-top: 127px" class="caption">
 
@@ -91,6 +95,7 @@
 
         </div>
 
+            @endif
     </div>
 
     <!--USER OPTION COLUMN END-->

@@ -135,9 +135,9 @@
 
                                     <div class="text-box">
 
-                                        <h3><a href="{{route('worker-detail', ['workerId' => $row['id']])}}">{{substr($row['name'],0,15)}}</a></h3>
+                                        <h3 style="margin-bottom: 2px"><a href="{{route('worker-detail', ['workerId' => $row['id']])}}">{{substr($row['name'],0,15)}}</a></h3>
 
-                                        <h5>{{\App\Helpers\GlobalHelper::getAgeByBirthdate($row['birthdate'])}} Tahun</h5>
+                                        <h5 style="margin-top: 5px;margin-bottom: 5px">{{\App\Helpers\GlobalHelper::getAgeByBirthdate($row['birthdate'])}} Tahun</h5>
 
                                         <div class="clearfix"> <strong class="city-name-list"><i class="fa fa-map-marker"></i>{{\App\Helpers\GlobalHelper::getCityName($row['city'])}}</strong></div>
 

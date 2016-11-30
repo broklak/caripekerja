@@ -16,7 +16,6 @@
                 </div>
             @endif
         </div>
-    </div>
 </section>
 
 <!--RESUME FORM START-->

@@ -1,7 +1,7 @@
 
 <!--CUSTOM CSS-->
 
-<link href="{{ asset("css") }}/custom.css?version1.2" rel="stylesheet" type="text/css">
+<link href="{{ asset("css") }}/custom.css?version1.1" rel="stylesheet" type="text/css">
 
 <!--BOOTSTRAP CSS-->
 
@@ -9,7 +9,7 @@
 
 <!--COLOR CSS-->
 
-<link href="{{ asset("css") }}/color.css" rel="stylesheet" type="text/css">
+<link href="{{ asset("css") }}/color.css?version1.0" rel="stylesheet" type="text/css">
 
 <!--RESPONSIVE CSS-->
 

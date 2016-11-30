@@ -4,5 +4,5 @@
 
 <!--TEXT EDITOR CSS-->
 
-<link href="{{ asset("css") }}/editor.css" type="text/css" rel="stylesheet"/>
+{{--<link href="{{ asset("css") }}/editor.css" type="text/css" rel="stylesheet"/>--}}
 
