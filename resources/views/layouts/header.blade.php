@@ -18,7 +18,7 @@
 
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
 
-                    <strong style="background-color: #fff;margin-top: -20px;padding: 16px 0 10px 0;" class="logo"><a href="{{url('/')}}"><img style="width: 150px" src="{{ asset("images") }}/logocpbeta.png" alt="logo"></a></strong> </div>
+                    <strong style="background-color: #fff;margin-top: -23px;padding: 16px 0 10px 0;" class="logo"><a href="{{url('/')}}"><img style="width: 150px" src="{{ asset("images") }}/logocpbeta.png" alt="logo"></a></strong> </div>
 
                 <div id="navbar" class="collapse navbar-collapse">
 
@@ -51,7 +51,7 @@
 
                 <div class="dropdown-box">
 
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <button style="color: #fff;background: none" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         <span class="hi-user">Hi, {{$authUser['name']}} @if($authRole == 'employer') | Anda memiliki {{$authUser['quota']}} Kuota @endif</span>
                     </button>
                     @if($authRole == 'employer') <a href="{{route('topup-create')}}" class="button-link link-green topup-link">TOP UP</a> @endif
