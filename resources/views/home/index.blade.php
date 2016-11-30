@@ -249,7 +249,7 @@
                     <div class="text-center">
                         <h4>Pilih Pekerja</h4>
                         <i class="fa fa-hand-pointer-o fa-3x"></i>
-                        <p>Masukkan kriteria pekerja yang anda mau</p>
+                        <p>Masukkan kriteria pekerja yang anda inginkan</p>
                     </div>
                 </div>
 
@@ -261,7 +261,7 @@
                     <div class="text-center">
                         <h4>Hubungi Pekerja</h4>
                         <i class="fa fa-phone fa-3x"></i>
-                        <p>Dapatkan kontak pekerja mulai dari Rp.2.000 / kontak</p>
+                        <p>Dapatkan kontak pekerja dan rekrut segera</p>
                     </div>
                 </div>
 
@@ -291,7 +291,7 @@
 
                     <li>untuk 20 kontak</li>
 
-                    <li>Rp.5000 / Kontak</li>
+                    <li>Rp 5000 / Kontak</li>
 
                 </ul>
 
@@ -300,7 +300,7 @@
 
             <div class="box">
 
-                <div class="head">Populer</div>
+                <div class="head">Penawaran Terbaik</div>
 
                 <h4>BRONZE</h4>
 
@@ -310,7 +310,7 @@
 
                     <li>untuk 80 kontak</li>
 
-                    <li>Rp.2500 / Kontak</li>
+                    <li>Rp 2500 / Kontak</li>
 
                 </ul>
 
@@ -327,7 +327,7 @@
 
                     <li>untuk 250 kontak</li>
 
-                    <li>Rp.2000 / Kontak</li>
+                    <li>Rp 2000 / Kontak</li>
 
                 </ul>
 
@@ -344,7 +344,7 @@
 
                     <li>untuk 600 kontak</li>
 
-                    <li>Rp.1500 / Kontak</li>
+                    <li>Rp 1500 / Kontak</li>
 
                 </ul>
 
@@ -379,7 +379,7 @@
                     <div class="text-center">
                         <i class="fa fa-money fa-5x"></i>
                         <h5>Hemat Uang</h5>
-                        <p>Dapatkan kontak pekerja mulai dari Rp.2.000 / kontak</p>
+                        <p>Dapatkan kontak pekerja mulai dari Rp 2000 / kontak</p>
                     </div>
                 </div>
 
