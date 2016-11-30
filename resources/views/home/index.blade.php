@@ -16,7 +16,7 @@
 
                 <h2>Pilihan Profesi Pekerja</h2>
 
-                <a href="{{route('worker-list')}}" class="btn-style-1">Lihat Semua Kategori Pekerja</a>
+                <a style="padding:15px 20px" href="{{route('worker-list')}}" class="btn-style-1">Lihat Semua Kategori Pekerja</a>
             </div>
 
             <div class="row">

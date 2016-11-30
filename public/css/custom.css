@@ -22,9 +22,9 @@ Background:	#f5f5f5 (lily white)
 
 Content:	#666666 (grey)
 
-Header h1:	#222222 (dark grey)
+Header h1:	#252525222 (dark grey)
 
-Header h2:	#222222 (dark gre)
+Header h2:	#252525222 (dark gre)
 
 Footer:		#fff (white)
 
@@ -143,21 +143,21 @@ a {
 }
 .theme-style-1 h2 {
 	font: 500 30px/30px 'Roboto', sans-serif;
-	color: #222;
+	color: #252525;
 	margin: 0 0 25px 0;
 }
 .theme-style-1 h2 a {
 	text-decoration: none;
-	color: #222;
+	color: #252525;
 }
 .theme-style-1 h4 {
 	font: 500 18px/18px 'Roboto', sans-serif;
-	color: #222;
+	color: #252525;
 	margin: 0;
 }
 .theme-style-1 h4 a {
 	text-decoration: none;
-	color: #222;
+	color: #252525;
 }
 .theme-style-1 a.btn-style-1 {
 	padding: 11px 25px;
@@ -257,7 +257,7 @@ strong.logo a {
 }
 #nav li a {
 	font: 400 15px/15px 'Roboto', sans-serif;
-	color: #222;
+	color: #252525;
 	text-decoration: none;
 	padding: 8px 0 8px 0;
 	display: block;
@@ -501,7 +501,7 @@ strong.logo a {
 	text-decoration: none;
 }
 .banner-menu ul li a:hover {
-	color: #222;
+	color: #252525;
 }
 .banner-outer .caption .holder .btn-row {
 	float: left;
@@ -516,7 +516,7 @@ strong.logo a {
 	border-radius: 3px;
 	margin: 0 10px;
 	font: 900 14px/14px 'Roboto', sans-serif;
-	color: #222;
+	color: #252525;
 	box-shadow: 0 5px 5px rgba(0,0,0,0.15);
 	-moz-box-shadow: 0 5px 5px rgba(0,0,0,0.15);
 	-webkit-box-shadow: 0 5px 5px rgba(0,0,0,0.15);
@@ -531,7 +531,7 @@ strong.logo a {
 	overflow: hidden;
 }
 .banner-outer .caption .holder .btn-row a:hover {
-	color: #000;
+	color: #fff;
 }
 .banner-outer .caption .holder .btn-row a:hover:before {
 	opacity: 1;
@@ -587,7 +587,7 @@ strong.logo a {
 	padding: 10px 25px;
 	border-radius: 3px;
 	font: 900 14px/14px 'Roboto', sans-serif;
-	color: #000;
+	color: #252525;
 	text-decoration: none;
 	margin: 0 0 0 30px;
 	box-shadow: 0 5px 3px rgba(0,0,0,0.15);
@@ -608,7 +608,7 @@ strong.logo a {
 	padding: 10px 0 0 0;
 }
 .browse-job-section a.btn-brows:hover {
-	color: #000;
+	color: #252525;
 }
 .browse-job-section a.btn-brows:hover:before {
 	opacity: 1;
@@ -735,7 +735,7 @@ strong.logo a {
 	padding: 12px 30px;
 	display: inline-block;
 	font: 900 13px/13px 'Roboto', sans-serif;
-	color: #222;
+	color: #252525;
 	border-radius: 3px;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -750,7 +750,7 @@ strong.logo a {
 	overflow: hidden;
 }
 .cp-top-bar .login-section a.btn-login:hover {
-	color: #000;
+	color: #252525;
 }
 .cp-top-bar .login-section a.btn-login:hover:before {
 	opacity: 1;
@@ -781,7 +781,7 @@ strong.logo a {
 	height: 20px;
 	background: #fff;
 	text-align: center;
-	color: #222;
+	color: #252525;
 	line-height: 20px;
 	font-size: 12px;
 }
@@ -1269,6 +1269,7 @@ strong.logo-2 {
 }
 .popular-categories .box h4 {
 	margin: 0 0 20px 0;
+	padding-top: 15px;
 }
 .popular-categories .box strong {
 	display: block;
@@ -1358,7 +1359,7 @@ strong.logo-2 {
 }
 #content-area .box strong.price {
 	font: 700 18px/18px 'Roboto', sans-serif;
-	color: #222;
+	color: #252525;
 	float: left;
 	padding: 24px 0 0 0;
 }
@@ -1451,7 +1452,7 @@ strong.logo-2 {
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	font: 900 14px/14px 'Roboto', sans-serif;
-	color: #222;
+	color: #252525;
 	text-transform: uppercase;
 	text-align: center;
 	text-decoration: none;
@@ -1468,7 +1469,7 @@ strong.logo-2 {
 	overflow: hidden;
 }
 #content-area a.load-more:hover {
-	color: #000;
+	color: #252525;
 }
 #content-area a.load-more:hover:before {
 	opacity: 1;
@@ -1514,7 +1515,7 @@ strong.logo-2 {
 .ink {
 	display: block;
 	position: absolute;
-	background: #000;
+	background: #252525;
 	border-radius: 100%;
 	transform: scale(0);
 	-moz-transform: scale(0);
@@ -1560,7 +1561,7 @@ strong.logo-2 {
 	float: left;
 	width: 100%;
 	overflow: hidden;
-	background: #000;
+	background: #252525;
 	position: relative;
 	border-radius: 3px;
 }
@@ -1576,14 +1577,14 @@ strong.logo-2 {
 	width: 100%;
 	height: 100%;
 	opacity: 0.4;
-	background: #000;
+	background: #252525;
 }
 .sidebar .box .frame {
 	float: left;
 	width: 100%;
 	border-radius: 3px 3px 0 0;
 	overflow: hidden;
-	background: #000;
+	background: #252525;
 }
 .sidebar .box .frame:hover img {
 	opacity: 0.6;
@@ -1651,7 +1652,7 @@ strong.logo-2 {
 }
 .sidebar .box .text-box strong.price {
 	font: 700 18px/18px 'Roboto', sans-serif;
-	color: #222;
+	color: #252525;
 	display: block;
 	padding: 3px 0 25px 0;
 }
@@ -1744,7 +1745,7 @@ strong.logo-2 {
 .sidebar .box .recent-post .img-frame {
 	float: left;
 	margin: 0 15px 0 0;
-	background: #000;
+	background: #252525;
 }
 .sidebar .box .recent-post .text-area {
 	overflow: hidden;
@@ -1822,7 +1823,7 @@ strong.logo-2 {
 	float: left;
 	margin: 0 15px 0 0;
 	overflow: hidden;
-	background: #000;
+	background: #252525;
 }
 .related-people .text-box {
 	overflow: hidden;
@@ -1881,7 +1882,7 @@ strong.logo-2 {
 	float: right;
 	border: 1px solid #ccc;
 	font: 900 14px/14px 'Roboto', sans-serif;
-	color: #222;
+	color: #252525;
 	text-transform: uppercase;
 	text-decoration: none;
 	border-radius: 3px;
@@ -1934,7 +1935,7 @@ strong.logo-2 {
 	background-position: left top;
 	background-size: cover;
 	background-attachment: fixed;
-	background-color: #000;
+	background-color: #252525;
 	position: relative;
 	padding: 60px 0 82px 0;
 }
@@ -1977,7 +1978,7 @@ strong.logo-2 {
 }
 .price-table .box strong.amount {
 	font: 700 46px/46px 'Roboto', sans-serif;
-	color: #222;
+	color: #252525;
 	display: block;
 	text-align: center;
 	padding: 0 0 40px 0;
@@ -2069,7 +2070,7 @@ strong.logo-2 {
 	background: #f5f5f5;
 }
 .price-table-2 h2 {
-	color: #222;
+	color: #252525;
 }
 /*****************************************************PRICE TABLE STYLE 2 END*****************************************************/
 
@@ -2085,7 +2086,7 @@ strong.logo-2 {
 	background-repeat: no-repeat;
 	background-position: left top;
 	background-size: cover;
-	background-color: #000;
+	background-color: #252525;
 }
 .testimonials-section .holder {
 	float: left;
@@ -2313,7 +2314,7 @@ strong.logo-2 {
 	padding: 14px 0 0;
 }
 .post-box .text-box strong.name span {
-	color: #222;
+	color: #252525;
 }
 .post-box .frame:hover:before {
 	transform: scaleX(1);
@@ -2376,7 +2377,7 @@ strong.logo-2 {
 	display: block;
 	line-height: 30px;
 	font-size: 13px;
-	color: #000;
+	color: #252525;
 	font-family: FontAwesome;
 	text-indent: 3px;
 }
@@ -2401,7 +2402,7 @@ strong.logo-2 {
 	display: block;
 	line-height: 31px;
 	font-size: 13px;
-	color: #000;
+	color: #252525;
 	font-family: FontAwesome;
 }
 .post-box .owl-prev:hover:before {
@@ -2898,7 +2899,7 @@ strong.logo-2 {
 	background-position: left top;
 	background-size: cover;
 	background-attachment: fixed;
-	background-color: #000;
+	background-color: #252525;
 	padding: 50px 0;
 }
 .facts-box .round-icon {
@@ -3062,7 +3063,7 @@ strong.logo-2 {
 }
 .video-section .text-box p em {
 	font-weight: 900;
-	color: #222;
+	color: #252525;
 }
 .video-section .text-box a.btn-style-1 {
 	padding: 22px 42px;
@@ -3113,7 +3114,7 @@ strong.logo-2 {
 	padding: 0;
 }
 .video-section .video-frame .close {
-	color: #000;
+	color: #252525;
 	float: right;
 	font-size: 21px;
 	font-weight: bold;
@@ -3192,12 +3193,12 @@ strong.logo-2 {
 }
 .error-page h2 {
 	font: 700 36px/36px 'Roboto', sans-serif;
-	color: #222;
+	color: #252525;
 	margin: 0 0 20px 0;
 }
 .error-page p {
 	font: 500 16px/16px 'Roboto', sans-serif;
-	color: #222;
+	color: #252525;
 	margin: 0;
 }
 .privacy-policy .post-box .text-box h4 {
@@ -3305,7 +3306,7 @@ strong.logo-2 {
 .testimonials-style-3 strong.name {
 	font: 500 18px/18px 'Roboto', sans-serif;
 	display: block;
-	color: #222;
+	color: #252525;
 	text-align: center;
 	padding: 0 0 5px 0;
 }
@@ -3769,12 +3770,12 @@ input[type="radio"] {
 }
 .address-box address strong {
 	font: 500 13px/22px 'Roboto', sans-serif;
-	color: #222;
+	color: #252525;
 	display: block;
 }
 .address-box address a {
 	font: 500 14px/18px 'Roboto', sans-serif;
-	color: #222;
+	color: #252525;
 	display: block;
 	text-decoration: none;
 	padding: 12px 0 0 0;
@@ -3895,7 +3896,7 @@ input[type="radio"] {
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	box-shadow: 1px 5px 7px 0 rgba(0, 0, 0, 0.15);
-	color: #222;
+	color: #252525;
 	display: inline-block;
 	font: 900 14px/14px "Roboto", sans-serif;
 	overflow: hidden;
@@ -3924,7 +3925,7 @@ input[type="radio"] {
 	z-index: -1;
 }
 .resumes-section a.load-more:hover {
-	color: #000;
+	color: #252525;
 }
 .resumes-section a.load-more:hover::before {
 	left: 0;
@@ -3969,7 +3970,7 @@ input[type="radio"] {
 .resumes-content .box .text-box span.price {
 	display: block;
 	font: 700 18px/18px 'Roboto', sans-serif;
-	color: #222;
+	color: #252525;
 	padding: 0 0 15px 0;
 }
 .resumes-content .box .text-box .clearfix {
@@ -4052,7 +4053,7 @@ input[type="radio"] {
 }
 .check-filter label {
 	font: 900 14px/16px 'Roboto', sans-serif;
-	color: #222;
+	color: #252525;
 	float: left;
 }
 .summary-box {
@@ -4451,7 +4452,7 @@ input[type="radio"] {
 	background: #fff;
 	padding: 20px 42px;
 	border: 1px solid #ccc;
-	color: #222;
+	color: #252525;
 	margin: 3px 0 0 0;
 }
 .theme-style-1 .account-option a.btn-style-1 .fa {
@@ -4830,6 +4831,7 @@ TRANSITION-FOR-IMAGES {
 	padding: 10px 25px;
 	font-weight: 900;
 	margin-left: 15px;
+	border-radius: 3px;
 }
 
 .link-green, .link-green:hover {

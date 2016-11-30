@@ -1,28 +1,34 @@
-<header id="header">
+<header id="header" style="padding: 0;">
 
-    <div class="container">
+    <div class="banner-outer">
+
+        <div style="height: 500px" id="banner" class="element kenburnsy">
+            <img src="{{ asset("images/bg") }}/banner-img-1.png" alt="banner">
+        </div>
+
+    <div class="container" style="position: absolute;margin-left: 10%">
 
         <!--NAVIGATION START-->
 
         <div class="navigation-col">
 
-            <nav class="navbar navbar-inverse">
+            <nav style="margin-top: 20px" class="navbar navbar-inverse">
 
                 <div class="navbar-header">
 
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
 
-                    <strong class="logo"><a href="{{url('/')}}"><img style="width: 150px" src="{{ asset("images") }}/logocpbeta.png" alt="logo"></a></strong> </div>
+                    <strong style="background-color: #fff;margin-top: -20px;padding: 16px 0 10px 0;" class="logo"><a href="{{url('/')}}"><img style="width: 150px" src="{{ asset("images") }}/logocpbeta.png" alt="logo"></a></strong> </div>
 
                 <div id="navbar" class="collapse navbar-collapse">
 
                     <ul class="nav navbar-nav" id="nav">
 
-                        @if($authRole != 'employer') <li><a href="{{route('job-list')}}">Lowongan Kerja</a></li> @endif
+                        @if($authRole != 'employer') <li><a style="color: #fff;" href="{{route('job-list')}}">Lowongan Kerja</a></li> @endif
 
-                        @if($authRole != 'worker') <li><a href="{{route('worker-list')}}">Cari Pekerja</a></li> @endif
+                        @if($authRole != 'worker') <li><a style="color: #fff;" href="{{route('worker-list')}}">Cari Pekerja</a></li> @endif
 
-                        @if($authRole != 'worker') <li><a href="{{route('job-create')}}">Buat Lowongan</a></li> @endif
+                        @if($authRole != 'worker') <li><a style="color: #fff;" href="{{route('job-create')}}">Buat Lowongan</a></li> @endif
 
                     </ul>
 
@@ -62,10 +68,28 @@
 
 
         @else
-            <div class="dropdown-box">
-                <span><a href="{{route('login')}}">Masuk</a></span> | <span><a href="{{route('register')}}">Daftar</a> <a href="{{route('topup-create')}}" class="button-link link-green topup-link">TOP UP</a></span>
+            <div class="dropdown-box" style="color: #fff;">
+                <span><a  style="color: #fff;" href="{{route('login')}}">Masuk</a></span> | <span><a  style="color: #fff;" href="{{route('register')}}">Daftar</a>
+                <a  style="color: #fff;" href="{{route('topup-create')}}" class="button-link link-green topup-link">TOP UP</a></span>
             </div>
         @endif
+
+    </div>
+
+        <div style="margin-top: 155px" class="caption">
+
+            <div class="holder">
+
+                <h1>CariPekerja adalah Mitra Pencari Pekerja untuk <span style="display: block;margin-top: 13px"> Usaha Kecil dan Menengah</span></h1>
+
+                <div class="btn-row">
+                    <a href="{{route('job-list')}}"><i class="fa fa-user"></i>Saya cari pekerjaan</a>
+                    <a href="{{route('worker-list')}}"><i class="fa fa-building-o"></i>Saya butuh pekerja</a>
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
