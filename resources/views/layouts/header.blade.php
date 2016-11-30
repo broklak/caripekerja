@@ -24,10 +24,6 @@
 
                         @if($authRole != 'worker') <li><a href="{{route('job-create')}}">Buat Lowongan</a></li> @endif
 
-                        <li><a href="#testimonial">Testimonial</a></li>
-
-                        <li><a href="#how-it-works">Cara Kerja</a></li>
-
                     </ul>
 
                 </div>
