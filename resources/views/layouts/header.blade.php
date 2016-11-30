@@ -2,7 +2,7 @@
 
     <div class="banner-outer">
 
-        <div style="height: 500px" id="banner" class="element kenburnsy">
+        <div style="height: 460px" id="banner" class="element kenburnsy">
             <img src="{{ asset("images/bg") }}/banner-img-1.png" alt="banner">
         </div>
 
@@ -76,7 +76,7 @@
 
     </div>
 
-        <div style="margin-top: 155px" class="caption">
+        <div style="margin-top: 127px" class="caption">
 
             <div class="holder">
 
