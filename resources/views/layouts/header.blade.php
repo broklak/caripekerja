@@ -72,7 +72,7 @@
         @else
             <div class="dropdown-box" style="color: #fff;">
                 <span><a  style="color: #fff;" href="{{route('login')}}">Masuk</a></span> | <span><a  style="color: #fff;" href="{{route('register')}}">Daftar</a>
-                <a  style="color: #fff;" href="{{route('topup-create')}}" class="button-link link-white topup-link">TOP UP</a></span>
+                <a href="{{route('topup-create')}}" class="button-link link-white topup-link">TOP UP</a></span>
             </div>
         @endif
 
