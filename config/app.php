@@ -231,4 +231,6 @@ return [
 
     ],
 
+    'template'  => 'workscout'
+
 ];

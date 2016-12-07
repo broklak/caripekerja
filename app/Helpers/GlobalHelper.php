@@ -12,11 +12,7 @@ class GlobalHelper
 {
     public static function setDisplayMessage($messageType = 'error', $message = 'Error Message')
     {
-        if($messageType == 'error') {
-            $messageType = 'danger';
-        }
-
-        $message = '<div class="alert alert-' . $messageType . '">' . $message . '</div>';
+        $message = '<div class="notification ' . $messageType . '">' . $message . '</div>';
         return $message;
     }
 
@@ -66,7 +62,7 @@ class GlobalHelper
 
     public static function getCityName($city_id) {
         if($city_id == null) {
-            return 'Belum Terdaftar';
+            return 'Lokasi Belum Terdaftar';
         }
 
         return \App\Province::find($city_id)->name;
@@ -133,8 +129,12 @@ class GlobalHelper
     }
 
     public static function getWorkerCategory ($category) {
-        $category = explode(',', $category);
+        if($category == null || empty($category))
+        {
+            return null;
+        }
 
+        $category = explode(',', $category);
         $arrCategory = array();
         foreach ($category as $row) {
             $arrCategory[] = (isset(WorkerCategory::find($row)->name)) ? WorkerCategory::find($row)->name : null ;
