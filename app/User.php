@@ -82,6 +82,8 @@ class User extends Authenticatable
             array_push($where,$age);
         }
 
+        $where[] = ['photo_profile', '<>', 'null'];
+
         $list = DB::table($table)->where($where)->orderBy('id', 'desc')->paginate($perPage);
 
         $worker = array();
