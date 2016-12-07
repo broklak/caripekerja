@@ -15,7 +15,7 @@ return [
 
 
     'paths' => [
-        realpath(base_path('resources/views/'.config('app.template'))),
+        realpath(base_path('resources/views/'.env('TEMPLATE_NAME'))),
     ],
 
     /*
