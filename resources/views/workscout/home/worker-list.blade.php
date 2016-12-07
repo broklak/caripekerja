@@ -68,7 +68,7 @@
                             <li><a href="{{route('worker-detail', ['workerId' => $row['id']])}}">
                                     <img src="{{\App\Helpers\GlobalHelper::setUserImage($row['photo_profile'])}}" alt="">
                                     <div class="resumes-list-content">
-                                        <h4>{{$row['name']}} <span>30 Tahun</span></h4>
+                                        <h4>{{$row['name']}} <span>{{\App\Helpers\GlobalHelper::getAgeByBirthdate($row['birthdate'])}}</span></h4>
                                         <span><i class="fa fa-map-marker"></i> {{\App\Helpers\GlobalHelper::getCityName($row['city'])}}</span>
                                         {{--<span><i class="fa fa-money"></i> $100 / hour</span>--}}
                                         {{--<p>Over 8000 hours on oDesk (only Drupal related). Highly motivated, goal-oriented, hands-on senior software engineer with extensive technical skills and over 15 years of experience in software development</p>--}}

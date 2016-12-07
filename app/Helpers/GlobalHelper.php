@@ -24,12 +24,16 @@ class GlobalHelper
     }
 
     public static function getAgeByBirthdate ($birthdate) {
+        if($birthdate == null || empty($birthdate)) {
+            return 'Umur Belum Terdata';
+        }
+
         $now = time();
         $birthdate = strtotime($birthdate);
 
         $age = floor(($now - $birthdate) / 31536000); // value of year in seconds
 
-        return $age;
+        return $age.' Tahun';
     }
 
     public static function maritalStatus ($marital) {
