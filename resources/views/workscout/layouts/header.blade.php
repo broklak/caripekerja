@@ -28,13 +28,13 @@
                             <li><a href="{{url('/keluar')}}">Keluar</a></li>
                         </ul>
                     </li>
-                    <li><a href="" style="background-color: #2196F3;color: #fff;border-radius: 4px" class="topup">Top Up</a></li>
+                    <li><a href="" style="background-color: #2196F3;color: #fff;border-radius: 4px;padding: 15px" class="topup">Top Up</a></li>
                 </ul>
             @else
                 <ul class="responsive float-right">
                     <li><a href="{{route('register')}}">Daftar</a></li>
                     <li><a href="{{route('login')}}">Masuk</a></li>
-                    <li><a href="" style="background-color: #2196F3;color: #fff;border-radius: 4px" class="topup">Top Up</a></li>
+                    <li><a href="" style="background-color: #2196F3;color: #fff;border-radius: 4px;padding: 15px" class="topup">Top Up</a></li>
                 </ul>
 
             @endif
