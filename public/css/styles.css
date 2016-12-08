@@ -270,6 +270,7 @@ header.transparent #logo { border-bottom: none; }
 	header.transparent.alternative #navigation ul.float-right a {
 		color: #fff;
 		background: transparent;
+		margin: 5px 20px 10px 0;
 	}
 	header.transparent #navigation ul.float-right {
 		right: -15px;
@@ -295,8 +296,8 @@ header.transparent #logo { border-bottom: none; }
 	}
 
 	#banner.with-transparent-header .search-container {
-		padding: 190px 0;
-		margin-top: 35px;
+		padding: 175px 0;
+		margin-top: 150px
 	}
 
 	#banner.with-transparent-header { max-height: 760px; }
@@ -617,7 +618,7 @@ ul li ul a.sf-with-ul:after {
 
 	#navigation ul.float-right a {
 		color: #333;
-		margin: 20px 25px 20px 0;
+		margin: 10px 20px 15px 0;
 		display: inline-block;
 		font-size: 14px;
 	}
@@ -6342,7 +6343,7 @@ label.upload-btn input[type="file"] { display: none; }
 	#our-clients img {  margin: 0 auto; }
 
 	.search-container { transform: translateY(0) !important;}
-	.search-container h2 { font-size: 40px; }
+	.search-container h2 { font-size: 40px;margin-bottom: 10px;margin-top: -20px }
 	.search-container input.ico-01 { width: 100%; margin: 0 0 15px 0; }
 	.search-container input.ico-02 { width: 100%; margin: 0 0 15px 0; }
 	.search-container button  { width: 100%; }
@@ -6493,7 +6494,7 @@ label.upload-btn input[type="file"] { display: none; }
 	}
 
 	.alternative #navigation ul,
-	.alternative .menu ul li { margin: 0}
+	.alternative .menu ul li { margin: 0, }
 	.alternative #navigation ul.float-right { top: 0 }
 
 	ul.float-right li a:hover,
