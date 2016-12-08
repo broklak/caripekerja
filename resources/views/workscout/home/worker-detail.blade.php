@@ -4,157 +4,110 @@
 
 @section('content')
 
-<section class="resumes-section padd-tb">
-
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-md-8 col-sm-8">
-
-                {!! session('displayMessage') !!}
-
-                <div class="resumes-content worker-detail">
-
-                    <div class="box">
-
-                        <div class="to-profile">
-                            @if($isOwner) <a class="button-link link-blue" href="{{route('myaccount-index')}}">Ganti Profil</a> @endif
-                        </div>
-
-                        <div class="frame"><a href="#"><img src="{{\App\Helpers\GlobalHelper::setUserImage($detail['photo_profile'])}}" alt="img"></a></div>
-
-                        <div class="text-box">
-
-                            <h2>{{$detail['name']}}</h2>
-
-                            @if((isset($ownedByEmployer) && $ownedByEmployer))
-                                <h5><b>Nomor Handphone : {{$detail['phone']}}</b></h5>
-
-                                <h5><b>Email : {{(empty($detail['email'])) ? 'Belum memiliki email' :$detail['email']}}</b></h5>
-                            @endif
-
-                            <h5>{{\App\Helpers\GlobalHelper::getAgeByBirthdate($detail['birthdate'])}} Tahun, {{\App\Helpers\GlobalHelper::maritalStatus($detail['marital'])}}</h5>
-
-                            <div class="clearfix"> <strong><i class="fa fa-map-marker"></i>{{\App\Helpers\GlobalHelper::getCityName($detail['city'])}}</strong></div>
-
-                            <div class="tags">{{($detail['gender'] == 1) ? str_replace('Babysitter,','', \App\Helpers\GlobalHelper::getWorkerCategory($detail['category'])) : \App\Helpers\GlobalHelper::getWorkerCategory($detail['category'])}}</div>
-
-                            @if((isset($showCallButton) && $showCallButton)) <div class="btn-row"> <a href="{{$callLink}}" onclick="{{$callConfirm}}" class="contact">Hubungi Pekerja</a> </div> @endif
-
-                        </div>
-
-                    </div>
-
-                    <div class="summary-box">
-
-                        <h4>Pengalaman Kerja</h4>
-
-                        @if(empty($experience))
-                            <p>Belum ada pengalaman kerja</p>
-
+    <div id="titlebar" class="resume">
+        <div class="container">
+            <div class="eleven columns">
+                <div class="resume-titlebar">
+                    <img src="{{\App\Helpers\GlobalHelper::setUserImage($detail['photo_profile'])}}" alt="">
+                    <div class="resumes-list-content">
+                        <h4>{{$detail['name']}} <span>{{\App\Helpers\GlobalHelper::getAgeByBirthdate($detail['birthdate'])}}</span></h4>
+                        <span class="icons"><i class="fa fa-map-marker"></i> {{\App\Helpers\GlobalHelper::getCityName($detail['city'])}}</span>
+                        <span class="icons"><i class="fa fa-users"></i> {{\App\Helpers\GlobalHelper::maritalStatus($detail['marital'])}}</span>
+                        <span class="icons"><i class="fa fa-graduation-cap"></i> Tamatan {{$detail['degree']}}</span>
+                        @php
+                        $category = explode(',',\App\Helpers\GlobalHelper::getWorkerCategory($detail['category']));
+                        @endphp
+                        @if($detail['category'] != null && !empty($detail['category']))
+                            <div class="skills">
+                                @foreach($category as $val)
+                                    <span>{{$val}}</span>
+                                @endforeach
+                            </div>
                         @else
-                            @foreach($experience as $rowExp)
+                            <div class="skills">
+                                <span style="background-color: #c0c0c0">Profesi Belum Tersedia</span>
+                            </div>
+                        @endif
 
-                                <div class="outer"> <strong class="title">{{$rowExp['role']}} di {{$rowExp['place']}}</strong>
+                        <div class="clearfix"></div>
 
-                                    <div class="col"> <span>{{$rowExp['start']}} - {{$rowExp['end']}}</span>
-
-                                        <p>{{$rowExp['desc']}}</p>
-
-                                    </div>
-
-                                </div>
-                            @endforeach
+                        @if((isset($showCallButton) && $showCallButton))
+                            <div class="call-worker">
+                                <a href="{{$callLink}}" onclick="{{$callConfirm}}" class="button blue"><i class="fa fa-phone"></i> Hubungi Pekerja</a>
+                            </div>
                         @endif
 
                     </div>
-
-                    <div class="summary-box">
-
-                        <h4>Pendidikan</h4>
-
-                        @if(empty($edu))
-                            <p>Belum ada data pendidikan</p>
-
-                        @else
-                            @foreach($edu as $rowEdu)
-
-                                <div class="outer"> <strong class="title">{{$rowEdu['level']}} di {{$rowEdu['name']}}</strong>
-
-                                    <div class="col"> <span>{{$rowEdu['start']}} - {{$rowEdu['end']}}</span></div>
-
-                                </div>
-                            @endforeach
-                        @endif
-
-                    </div>
-
-                    <div class="skills-box">
-
-                        <h4>Keahlian</h4>
-
-                        @if(empty($skill))
-                            <p>Belum ada keahlian</p>
-
-                        @else
-
-                            @foreach($skill as $rowSkill)
-
-                                <div class="progress-box"> <strong class="title">{{$rowSkill['name']}}</strong>
-
-                                    <div class="progress">
-
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: {{$rowSkill['level']}}%;"> <span> {{$rowSkill['level']}}</span> </div>
-
-                                    </div>
-
-                                </div>
-
-                            @endforeach
-
-                        @endif
-
                 </div>
-
             </div>
+
+            <div class="five columns">
+                <div class="worker-verify">
+                    <p><i class="fa fa-{{($detail['data_verified'] == 0) ? 'times-circle' : 'check-circle'}}"></i> Identitas {{($detail['data_verified'] == 0) ? 'Belum' : ''}} Terverifikasi</p>
+                    <p><i class="fa fa-{{($detail['data_verified'] == 0) ? 'times-circle' : 'check-circle'}}"></i> Kontak {{($detail['data_verified'] == 0) ? 'Belum' : ''}} Terverifikasi</p>
+                    <p><i class="fa fa-{{($detail['data_verified'] == 0) ? 'times-circle' : 'check-circle'}}"></i> Pengalaman {{($detail['data_verified'] == 0) ? 'Belum' : ''}} Terverifikasi</p>
+
                 </div>
-
-            <div class="col-md-4 col-sm-4">
-
-                <aside>
-
-                    <div class="sidebar">
-
-                        <div class="related-people">
-
-                            <ul>
-
-                                <li>
-
-                                    <div class="text-box">
-                                        <h2>Verifikasi</h2>
-                                        <span><i @if($detail['data_verified'] == 0) style="color: #f44336" @endif class="fa fa-{{($detail['data_verified'] == 0) ? 'minus' : 'check'}}-square"></i> Data Diri {{($detail['data_verified'] == 0) ? 'Belum' : ''}} Terverifikasi</span>
-                                        <span><i @if($detail['contact_verified'] == 0) style="color: #f44336" @endif class="fa fa-{{($detail['contact_verified'] == 0) ? 'minus' : 'check'}}-square"></i> Kontak {{($detail['contact_verified'] == 0) ? 'Belum' : ''}} Terverifikasi</span>
-                                        <span><i @if($detail['exp_verified'] == 0) style="color: #f44336" @endif class="fa fa-{{($detail['exp_verified'] == 0) ? 'minus' : 'check'}}-square"></i> Pengalaman Kerja {{($detail['exp_verified'] == 0) ? 'Belum' : ''}} Terverifikasi</span>
-                                    </div>
-
-                                </li>
-
-                            </ul>
-
-                        </div>
-
-                    </div>
-
-                </aside>
-
             </div>
 
         </div>
+    </div>
+
+    <div class="container">
+    <!-- Recent Jobs -->
+        <div class="eight columns">
+
+            <h3 class="margin-bottom-20">Pengalaman Kerja</h3>
+
+            <!-- Resume Table -->
+            @if(empty($edu))
+                <p>Belum ada data pengalaman kerja</p>
+
+            @else
+
+                <dl class="resume-table">
+                    @foreach($experience as $rowExp)
+                        <dt>
+                            <small class="date">{{$rowExp['start']}} - {{$rowExp['end']}}</small>
+                            <strong>{{$rowExp['role']}} di {{$rowExp['place']}}</strong>
+                        </dt>
+                        <dd>
+                            <p>{{$rowExp['desc']}}</p>
+                        </dd>
+                    @endforeach
+
+                </dl>
+
+            @endif
+
+        </div>
+
+
+    <!-- Widgets -->
+    <div class="eight columns">
+
+        <h3 class="margin-bottom-20">Pendidikan</h3>
+
+        <!-- Resume Table -->
+        @if(empty($edu))
+            <p>Belum ada data pendidikan</p>
+
+        @else
+
+            <dl class="resume-table">
+                @foreach($edu as $rowEdu)
+                    <dt>
+                        <small class="date">{{$rowEdu['start']}} - {{$rowEdu['end']}}</small>
+                        <strong>{{$rowEdu['name']}}</strong>
+                    </dt>
+                @endforeach
+
+            </dl>
+
+        @endif
 
     </div>
 
-</section>
+    </div>
 
 @endsection

@@ -4,27 +4,40 @@
 
         <!-- Logo -->
         <div id="logo">
-            <h1><a href="{{route('home')}}"><img src="images/{{($view_name == 'home.index') ? 'logocp.png' : 'logo-not-homepage.png'}}" alt="CariPekerja.com" /></a></h1>
+            <h1><a href="{{route('home')}}"><img src="{{asset("images")}}/{{($view_name == 'home.index') ? 'logocp.png' : 'logo-not-homepage.png'}}" alt="CariPekerja.com" /></a></h1>
         </div>
 
         <!-- Menu -->
         <nav id="navigation" class="menu">
             <ul id="responsive">
 
-                <li><a href="#">Lowongan Kerja</a></li>
+                @if($authRole != 'employer') <li><a href="{{route('job-list')}}">Lowongan Kerja</a></li> @endif
 
-                <li><a href="{{route('worker-list')}}">Cari Pekerja</a></li>
+                @if($authRole != 'worker') <li><a href="{{route('worker-list')}}">Cari Pekerja</a></li> @endif
 
-                <li><a href="#">Buat Lowongan</a></li>
+                @if($authRole != 'worker') <li><a href="#">Buat Lowongan</a></li> @endif
 
             </ul>
 
 
-            <ul class="float-right">
-                <li><a href="{{route('register')}}">Daftar</a></li>
-                <li><a href="{{route('login')}}">Masuk</a></li>
-                <li><a href="" style="background-color: #2196F3;color: #fff;border-radius: 4px" class="topup">Top Up</a></li>
-            </ul>
+            @if($isLogged)
+                <ul class="responsive float-right">
+                    <li><a href="{{route('myaccount-profile')}}">Hi, {{$authUser['name']}} @if($authRole == 'employer') | Anda memiliki {{$authUser['quota']}} Kuota @endif</a>
+                        <ul>
+                            <li><a href="{{route('owned-worker')}}">Akun Saya</a></li>
+                            <li><a href="{{url('/keluar')}}">Keluar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" style="background-color: #2196F3;color: #fff;border-radius: 4px" class="topup">Top Up</a></li>
+                </ul>
+            @else
+                <ul class="responsive float-right">
+                    <li><a href="{{route('register')}}">Daftar</a></li>
+                    <li><a href="{{route('login')}}">Masuk</a></li>
+                    <li><a href="" style="background-color: #2196F3;color: #fff;border-radius: 4px" class="topup">Top Up</a></li>
+                </ul>
+
+            @endif
 
         </nav>
 

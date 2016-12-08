@@ -4,143 +4,122 @@
 
 @section('content')
 
-<section class="resumes-section padd-tb job-detail">
+    <div style="margin-top: 30px">
+
+    </div>
 
     <div class="container">
 
-        <div class="row">
+    <!-- Recent Jobs -->
+    <div class="eleven columns">
+        <div class="padding-right">
 
-            <div class="col-md-12 col-sm-8">
-
-                {!! session('displayMessage') !!}
-
-                <div class="resumes-content worker-detail">
-
-                    <div class="box">
-
-                        <div class="to-profile">
-                            <a class="button-link link-blue" href="{{route('myaccount-index')}}">Ganti Profil</a>
-                        </div>
-
-                        <div class="frame"><a href="#"><img style="width: 200px" src="{{\App\Helpers\GlobalHelper::setEmployerImage($detail['photo_profile'])}}" alt="img"></a></div>
-
-                        <div class="text-box">
-
-                            <h2>{{$detail['name']}}</h2>
-
-                            <ul class="company-small">
-
-                                <li><strong>Bidang Usaha:</strong> {{$detail['ukm_category']}}</li>
-
-                                <li><strong>Nama Pemilik:</strong> {{$detail['name_owner']}}</li>
-
-                                <li><strong>Alamat:</strong> {{$detail['address']}}</li>
-
-                                <li><strong>Kota:</strong> {{\App\Helpers\GlobalHelper::getCityName($detail['city'])}}</li>
-
-                                <li><strong>Website:</strong> <a target="_blank" href="{{$detail['website']}}">{{$detail['website']}}</a></li>
-
-                            </ul>
-
-                        </div>
-
-                    </div>
-
-                    </div>
-
-
-                    <div class="summary-box">
-
-                        <h4>Deskripsi Usaha</h4>
-                        <p>{{$detail['description']}}</p>
-                    </div>
-
-                    <div class="summary-box">
-                        <section class="recent-row" style="background-color: #fff">
-
-                            <div class="container">
-
-                                <div class="row">
-
-                                    <div class="col-md-11 col-sm-8">
-
-                                        <div id="content-area">
-
-                                            <h4>Lowongan Pekerjaan Saya</h4>
-
-                                            @if(!empty($job))
-
-                                                        <ul id="myList">
-
-                                                            @foreach ($job as $row)
-
-                                                                    <li style="display: list-item;padding: 0">
-
-                                                                        <div style="background-color: #f5f5f5" class="box">
-
-                                                                            <div class="text-col">
-
-                                                                                <div class="hold">
-
-                                                                                    <h4><a href="#">{{$row['title']}}</a></h4>
-
-                                                                                    <h5>{{$row['employerName']}}</h5>
-
-                                                                                    <p>{{empty($row['description']) ? 'Tidak ada deskripsi' : $row['description']}}</p>
-
-                                                                                    <a href="#" class="text">{{$row['provinceName']}}</a>
-                                                                                    <a href="#" class="text">Diposting {{\App\Helpers\GlobalHelper::getHowLongTime($row['created_at'])}}</a> </div>
-
-                                                                            </div>
-
-                                                                            <strong class="price">{{\App\Helpers\GlobalHelper::moneyFormat($row['salary_min'])}} - {{\App\Helpers\GlobalHelper::moneyFormat($row['salary_max'])}}</strong>
-
-                                                                            <a class="btn-1 btn-color-{{($row['status'] == 1) ? '2' : '1' }} ripple">{{($row['status'] == 1) ? 'Aktif' : 'Tidak Aktif' }}</a>
-
-                                                                        </div>
-
-                                                                    </li>
-
-                                                            @endforeach
-
-                                                        </ul>
-                                            @else
-
-                                                <p>Anda belum pernam memasang lowongan pekerjaan. Ayo mulai pasang lowongan dengan mengikuti link berikut. <a class="button-link link-green" href="{{route('job-create')}}">Buat Lowongan</a></p>
-
-                                            @endif
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div style="clear: both"></div>
-
-                        </section>
-
-                    </div>
-
+            <!-- Company Info -->
+            <div class="company-info">
+                <img src="{{\App\Helpers\GlobalHelper::setEmployerImage($detail['photo_profile'])}}" alt="">
+                <div class="content">
+                    <h4>{{$detail['name']}}</h4>
+                    <span><a href="#"><i class="fa fa-map"></i> {{\App\Helpers\GlobalHelper::getCityName($detail['city'])}}</a></span>
                 </div>
-
-        </div>
-    </div>
-
-</section>
-
-<section class="resumes-section">
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-md-12 col-sm-8">
-                {{$link}}
+                <div class="clearfix"></div>
             </div>
+
+            <p class="margin-reset">
+                {{(empty($detail['description'])) ? 'Belum ada deskripsi usaha' : $detail['description']}}
+            </p>
         </div>
+
     </div>
 
-</section>
+
+    <!-- Widgets -->
+    <div class="five columns">
+
+        <!-- Sort by -->
+        <div class="widget">
+            <h4>Data Usaha</h4>
+
+            <div class="job-overview">
+
+                <ul>
+                    <li>
+                        <i class="fa fa-map-marker"></i>
+                        <div>
+                            <strong>Alamat</strong>
+                            <span>{{$detail['address']}}</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa fa-folder"></i>
+                        <div>
+                            <strong>Bidang Usaha</strong>
+                            <span>{{$detail['ukm_category']}}</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa fa-user"></i>
+                        <div>
+                            <strong>Nama Pemilik</strong>
+                            <span>{{$detail['name_owner']}}</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa fa-link"></i>
+                        <div>
+                            <strong>Website</strong>
+                            <span><a target="_blank" href="{{$detail['website']}}">{{$detail['website']}}</a></span>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Widgets / End -->
+
+    <div class="sixteen columns">
+
+        <h2 style="margin: 15px 0">Pekerjaan Dari UKM {{$detail['name']}}</h2>
+
+        <table class="manage-table responsive-table">
+
+            <tr>
+                <th><i class="fa fa-file-text"></i> Judul Pekerjaan</th>
+                <th><i class="fa fa-calendar"></i> Tanggal Posting</th>
+                <th><i class="fa fa-money"></i> Gaji</th>
+                <th><i class="fa fa-check-square"></i> Status</th>
+            </tr>
+
+            @if(!empty($job))
+
+                @foreach ($job as $row)
+
+                    <tr>
+                        <td class="title">{{$row['title']}}</td>
+                        <td class="">{{date('j F Y', strtotime($row['created_at']))}}</td>
+                        <td class="">{{\App\Helpers\GlobalHelper::moneyFormat($row['salary_min'])}} - {{\App\Helpers\GlobalHelper::moneyFormat($row['salary_max'])}}</td>
+                        <td class="">{{($row['status'] == 1) ? 'Aktif' : 'Tidak Aktif' }}</td>
+                    </tr>
+
+                @endforeach
+
+            @else
+
+                <tr>
+                    <td colspan="4" class="centered">Belum ada pekerjaan yang dipasang</td>
+                </tr>
+
+            @endif
+
+        </table>
+
+        {{$link}}
+
+    </div>
+
+
+    </div>
 
 @endsection

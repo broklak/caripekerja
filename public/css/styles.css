@@ -7,22 +7,13 @@
 /* ------------------------------------------------------------------- */
 /* Import Section
 ---------------------------------------------------------------------- */
-@import url("base.css?version2.0");				/* Default Reset, Typography, Forms, etc. */
-@import url("custom.css?version2.0");				/*  */
+@import url("base.css?version2.1");				/* Default Reset, Typography, Forms, etc. */
+@import url("custom.css?version2.1");				/*  */
 @import url("responsive.css?version2.0");			/* Responsive Grid */
 @import url("font-awesome.css?version2.0");		/* Font Awesome Icons */
 @import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
 @import url("http://fonts.googleapis.com/css?family=Lato:400,700,300");
 
-@font-face {
-	font-family: Circular;
-	src: url(../fonts/CircularStd-Book.otf);
-}
-
-@font-face {
-	font-family: CircularBold;
-	src: url(../fonts/CircularStd-Bold.otf);
-}
 
 
 
@@ -468,13 +459,13 @@ ul.float-right li a {
 }
 
 ul.float-right li a:hover, .menu ul li.sfHover a.sf-with-ul, .menu ul li a:hover {
-	background-color: #505050;
-	color: #333;
+	/*background-color: #505050;*/
+	/*color: #fff;*/
 }
 
 .menu ul li a:hover {
-	background-color: #2196F3;
-	color: #fff;
+	/*background-color: #2196F3;*/
+	/*color: #fff;*/
 }
 
 /* Drop-Down */
@@ -520,7 +511,7 @@ ul.float-right li a:hover, .menu ul li.sfHover a.sf-with-ul, .menu ul li a:hover
 	padding: 5px 18px !important;
 	border: 0;
 	margin-bottom: 0;
-	background-color: #282828;
+	/*background-color: #282828;*/
 }
 
 
@@ -873,16 +864,16 @@ header.transparent ul.float-right li .topup:hover {
 }
 
 #titlebar span a,
-#titlebar span { font-size: 18px; color: #888; }
+#titlebar span { font-size: 14px; color: #888; }
 
 #titlebar span { margin-bottom: 3px; display: inline-block; }
 
 #titlebar.single { padding: 70px 0; }
-#titlebar.resume { margin-bottom: 45px; padding: 70px 0 65px 0;}
+#titlebar.resume { margin-bottom: 45px; padding: 70px 0 30px 0;}
 
 #titlebar .button {
-	right: 10px;
-	position: absolute;
+	/*right: 10px;*/
+	/*position: absolute;*/
 	top: 51%;
 	-webkit-transform: translateY(-51%);
 	-moz-transform: translateY(-51%);
@@ -1067,6 +1058,23 @@ button { padding: 5px 0; }
 .button.gray {
 	background-color: #f2f2f2;
 	color: #808080;
+}
+
+.button.blue {
+	font-size: 14px;
+	background-color: #347ab8;
+	color: #fff;
+}
+
+.button.red {
+	font-size: 13px;
+	background-color: #D32F2F;
+	color: #fff;
+}
+
+.button.red:hover {
+	background-color: #D32F2F;
+	color: #fff;
 }
 
 a.button.white {
@@ -2661,6 +2669,13 @@ a.button {
 	border-top: none;
 }
 
+.color-2 .plan-features {
+	background-color: #3a86ca;
+	color: #fff;
+	border-top: solid 1px rgba(0,0,0,0.20);
+	border-bottom: solid 1px rgba(0,0,0,0.20);
+}
+
 .plan-features ul {
 	padding: 22px 0;
 }
@@ -3218,6 +3233,7 @@ a.button {
 	width: 100%;
 	height: 100%;
 	display: inline-block;
+	cursor: pointer;
 }
 
 .resumes-list li:last-child,
@@ -3290,7 +3306,7 @@ a.button {
 
 
 /* Icons */
-.resume-titlebar i,
+/*.resume-titlebar i,*/
 .job-spotlight i,
 .job-list li a i,
 .resumes-list li a i {
@@ -3396,7 +3412,7 @@ a.button {
 
 #titlebar.resume .resume-titlebar .resumes-list-content h4 span,
 .resumes-list-content h4 span {
-	font-size: 24px;
+	font-size: 18px;
 	color: #333;
 	margin: -3px 0 18px 0;
 	line-height: 32px;
@@ -3474,6 +3490,12 @@ span.temporary { background-color: #e12335; }
 ------------------------------------- */
 .job-overview,
 .job-spotlight {
+	background-color: #fdfdfd;
+	border: 1px solid #e2e2e2;
+	padding: 35px 38px 31px 38px;
+}
+
+.worker-verify {
 	background-color: #fdfdfd;
 	border: 1px solid #e2e2e2;
 	padding: 35px 38px 31px 38px;
@@ -6391,7 +6413,7 @@ label.upload-btn input[type="file"] { display: none; }
 	#titlebar .button {
 		right: 0;
 		position: relative;
-		margin-top: 20px;
+		margin-top: 10px;
 		-webkit-transform: none;
 		-moz-transform: none;
 		-ms-transform: none;

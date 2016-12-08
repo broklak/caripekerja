@@ -1,7 +1,7 @@
 
 <!--CUSTOM CSS-->
 
-<link rel="stylesheet" href="{{ asset("css") }}/styles.css?version=2.3">
-<link rel="stylesheet" href="{{ asset("css") }}/colors/blue.css" id="colors">
+<link rel="stylesheet" href="{{ asset("css") }}/styles.css?version=2.6">
+<link rel="stylesheet" href="{{ asset("css") }}/colors/blue.css?version=2.0" id="colors">
 
 @includeIf($css_name)

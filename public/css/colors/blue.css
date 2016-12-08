@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------- */
-/* Blue #0c6aca
+/* Blue #3a86ca
 ---------------------------------------------------------------------- */
 #current,
 .icon-box.rounded i:after,
@@ -36,7 +36,7 @@ a.button.dark:hover,
 .chosen-container-multi .chosen-choices li.search-choice,
 .list-search button,
 .checkboxes input[type=checkbox]:checked + label:before 
-{ background-color: #0c6aca; }
+{ background-color: #3a86ca; }
 
 
 
@@ -60,11 +60,11 @@ table.manage-table td.action a:hover,
 .widget-text h5 a:hover,
 .app-content .info span ,
 .app-content .info ul li a:hover
-{ color: #0c6aca; }
+{ color: #3a86ca; }
 
 
 .icon-box.rounded i {
-	border-color: #0c6aca;
+	border-color: #3a86ca;
 }
 
 .resumes-list li a:before,

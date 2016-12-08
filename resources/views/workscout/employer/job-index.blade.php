@@ -4,130 +4,136 @@
 
 @section('content')
 
-        <section class="recent-row padd-tb">
+    <div class="container">
 
-            <div class="container">
+        <div class="title-page">
+            <h2>Lowongan Pekerjaan</h2>
+        </div>
 
-                <div class="row">
+    <!-- Recent Jobs -->
+    <div class="eleven columns">
+        <div class="padding-right">
 
-                    <div class="col-md-3 col-sm-4 filter-worker">
+            <form action="#" method="get" class="list-search">
+                <button><i class="fa fa-search"></i></button>
+                <input type="text" placeholder="Cari Lowongan Kerja Berdasarkan Kata Kunci" value=""/>
+                <div class="clearfix"></div>
+            </form>
 
-                        <h2>Cari Lowongan</h2>
+            <ul class="job-list full">
+                @if(!empty($list))
 
-                        <form method="post" action="{{route('job-list')}}">
-                            {{csrf_field()}}
-                            <aside>
+                    @foreach ($list as $row)
 
-                                <div class="sidebar" style="margin-bottom: 20px">
-
-                                    <div class="selector" style="background-color: #fff;">
-
-                                        <select name="category" class="full-width">
-
-                                            <option value="0">Semua Profesi</option>
-
-                                            @foreach($category as $key => $row)
-                                                <option @if(isset($param['category']) && $param['category'] == $row['id']) selected @endif value="{{$row['id']}}">{{$row['name']}}</option>
-                                            @endforeach
-
-                                        </select>
-
+                        <li>
+                            <a href="{{($authRole == 'worker') ? route('job-apply', ['jobId' => $row['id']]) : route('login')}}" onclick="@if($authRole == 'worker') return confirm('Anda akan melamar pekerjaan {{$row['title']}} di {{$row['employerName']}}. Lanjutkan Proses ?') @else alert('Silahkan login sebagai pekerja untuk melamar') @endif ">
+                                    <img src="{{\App\Helpers\GlobalHelper::setEmployerImage($row['employerPhoto'])}}" alt="">
+                                    <div class="job-list-content">
+                                        <h4>{{$row['title']}}</h4>
+                                        <div class="job-icons">
+                                            <span><i class="fa fa-briefcase"></i> {{$row['employerName']}}</span>
+                                            <span><i class="fa fa-map-marker"></i>{{$row['provinceName']}}</span>
+                                            <span><i class="fa fa-money"></i> {{\App\Helpers\GlobalHelper::moneyFormat($row['salary_min'])}} - {{\App\Helpers\GlobalHelper::moneyFormat($row['salary_max'])}}</span>
+                                        </div>
+                                        <p>{{empty($row['description']) ? 'Tidak ada deskripsi' : $row['description']}}</p>
                                     </div>
-                                </div>
+                                @if($authRole != 'employer') <span class="apply-job">Lamar</span> @endif
+                            </a>
+                            <div class="clearfix"></div>
+                        </li>
+                    @endforeach
+                @else
+                    <p> Lowongan tidak ditemukan. Coba gunakan kriteria pencarian lain</p>
+                @endif
+            </ul>
+            <div class="clearfix"></div>
 
-                                <div class="sidebar" style="margin-bottom: 20px">
-                                    <div class="selector" style="background-color: #fff;">
+            {{$link}}
 
-                                        <select name="city" class="full-width">
-
-                                            <option value="0">Semua Kota</option>
-
-                                            @foreach ($province as $rowProvince)
-                                                <option @if(isset($param['city']) && $param['city'] == $rowProvince['id']) selected @endif value="{{$rowProvince['id']}}">{{$rowProvince['name']}}</option>
-                                            @endforeach>
-
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="resum-form sidebar" style="margin-bottom: 20px;width: 100%;margin: 0;background: none">
-                                    <input style="width: 48%;float: left;margin-right: 10px" type="text" name="min_salary" value="{{ isset($param['min_salary']) ? $param['min_salary'] : '' }}" placeholder="Gaji Minimal" class="full-width">
-                                    <input style="width: 48%" type="text" name="max_salary" placeholder="Gaji Maksimal" value="{{ isset($param['max_salary']) ? $param['max_salary'] : '' }}" class="full-width">
-                                </div>
-
-                                <div class="resum-form sidebar" style="margin-bottom: 20px;width: 50%;text-align: center;float: none">
-                                    <div> <input type="submit" value="Cari"> </div>
-                                </div>
+        </div>
+    </div>
 
 
-                            </aside>
-                        </form>
-                    </div>
+    <!-- Widgets -->
+    <div class="five columns">
 
-                    <div class="col-md-9 col-sm-8">
-
-                        <div id="content-area">
-
-                            <h2>Menampilkan Seluruh Pekerjaan</h2>
-
-                            @if(!empty($list))
-
-                                <ul id="myList">
-
-                                    @foreach ($list as $row)
-
-                                        <li style="display: list-item;">
-
-                                            <div class="box">
-
-                                                <div class="thumb-jobs"><a href="#"><img src="{{\App\Helpers\GlobalHelper::setEmployerImage($row['employerPhoto'])}}" alt="img"></a></div>
-
-                                                <div class="text-col">
-
-                                                    <div class="hold">
-
-                                                        <h4><a href="#">{{$row['title']}}</a></h4>
-
-                                                        <h5>{{$row['employerName']}}</h5>
-
-                                                        <p>{{empty($row['description']) ? 'Tidak ada deskripsi' : $row['description']}}</p>
-
-                                                        <a href="#" class="text"><i class="fa fa-map-marker"></i>{{$row['provinceName']}}</a>
-                                                        <a href="#" class="text"><i class="fa fa-calendar"></i>Diposting {{\App\Helpers\GlobalHelper::getHowLongTime($row['created_at'])}}</a> </div>
-
-                                                </div>
-
-                                                <strong class="price"><i class="fa fa-money"></i>
-                                                    @if($isValidWorker)
-                                                        {{\App\Helpers\GlobalHelper::moneyFormat($row['salary_min'])}} - {{\App\Helpers\GlobalHelper::moneyFormat($row['salary_max'])}}
-                                                    @else
-                                                        <a style="color: #000;font-size: 14px" href="{{route('login')}}">Masuk sebagai pekerja untuk melihat gaji</a>
-                                                    @endif
-                                                </strong>
-                                                @if($authRole != 'employer') <a href="{{($authRole == 'worker') ? route('job-apply', ['jobId' => $row['id']]) : route('login')}}" onclick="@if($authRole == 'worker') return confirm('Anda akan melamar pekerjaan {{$row['title']}} di {{$row['employerName']}}. Lanjutkan Proses ?') @else alert('Silahkan login sebagai pekerja untuk melamar') @endif " class="btn-1 btn-color-1 ripple">Lamar Pekerjaan</a> @endif
-                                            </div>
-
-                                        </li>
-
-                                    @endforeach
-
-                                </ul>
-
-                            @else
-                                <p>Lowongan kerja tidak ditemukan. Coba gunakan kriteria pencarian lain</p>
-                            @endif
-                        </div>
-
-                        {{$link}}
-
-                    </div>
-
-
+        <div class="five columns">
+            <!-- Skills -->
+            <form action="{{route('job-list')}}" method="post">
+                {{csrf_field()}}
+                <div class="widget">
+                    <h4>Profesi</h4>
+                    <select data-placeholder="Pilih Profesi" name="category" class="chosen-select">
+                        <option value="0">Semua Profesi</option>
+                        @foreach($category as $key => $row)
+                            <option @if(isset($param['category']) && $param['category'] == $row['id']) selected @endif value="{{$row['id']}}">{{$row['name']}}</option>
+                        @endforeach
+                    </select>
 
                 </div>
 
-            </div>
+                <div class="widget">
+                    <h4>Lokasi</h4>
+                    <select data-placeholder="Pilih Kota Tinggal" name="city" class="chosen-select">
+                        <option value="0">Semua Kota</option>
+                        @foreach ($province as $rowProvince)
+                            <option @if(isset($param['city']) && $param['city'] == $rowProvince['id']) selected @endif value="{{$rowProvince['id']}}">{{$rowProvince['name']}}</option>
+                        @endforeach>
+                    </select>
 
-        </section>
+                </div>
+
+                <div class="widget">
+                    <h4>Pendidikan Terakhir</h4>
+                    <select data-placeholder="Pilih Kota Tinggal" name="degree" class="chosen-select">
+                        <option value="0">Semua Latar Pendidikan Terakhir</option>
+
+                        @foreach ($degree as $key => $row)
+                            <option @if(isset($param['degree']) && $param['degree'] == $row) selected @endif>{{$row}}</option>
+                        @endforeach>
+                    </select>
+
+                </div>
+
+                <div class="widget">
+                    <h4>Rentang Gaji</h4>
+
+                    <ul class="checkboxes">
+                        <li>
+                            <input id="check-6" type="checkbox" name="check" value="check-6" checked>
+                            <label for="check-6">Semua Rentang</label>
+                        </li>
+                        <li>
+                            <input id="check-7" type="checkbox" name="check" value="check-7">
+                            <label for="check-7">Rp 500,000 - Rp 1,000,000</label>
+                        </li>
+                        <li>
+                            <input id="check-8" type="checkbox" name="check" value="check-8">
+                            <label for="check-8">Rp 1,000,000 - Rp 3,000,000</label>
+                        </li>
+                        <li>
+                            <input id="check-9" type="checkbox" name="check" value="check-9">
+                            <label for="check-9">Rp 3,000,000 - Rp 5,000,000</label>
+                        </li>
+                        <li>
+                            <input id="check-10" type="checkbox" name="check" value="check-10">
+                            <label for="check-10">Lebih Dari Rp 5,000,000</label>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="margin-top-15"></div>
+                <button class="button">Filter</button>
+
+            </form>
+        </div>
+
+    </div>
+    <!-- Widgets / End -->
+
+    </div>
+
+    <div style="margin-bottom: 20px"></div>
 
 @endsection
