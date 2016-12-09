@@ -38,6 +38,16 @@
         </div>
     </div>
 
+    <div class="sixteen columns video">
+        <div class="video-wrapper">
+            <h3 class="margin-bottom-25">Video Pengenalan</h3>
+            <center><div style="margin-bottom: 35px" class="kategoribox-white"></div></center>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/L-kbuxUkR3E" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
     <!-- Categories -->
     <div class="container">
 

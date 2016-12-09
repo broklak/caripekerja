@@ -8,7 +8,7 @@
 /* Import Section
 ---------------------------------------------------------------------- */
 @import url("base.css?version2.1");				/* Default Reset, Typography, Forms, etc. */
-@import url("custom.css?version2.3");				/*  */
+@import url("custom.css?version2.6");				/*  */
 @import url("responsive.css?version2.0");			/* Responsive Grid */
 @import url("font-awesome.css?version2.0");		/* Font Awesome Icons */
 @import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
@@ -227,8 +227,9 @@ header.transparent .menu ul ul li a {
 }
 
 header.transparent ul.float-right li a {
-	background-color: rgba(255,255,255,0.1);
+	background-color: rgba(255,255,255,0.4);
 	color: white;
+	border-radius: 4px;
 }
 
 header.transparent ul.float-right li a:hover {
@@ -688,7 +689,7 @@ ul li ul a.sf-with-ul:after {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	margin-bottom: 35px;
+	/*margin-bottom: 35px;*/
 }
 
 #banner:before {
@@ -717,7 +718,7 @@ ul li ul a.sf-with-ul:after {
 .search-container h2 {
 	font-size: 40px;
 	color: #fff;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 	letter-spacing: -1px;
 
 	font-family: "CircularBold","Roboto", Arial, Helvetica, sans-serif;
@@ -831,12 +832,12 @@ header.transparent ul.float-right li .topup {
 	border-radius: 4px;
 }
 
-header.transparent ul.float-right li .topup:hover {
-	background-color: #1E88E5 !important;
-	color: white !important;
-	border-radius: 4px;
-	text-decoration: none !important;
-}
+/*header.transparent ul.float-right li .topup:hover {*/
+	/*background-color: #1E88E5 !important;*/
+	/*color: white !important;*/
+	/*border-radius: 4px;*/
+	/*text-decoration: none !important;*/
+/*}*/
 
 
 /* Announce */
@@ -2151,7 +2152,7 @@ img.mfp-img {
 	background-color: #fff;
 	font-size: 14px;
 	text-transform: initial;
-	color: #212121;
+	color: #222;
 	padding: 45px 15px;
 	max-height: 157px;
 	margin-right: 2%;
@@ -5815,6 +5816,12 @@ a.close-form i { margin: 0; }
 	height: 4px;
 	width: 50px;
 	background: #484848;
+}
+
+.kategoribox-white {
+	height: 4px;
+	width: 50px;
+	background: #fff;
 }
 
 #footer a.button { margin-top: 12px; }
