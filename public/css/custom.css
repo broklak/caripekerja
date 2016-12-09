@@ -46,9 +46,24 @@
 		margin-bottom: 0px;
 	}
 
-	.resume-titlebar span, .job-spotlight span, .job-list li a span, .resumes-list li a span {
+	.resume-titlebar span, .job-spotlight span, .resumes-list li a span {
 		font-size: 12px;
-		margin-top: 10px;
+		margin-top: 5px;
+		line-height: 15px;
+	}
+
+	.job-list li a span {
+		font-size: 10px;
+		margin-top: 5px;
+		line-height: 10px;
+	}
+
+	.job-list .job-list-content {
+		padding-right: 0;
+	}
+
+	.resumes-list-content h4 {
+		line-height: 25px;
 	}
 }
 

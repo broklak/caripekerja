@@ -8,7 +8,7 @@
 /* Import Section
 ---------------------------------------------------------------------- */
 @import url("base.css?version2.1");				/* Default Reset, Typography, Forms, etc. */
-@import url("custom.css?version2.2");				/*  */
+@import url("custom.css?version2.3");				/*  */
 @import url("responsive.css?version2.0");			/* Responsive Grid */
 @import url("font-awesome.css?version2.0");		/* Font Awesome Icons */
 @import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
@@ -6343,7 +6343,7 @@ label.upload-btn input[type="file"] { display: none; }
 	#our-clients img {  margin: 0 auto; }
 
 	.search-container { transform: translateY(0) !important;}
-	.search-container h2 { font-size: 40px;margin-bottom: 10px;margin-top: -20px }
+	.search-container h2 { font-size: 40px;margin-bottom: 10px;margin-top: -100px }
 	.search-container input.ico-01 { width: 100%; margin: 0 0 15px 0; }
 	.search-container input.ico-02 { width: 100%; margin: 0 0 15px 0; }
 	.search-container button  { width: 100%; }
@@ -6364,6 +6364,10 @@ label.upload-btn input[type="file"] { display: none; }
 	.resumes-list .resumes-list-content,
 	.job-list .job-list-content {
 		margin-left: 105px;
+	}
+
+	.job-list .job-list-content {
+		padding-right: 0;
 	}
 
 	.testimonials-slider li p { padding: 70px 20px; }
@@ -6544,7 +6548,7 @@ label.upload-btn input[type="file"] { display: none; }
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
 
-	.resume-titlebar img { display: none; }
+	.resume-titlebar img { margin-right: 15px; }
 	.resume-titlebar .resumes-list-content { margin-left: 0px; }
 
 }

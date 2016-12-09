@@ -33,7 +33,7 @@
                                         <div class="job-icons">
                                             <span><i class="fa fa-briefcase"></i> {{$row['employerName']}}</span>
                                             <span><i class="fa fa-map-marker"></i>{{$row['provinceName']}}</span>
-                                            <span><i class="fa fa-money"></i> {{\App\Helpers\GlobalHelper::moneyFormat($row['salary_min'])}} - {{\App\Helpers\GlobalHelper::moneyFormat($row['salary_max'])}}</span>
+                                            <span class="money"><i class="fa fa-money"></i> {{\App\Helpers\GlobalHelper::moneyFormat($row['salary_min'])}} - {{\App\Helpers\GlobalHelper::moneyFormat($row['salary_max'])}}</span>
                                         </div>
                                         <p>{{empty($row['description']) ? 'Tidak ada deskripsi' : $row['description']}}</p>
                                     </div>
