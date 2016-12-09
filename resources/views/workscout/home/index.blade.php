@@ -122,7 +122,7 @@
                 <div class="testimonials-slider">
                     <ul class="slides">
                         <li>
-                            <p>Mencari staff untuk bekerja di usaha menengah tidak pernah semudah ini.
+                            <p>Mencari satpam untuk tempat futsal biasanya sulit dan harus melalui penyedia layanan keamanan yang mahal, dengan CariPekerja saya mudah sekali mendapatkan satpam dengan usaha dan biaya yg ringan
                                 <span>James Wahab, Pemilik Ayo Futsal</span></p>
                         </li>
 
