@@ -45,6 +45,11 @@
 	.verify-worker a {
 		margin-bottom: 0px;
 	}
+
+	.resume-titlebar span, .job-spotlight span, .job-list li a span, .resumes-list li a span {
+		font-size: 12px;
+		margin-top: 10px;
+	}
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
