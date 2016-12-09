@@ -733,6 +733,7 @@ ul li ul a.sf-with-ul:after {
 	margin-right: 2%;
 	width: 42.5%;
 	float: left;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 /* Form Icons */
@@ -753,6 +754,7 @@ input.ico-02 { background: #fff url("../images/ico-02.png") no-repeat scroll 96%
 	width: 11%;
 	position: relative;
 	border-radius: 4px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 
@@ -2632,11 +2634,11 @@ a.button {
 .plan {	box-sizing: border-box;  }
 
 .plan.color-1 { border: 1px solid #e0e0e0; }
-.plan.color-2 { border: none; }
+.plan.color-2 { border: 1px solid #e0e0e0; }
 
 .plan.color-2 .plan-features ul {
-	border-left: 1px solid #e0e0e0;
-	border-right: 1px solid #e0e0e0;
+	/*border-left: 1px solid #e0e0e0;*/
+	/*border-right: 1px solid #e0e0e0;*/
 }
 
 /* Colors */
@@ -5807,7 +5809,7 @@ a.close-form i { margin: 0; }
 }
 #footer h4 {
 	color: #484848;
-	font-size: 15px;
+	font-size: 18px;
 	margin-bottom: 0px;
 	font-family: "CircularBold","Helvetica Neue",Helvetica,Arial,sans-serif;
 }

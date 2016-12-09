@@ -1,4 +1,4 @@
-<div id="banner" class="with-transparent-header parallax background" style="background-image: url(images/baru/bgtest.jpg);background-attachment: fixed;background-size: 1440px 957.6px;background-position: 50% -1px;opacity: 0.7" data-img-width="2000" data-img-height="1330" data-diff="300">
+<div id="banner" class="with-transparent-header parallax background" style="background-image: url(images/baru/bgtest.jpg);background-attachment: fixed;background-size: 1440px 957.6px;background-position: 50% -1px;opacity: 0.6" data-img-width="2000" data-img-height="1330" data-diff="300">
 <div class="container">
     <div class="sixteen columns">
 
