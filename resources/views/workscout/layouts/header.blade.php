@@ -11,11 +11,11 @@
         <nav id="navigation" class="menu">
             <ul id="responsive">
 
-                @if($authRole != 'employer') <li><a href="{{route('job-list')}}">Lowongan Kerja</a></li> @endif
+                @if($authRole != 'employer') <li><a href="{{route('job-list')}}">LOWONGAN KERJA</a></li> @endif
 
-                @if($authRole != 'worker') <li><a href="{{route('worker-list')}}">Cari Pekerja</a></li> @endif
+                @if($authRole != 'worker') <li><a href="{{route('worker-list')}}">CARI PEKERJA</a></li> @endif
 
-                @if($authRole != 'worker') <li><a href="#">Buat Lowongan</a></li> @endif
+                @if($authRole != 'worker') <li><a href="#">BUAT LOWONGAN</a></li> @endif
 
             </ul>
 
@@ -28,13 +28,13 @@
                             <li><a href="{{url('/keluar')}}">Keluar</a></li>
                         </ul>
                     </li>
-                    <li><a href="" style="background-color: #2196F3;color: #fff;border-radius: 4px;padding: 10px 15px" class="topup">Top Up</a></li>
+                    <li><a href="" style="background-color: #4fa0ee;color: #fff;border-radius: 4px;padding: 10px 15px" class="topup">Top Up</a></li>
                 </ul>
             @else
                 <ul class="responsive float-right">
                     <li><a href="{{route('register')}}">Daftar</a></li>
                     <li><a href="{{route('login')}}">Masuk</a></li>
-                    <li><a href="" style="background-color: #2196F3;color: #fff;border-radius: 4px;padding: 10px 15px" class="topup">Top Up</a></li>
+                    <li><a href="" style="background-color: #4fa0ee;color: #fff;border-radius: 4px;padding: 10px 15px" class="topup">Top Up</a></li>
                 </ul>
 
             @endif

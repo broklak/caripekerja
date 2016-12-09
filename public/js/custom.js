@@ -597,7 +597,7 @@
                 // set background-position
                 var orizontalPosition = path.attr("data-oriz-pos");
                 orizontalPosition = orizontalPosition ? orizontalPosition : "50%";
-                $(this).css("background-position", orizontalPosition + " " + value + "px");
+                //$(this).css("background-position", orizontalPosition + " " + value + "px");
 
             }
         });

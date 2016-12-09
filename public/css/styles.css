@@ -247,7 +247,6 @@ header.transparent .sf-with-ul::after { color: rgba(255,255,255,0.8); }
 
 #banner.with-transparent-header .search-container {
 	padding: 190px 0;
-	margin-top: 45px;
 
 }
 
@@ -697,7 +696,7 @@ ul li ul a.sf-with-ul:after {
 	width: 100%;
 	height: 100%;
 	display: inline-block;
-	background-color: rgba(42, 46, 50, 0.70);
+	background-color: rgba(42, 46, 50, 0.2);
 	position: absolute;
 }
 
@@ -716,7 +715,7 @@ ul li ul a.sf-with-ul:after {
 }
 
 .search-container h2 {
-	font-size: 60px;
+	font-size: 40px;
 	color: #fff;
 	margin-bottom: 20px;
 	letter-spacing: -1px;
@@ -789,16 +788,17 @@ input.ico-02 { background: #fff url("../images/ico-02.png") no-repeat scroll 96%
 	z-index: 99;
 }
 
-.search-container button:hover:before { opacity: 1; }
+/*.search-container button:hover:before { opacity: 1; }*/
 
 .search-container button i { z-index: 100; position: relative; }
 
 
 /* Browse Jobs */
 .browse-jobs {
-	color: #fff;
+	color: #333;
 	margin-top: 20px;
 	line-height: 43px;
+	font-size: 13px;
 }
 
 
@@ -845,6 +845,7 @@ header.transparent ul.float-right li .topup:hover {
 	font-size: 24px;
 	font-weight: 300;
 	margin-top: 40px;
+	text-align: center;
 }
 
 .announce strong {
@@ -2671,7 +2672,7 @@ a.button {
 }
 
 .color-2 .plan-features {
-	background-color: #3a86ca;
+	background-color: #4fa0ee;
 	color: #fff;
 	border-top: solid 1px rgba(0,0,0,0.20);
 	border-bottom: solid 1px rgba(0,0,0,0.20);
@@ -6343,7 +6344,7 @@ label.upload-btn input[type="file"] { display: none; }
 	#our-clients img {  margin: 0 auto; }
 
 	.search-container { transform: translateY(0) !important;}
-	.search-container h2 { font-size: 40px;margin-bottom: 10px;margin-top: -100px }
+	.search-container h2 { font-size: 16px;margin-bottom: 10px;margin-top: -100px }
 	.search-container input.ico-01 { width: 100%; margin: 0 0 15px 0; }
 	.search-container input.ico-02 { width: 100%; margin: 0 0 15px 0; }
 	.search-container button  { width: 100%; }

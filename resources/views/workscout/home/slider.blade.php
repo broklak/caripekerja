@@ -1,13 +1,12 @@
-<div id="banner" class="with-transparent-header parallax background" style="background-image: url(images/baru/homepagebg3.jpg)" data-img-width="2000" data-img-height="1330" data-diff="300">
+<div id="banner" class="with-transparent-header parallax background" style="background-image: url(images/baru/bgtest.jpg);background-attachment: fixed;background-size: 1440px 957.6px;background-position: 50% -1px;opacity: 0.7" data-img-width="2000" data-img-height="1330" data-diff="300">
 <div class="container">
     <div class="sixteen columns">
 
         <div class="search-container">
 
             <!-- Form -->
-            <h2>Cari Pekerja</h2>
             <div class="bottomline"></div>
-            <h5>Dapatkan pekerja berkualitas dan terverifikasi untuk usaha anda. </h5>
+            <h2 style="text-align: center">DAPATKAN PEKERJA BERKUALITAS <br />DAN TERVERIFIKASI UNTUK USAHA ANDA</h2>
             <input type="text" class="ico-01" placeholder="Kategori pekerja yang dicari" value=""/>
             <input type="text" class="ico-02" placeholder="Kota atau Provinsi" value=""/>
             <button>Cari</button>
@@ -39,8 +38,7 @@
             <!-- Announce -->
             <div class="announce">
 
-                CariPekerja adalah Mitra Pencari Pekerja untuk
-                Usaha Anda.
+                CariPekerja adalah Mitra Pencari Pekerja untuk Usaha Anda
 
             </div>
 
