@@ -15,17 +15,16 @@
 
 
             <div class="browse-jobs">
-                Pencarian teratas :
                 <a href=""> Pelayan</a>
                 <a href=""> Penjaga Toko</a>
                 <a href=""> Asisten Rumah Tangga</a>
                 <a href="">Baby Sitter</a>
                 <a href="">Sopir</a>
-                <a href=""> Admin</a><br>
+                <a href=""> Admin</a>
                 <a href=""> Buruh Pabrik</a>
                 <a href=""> Satpam</a>
                 <a href=""> Montir</a>
-                <a href=""> Kurir</a>
+                <a href=""> Kurir</a><br>
                 <a href=""> Juru Masak</a>
                 <a href=""> Kuli Bangunan</a>
                 <a href=""> Office Boy / Girl</a>
