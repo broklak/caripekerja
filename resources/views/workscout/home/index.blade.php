@@ -12,22 +12,22 @@
             </div>
 
             <ul id="popular-categories">
-                <li><a href="#"><i class="ln  ln-icon-Bar-Chart"></i> Asisten Rumah Tangga</a></li>
-                <li><a href="#"><i class="ln ln-icon-Car"></i> Baby Sitter</a></li>
-                <li><a href="#"><i class="ln ln-icon-Worker"></i> Sopir</a></li>
-                <li><a href="#"><i class="ln ln-icon-Student-Female"></i>Pelayan</a></li>
-                <li><a href="#"><i class="ln  ln-icon-Medical-Sign"></i> Penjaga Toko</a></li>
-                <li><a href="#"><i class="ln  ln-icon-Plates"></i> Admin</a></li>
-                <li><a href="#"><i class="ln  ln-icon-Globe"></i> Buruh Pabrik</a></li>
-                <li><a href="#"><i class="ln  ln-icon-Laptop-3"></i>Satpam</a></li>
-                <li><a href="#"><i class="ln  ln-icon-Medical-Sign"></i>Montir</a></li>
-                <li><a href="#"><i class="ln  ln-icon-Plates"></i>Kurir</a></li>
-                <li><a href="#"><i class="ln  ln-icon-Globe"></i> Juru Masak</a></li>
-                <li><a href="#"><i class="ln  ln-icon-Laptop-3"></i>Kuli Bangunan</a></li>
-                <li><a href="#"><i class="ln  ln-icon-Medical-Sign"></i>Office Boy / Girl</a></li>
-                <li><a href="#"><i class="ln  ln-icon-Plates"></i>Tukang Kayu</a></li>
-                <li><a href="#"><i class="ln  ln-icon-Globe"></i>Penjahit</a></li>
-                <li><a href="#"><i class="ln  ln-icon-Laptop-3"></i>Pemayet</a></li>
+                <li><a href="#"><i class="ln  ln-icon-Assistant"></i> Asisten Rumah Tangga</a></li>
+                <li><a href="#"><i class="ln ln-icon-Baby"></i> Baby Sitter</a></li>
+                <li><a href="#"><i class="ln ln-icon-Car"></i> Sopir</a></li>
+                <li><a href="#"><i class="ln ln-icon-Waiter"></i>Pelayan</a></li>
+                <li><a href="#"><i class="ln ln-icon-Shop"></i> Penjaga Toko</a></li>
+                <li><a href="#"><i class="ln ln-icon-Administrator"></i> Admin</a></li>
+                <li><a href="#"><i class="ln  ln-icon-Worker"></i> Buruh Pabrik</a></li>
+                <li><a href="#"><i class="ln  ln-icon-Police-Man"></i>Satpam</a></li>
+                <li><a href="#"><i class="ln  ln-icon-Repair"></i>Montir</a></li>
+                <li><a href="#"><i class="ln  ln-icon-Luggage-2"></i>Kurir</a></li>
+                <li><a href="#"><i class="ln  ln-icon-Chef"></i> Juru Masak</a></li>
+                <li><a href="#"><i class="ln  ln-icon-Bodybuilding"></i>Kuli Bangunan</a></li>
+                <li><a href="#"><i class="ln  ln-icon-User"></i>Office Boy / Girl</a></li>
+                <li><a href="#"><i class="ln  ln-icon-Saw"></i>Tukang Kayu</a></li>
+                <li><a href="#"><i class="ln  ln-icon-Worker-Clothes"></i>Penjahit</a></li>
+                <li><a href="#"><i class="ln  ln-icon-Dress"></i>Pemayet</a></li>
             </ul>
 
             <div class="clearfix"></div>
