@@ -150,7 +150,7 @@
     <!-- Infobox -->
     <div class="infobox">
         <div class="container">
-            <div class="sixteen columns">Dapatkan Pekerja Untuk Usaha Anda Segera <a href="{{route('register')}}">Daftar</a></div>
+            <div class="sixteen columns">Dapatkan Pekerja Untuk Usaha Anda Segera <a href="#">Daftar</a></div>
         </div>
     </div>
 
