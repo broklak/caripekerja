@@ -34,7 +34,7 @@
                                 <h5><b>Email : {{(empty($detail['email'])) ? 'Belum memiliki email' :$detail['email']}}</b></h5>
                             @endif
 
-                            <h5>{{\App\Helpers\GlobalHelper::getAgeByBirthdate($detail['birthdate'])}} Tahun, {{\App\Helpers\GlobalHelper::maritalStatus($detail['marital'])}}</h5>
+                                <h5>{{\App\Helpers\GlobalHelper::getAgeByBirthdate($detail['birthdate'])}} Tahun, {{\App\Helpers\GlobalHelper::maritalStatus($detail['marital'])}}</h5>
 
                             <div class="clearfix"> <strong><i class="fa fa-map-marker"></i>{{\App\Helpers\GlobalHelper::getCityName($detail['city'])}}</strong></div>
 

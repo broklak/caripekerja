@@ -25,7 +25,7 @@ class GlobalHelper
 
     public static function getAgeByBirthdate ($birthdate) {
         if($birthdate == null || empty($birthdate)) {
-            return 'Umur Belum Terdata';
+            return '25 Tahun';
         }
 
         $now = time();
@@ -67,7 +67,7 @@ class GlobalHelper
 
     public static function getCityName($city_id) {
         if($city_id == null) {
-            return 'Lokasi Belum Terdaftar';
+            return 'Indonesia';
         }
 
         return \App\Province::find($city_id)->name;

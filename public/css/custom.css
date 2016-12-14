@@ -1,3 +1,46 @@
+.content-grey {
+	background-color: #f5f5f5;
+}
+
+.experience-list {
+	font-size: 12px;
+}
+
+.header-about {
+	margin-left: 15px;
+	margin-bottom: 10px;;
+}
+
+.no-desc {
+	margin-left: 15px;
+}
+
+.verify-worker li {
+	color: #fff;
+	margin: 15px 0;
+}
+
+.contact-candidate {
+	cursor: pointer;
+	padding: 20px 20px;
+	display: inline-block;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 18px;
+	outline: none;
+	overflow: hidden;
+	position: relative;
+	z-index: 10;
+	color: #fff;
+	background-color: #3a86ca;
+	border: none;
+	border-radius: 4px;
+}
+
+.contact-candidate a:hover {
+	color: #fff;
+}
+
 .title-page h1, .title-page h3 {
 	text-align: center;
 }
@@ -25,6 +68,10 @@
 	margin-bottom: 20px;
 	font-weight: 900;
 	background-color: #3a86ca;
+}
+
+.purchased-data {
+	margin: 15px 0;
 }
 
 .float-left {
@@ -71,6 +118,13 @@ height:100%;
 }
 
 
+/*IPAD*/
+@media (min-width: 768px) and (max-width: 991px) {
+	.verify-worker li {
+		font-size: 14px;
+	}
+}
+
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
 	.call-worker {
@@ -103,6 +157,15 @@ height:100%;
 
 	.resumes-list-content h4 {
 		line-height: 25px;
+	}
+
+	.verify-worker li {
+		color: #252525;
+		font-size: 16px;
+	}
+
+	.purchased-data {
+		margin: 0;
 	}
 }
 

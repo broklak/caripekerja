@@ -3227,18 +3227,42 @@ a.button {
 .resumes-list li,
 .job-list li {
 	background-color: #fff;
-	border-top: 1px solid #e0e0e0;
+	border: 1px solid #e0e0e0;
 	position: relative;
 	z-index: 99;
+	width: 22%;
+	float: left;
+	margin: 20px 10px;
+	text-align: center;
 }
 
 .resumes-list li a,
 .job-list li a {
 	color: #808080;
-	width: 100%;
+	/*width: 100%;*/
 	height: 100%;
 	display: inline-block;
 	cursor: pointer;
+}
+
+.resumes-list li a h4,
+.job-list li a h4 {
+	font-size: 16px;
+	position: absolute;
+	top: -20px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	background-color: #fff;
+	width: auto;
+	max-width: -webkit-calc(100% - 70px);
+	max-width: calc(100% - 70px);
+	padding: 0 20px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	background-color: transparent;
 }
 
 .resumes-list li:last-child,
@@ -3248,14 +3272,7 @@ a.button {
 
 .resumes-list li:nth-child(2n),
 .job-list li:nth-child(2n) {
-	background-color: #fbfbfb;
-}
-
-.resumes-list li:hover,
-.job-list li:hover {
-	background-color: rgba(80, 80, 80,0.05);
-	border-color: rgba(80, 80, 80,0.7);
-	z-index: 1011;
+	/*background-color: #fbfbfb;*/
 }
 
 .resumes-list li.highlighted a:before,
@@ -3274,22 +3291,6 @@ a.button {
 	left: 0;
 	z-index: 101;
 	opacity: 0;
-}
-
-.resumes-list li:hover a:before,
-.job-list li:hover a:before { opacity: 1 }
-
-
-.resume-titlebar span a:hover i,
-.resumes-list li,
-.resumes-list li a:before,
-.job-list li,
-.job-list li a:before {
-	-webkit-transition: all 0.2s ease-in-out;
-	-moz-transition: all 0.2s ease-in-out;
-	-o-transition: all 0.2s ease-in-out;
-	-ms-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
 }
 
 
@@ -3327,7 +3328,7 @@ a.button {
 .job-spotlight span,
 .job-list li a span,
 .resumes-list li a span {
-	margin-right: 17px;
+	/*margin-right: 17px;*/
 	display: inline-block;
 }
 
@@ -3359,11 +3360,11 @@ a.button {
 
 .resumes-list img {
 	border-radius: 50%;
-	width: 90px;
-	height: 90px;
+	width: 130px;
+	height: 130px;
 	float: left;
 	display: inline-block;
-	margin: 35px 0 35px 35px;
+	margin: 35px 0 10px 30px;
 }
 
 .resume-titlebar img {
@@ -6347,6 +6348,14 @@ label.upload-btn input[type="file"] { display: none; }
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
+
+	.resume-table strong {
+		font-size: 16px;
+	}
+
+	.resume-table p {
+		font-size: 14px;
+	}
 
 	.one.carousel.column { width: 5%; }
 	#our-clients { width: 85%; }

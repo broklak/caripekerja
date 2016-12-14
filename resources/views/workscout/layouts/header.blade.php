@@ -33,7 +33,7 @@
             @else
                 <ul class="responsive float-right">
                     <li><a href="#" onclick="alert('Fitur ini masih dalam tahap pengembangan')">Daftar</a></li>
-                    <li><a href="#" onclick="alert('Fitur ini masih dalam tahap pengembangan')">Masuk</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#modalLogin">Masuk</a></li>
                     <li><a href="" onclick="alert('Fitur ini masih dalam tahap pengembangan')" style="background-color: #4fa0ee;color: #fff;border-radius: 4px;padding: 10px 15px" class="topup">Top Up</a></li>
                 </ul>
 

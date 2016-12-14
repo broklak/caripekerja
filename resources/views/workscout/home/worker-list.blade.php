@@ -4,77 +4,15 @@
 
 @section('content')
 
+    <div class="title-page"></div>
+
     <div class="container">
-
-        <div class="title-page">
-            <h2>Daftar Pekerja</h2>
-        </div>
-
-        <!-- Recent Jobs -->
-        <div class="eleven columns">
-            <div class="padding-right">
-
-                <form action="#" method="get" class="list-search">
-                    <button><i class="fa fa-search"></i></button>
-                    <input type="text" placeholder="Cari Pekerja Berdasarkan Kata Kunci" value=""/>
-                    <div class="clearfix"></div>
-                </form>
-
-                <ul class="resumes-list">
-
-                    @if(!empty($list))
-
-                        @foreach ($list as $row)
-
-                            <li><a href="{{route('worker-detail', ['workerId' => $row['id']])}}">
-                                    <img src="{{\App\Helpers\GlobalHelper::setUserImage($row['photo_profile'])}}" alt="">
-                                    <div class="resumes-list-content">
-                                        <h4>{{$row['name']}} <span>{{\App\Helpers\GlobalHelper::getAgeByBirthdate($row['birthdate'])}}</span></h4>
-                                        <span><i class="fa fa-map-marker"></i> {{\App\Helpers\GlobalHelper::getCityName($row['city'])}}</span>
-                                        <span><i class="fa fa-users"></i> {{\App\Helpers\GlobalHelper::maritalStatus($row['marital'])}}</span>
-                                        <span><i class="fa fa-graduation-cap"></i> Tamatan {{$row['degree']}}</span>
-                                        {{--<span><i class="fa fa-money"></i> $100 / hour</span>--}}
-                                        {{--<p>Over 8000 hours on oDesk (only Drupal related). Highly motivated, goal-oriented, hands-on senior software engineer with extensive technical skills and over 15 years of experience in software development</p>--}}
-
-                                        @php
-                                        $categoryList = explode(',',\App\Helpers\GlobalHelper::getWorkerCategory($row['category']));
-                                        @endphp
-                                        @if($row['category'] != null && !empty($row['category']))
-                                            <div class="skills">
-                                                @foreach($categoryList as $val)
-                                                    <span>{{$val}}</span>
-                                                @endforeach
-                                            </div>
-                                         @else
-                                            <div class="skills">
-                                                <span style="background-color: #c0c0c0">Profesi Belum Tersedia</span>
-                                            </div>
-                                        @endif
-                                        <div class="clearfix"></div>
-
-                                    </div>
-                                </a>
-                                <div class="clearfix"></div>
-                            </li>
-                        @endforeach
-                    @else
-                        <p> Pekerja tidak ditemukan. Coba gunakan kriteria pencarian lain</p>
-                    @endif
-                </ul>
-                <div class="clearfix"></div>
-
-                {{$link}}
-
-            </div>
-        </div>
-
         <!-- Widgets -->
-        <div class="five columns">
+        <div class="four columns">
             <!-- Skills -->
             <form action="{{route('worker-list')}}" method="post">
                 {{csrf_field()}}
                 <div class="widget">
-                    <h4>Profesi</h4>
                     <select data-placeholder="Pilih Profesi" name="category" class="chosen-select">
                         <option value="0">Semua Profesi</option>
                         @foreach($category as $key => $row)
@@ -85,7 +23,6 @@
                 </div>
 
                 <div class="widget">
-                    <h4>Lokasi</h4>
                     <select data-placeholder="Pilih Kota Tinggal" name="city" class="chosen-select">
                         <option value="0">Semua Kota</option>
                         @foreach ($province as $rowProvince)
@@ -96,7 +33,6 @@
                 </div>
 
                 <div class="widget">
-                    <h4>Pendidikan Terakhir</h4>
                     <select data-placeholder="Pilih Kota Tinggal" name="degree" class="chosen-select">
                         <option value="0">Semua Latar Pendidikan Terakhir</option>
 
@@ -108,8 +44,6 @@
                 </div>
 
                 <div class="widget">
-                    <h4>Rentang Umur</h4>
-
                     <ul class="checkboxes">
                         <li>
                             <input id="check-6" type="checkbox" name="check" value="check-6" checked>
@@ -141,6 +75,35 @@
             </form>
         </div>
         <!-- Widgets / End -->
+
+        <!-- Recent Jobs -->
+        <div class="twelve columns">
+            <div class="padding-right">
+
+                <ul class="resumes-list">
+
+                    @if(!empty($list))
+
+                        @foreach ($list as $row)
+
+                            <li>
+                                <a href="{{route('worker-detail', ['workerId' => $row['id']])}}">
+                                    <h4>{{$row['name']}}</h4>
+                                    <img src="{{\App\Helpers\GlobalHelper::setUserImage($row['photo_profile'])}}" alt="">
+                                    <span class="experience-list">PENGALAMAN 1 TAHUN</span>
+                                </a>
+                            </li>
+                        @endforeach
+                    @else
+                        <p> Pekerja tidak ditemukan. Coba gunakan kriteria pencarian lain</p>
+                    @endif
+                </ul>
+                <div class="clearfix"></div>
+
+                {{$link}}
+
+            </div>
+        </div>
 
     </div>
 
