@@ -29,7 +29,7 @@
                                                     $category = explode(',',\App\Helpers\GlobalHelper::getWorkerCategory($detail['category']));
                                                 @endphp
                                                 <li><i class="fa fa-map-marker"></i> {{\App\Helpers\GlobalHelper::getCityName($detail['city'])}}</li>
-                                                <li><i class="fa fa-briefcase"></i> {{(isset($category[0])) ? $category[0] : 'Admin'}}</li>
+                                                <li><i class="fa fa-briefcase"></i> {{(!empty($category[0])) ? $category[0] : 'Admin'}}</li>
                                                 <li><i class="fa fa-clock-o"></i> {{\App\Helpers\GlobalHelper::getAgeByBirthdate($detail['birthdate'])}}</li>
                                                 <li><i class="fa fa-heart"></i> {{\App\Helpers\GlobalHelper::maritalStatus($detail['marital'])}}</li>
                                                 @if((isset($ownedByEmployer) && $ownedByEmployer))
