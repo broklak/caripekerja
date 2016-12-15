@@ -4,17 +4,18 @@
 
 @section('content')
 
-    <div class="row">
-        @if (count($errors) > 0)
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-    </div>
+    @if (count($errors) > 0)
+        <div class="row">
+
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li style="text-align: center">{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+        </div>
+    @endif
     <div class="mj_transprentbg">
     <div class="container-fluid">
         <div class="row">

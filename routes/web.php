@@ -17,7 +17,8 @@ Route::get('/home', 'HomeController@index');
 // AUTHENTICATION
 Auth::routes();
 Route::get('/keluar', 'Auth\LoginController@logout')->name('logout');
-Route::get('/masuk', 'Auth\LoginController@showLoginForm')->name('login');
+Route::get('/masuk', 'Auth\RegisterController@showRegistrationForm')->name('login');
+Route::get('/login', 'Auth\RegisterController@showRegistrationForm')->name('login');
 Route::get('/daftar', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::get('/lupa-password', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('forget-password');
 
