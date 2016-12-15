@@ -32,6 +32,7 @@
                                                 <li><i class="fa fa-briefcase"></i> {{(!empty($category[0])) ? $category[0] : 'Admin'}}</li>
                                                 <li><i class="fa fa-clock-o"></i> {{\App\Helpers\GlobalHelper::getAgeByBirthdate($detail['birthdate'])}}</li>
                                                 <li><i class="fa fa-heart"></i> {{\App\Helpers\GlobalHelper::maritalStatus($detail['marital'])}}</li>
+                                                {{--<li><i class="fa fa-graduation-cap"></i> Tamatan {{$detail['degree']}}</li>--}}
                                                 @if((isset($ownedByEmployer) && $ownedByEmployer))
                                                     <div class="clearfix"></div>
                                                     <li class="purchased-data"><i class="fa fa-phone"></i> {{$detail['phone']}}</li>

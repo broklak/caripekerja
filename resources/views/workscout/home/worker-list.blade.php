@@ -20,9 +20,9 @@
                 {{csrf_field()}}
                 <div class="widget wrapperzz">
                     <select data-placeholder="Pilih Profesi" name="category" class="chosen-select">
-                        <option value="0">&#xf0b1 &nbsp;&nbsp; Semua Profesi</option>
+                        <option value="0">@if(!isset($param['category']) || $param['category'] == 0) &#xf0b1 &nbsp;&nbsp; @endif Semua Profesi</option>
                         @foreach($category as $key => $row)
-                            <option @if(isset($param['category']) && $param['category'] == $row['id']) selected @endif value="{{$row['id']}}">{{$row['name']}}</option>
+                            <option @if(isset($param['category']) && $param['category'] == $row['id']) selected @endif value="{{$row['id']}}">@if(isset($param['category']) && $param['category'] == $row['id']) &#xf0b1 &nbsp;&nbsp; @endif {{$row['name']}}</option>
                         @endforeach
                     </select>
 
@@ -30,9 +30,9 @@
 
                 <div class="widget">
                     <select data-placeholder="Pilih Kota Tinggal" name="city" class="chosen-select">
-                        <option value="0">&#xf041 &nbsp; &nbsp; Semua Lokasi</option>
+                        <option value="0">@if(!isset($param['city']) || $param['city'] == 0) &#xf041 &nbsp;&nbsp;  @endif Semua Lokasi</option>
                         @foreach ($province as $rowProvince)
-                            <option @if(isset($param['city']) && $param['city'] == $rowProvince['id']) selected @endif value="{{$rowProvince['id']}}">{{$rowProvince['name']}}</option>
+                            <option @if(isset($param['city']) && $param['city'] == $rowProvince['id']) selected @endif value="{{$rowProvince['id']}}">@if(isset($param['city']) && $param['city'] == $rowProvince['id']) &#xf041 &nbsp; &nbsp; @endif{{$rowProvince['name']}}</option>
                         @endforeach>
                     </select>
 
@@ -40,28 +40,28 @@
 
                 <div class="widget">
                     <select data-placeholder="Pilih Jenis Kelamin" name="gender" class="chosen-select">
-                        <option value="0">&#xf224; &nbsp; &nbsp; Semua Jenis Kelamin</option>
-                        <option value="1">Laki - Laki</option>
-                        <option value="2">Perempuan</option>
+                        <option value="0">@if(!isset($param['gender']) || $param['gender'] == 0) &#xf224; &nbsp; &nbsp; @endif Semua Jenis Kelamin</option>
+                        <option @if(isset($param['gender']) && $param['gender'] == 1) selected @endif value="1">@if(isset($param['gender']) && $param['gender'] == 1) &#xf224; &nbsp; &nbsp; @endif Laki - Laki</option>
+                        <option @if(isset($param['gender']) && $param['gender'] == 2) selected @endif value="2">@if(isset($param['gender']) && $param['gender'] == 2) &#xf224; &nbsp; &nbsp; @endif Perempuan</option>
                     </select>
 
                 </div>
 
                 <div class="widget">
-                    <select data-placeholder="Pilih Status" name="marital" class="chosen-select">
-                        <option value="0">&#xf004 &nbsp; &nbsp; Semua Status</option>
-                        <option value="1">Sudah Menikah</option>
-                        <option value="2">Belum Menikah</option>
+                    <select data-placeholder="Pilih Status" name="status" class="chosen-select">
+                        <option value="0">@if(!isset($param['status']) || $param['status'] == 0) &#xf004 &nbsp; &nbsp; @endif Semua Status</option>
+                        <option @if(isset($param['status']) && $param['status'] == 1) selected @endif value="1">@if(isset($param['status']) && $param['status'] == 1) &#xf004 &nbsp; &nbsp; @endif Sudah Menikah</option>
+                        <option @if(isset($param['status']) && $param['status'] == 2) selected @endif value="2">@if(isset($param['status']) && $param['status'] == 2) &#xf004 &nbsp; &nbsp; @endif Belum Menikah</option>
                     </select>
 
                 </div>
 
                 <div class="widget">
                     <select data-placeholder="Pilih Kota Tinggal" name="degree" class="chosen-select">
-                        <option value="0">&#xf19d &nbsp; &nbsp; Semua Pendidikan</option>
+                        <option value="0">@if(!isset($param['degree']) || $param['degree'] == 0) &#xf19d &nbsp; &nbsp; @endif Semua Pendidikan</option>
 
                         @foreach ($degree as $key => $row)
-                            <option @if(isset($param['degree']) && $param['degree'] == $row) selected @endif>{{$row}}</option>
+                            <option @if(isset($param['degree']) && $param['degree'] == $row) selected @endif>@if(isset($param['degree']) && $param['degree'] == $row) &#xf19d &nbsp; &nbsp; @endif {{$row}}</option>
                         @endforeach>
                     </select>
 
@@ -70,8 +70,9 @@
                 <div class="widget">
                     <select data-placeholder="Pilih Status" name="exp" class="chosen-select">
                         <option value="0">&#xf017 &nbsp; &nbsp; Semua Rentang Pengalaman</option>
-                        <option value="1">Kurang dari 5 tahun</option>
-                        <option value="2">Lebih dari 5 tahun</option>
+                        <option value="1">1 - 5 Tahun</option>
+                        <option value="2">5 - 10 Tahun</option>
+                        <option value="2">Lebih Dari 10 Tahun</option>
                     </select>
 
                 </div>
@@ -141,7 +142,7 @@
                                 $category = explode(',',\App\Helpers\GlobalHelper::getWorkerCategory($row['category']));
                                 @endphp
                                 <li><span>{{(!empty($category[0])) ? $category[0] : 'Admin'}}</span></li>
-                                <li class="text-uppercase"><span>Belum ada rating</span></li>
+                                <li class="text-uppercase"><span>Belum dinilai</span></li>
                                 <li><i>{{\App\Helpers\GlobalHelper::getCityName($row['city'])}}</i></li>
                             </ul>
                             </a>

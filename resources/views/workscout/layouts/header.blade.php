@@ -1,4 +1,4 @@
-<header style="@if($view_name != 'home.index') border-bottom: 1px solid #dfdfdf;  @endif" class="@if($view_name == 'home.index') transparent @endif sticky-header full-width">
+<header style="@if($view_name != 'home.index') border-bottom: 1px solid #dfdfdf;border-top: 4px solid #4fa0ee;  @endif" class="@if($view_name == 'home.index') transparent @endif sticky-header full-width">
 <div class="container">
     <div class="sixteen columns">
 
