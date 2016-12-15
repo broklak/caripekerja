@@ -33,7 +33,7 @@ class GlobalHelper
 
         $age = floor(($now - $birthdate) / 31536000); // value of year in seconds
 
-        $age = ($age > 40) ? 40 : $age;
+        $age = ($age > 40 || $age < 10) ? 25 : $age;
         return $age.' Tahun';
     }
 
