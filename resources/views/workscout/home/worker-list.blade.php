@@ -132,8 +132,8 @@
                         <div class="candidate">
                             <h4 class="text-uppercase">{{$row['name']}}</h4>
                             <img src="{{\App\Helpers\GlobalHelper::setUserImage($row['photo_profile'])}}" alt="{{$row['name']}}"  class="img-responsive">
-                            <span class="resume-meta-info">
-                                PENGALAMAN {{(!empty($row['years_experience'])) ? $row['years_experience'] : '1'}} TAHUN
+                            <span style="text-transform: uppercase" class="resume-meta-info">
+                                {{\App\Helpers\GlobalHelper::getAgeByBirthdate($row['birthdate'])}}
                             </span>
                             <ul class="list-unstyled text-center about-candidate">
                                 @php
