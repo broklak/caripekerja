@@ -87,7 +87,7 @@
                                 <a href="{{route('job-detail', ['jobId' => $row['id']])}}">
                                     <h4 class="text-uppercase">{{$row['employerName']}}</h4>
                                     <img src="{{\App\Helpers\GlobalHelper::setEmployerImage($row['employerPhoto'])}}" alt="{{$row['employerName']}}"  class="img-responsive">
-                                    <span style="text-transform: uppercase" class="resume-meta-info">{{$row['title']}}</span>
+                                    <span style="text-transform: uppercase" class="resume-meta-info">{{(strlen($row['title']) > 18) ? substr($row['title'],0,15).'...' : $row['title']}}</span>
                                     <ul class="list-unstyled text-center about-candidate">
                                         <li><span>FULL TIME</span></li>
                                         <li class="text-uppercase"><span>{{\App\Helpers\GlobalHelper::moneyFormat($row['salary_min'])}}</span></li>
