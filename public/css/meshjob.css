@@ -2513,7 +2513,7 @@ ul.mj_joblist li a:hover, ul.mj_joblist.nav-tabs > li.active > a, ul.mj_joblist.
     max-height: 250px;
     width: auto;
     height: auto;
-    min-height: 50px;
+    min-height: 175px;
     border-radius: 100%;
 }
 .mj_joblogo {
