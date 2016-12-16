@@ -31,7 +31,7 @@ class JobController extends Controller
     {
         $param = $request->input();
 
-        $perPage = 10;
+        $perPage = 20;
         $getJob = Job::getAll($param, $perPage);
 
         $getAuth = GlobalHelper::getAuthtype();
