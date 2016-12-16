@@ -25,7 +25,7 @@
                                         <div class="mj_pageheading">
                                             <h1>{{$detail['title']}}</h1>
                                             <ul>
-                                                <li><i class="fa fa-clock-o"></i> Full Time</li>
+                                                <li><i class="fa fa-clock-o"></i> {{($detail['type'] == 1) ? ' Full Time' : 'Part Time'}}</li>
                                                 <li><i class="fa fa-map-marker"></i> {{$detail['provinceName']}}</li>
                                                 <li><i class="fa fa-calendar"></i> Diposting {{\App\Helpers\GlobalHelper::getHowLongTime($detail['created_at'])}}</li>
                                                 <li><i class="fa fa-money"></i> {{\App\Helpers\GlobalHelper::moneyFormat($detail['salary_min'])}} - {{\App\Helpers\GlobalHelper::moneyFormat($detail['salary_max'])}}</li>
@@ -65,7 +65,7 @@
                             <div class="">
                                 <div class="padding-right">
                                     <label class="header-about">Deskripsi Pekerjaan</label>
-                                    <p class="no-desc">{{empty($detail['description']) ? 'Tidak ada deskripsi' : $detail['description']}}</p>
+                                    <p class="no-desc">{{empty($detail['description']) ? 'Tidak ada deskripsi' : htmlspecialchars($detail['description'])}}</p>
                                 </div>
                             </div>
                         </div>

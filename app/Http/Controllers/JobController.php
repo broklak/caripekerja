@@ -141,7 +141,7 @@ class JobController extends Controller
      */
     public function getEmployerJob () {
         $employerId = $this->_employer['id'];
-        $perPage = 20;
+        $perPage = 10;
         $param['employer_id'] = $employerId;
         $getJob = Job::getAll($param, $perPage);
 
@@ -259,6 +259,13 @@ class JobController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $job = Job::find($id);
+
+        $title = $job->title;
+
+        Job::destroy($id);
+
+        $message = GlobalHelper::setDisplayMessage('success', 'Anda telah menghapus lowongan '.$title);
+        return redirect(route('employer-job'))->with('displayMessage', $message);
     }
 }

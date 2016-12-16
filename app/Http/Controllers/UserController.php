@@ -226,10 +226,10 @@ class UserController extends Controller
                 'phone' => 'required|max:50',
                 'website' => 'max:75',
                 'city' => 'required',
-                'address' => 'required|max:255',
+                'address' => 'required',
                 'category' => 'required|max:100',
                 'name_owner' => 'required|max:100',
-                'description' => 'required|max:200',
+                'description' => 'required',
                 'photo' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg|max:5020'
             ]);
 

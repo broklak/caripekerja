@@ -14,7 +14,7 @@
     <p>Nomor Rekening : {{$payment->account_number}}</p>
     <p>Nama pemilik Rekening : {{$payment->account_name}}</p>
     <p></p>
-    <p>Silahkan klik link berikut untuk melakukan konfirmasi pembayaran apabila telah melakukan pembayaran. <a href="{{route('topup-confirm')}}">Konfirmasi</a></p>
+    <p>Silahkan klik link berikut untuk melakukan konfirmasi pembayaran apabila telah melakukan pembayaran. <a href="{{route('topup-finished', ['id' => $topup->id])}}">Konfirmasi</a></p>
     <p></p>
     <p>Salam</p>
     <p>Caripekerja.com</p>

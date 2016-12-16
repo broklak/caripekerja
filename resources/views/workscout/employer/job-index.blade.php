@@ -65,7 +65,7 @@
                 </div>
 
                 <div class="margin-top-15"></div>
-                <button style="color: #fff" class="button">Filter</button>
+                <button style="color: #fff;font-size: 16px;width: 100%" class="button">Filter</button>
 
             </form>
             <div class="margin-bottom-40"></div>
@@ -89,7 +89,7 @@
                                     <img src="{{\App\Helpers\GlobalHelper::setEmployerImage($row['employerPhoto'])}}" alt="{{$row['employerName']}}"  class="img-responsive">
                                     <span style="text-transform: uppercase" class="resume-meta-info">{{(strlen($row['title']) > 18) ? substr($row['title'],0,15).'...' : $row['title']}}</span>
                                     <ul class="list-unstyled text-center about-candidate">
-                                        <li><span>FULL TIME</span></li>
+                                        <li><span>{{($row['type'] == 1) ? ' FULL TIME' : 'PART TIME'}}</span></li>
                                         <li class="text-uppercase"><span>{{\App\Helpers\GlobalHelper::moneyFormat($row['salary_min'])}}</span></li>
                                         <li><i>{{$row['provinceName']}}</i></li>
                                     </ul>

@@ -21,6 +21,7 @@
                     <h4>{{$detail['name']}}</h4>
                     <span><a href="#"><i class="fa fa-map"></i> {{\App\Helpers\GlobalHelper::getCityName($detail['city'])}}</a></span>
                 </div>
+                <a class="button" style="margin-top: 20px;margin-left: 20px" href="{{route('myaccount-index')}}">Ganti Profil</a>
                 <div class="clearfix"></div>
             </div>
 

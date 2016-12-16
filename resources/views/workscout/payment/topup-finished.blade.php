@@ -1,76 +1,144 @@
+
 @extends('layouts.main')
 
 @section('title', 'Home')
 
 @section('content')
 
-    <section class="resum-form opt-log">
-        <div class="container">
-            @if (count($errors) > 0)
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
+    @if(isset($error))
+        <div class="container margin-top-30">
+            <div class="notification error">
+                <p class="align-center">Maaf transaksi tidak ditemukan</p>
+            </div>
         </div>
+
+    @else
+
+        <div class="container margin-top-30">
+            <div class="notification success">
+                <p>Hi <strong>{{$employer->name}}</strong>, </p>
+                <p>
+                    Terima kasih atas kepercayaan anda menggunakan layanan Top Up di CariPekerja. Silahkan melakukan pembayaran untuk mengaktifkan kuota.</b>
+                </p>
+            </div>
         </div>
-    </section>
-
-    <!--RESUME FORM START-->
-
-    <section class="resum-form padd-tb">
 
         <div class="container">
 
-                <div class="row">
+            <div class="eight columns">
 
-                    <div class="col-md-12">
+                <!-- Sort by -->
+                <div class="widget">
+                    <h4>Rincian Top Up</h4>
 
-                        @if(isset($error))
-                            <p>Data transaksi tidak ditemukan</p>
-                        @else
+                    <div class="job-overview">
 
-                            <div>
-                                <p>Hi <b>{{$employer->name}}</b>, </p>
-                                <p>
-                                    Terima kasih atas kepercayaan anda menggunakan layanan Top Up di CariPekerja. Kode transaksi anda adalah : <b>{{$topup->code}}</b>
-                                </p>
-                                <p>Berikut adalah detail Top Up anda </p>
-                                <p> </p>
-                                <p>Nama Paket : <b>{{ucfirst($package->name)}}</b></p>
-                                <p>Harga : <b>{{\App\Helpers\GlobalHelper::moneyFormat($package->price)}}</b></p>
-                                <p>Tambahan Quota : <b>{{$package->quota}}</b></p>
-                                <p> </p>
-                                <p>Harap melakukan pembayaran sebesar <b>{{\App\Helpers\GlobalHelper::moneyFormat($package['price'])}}</b> dengan detail berikut</p>
-                                <p></p>
-                                <p>Metode : <b>{{$payment->name}}</b></p>
-                                <p>Nomor Rekening : <b>{{$payment->account_number}}</b></p>
-                                <p>Nama pemilik Rekening : <b>{{$payment->account_name}}</b></p>
-                                <p></p>
-                                <p>Salam</p>
-                                <p>Caripekerja.com</p>
-                            </div>
-
-                            <div class="btn-col">
-
-                                <input type="hidden" name="role" value="worker">
-
-                                <a class="button-link link-green" href="{{route('topup-confirm')}}">Konfirmasi Pembayaran</a>
-
-                            </div>
-
-                        @endif
+                        <ul>
+                            <li>
+                                <i class="fa fa-book"></i>
+                                <div>
+                                    <strong>Kode Transaksi</strong>
+                                    <span>{{$topup->code}}</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa fa-cart-plus"></i>
+                                <div>
+                                    <strong>Nama Paket</strong>
+                                    <span>{{ucfirst($package->name)}}</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa fa-plus"></i>
+                                <div>
+                                    <strong>Tambahan Kuota</strong>
+                                    <span>{{$package->quota}}</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa fa-money"></i>
+                                <div>
+                                    <strong>Total Tagihan</strong>
+                                    <span style="font-size: 22px"><strong>{{\App\Helpers\GlobalHelper::moneyFormat($package['price'])}}</strong></span>
+                                </div>
+                            </li>
+                        </ul>
 
                     </div>
 
                 </div>
+
+            </div>
+            <!-- Widgets / End -->
+
+            <!-- Widgets -->
+            <div class="eight columns">
+
+                <!-- Sort by -->
+                <div class="widget">
+                    <h4>Metode Pembayaran</h4>
+
+                    <div class="job-overview">
+
+                        <ul>
+                            <li>
+                                <i class="fa fa-bank"></i>
+                                <div>
+                                    <strong>Metode Pembayaran</strong>
+                                    <span>{{$payment->name}}</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa fa-barcode"></i>
+                                <div>
+                                    <strong>Nomor Rekening Tujuan</strong>
+                                    <span>{{$payment->account_number}}</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa fa-user"></i>
+                                <div>
+                                    <strong>Nama Pemilik rekening</strong>
+                                    <span>{{$payment->account_name}}</span>
+                                </div>
+                            </li>
+                        </ul>
+
+
+                        <a href="#small-dialog" class="popup-with-zoom-anim button">Konfirmasi Pembayaran</a>
+
+                        <div id="small-dialog" class="zoom-anim-dialog mfp-hide apply-popup">
+                            <div class="small-dialog-headline">
+                                <h2>Konfirmasi Pembayaran Tagihan <strong>#{{$topup->code}}</strong></h2>
+                            </div>
+
+                            <div class="small-dialog-content">
+                                <form action="{{ url('/confirm-topup') }}" method="post" >
+                                    {{csrf_field()}}
+                                    <input type="number" required name="amount" value="{{old('amount')}}" placeholder="Masukkan jumlah transfer (Isi dengan angka)">
+                                    <input type="number" required name="acc_number" value="{{old('acc_number')}}" placeholder="Masukkan nomor rekening pembayar" />
+                                    <input type="text" required name="acc_name" value="{{old('acc_name')}}" placeholder="Masukkan nama pemilik rekening pembayar" />
+
+                                    <input type="hidden" name="code" value="{{$topup->code}}">
+                                    <input type="hidden" name="package" value="{{$topup->package_id}}">
+                                    <input type="hidden" name="payment" value="{{$payment->id}}">
+                                    <button class="send" type="submit">Kirim Konfirmasi</button>
+                                </form>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- Widgets / End -->
+
         </div>
 
-    </section>
+        @endif
 
-
+    <div class="margin-bottom-50"></div>
 
 @endsection

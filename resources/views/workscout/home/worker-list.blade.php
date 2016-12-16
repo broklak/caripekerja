@@ -103,7 +103,7 @@
                 </div>
 
                 <div class="margin-top-15"></div>
-                <button style="color: #fff" class="button">Filter</button>
+                <button style="color: #fff;font-size: 16px;width: 100%" class="button">Filter</button>
 
             </form>
             <div class="margin-bottom-40"></div>
@@ -114,19 +114,9 @@
         <div class="twelve columns">
             <div class="padding-right">
 
-                {{--<ul class="resumes-list">--}}
-
                     @if(!empty($list))
 
                         @foreach ($list as $row)
-
-                            {{--<li>--}}
-                                {{--<a href="{{route('worker-detail', ['workerId' => $row['id']])}}">--}}
-                                    {{--<h4>{{$row['name']}}</h4>--}}
-                                    {{--<img src="{{\App\Helpers\GlobalHelper::setUserImage($row['photo_profile'])}}" alt="">--}}
-                                    {{--<span class="experience-list">PENGALAMAN 1 TAHUN</span>--}}
-                                {{--</a>--}}
-                            {{--</li>--}}
 
                         <div class=" col-md-3 text-center">
                         <div class="candidate">
@@ -140,7 +130,7 @@
                                 @php
                                 $category = explode(',',\App\Helpers\GlobalHelper::getWorkerCategory($row['category']));
                                 @endphp
-                                <li><span>{{(!empty($category[0])) ? $category[0] : 'Admin'}}</span></li>
+                                <li><span style="text-transform: uppercase;font-weight: 600">{{(!empty($category[0])) ? $category[0] : 'Admin'}}</span></li>
                                 <li class="text-uppercase"><span>Belum dinilai</span></li>
                                 <li><i>{{\App\Helpers\GlobalHelper::getCityName($row['city'])}}</i></li>
                             </ul>
@@ -152,7 +142,7 @@
                     @else
                         <p> Pekerja tidak ditemukan. Coba gunakan kriteria pencarian lain</p>
                     @endif
-                {{--</ul>--}}
+
                 <div class="clearfix"></div>
 
                 {{$link}}

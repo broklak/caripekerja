@@ -1039,14 +1039,14 @@ header.transparent ul.float-right li .topup {
 ------------------------------------- */
 a.button.gray.app-link.opened, .upload-btn, button, input[type="button"], input[type="submit"], a.button {
 	cursor: pointer;
-	padding: 10px 20px;
+	padding: 10px 10px;
 	display: inline-block;
 	text-transform: uppercase;
 	font-weight: 600;
-	font-size: 18px;
+	font-size: 14px;
 	outline: none;
 	overflow: hidden;
-	position: relative;
+	/*position: relative;*/
 	z-index: 10;
 	color: #fff;
 	background-color: #505050;
@@ -1139,10 +1139,10 @@ table.manage-table {
 }
 
 table.manage-table th {
-	background-color: #f6f6f6;
+	background-color: #252525;
 	text-align: left;
 	padding: 18px 20px 18px 40px;
-	color: #333;
+	color: #fff;
 	vertical-align: top;
 	font-size: 16px;
 	font-weight: 600;
@@ -1161,7 +1161,7 @@ table.manage-table a.button {
 
 table.manage-table tr:nth-child(2n+1) { background-color: #fbfbfb; }
 
-table.manage-table th:first-child { width: 32%; padding-left: 55px; }
+table.manage-table th:first-child { width: 25%; padding-left: 55px; }
 table.manage-table th:first-child i { left: 35px; }
 table.manage-table.resumes th:first-child { width: auto; }
 
@@ -3541,7 +3541,7 @@ li .job-spotlight p { line-height: 27px; }
 ------------------------------------- */
 
 /* Job Overview */
-.job-overview ul li { margin: 0 0 3px 0; }
+.job-overview ul li { margin: 10px 0 10px 0; }
 .job-overview ul li:last-child { margin: 0; }
 .job-overview ul li:first-child { margin-top: 5px; }
 
@@ -3952,6 +3952,7 @@ html[xmlns] .flexslider .slides {
 .pagination-next-prev {
 	position: relative;
 	top: -42px;
+	display: none;
 }
 
 .pagination ul li {
@@ -3977,7 +3978,10 @@ html[xmlns] .flexslider .slides {
 	font-size: 14px;
 }
 
-.pagination ul li a { width: 42px; }
+.pagination ul li a {
+	width: 42px;
+	background-color: #fff;
+}
 .pagination ul li.blank {
 	color: #a0a0a0;
 	padding: 0 6px;
@@ -4753,7 +4757,7 @@ a.post-img:hover:before {
 /* ------------------------------------------------------------------- */
 /* Widgets
 ---------------------------------------------------------------------- */
-.widget { margin-bottom: 22px; }
+.widget { margin-bottom: 15px; }
 
 .widget input { margin-bottom: 15px; }
 .widget-box input { margin-bottom: 0; }
@@ -5722,7 +5726,7 @@ div.sceditor-group:first-child {
 /* ------------------------------------------------------------------- */
 /* Submit Pages
 ---------------------------------------------------------------------- */
-#titlebar.single.submit-page { padding: 65px 0; }
+/*#titlebar.single.submit-page { padding: 65px 0; }*/
 
 #titlebar.single.submit-page h2,
 .submit-page { padding: 0 9%; }
@@ -5732,7 +5736,7 @@ div.sceditor-group:first-child {
 .submit-page h5 { margin-bottom: 9px; }
 .submit-page h5 span {  color: #888; }
 
-.submit-page .form { margin-bottom: 34px; }
+.submit-page .form { margin-bottom: 20px; }
 
 .submit-page .form .note {
 	margin-top: 9px;
@@ -5899,6 +5903,7 @@ ul.footer-links { margin: 0 0 15px 0; }
 .app-content {
 	padding: 35px 40px 35px 40px;
 	position: relative;
+	background-color: #fff;
 }
 
 .app-footer {
@@ -6015,9 +6020,9 @@ ul.footer-links { margin: 0 0 15px 0; }
 
 .app-content .buttons {
 	top: 0;
-	right: 40px;
+	right: 10px;
 	display: inline-block;
-	top: 52%;
+	top: 25%;
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);

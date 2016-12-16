@@ -67,6 +67,9 @@
                             @if((isset($showCallButton) && $showCallButton))
                                 <a class="contact-candidate" href="{{$callLink}}" onclick="{{$callConfirm}}" data-text="Contact Candidate">HUBUNGI PEKERJA</a>
                             @endif
+                                @if($isOwner)
+                                    <a class="contact-candidate" href="{{route('myaccount-index')}}">Ganti Profil</a>
+                                @endif
                         </div>
                     </div>
                 </div>

@@ -4,13 +4,17 @@
 
 @section('content')
 
+    <div id="titlebar" class="single submit-page people-bg">
+        <h2>PEKERJA SAYA</h2>
+    </div>
+
     <div class="container">
 
-        <div class="title-page">
-            <h2>Pekerja Saya</h2>
+        <div class="four columns">
+            @include('user.myaccount-link')
         </div>
 
-    <div class="eight columns">
+    <div class="four columns">
         <!-- Select -->
         <select data-placeholder="Filter Status" class="chosen-select-no-single">
             <option value="">Filter status</option>
@@ -23,7 +27,7 @@
         <div class="margin-bottom-15"></div>
     </div>
 
-    <div class="eight columns">
+    <div class="four columns">
         <!-- Select -->
         <select data-placeholder="Urutkan" class="chosen-select-no-single">
             <option value="">Urutkan Berdasarkan Data Terbaru</option>
@@ -35,7 +39,7 @@
 
 
     <!-- Applications -->
-    <div class="sixteen columns">
+    <div class="twelve columns">
 
         @foreach($worker as $row)
             <div class="application">

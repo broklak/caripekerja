@@ -4,99 +4,66 @@
 
 @section('content')
 
-    <section class="resume-process padd-tb">
+    <div id="titlebar" class="single submit-page people-bg">
+        <h2>LAMARAN KERJA SAYA</h2>
+    </div>
 
-        <div class="container">
+    <div class="container">
 
+        <div class="four columns">
             @include('user.myaccount-link')
-
         </div>
 
-    </section>
+        <!-- Table -->
+        <div class="twelve columns">
 
-    <section class="recent-row padd-tb" style="background-color: #fff">
-
-        <div class="container">
+            {{--<p class="margin-bottom-25">Your listings are shown in the table below. Expired listings will be automatically removed after 30 days.</p>--}}
 
             {!! session('displayMessage') !!}
 
-            <div class="row">
+            <table class="manage-table responsive-table">
 
-                <div class="col-md-12 col-sm-8">
+                <tr>
+                    <th><i class="fa fa-file-text"></i> Pekerjaan</th>
+                    <th><i class="fa fa-building"></i> Nama Usaha</th>
+                    <th><i class="fa fa-calendar"></i> Tanggal Lamar</th>
+                    <th><i class="fa fa-check-square"></i> Status</th>
+                    <th></th>
+                </tr>
 
-                    <div id="content-area">
+                @if(!empty($job))
+                    @foreach ($job as $row)
+                        <tr>
+                            <td class="title"><a href="{{route('job-detail', ['jobId' => $row['id']])}}">{{$row['title']}}</a></td>
+                            <td>{{$row['employerName']}}</td>
+                            <td>{{date('j F Y', strtotime($row['created_at']))}}</td>
+                            <td>
+                                @if($row['status'] == 0)
+                                    Diterima
+                                @elseif($row['status'] == 1)
+                                    Ditinjau
+                                @else
+                                    Ditutup
+                                @endif
+                            </td>
+                            <td><a class="button" href="{{route('job-detail', ['id' => $row['id']])}}">Lihat Lowongan</a></td>
+                        </tr>
+                    @endforeach
 
-                        <h2>Lamaran Pekerjaan Saya</h2>
+                @else
+                    <tr>
+                        <td colspan="5" style="text-align: center">Anda belum pernah melamar kerja di caripekerja. <a class="button" href="{{route('job-list')}}">Cari Lowongan Kerja</a></td>
+                    </tr>
+                @endif
 
-                        @if(!empty($job))
-
-                            <ul id="myList">
-
-                                @foreach ($job as $row)
-
-                                    <li style="display: list-item;">
-
-                                        <div style="background-color: #f5f5f5" class="box">
-
-                                            <div class="thumb-jobs"><a href="#"><img src="{{\App\Helpers\GlobalHelper::setEmployerImage($row['employerPhoto'])}}" alt="img"></a></div>
-
-                                            <div class="text-col">
-
-                                                <div class="hold">
-
-                                                    <h4><a href="#">{{$row['title']}}</a></h4>
-
-                                                    <h5>{{$row['employerName']}}</h5>
-
-                                                    <p>{{empty($row['description']) ? 'Tidak ada deskripsi' : $row['description']}}</p>
-
-                                                    <a href="#" class="text"><i class="fa fa-map-marker"></i>{{$row['provinceName']}}</a>
-                                                    <a href="#" class="text"><i class="fa fa-calendar"></i>Diposting {{\App\Helpers\GlobalHelper::getHowLongTime($row['created_at'])}}</a> </div>
-
-                                            </div>
-
-                                            <strong class="price"><i class="fa fa-money"></i>{{\App\Helpers\GlobalHelper::moneyFormat($row['salary_min'])}} - {{\App\Helpers\GlobalHelper::moneyFormat($row['salary_max'])}}</strong>
-
-                                            @if($row['status'] == 0)
-
-                                                <a class="btn-1 btn-color-2 ripple">Lamaran Diterima</a>
-
-                                            @elseif($row['status'] == 1)
-
-                                                <a class="btn-1 btn-color-4 ripple">Lamaran Ditinjau</a>
-
-                                            @else
-
-                                                <a class="btn-1 btn-color-1 ripple">lamaran Ditutup</a>
-
-                                            @endif
-
-                                        </div>
-
-                                    </li>
-
-                                @endforeach
-
-                            </ul>
-
-                        @else
-
-                            <p>Belum ada pekerjaan yang anda lamar. Ayo mulai cari pekerjaan dengan klik link berikut. <a class="button-link link-green" href="{{route('job-list')}}">Cari Pekerjaan</a></p>
-
-                        @endif
-
-                    </div>
-
-                    {{$link}}
-
-                </div>
-
-
-
-            </div>
+            </table>
 
         </div>
 
-    </section>
+    </div>
+
+    {{$link}}
+
+    <div class="margin-bottom-25"></div>
 
 @endsection

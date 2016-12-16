@@ -23,6 +23,32 @@
 	margin: 10px 0;
 }
 
+.add-job {
+	background-image: url('../images/user/bg-profil-kerja.jpg');
+	background-size: cover;
+	text-align: center;
+}
+
+.people-bg {
+	background-image: url('../images/user/bg-title-people.jpg');
+	background-size: cover;
+	text-align: center;;
+}
+
+.tree-bg {
+	background-image: url('../images/user/bg-title-pohon.jpg');
+	background-size: cover;
+	text-align: center;
+}
+
+.no-image-title {
+	text-align: center;
+}
+
+.people-bg h2, .tree-bg h2 {
+	color: #fff;
+}
+
 .company-detail-title {
 	display: block;
 	font-weight: 800;

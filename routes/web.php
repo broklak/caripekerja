@@ -42,6 +42,7 @@ Route::get('employer/password/reset/{token}', 'EmployerAuth\ResetPasswordControl
 // JOB
 Route::get('buat-lowongan', 'JobController@create')->name('job-create');
 Route::get('edit-lowongan/{jobId}', 'JobController@edit')->name('job-edit');
+Route::get('hapus-lowongan/{jobId}', 'JobController@destroy')->name('job-delete');
 Route::post('job/store', 'JobController@store');
 Route::post('job/update/{id}', 'JobController@update');
 Route::get('lowongan-kerja', 'JobController@index')->name('job-list');

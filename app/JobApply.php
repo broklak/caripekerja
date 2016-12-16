@@ -22,7 +22,7 @@ class JobApply extends Model
         $table = 'jobs';
         $list = DB::table($table)
             ->select('jobs.id', 'employers.name as employerName', 'employers.photo_profile as employerPhoto', 'title', 'jobs.description', 'province.name as provinceName',
-                    'start_date', 'end_date', 'age_min', 'age_max', 'salary_min', 'salary_max', 'jobs.created_at', 'job_apply.status')
+                    'start_date', 'end_date', 'age_min', 'age_max', 'salary_min', 'salary_max', 'job_apply.created_at', 'job_apply.status')
             ->where('jobs.status', 1)
             ->where('job_apply.worker_id', $workerId)
             ->join('employers', 'employers.id', '=', 'jobs.employer_id')

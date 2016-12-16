@@ -3320,7 +3320,7 @@ margin-right: 8px;
     transition: all 0.3s ease-in-out;
 } .candidate{
       border: 1px solid #dde0e1;
-      padding: 30px 20px;
+      padding: 30px 18px 15px;
       position: relative;
       margin-bottom: 30px;
       letter-spacing: 1px;
@@ -3342,12 +3342,12 @@ margin-right: 8px;
 }
 .candidate h4 {
     position: absolute;
-    top: -18px;
+    top: -17px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
-    background:linear-gradient(180deg, transparent 38%, #fff 50%);
+    background:linear-gradient(180deg, transparent 41%, #fff 0%);
     width: auto;
     max-width: -webkit-calc(100% - 40px);
     max-width: calc(100% - 40px);
@@ -3359,11 +3359,12 @@ margin-right: 8px;
     font-weight: 600;
 }
 .candidate img{
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     width: 100%;
     border-radius: 100%;
-    max-height: 125px;
-    height: 125px;
+    max-height: 160px;
+    height: 160px;
+    margin-top: -10px;
 }
 .candidate.active img{
     -webkit-filter: grayscale(0);
@@ -3371,7 +3372,7 @@ margin-right: 8px;
 }
 .candidate .about-candidate{
     position: relative;
-    top: 13px;
+    top: 5px;
     margin-bottom: 0;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
@@ -3387,9 +3388,9 @@ margin-right: 8px;
     max-width: 100%;
 }
 .candidate .about-candidate li:nth-child(2){
-    margin: 5px 0;
+    /*margin: 5px 0;*/
 }
-.candidate .about-candidate li:last-child {color: #999}
+.candidate .about-candidate li:last-child {color: #252525}
 .view-resume,
 .view-resume a{
     position: absolute;
