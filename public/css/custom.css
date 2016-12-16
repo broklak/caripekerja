@@ -11,8 +11,25 @@
 	margin-bottom: 10px;;
 }
 
-.no-desc {
+.no-desc, .company-profile-detail {
 	margin-left: 15px;
+	border-top: 3px solid #D7CCC8;
+	padding-top: 10px;
+}
+
+.company-profile-detail li {
+	width: 50%;
+	float: left;
+	margin: 10px 0;
+}
+
+.company-detail-title {
+	display: block;
+	font-weight: 800;
+}
+
+.company-detail-content {
+	font-size: 15px;
 }
 
 .verify-worker li {

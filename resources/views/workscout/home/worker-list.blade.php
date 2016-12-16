@@ -5,10 +5,9 @@
 @section('content')
 
     <style>
-        .chosen-single span, .result-selected { font-family: 'FontAwesome'; } /* This is for the placeholder */
+        .chosen-single span, .result-selected { font-family: 'FontAwesome',"Roboto", Arial, Helvetica, sans-serif; } /* This is for the placeholder */
     </style>
 
-    <link rel="stylesheet" href="{{ asset("css") }}/dojo.css?version=1" id="colors">
     <div class="title-page list-worker"></div>
     <div class="clearfix"></div>
 

@@ -11,9 +11,9 @@
         <nav id="navigation" class="menu">
             <ul id="responsive">
 
-                @if($authRole != 'employer') <li><a href="#" onclick="alert('Fitur ini masih dalam tahap pengembangan')">LOWONGAN KERJA</a></li> @endif
+                @if($authRole != 'employer') <li><a href="{{route('job-list')}}">LOWONGAN KERJA</a></li> @endif
 
-                @if($authRole != 'worker') <li><a href="#" onclick="alert('Fitur ini masih dalam tahap pengembangan')">CARI PEKERJA</a></li> @endif
+                @if($authRole != 'worker') <li><a href="{{route('worker-list')}}">CARI PEKERJA</a></li> @endif
 
                 @if($authRole != 'worker') <li><a href="#" onclick="alert('Fitur ini masih dalam tahap pengembangan')">BUAT LOWONGAN</a></li> @endif
 
@@ -32,8 +32,7 @@
                 </ul>
             @else
                 <ul class="responsive float-right">
-                    <li><a href="#" onclick="alert('Fitur ini masih dalam tahap pengembangan')">Daftar</a></li>
-                    <li><a href="#" data-toggle="modal" data-target="#modalLogin">Masuk</a></li>
+                    <li><a href="{{route('login')}}">Masuk</a></li>
                     <li><a href="" onclick="alert('Fitur ini masih dalam tahap pengembangan')" style="background-color: #4fa0ee;color: #fff;border-radius: 4px;padding: 10px 15px" class="topup">Top Up</a></li>
                 </ul>
 

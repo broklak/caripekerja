@@ -45,6 +45,7 @@ Route::get('edit-lowongan/{jobId}', 'JobController@edit')->name('job-edit');
 Route::post('job/store', 'JobController@store');
 Route::post('job/update/{id}', 'JobController@update');
 Route::get('lowongan-kerja', 'JobController@index')->name('job-list');
+Route::get('detail-lowongan/{jobId}', 'JobController@detail')->name('job-detail');
 Route::post('lowongan-kerja', 'JobController@index')->name('job-list');
 Route::get('lamar-kerja/{jobId}', 'UserController@applyJob')->name('job-apply');
 

@@ -5,10 +5,10 @@
 @section('content')
 
     @if (count($errors) > 0)
-        <div class="row">
+        <div class="row" style="margin-bottom: 0">
 
-                <div class="alert alert-danger">
-                    <ul>
+                <div class="alert alert-danger" style="margin-bottom: 0;">
+                    <ul style="padding: 20px">
                         @foreach ($errors->all() as $error)
                             <li style="text-align: center">{{ $error }}</li>
                         @endforeach
@@ -26,7 +26,7 @@
                             <h1>SAYA PEMILIK USAHA</h1>
                         </div>
                         <div class="mj_blog_btn">
-                            <a href="#" class="mj_mainbtn mj_btnblack" data-text="Daftar" data-toggle="modal" data-target="#usaha"><span>Daftar</span></a>
+                            <a href="#" class="mj_mainbtn mj_btnblack" data-text="Masuk" data-toggle="modal" data-target="#usaha"><span>Masuk</span></a>
                         </div>
                         <div class="mj_signup_section_img">
                             <img src="images/signup_bg1.png" class="img-responsive" alt="hire">
@@ -41,7 +41,7 @@
                             <h1>SAYA PENCARI KERJA</h1>
                         </div>
                         <div class="mj_blog_btn">
-                            <a href="#" class="mj_mainbtn mj_btnblack" data-text="Daftar" data-toggle="modal" data-target="#pekerja"><span>Daftar</span></a>
+                            <a href="#" class="mj_mainbtn mj_btnblack" data-text="Masuk" data-toggle="modal" data-target="#pekerja"><span>Masuk</span></a>
                         </div>
                         <div class="mj_signup_section_img">
                             <img src="images/signup_bg2.png" class="img-responsive" alt="job">

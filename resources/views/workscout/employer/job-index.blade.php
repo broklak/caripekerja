@@ -4,104 +4,45 @@
 
 @section('content')
 
+    <style>
+        .chosen-single span, .result-selected { font-family: 'FontAwesome',"Roboto", Arial, Helvetica, sans-serif; } /* This is for the placeholder */
+    </style>
+
+    <link rel="stylesheet" href="{{ asset("css") }}/dojo.css?version=1" id="colors">
+    <div class="title-page list-worker"></div>
+    <div class="clearfix"></div>
+
     <div class="container">
-
-        <div class="title-page">
-            <h2>Lowongan Pekerjaan</h2>
-        </div>
-
-    <!-- Recent Jobs -->
-    <div class="eleven columns">
-        <div class="padding-right">
-
-            <form action="#" method="get" class="list-search">
-                <button><i class="fa fa-search"></i></button>
-                <input type="text" placeholder="Cari Lowongan Kerja Berdasarkan Kata Kunci" value=""/>
-                <div class="clearfix"></div>
-            </form>
-
-            <ul class="job-list full">
-                @if(!empty($list))
-
-                    @foreach ($list as $row)
-
-                        <li>
-                            <a href="{{($authRole == 'worker') ? route('job-apply', ['jobId' => $row['id']]) : route('login')}}" onclick="@if($authRole == 'worker') return confirm('Anda akan melamar pekerjaan {{$row['title']}} di {{$row['employerName']}}. Lanjutkan Proses ?') @else alert('Silahkan login sebagai pekerja untuk melamar') @endif ">
-                                    <img src="{{\App\Helpers\GlobalHelper::setEmployerImage($row['employerPhoto'])}}" alt="">
-                                    <div class="job-list-content">
-                                        <h4>{{$row['title']}}</h4>
-                                        <div class="job-icons">
-                                            <span><i class="fa fa-briefcase"></i> {{$row['employerName']}}</span>
-                                            <span><i class="fa fa-map-marker"></i>{{$row['provinceName']}}</span>
-                                            <span class="money"><i class="fa fa-money"></i> {{\App\Helpers\GlobalHelper::moneyFormat($row['salary_min'])}} - {{\App\Helpers\GlobalHelper::moneyFormat($row['salary_max'])}}</span>
-                                        </div>
-                                        <p>{{empty($row['description']) ? 'Tidak ada deskripsi' : $row['description']}}</p>
-                                    </div>
-                                @if($authRole != 'employer') <span class="apply-job">Lamar</span> @endif
-                            </a>
-                            <div class="clearfix"></div>
-                        </li>
-                    @endforeach
-                @else
-                    <p> Lowongan tidak ditemukan. Coba gunakan kriteria pencarian lain</p>
-                @endif
-            </ul>
-            <div class="clearfix"></div>
-
-            {{$link}}
-
-        </div>
-    </div>
-
-
-    <!-- Widgets -->
-    <div class="five columns">
-
-        <div class="five columns">
+        <!-- Widgets -->
+        <div class="four columns">
             <!-- Skills -->
             <form action="{{route('job-list')}}" method="post">
                 {{csrf_field()}}
-                <div class="widget">
-                    <h4>Profesi</h4>
+                <div class="widget wrapperzz">
                     <select data-placeholder="Pilih Profesi" name="category" class="chosen-select">
-                        <option value="0">Semua Profesi</option>
+                        <option value="0">@if(!isset($param['category']) || $param['category'] == 0) &#xf0b1 &nbsp;&nbsp; @endif Semua Profesi</option>
                         @foreach($category as $key => $row)
-                            <option @if(isset($param['category']) && $param['category'] == $row['id']) selected @endif value="{{$row['id']}}">{{$row['name']}}</option>
+                            <option @if(isset($param['category']) && $param['category'] == $row['id']) selected @endif value="{{$row['id']}}">@if(isset($param['category']) && $param['category'] == $row['id']) &#xf0b1 &nbsp;&nbsp; @endif {{$row['name']}}</option>
                         @endforeach
                     </select>
 
                 </div>
 
                 <div class="widget">
-                    <h4>Lokasi</h4>
                     <select data-placeholder="Pilih Kota Tinggal" name="city" class="chosen-select">
-                        <option value="0">Semua Kota</option>
+                        <option value="0">@if(!isset($param['city']) || $param['city'] == 0) &#xf041 &nbsp;&nbsp;  @endif Semua Lokasi</option>
                         @foreach ($province as $rowProvince)
-                            <option @if(isset($param['city']) && $param['city'] == $rowProvince['id']) selected @endif value="{{$rowProvince['id']}}">{{$rowProvince['name']}}</option>
+                            <option @if(isset($param['city']) && $param['city'] == $rowProvince['id']) selected @endif value="{{$rowProvince['id']}}">@if(isset($param['city']) && $param['city'] == $rowProvince['id']) &#xf041 &nbsp; &nbsp; @endif{{$rowProvince['name']}}</option>
                         @endforeach>
                     </select>
 
                 </div>
 
                 <div class="widget">
-                    <h4>Pendidikan Terakhir</h4>
-                    <select data-placeholder="Pilih Kota Tinggal" name="degree" class="chosen-select">
-                        <option value="0">Semua Latar Pendidikan Terakhir</option>
-
-                        @foreach ($degree as $key => $row)
-                            <option @if(isset($param['degree']) && $param['degree'] == $row) selected @endif>{{$row}}</option>
-                        @endforeach>
-                    </select>
-
-                </div>
-
-                <div class="widget">
-                    <h4>Rentang Gaji</h4>
-
                     <ul class="checkboxes">
                         <li>
                             <input id="check-6" type="checkbox" name="check" value="check-6" checked>
-                            <label for="check-6">Semua Rentang</label>
+                            <label for="check-6">Semua Rentang Gaji</label>
                         </li>
                         <li>
                             <input id="check-7" type="checkbox" name="check" value="check-7">
@@ -117,20 +58,56 @@
                         </li>
                         <li>
                             <input id="check-10" type="checkbox" name="check" value="check-10">
-                            <label for="check-10">Lebih Dari Rp 5,000,000</label>
+                            <label for="check-10">Diatas Rp 5,000,000</label>
                         </li>
                     </ul>
 
                 </div>
 
                 <div class="margin-top-15"></div>
-                <button class="button">Filter</button>
+                <button style="color: #fff" class="button">Filter</button>
 
             </form>
+            <div class="margin-bottom-40"></div>
         </div>
+        <!-- Widgets / End -->
 
-    </div>
-    <!-- Widgets / End -->
+        <!-- Recent Jobs -->
+        <div class="twelve columns">
+            <div class="padding-right">
+
+                {{--<ul class="resumes-list">--}}
+
+                @if(!empty($list))
+
+                    @foreach ($list as $row)
+
+                        <div class=" col-md-3 text-center">
+                            <div class="candidate">
+                                <a href="{{route('job-detail', ['jobId' => $row['id']])}}">
+                                    <h4 class="text-uppercase">{{$row['employerName']}}</h4>
+                                    <img src="{{\App\Helpers\GlobalHelper::setEmployerImage($row['employerPhoto'])}}" alt="{{$row['employerName']}}"  class="img-responsive">
+                                    <span style="text-transform: uppercase" class="resume-meta-info">{{$row['title']}}</span>
+                                    <ul class="list-unstyled text-center about-candidate">
+                                        <li><span>FULL TIME</span></li>
+                                        <li class="text-uppercase"><span>{{\App\Helpers\GlobalHelper::moneyFormat($row['salary_min'])}}</span></li>
+                                        <li><i>{{$row['provinceName']}}</i></li>
+                                    </ul>
+                                </a>
+                            </div>
+                        </div>
+
+                    @endforeach
+                @else
+                    <p> Lowongan kerja tidak ditemukan. Coba gunakan kriteria pencarian lain</p>
+                @endif
+                {{--</ul>--}}
+                <div class="clearfix"></div>
+
+                {{$link}}
+
+            </div>
+        </div>
 
     </div>
 

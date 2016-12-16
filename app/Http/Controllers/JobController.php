@@ -17,7 +17,7 @@ class JobController extends Controller
 
     public function __construct()
     {
-        $this->middleware('employer', ['except' => 'index']);
+        $this->middleware('employer', ['except' => ['index', 'detail']]);
         $this->_employer = Auth::guard('employer')->user();
     }
 
@@ -46,6 +46,19 @@ class JobController extends Controller
         $data['link'] = $getJob['link'];
         $data['param'] = $param;
         return view('employer.job-index', $data);
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function detail($id)
+    {
+        $detail = Job::getDetail($id);
+        $data['detail'] = (array) $detail;
+        return view('employer.job-detail', $data);
     }
 
     /**

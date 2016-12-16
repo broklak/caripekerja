@@ -92,14 +92,14 @@ class GlobalHelper
         $days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
 
         if($days == 0) {
-            return 'hari ini';
+            return 'Hari ini';
         }
 
         if($days == 1) {
-            return 'kemarin';
+            return 'Kemarin';
         }
 
-        return $days . ' hari yang lalu';
+        return $days . ' Hari yang lalu';
     }
 
     public static function skillLevel ($skill) {
