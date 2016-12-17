@@ -152,7 +152,7 @@
                         <div class=" col-md-3 text-center">
                         <div class="candidate">
                             <a href="{{route('worker-detail', ['workerId' => $row['id']])}}">
-                            <h4 class="text-uppercase">{{$row['name']}}</h4>
+                            <h4 class="text-uppercase">{{\App\Helpers\GlobalHelper::simplifyName($row['name'])}}</h4>
                             <img src="{{\App\Helpers\GlobalHelper::setUserImage($row['photo_profile'])}}" alt="{{$row['name']}}"  class="img-responsive">
                             <span style="text-transform: uppercase" class="resume-meta-info">
                                 {{\App\Helpers\GlobalHelper::getAgeByBirthdate($row['birthdate'])}}

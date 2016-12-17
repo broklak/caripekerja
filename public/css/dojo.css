@@ -2875,29 +2875,33 @@ footer p, .resume-details .col-md-8{font-size: 16px}
 .footer-companies a, .footer-about a,
 .job-view, .cbp_tmtimeline > li .cbp_tmlabel, .job i, .user-description .animated-intro,
 .meter > p, .progress-name b, .portofolio-menu button, #issues h1, #issues li p, #issues li i, #issues b.text-uppercase,
-.statisticFront i, .register-intro h3, .register-header p, header.add-resume p, .form-group b{ letter-spacing: 0px;}
+.statisticFront i, .register-intro h3, .register-header p, header.add-resume p, .form-group b{ letter-spacing: 0px;font-family: 'Roboto Condensed', sans-serif}
 .candidate ul.about-candidate span,
 .candidate ul.about-candidate i {
     background: #fff;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    padding: 0 10px;
+    padding: 0 8px;
     display: inline-block;
     width: auto;
     max-width: 100%;
+    color: #777;
     font-size: 14px;
     letter-spacing: 0;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 .resume-meta-info {
     width: 100%;
     display: block;
     float: left;
+    font-weight: 500;
 }
 .resume-meta-info span {
     background-color: #fff;
     z-index: 999;
     position: relative;
+    color: #795548;
 }
 .resume-meta-info:before {
     content: "";
@@ -3349,21 +3353,22 @@ margin-right: 8px;
     transform: translateX(-50%);
     background:linear-gradient(180deg, transparent 41%, #fff 0%);
     width: auto;
-    max-width: -webkit-calc(100% - 40px);
-    max-width: calc(100% - 40px);
+    max-width: -webkit-calc(100% - 10px);
+    max-width: calc(100% - 10px);
     overflow:hidden;
     white-space:nowrap;
     text-overflow: ellipsis;
     font-size: 14px;
-    color: #8D6E63;
+    color: #777;
     font-weight: 600;
 }
 .candidate img{
     margin-bottom: 15px;
-    width: 100%;
     border-radius: 100%;
-    max-height: 160px;
-    height: 160px;
+    max-width: 150px;
+    width: 150px;
+    max-height: 150px;
+    height: 150px;
     margin-top: -10px;
 }
 .candidate.active img{
@@ -3371,6 +3376,8 @@ margin-right: 8px;
     filter: grayscale(0);
 }
 .candidate .about-candidate{
+    font-family: Trebuchet;
+    color: #795548;
     position: relative;
     top: 5px;
     margin-bottom: 0;
@@ -3423,7 +3430,7 @@ margin-right: 8px;
     color: #fff;
     border-radius: 4px;
     margin-left: 25px;
-    background-color: #4fa0ee;
+    background-color: #616161;
     width: 100%;
     width: -webkit-calc(100% - 50px);
     width: calc(100% - 50px);

@@ -5,10 +5,11 @@
 @section('content')
 
     <div id="titlebar" class="single submit-page people-bg">
-        <h2>Ubah Profil</h2>
+        <h2>Update Profil</h2>
     </div>
 
     <div class="container margin-top-30">
+        {!! session('displayMessage') !!}
         <div class="notification success">
             <p class="align-center">Kode Referal Anda : <strong>{{$referral}}</strong>. Ajak teman anda untuk mendaftar di Caripekerja dan gunakan kode referal ini di halaman pendaftaran.</p>
         </div>

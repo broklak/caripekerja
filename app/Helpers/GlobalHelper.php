@@ -16,6 +16,16 @@ class GlobalHelper
         return $message;
     }
 
+    public static function simplifyName($name) {
+        $split = explode(' ', $name);
+        if(count($split) < 3) {
+            return $name;
+        }
+
+        unset($split[2]);
+        return implode(' ', $split);
+    }
+
     public static function moneyFormat ($money) {
         $currency = 'Rp ';
         $money = $currency . number_format($money,0,',',',');

@@ -25,8 +25,10 @@ class HomeController extends Controller {
 
 
     public function index () {
+        $data['category'] = WorkerCategory::all();
+        $data['province'] = Province::all();
         GlobalHelper::setNoBanner();
-        return view('home.index');
+        return view('home.index', $data);
     }
 
     /**

@@ -736,11 +736,27 @@ ul li ul a.sf-with-ul:after {
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
-/* Form Icons */
-input.ico-01 { background: #fff url("../images/ico-01.png") no-repeat scroll 97% 20px / 21px 21px; }
-input.ico-02 { background: #fff url("../images/ico-02.png") no-repeat scroll 96% 20px / 14px 21px; }
+.search-container select {
+	font-weight: 500;
+	font-size: 18px;
+	float: left;
+	box-sizing: border-box;
+	padding: 19px 20px;
+	border: none;
+	margin-right: 2%;
+	width: 42.5%;
+	float: left;
+	height: 55px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
 
-.search-container input:focus { border: none; }
+/* Form Icons */
+/*input.ico-01,select.ico-01 { background: #fff url("../images/ico-01.png") no-repeat scroll 97% 20px / 21px 21px; }*/
+/*input.ico-02,select.ico-02 { background: #fff url("../images/ico-02.png") no-repeat scroll 96% 20px / 14px 21px; }*/
+
+
+
+.search-container input:focus,.search-container select:focus { border: none; }
 
 .search-container button {
 	background-color: #505050;
@@ -6169,7 +6185,7 @@ ul.footer-links { margin: 0 0 15px 0; }
 	position: relative;
 	padding-left: 30px;
 	margin-right: 15px;
-	color: #8D6E63;
+	color: #777;
 }
 
 .checkboxes label span {
@@ -6268,8 +6284,8 @@ label.upload-btn input[type="file"] { display: none; }
 @media only screen and (min-width: 960px) and (max-width: 1289px) {
 
 	.search-container { padding: 150px 0; }
-	input.ico-01 { background-position: 95.5% 20px; }
-	input.ico-02 { background-position: 95% 20px; }
+	input.ico-01,select.ico-01{ background-position: 95.5% 20px; }
+	input.ico-02,select.ico-02 { background-position: 95% 20px; }
 
 	#titlebar.single.submit-page h2, .submit-page { padding: 0; }
 }
@@ -6278,12 +6294,16 @@ label.upload-btn input[type="file"] { display: none; }
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 990px) {
 	.search-container { transform: translateY(0) !important;}
-	.search-container input.ico-01 { width: 45%; }
-	.search-container input.ico-02 { width: 33%; }
+	.search-container input.ico-01,.search-container select.ico-01 { width: 45%; }
+	.search-container input.ico-02,.search-container select.ico-02 { width: 33%; }
 	.search-container button  { width: 13%; }
-	input.ico-01 { background-position: 95% 20px; }
-	input.ico-02 { background-position: 93% 20px; }
+	input.ico-01,select.ico-01 { background-position: 95% 20px; }
+	input.ico-02,select.ico-02 { background-position: 93% 20px; }
 	.search-container { padding: 120px 0; }
+
+	.search-container select {
+		height: 62px;
+	}
 
 	.browse-jobs a {
 		padding: 5px 5px;
@@ -6385,6 +6405,10 @@ label.upload-btn input[type="file"] { display: none; }
 		font-size: 16px;
 	}
 
+	.search-container select {
+		height: 62px;
+	}
+
 	.widget.sort {
 		margin-left: 0;
 	}
@@ -6399,11 +6423,11 @@ label.upload-btn input[type="file"] { display: none; }
 
 	.search-container { transform: translateY(0) !important;}
 	.search-container h2 { font-size: 16px;margin-bottom: 25px;margin-top: -100px;line-height:25px }
-	.search-container input.ico-01 { width: 100%; margin: 0 0 15px 0; }
-	.search-container input.ico-02 { width: 100%; margin: 0 0 15px 0; }
+	.search-container input.ico-01,.search-container select.ico-01 { width: 100%; margin: 0 0 15px 0; }
+	.search-container input.ico-02,.search-container select.ico-02 { width: 100%; margin: 0 0 15px 0; }
 	.search-container button  { width: 100%; }
-	input.ico-01 { background-position: 95% 20px; }
-	input.ico-02 { background-position: 94% 20px; }
+	input.ico-01,select.ico-01 { background-position: 95% 20px; }
+	input.ico-02,select.ico-02 { background-position: 94% 20px; }
 	.search-container { padding: 100px 0; }
 
 	#popular-categories li a { width: 100%; }

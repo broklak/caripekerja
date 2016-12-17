@@ -19,7 +19,7 @@ class RedirectIfNotEmployer
 	public function handle($request, Closure $next, $guard = 'employer')
 	{
 	    if (!Auth::guard($guard)->check()) {
-			$message = 'Silahkan masuk sebagai UKM untuk mengakses';
+			$message = 'Silahkan masuk sebagai pemilik usaha untuk mengakses';
 			return redirect()->guest('login	')
 				->withInput(['role' => 'employer'])
 				->withErrors([

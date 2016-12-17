@@ -15,7 +15,13 @@
     <form role="form" method="POST" id="form-job-create" action="{{ url('update-profile') }}" enctype="multipart/form-data">
         {{ csrf_field() }}
 
-                <!-- Email -->
+        <div class="form">
+            <h5>Foto Profil</h5>
+            <div class="frame"><img style="width: 200px;height: 200px" src="{{$image}}" alt="img"></div>
+
+            <input type="file" name="photo" accept="image/*">
+        </div>
+
         <div class="form">
             <h5>Nama Usaha</h5>
             <input class="search-field" name="name" value="{{$authData['name']}}" type="text" placeholder="Nama Usaha" />
@@ -67,12 +73,6 @@
             </select>
         </div>
 
-        <div class="form">
-            <h5>Foto Profil</h5>
-            <div class="frame"><img style="width: 200px;height: 200px" src="{{$image}}" alt="img"></div>
-
-            <input type="file" name="photo" accept="image/*">
-        </div>
         <input type="hidden" name="role" value="employer">
         <input type="submit" class="button big margin-top-5" value="Ubah Profil">
 

@@ -12,22 +12,22 @@
             </div>
 
             <ul id="popular-categories">
-                <li><a href="#"><i class="ln  ln-icon-Assistant"></i> Asisten Rumah Tangga</a></li>
-                <li><a href="#"><i class="ln ln-icon-Baby"></i> Baby Sitter</a></li>
-                <li><a href="#"><i class="ln ln-icon-Car"></i> Sopir</a></li>
-                <li><a href="#"><i class="ln ln-icon-Waiter"></i>Pelayan</a></li>
-                <li><a href="#"><i class="ln ln-icon-Shop"></i> Penjaga Toko</a></li>
-                <li><a href="#"><i class="ln ln-icon-Administrator"></i> Admin</a></li>
-                <li><a href="#"><i class="ln  ln-icon-Worker"></i> Buruh Pabrik</a></li>
-                <li><a href="#"><i class="ln  ln-icon-Police-Man"></i>Satpam</a></li>
-                <li><a href="#"><i class="ln  ln-icon-Repair"></i>Montir</a></li>
-                <li><a href="#"><i class="ln  ln-icon-Luggage-2"></i>Kurir</a></li>
-                <li><a href="#"><i class="ln  ln-icon-Chef"></i> Juru Masak</a></li>
-                <li><a href="#"><i class="ln  ln-icon-Bodybuilding"></i>Kuli Bangunan</a></li>
-                <li><a href="#"><i class="ln  ln-icon-User"></i>Office Boy / Girl</a></li>
-                <li><a href="#"><i class="ln  ln-icon-Saw"></i>Tukang Kayu</a></li>
-                <li><a href="#"><i class="ln  ln-icon-Worker-Clothes"></i>Penjahit</a></li>
-                <li><a href="#"><i class="ln  ln-icon-Dress"></i>Pemayet</a></li>
+                <li><a href="{{route('worker-list-category', ['url' => 'asisten-rumah-tangga'])}}"><i class="ln  ln-icon-Assistant"></i> Asisten Rumah Tangga</a></li>
+                <li><a href="{{route('worker-list-category', ['url' => 'babysitter'])}}"><i class="ln ln-icon-Baby"></i> Baby Sitter</a></li>
+                <li><a href="{{route('worker-list-category', ['url' => 'sopir'])}}"><i class="ln ln-icon-Car"></i> Sopir</a></li>
+                <li><a href="{{route('worker-list-category', ['url' => 'pelayan'])}}"><i class="ln ln-icon-Waiter"></i>Pelayan</a></li>
+                <li><a href="{{route('worker-list-category', ['url' => 'jaga-toko'])}}"><i class="ln ln-icon-Shop"></i> Penjaga Toko</a></li>
+                <li><a href="{{route('worker-list-category', ['url' => 'admin'])}}"><i class="ln ln-icon-Administrator"></i> Admin</a></li>
+                <li><a href="{{route('worker-list-category', ['url' => 'buruh-pabrik'])}}"><i class="ln  ln-icon-Worker"></i> Buruh Pabrik</a></li>
+                <li><a href="{{route('worker-list-category', ['url' => 'satpam'])}}"><i class="ln  ln-icon-Police-Man"></i>Satpam</a></li>
+                <li><a href="{{route('worker-list-category', ['url' => 'montir'])}}"><i class="ln  ln-icon-Repair"></i>Montir</a></li>
+                <li><a href="{{route('worker-list-category', ['url' => 'kurir'])}}"><i class="ln  ln-icon-Luggage-2"></i>Kurir</a></li>
+                <li><a href="{{route('worker-list-category', ['url' => 'juru-masak'])}}"><i class="ln  ln-icon-Chef"></i> Juru Masak</a></li>
+                <li><a href="{{route('worker-list-category', ['url' => 'kuli-bangunan'])}}"><i class="ln  ln-icon-Bodybuilding"></i>Kuli Bangunan</a></li>
+                <li><a href="{{route('worker-list-category', ['url' => 'ob-og'])}}"><i class="ln  ln-icon-User"></i>Office Boy / Girl</a></li>
+                <li><a href="{{route('worker-list-category', ['url' => 'tukang-kayu'])}}"><i class="ln  ln-icon-Saw"></i>Tukang Kayu</a></li>
+                <li><a href="{{route('worker-list-category', ['url' => 'penjahit'])}}"><i class="ln  ln-icon-Worker-Clothes"></i>Penjahit</a></li>
+                <li><a href="{{route('worker-list-category', ['url' => 'pemayet'])}}"><i class="ln  ln-icon-Dress"></i>Pemayet</a></li>
             </ul>
 
             <div class="clearfix"></div>

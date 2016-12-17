@@ -186,6 +186,7 @@ class UserController extends Controller
             $worker->birthdate = date('Y-m-d H:i:s', strtotime($request->input('birthdate')));
             $worker->category = implode(',', $request->input('category'));
 
+
             if($request->input('exp_place') != '') {
                 $this->validate($request, [
                     'exp_place' => 'required|max:100',
@@ -206,6 +207,30 @@ class UserController extends Controller
                 $experience[] = $new;
 
                 $worker->experiences = json_encode($experience);
+            }
+
+            if($request->input('edu_name') != '') {
+                $this->validate($request, [
+                    'edu_name' => 'required|max:100',
+                    'edu_level' => 'required',
+                    'edu_start_year' => 'required',
+                    'edu_end_year' => 'required',
+                ]);
+
+                $worker = User::find($workerId);
+
+                $edu = json_decode($worker['education'], true);
+
+                $new = array(
+                    'name'     => $request->input('edu_name'),
+                    'level'     => $request->input('edu_level'),
+                    'start'     => $request->input('edu_start_year'),
+                    'end'     => $request->input('edu_end_year'),
+                    'desc'     => $request->input('edu_desc'),
+                );
+                $edu[] = $new;
+
+                $worker->education = json_encode($edu);
 
             }
 
@@ -217,7 +242,8 @@ class UserController extends Controller
             }
 
             $worker->save();
-
+            $message = GlobalHelper::setDisplayMessage('success', 'Sukses mengganti profil anda');
+            return redirect(route('myaccount-profile'))->with('displayMessage', $message);
         } else {
             $employerId = $this->_authData['id'];
 
@@ -251,10 +277,9 @@ class UserController extends Controller
             }
 
             $employer->save();
+            $message = GlobalHelper::setDisplayMessage('success', 'Sukses mengganti profil anda');
+            return redirect(route('myaccount-index'))->with('displayMessage', $message);
         }
-
-        $message = GlobalHelper::setDisplayMessage('success', 'Sukses mengganti profil anda');
-        return redirect(route('myaccount-profile'))->with('displayMessage', $message);
     }
 
     /**
@@ -334,6 +359,7 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function addEdu (Request $request) {
+        die('oi');
         $workerId = $this->_authData['id'];
 
         $this->validate($request, [
@@ -352,6 +378,7 @@ class UserController extends Controller
             'level'     => $request->input('edu_level'),
             'start'     => $request->input('edu_start_year'),
             'end'     => $request->input('edu_end_year'),
+            'desc'     => $request->input('edu_desc'),
         );
         $edu[] = $new;
 

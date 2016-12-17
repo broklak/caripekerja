@@ -11,6 +11,14 @@
 	margin-bottom: 10px;;
 }
 
+.on-home{
+	width: 49%;
+}
+
+.slider-container{
+	margin-top: 30px;
+}
+
 .no-desc, .company-profile-detail {
 	margin-left: 15px;
 	border-top: 3px solid #D7CCC8;
@@ -166,10 +174,21 @@ height:100%;
 	.verify-worker li {
 		font-size: 14px;
 	}
+
+	.on-home{
+		width: 40%;
+	}
 }
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
+	.on-home{
+		width: 45%;
+	}
+	.slider-container {
+		margin-top: 50px;
+	}
+
 	.call-worker {
 		margin-top: 0px;
 	}
