@@ -67,9 +67,9 @@
 
                 <div class="widget">
                     <select data-placeholder="Pilih Tipe Waktu" name="type" class="chosen-select">
-                        <option value="0">@if(!isset($param['type']) || $param['type'] == 0) &#xf017 &nbsp;&nbsp;  @endif Semua Tipe Pekerjaan</option>
-                        <option value="1">@if(isset($param['type']) && $param['type'] == 1) &#xf017 &nbsp;&nbsp;  @endif Full Time</option>
-                        <option value="2">@if(isset($param['type']) && $param['type'] == 2) &#xf017 &nbsp;&nbsp;  @endif Part Time</option>
+                        <option @if(!isset($param['type']) || $param['type'] == 0) selected  @endif value="0">@if(!isset($param['type']) || $param['type'] == 0) &#xf017 &nbsp;&nbsp;  @endif Semua Tipe Pekerjaan</option>
+                        <option @if(isset($param['type']) && $param['type'] == 1) selected  @endif value="1">@if(isset($param['type']) && $param['type'] == 1) &#xf017 &nbsp;&nbsp;  @endif Full Time</option>
+                        <option @if(isset($param['type']) && $param['type'] == 2) selected  @endif value="2">@if(isset($param['type']) && $param['type'] == 2) &#xf017 &nbsp;&nbsp;  @endif Part Time</option>
                     </select>
 
                 </div>
@@ -126,7 +126,7 @@
                                     <span style="text-transform: uppercase" class="resume-meta-info">{{(strlen($row['title']) > 18) ? substr($row['title'],0,15).'...' : $row['title']}}</span>
                                     <ul class="list-unstyled text-center about-candidate">
                                         <li><span>{{($row['type'] == 1) ? ' FULL TIME' : 'PART TIME'}}</span></li>
-                                        <li class="text-uppercase"><span>{{\App\Helpers\GlobalHelper::getAverageSalary($row['salary_min'], $row['salary_max'])}}</span></li>
+                                        <li><span>{{\App\Helpers\GlobalHelper::getAverageSalary($row['salary_min'], $row['salary_max'])}}</span></li>
                                         <li><i>{{$row['provinceName']}}</i></li>
                                     </ul>
                                 </a>

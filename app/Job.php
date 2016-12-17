@@ -31,14 +31,9 @@ class Job extends Model
             array_push($where,$city);
         }
 
-        if(isset($criteria['min_salary']) && $criteria['min_salary'] != '') {
-            $salary = ['salary_min', '>=', $criteria['min_salary']];
-            array_push($where,$salary);
-        }
-
-        if(isset($criteria['max_salary']) && $criteria['max_salary'] != '') {
-            $salary = ['salary_max', '<=', $criteria['max_salary']];
-            array_push($where,$salary);
+        if(isset($criteria['type']) && $criteria['type'] != 0) {
+            $type = ['jobs.type', '=', $criteria['type']];
+            array_push($where,$type);
         }
 
         if(isset($criteria['salary']) && $criteria['salary'] != 0) {
