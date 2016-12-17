@@ -57,10 +57,19 @@
 
                 <div class="widget">
                     <select data-placeholder="Pilih Kota Tinggal" name="city" class="chosen-select">
-                        <option value="0">@if(!isset($param['city']) || $param['city'] == 0) &#xf041 &nbsp;&nbsp;  @endif Semua Lokasi</option>
+                        <option value="0">@if(!isset($param['city']) || $param['city'] == 0) &nbsp;&#xf041 &nbsp;&nbsp;  @endif Semua Lokasi</option>
                         @foreach ($province as $rowProvince)
                             <option @if(isset($param['city']) && $param['city'] == $rowProvince['id']) selected @endif value="{{$rowProvince['id']}}">@if(isset($param['city']) && $param['city'] == $rowProvince['id']) &#xf041 &nbsp; &nbsp; @endif{{$rowProvince['name']}}</option>
                         @endforeach>
+                    </select>
+
+                </div>
+
+                <div class="widget">
+                    <select data-placeholder="Pilih Tipe Waktu" name="type" class="chosen-select">
+                        <option value="0">@if(!isset($param['type']) || $param['type'] == 0) &#xf017 &nbsp;&nbsp;  @endif Semua Tipe Pekerjaan</option>
+                        <option value="1">@if(isset($param['type']) && $param['type'] == 1) &#xf017 &nbsp;&nbsp;  @endif Full Time</option>
+                        <option value="2">@if(isset($param['type']) && $param['type'] == 2) &#xf017 &nbsp;&nbsp;  @endif Part Time</option>
                     </select>
 
                 </div>
@@ -110,7 +119,7 @@
                     @foreach ($list as $row)
 
                         <div class=" col-md-3 text-center job_listing">
-                            <div class="candidate">
+                            <div class="candidate job-list-img">
                                 <a href="{{route('job-detail', ['jobId' => $row['id']])}}">
                                     <h4 class="text-uppercase">{{$row['employerName']}}</h4>
                                     <img src="{{\App\Helpers\GlobalHelper::setEmployerImage($row['employerPhoto'])}}" alt="{{$row['employerName']}}"  class="img-responsive">
