@@ -6186,6 +6186,8 @@ ul.footer-links { margin: 0 0 15px 0; }
 	padding-left: 30px;
 	margin-right: 15px;
 	color: #777;
+	font-weight: 500;
+	font-size: 15px;
 }
 
 .checkboxes label span {
