@@ -14,6 +14,7 @@ use App\Http\Controllers\Controller;
 use App\Libraries\LayoutManager;
 use App\Province;
 use App\WorkerCategory;
+
 use App\WorkerTransaction;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
@@ -28,7 +29,7 @@ class HomeController extends Controller {
         $data['category'] = WorkerCategory::all();
         $data['province'] = Province::all();
         GlobalHelper::setNoBanner();
-        return view('home.index', $data);
+        return view('home.index');
     }
 
     /**
@@ -51,7 +52,7 @@ class HomeController extends Controller {
             $categoryName = (isset($getCategoryName['id'])) ? $getCategoryName['name'] : 'all';
         }
 
-        $perPage = 20;
+        $perPage = 1;
         $list = User::search($param, $perPage);
 
         $data['categoryTitle'] = $categoryName;
