@@ -3987,7 +3987,9 @@ html[xmlns] .flexslider .slides {
 }
 
 .pagination ul li {
-	border: 1px solid #dde0e1;
+	border-right: 1px solid #dde0e1;
+	border-top: 1px solid #dde0e1;
+	border-bottom: 1px solid #dde0e1;
 	float: left;
 	margin: 0;
 	padding: 0;
