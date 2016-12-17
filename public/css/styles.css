@@ -4763,22 +4763,48 @@ a.post-img:hover:before {
 	padding: 3px 0 0 0;
 }
 
+.widget.sort-mobile {
+	display: none;
+}
+
 .widget-sort-title {
-	background-color: #BDBDBD;
-	padding: 15px 20px;
-	border-radius: 4px;
+	font-family: "Roboto", Arial, Helvetica, sans-serif;
+	background-color: #eeeeee;
+	padding: 14px 20px;
 	float: left;
+	font-weight: 600;
+	color: #9E9E9E;
+	border-top: 1px solid #777;
+	border-bottom: 1px solid #777;
+	border-left: 1px solid #777;
+}
+
+.widget-sort-select.work {
+	width: 20%;
+}
+
+.widget-sort-select.job-list {
+	width: 40%;
 }
 
 .widget-sort-select {
-	width: 25%;
 	float: left;
-	/*margin-left: -5px;*/
-	border-left: none;
-	border-right: none;
 	height: 50px;
-	font-size: 16px;
+	font-size: 14px;
+	padding: 15px 25px;
 	color: #757575;
+	border-top: 1px solid #777;
+	border-bottom: 1px solid #777;
+	cursor: pointer;
+	text-align: center;
+}
+
+.widget-sort-select:last-child{
+	border-right: 1px solid #777;
+}
+
+.widget-sort-select:hover{
+	text-decoration: none;
 }
 
 .widget-sort-select option {
@@ -6417,6 +6443,14 @@ label.upload-btn input[type="file"] { display: none; }
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
+
+	.widget.sort{
+		display: none;
+	}
+
+	.widget.sort-mobile{
+		display: block;
+	}
 
 	.resume-table strong {
 		font-size: 16px;

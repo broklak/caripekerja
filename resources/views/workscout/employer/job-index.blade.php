@@ -12,26 +12,23 @@
     <div class="title-page list-worker"></div>
     <div class="clearfix"></div>
 
-    <div class="container margin-bottom-40">
+    <div class="container margin-bottom-10">
         <div class="four columns">
-            <div class="widget">
-
-            </div>
+            <h2 style="margin-top: 0;color: #655">FILTER PEKERJA</h2>
         </div>
 
         <div class="twelve columns">
             <div class="widget sort">
-                <form action="{{route('worker-list')}}" method="post">
-                    <span class="widget-sort-title">Urut Berdasarkan</span>
-                    <select data-placeholder="Pengalaman" name="gender" class="widget-sort-select">
-                        <option>Gaji</option>
-                        <option>(Gaji) Tinggi ke Rendah</option>
-                        <option>(Gaji) Rendah ke Tinggi</option>
-                    </select>
-                    <select data-placeholder="Pengalaman" name="gender" class="widget-sort-select">
-                        <option>Tanggal Posting</option>
-                        <option>(Tanggal Posting) Terbaru</option>
-                        <option>(Usia) Rendah ke Terlama</option>
+                <span class="widget-sort-title">URUTKAN</span>
+                <a class="widget-sort-select job-list">GAJI <i class="fa fa-chevron-down"></i></a>
+                <a class="widget-sort-select job-list">TERBARU <i class="fa fa-chevron-down"></i></a>
+            </div>
+            <div class="widget sort-mobile" style="margin-bottom: -30px">
+                <form action="{{route('job-list')}}" method="post">
+                    <select name="sort">
+                        <option value="0">Urut Berdasarkan</option>
+                        <option value="1">Gaji</option>
+                        <option value="2">Terbaru</option>
                     </select>
                 </form>
             </div>

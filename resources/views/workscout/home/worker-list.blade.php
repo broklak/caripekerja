@@ -12,29 +12,25 @@
 
     <div class="container margin-bottom-40">
         <div class="four columns">
-            <div class="widget">
-
-            </div>
+            <h2 style="margin-top: 0;color: #655">FILTER PEKERJA</h2>
         </div>
 
         <div class="twelve columns">
             <div class="widget sort">
+                    <span class="widget-sort-title">URUTKAN</span>
+                    <a class="widget-sort-select work">PENGALAMAN <i class="fa fa-chevron-down"></i></a>
+                    <a class="widget-sort-select work">USIA <i class="fa fa-chevron-down"></i></a>
+                    <a class="widget-sort-select work">PENDIDIKAN <i class="fa fa-chevron-down"></i></a>
+                    <a class="widget-sort-select work">RATING <i class="fa fa-chevron-down"></i></a>
+            </div>
+            <div class="widget sort-mobile" style="margin-bottom: -30px">
                 <form action="{{route('worker-list')}}" method="post">
-                    <span class="widget-sort-title">Urut Berdasarkan</span>
-                    <select data-placeholder="Pengalaman" name="gender" class="widget-sort-select">
-                        <option>Pengalaman</option>
-                        <option>(Pengalaman) Tinggi ke Rendah</option>
-                        <option>(Pengalaman) Rendah ke Tinggi</option>
-                    </select>
-                    <select data-placeholder="Pengalaman" name="gender" class="widget-sort-select">
-                        <option>Usia</option>
-                        <option>(Usia) Tinggi ke Rendah</option>
-                        <option>(Usia) Rendah ke Tinggi</option>
-                    </select>
-                    <select data-placeholder="Pengalaman" name="gender" class="widget-sort-select">
-                        <option>Pendidikan</option>
-                        <option>(Pendidikan) Tinggi ke Rendah</option>
-                        <option>(Pendidikan) Rendah ke Tinggi</option>
+                    <select name="sort">
+                        <option value="0">Urut Berdasarkan</option>
+                        <option value="1">Pengalaman</option>
+                        <option value="2">Usia</option>
+                        <option value="3">Pendidikan</option>
+                        <option value="3">Rating</option>
                     </select>
                 </form>
             </div>
