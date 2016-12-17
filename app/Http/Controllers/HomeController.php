@@ -52,7 +52,7 @@ class HomeController extends Controller {
             $categoryName = (isset($getCategoryName['id'])) ? $getCategoryName['name'] : 'all';
         }
 
-        $perPage = 1;
+        $perPage = 20;
         $list = User::search($param, $perPage);
 
         $data['categoryTitle'] = $categoryName;
