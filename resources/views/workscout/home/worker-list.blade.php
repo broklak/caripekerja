@@ -7,9 +7,40 @@
     <style>
         .chosen-single span, .result-selected { font-family: 'FontAwesome',"Roboto", Arial, Helvetica, sans-serif; } /* This is for the placeholder */
     </style>
-
     <div class="title-page list-worker"></div>
     <div class="clearfix"></div>
+
+    <div class="container margin-bottom-40">
+        <div class="four columns">
+            <div class="widget">
+
+            </div>
+        </div>
+
+        <div class="twelve columns">
+            <div class="widget sort">
+                <form action="{{route('worker-list')}}" method="post">
+                    <span class="widget-sort-title">Urut Berdasarkan</span>
+                    <select data-placeholder="Pengalaman" name="gender" class="widget-sort-select">
+                        <option>Pengalaman</option>
+                        <option>(Pengalaman) Tinggi ke Rendah</option>
+                        <option>(Pengalaman) Rendah ke Tinggi</option>
+                    </select>
+                    <select data-placeholder="Pengalaman" name="gender" class="widget-sort-select">
+                        <option>Usia</option>
+                        <option>(Usia) Tinggi ke Rendah</option>
+                        <option>(Usia) Rendah ke Tinggi</option>
+                    </select>
+                    <select data-placeholder="Pengalaman" name="gender" class="widget-sort-select">
+                        <option>Pendidikan</option>
+                        <option>(Pendidikan) Tinggi ke Rendah</option>
+                        <option>(Pendidikan) Rendah ke Tinggi</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+
+    </div>
 
     <div class="container">
         <!-- Widgets -->
@@ -68,10 +99,10 @@
 
                 <div class="widget">
                     <select data-placeholder="Pilih Status" name="exp" class="chosen-select">
-                        <option value="0">&#xf017 &nbsp; &nbsp; Semua Rentang Pengalaman</option>
-                        <option value="1">1 - 5 Tahun</option>
-                        <option value="2">5 - 10 Tahun</option>
-                        <option value="2">Lebih Dari 10 Tahun</option>
+                        <option value="0">@if(!isset($param['exp']) || $param['exp'] == 0) &#xf017 &nbsp; &nbsp; @endif Semua Rentang Pengalaman</option>
+                        <option @if(isset($param['exp']) && $param['exp'] == 1) selected @endif value="1">@if(isset($param['exp']) && $param['exp'] == 1) &#xf017 &nbsp; &nbsp; @endif 1 - 5 Tahun</option>
+                        <option @if(isset($param['exp']) && $param['exp'] == 2) selected @endif value="2">@if(isset($param['exp']) && $param['exp'] == 2) &#xf017 &nbsp; &nbsp; @endif 5 - 10 Tahun</option>
+                        <option @if(isset($param['exp']) && $param['exp'] == 3) selected @endif value="3">@if(isset($param['exp']) && $param['exp'] == 3) &#xf017 &nbsp; &nbsp; @endif Lebih Dari 10 Tahun</option>
                     </select>
 
                 </div>
@@ -79,24 +110,24 @@
                 <div class="widget">
                     <ul class="checkboxes">
                         <li>
-                            <input id="check-6" type="checkbox" name="check" value="check-6" checked>
+                            <input id="check-6" type="checkbox" name="age[]" value="0" @if((isset($param['age']) && in_array('0', $param['age'])) || !isset($param['age'])) checked @endif >
                             <label for="check-6">Semua Rentang Usia</label>
                         </li>
                         <li>
-                            <input id="check-7" type="checkbox" name="check" value="check-7">
+                            <input id="check-7" type="checkbox" name="age[]" value="1" @if(isset($param['age']) && in_array('1', $param['age'])) checked @endif >
                             <label for="check-7">18 - 25 Tahun</label>
                         </li>
                         <li>
-                            <input id="check-8" type="checkbox" name="check" value="check-8">
-                            <label for="check-8">25 - 30 Tahun</label>
+                            <input id="check-8" type="checkbox" name="age[]" value="2" @if(isset($param['age']) && in_array('2', $param['age'])) checked @endif >
+                            <label for="check-8">26 - 35 Tahun</label>
                         </li>
                         <li>
-                            <input id="check-9" type="checkbox" name="check" value="check-9">
-                            <label for="check-9">30 - 40 Tahun</label>
+                            <input id="check-9" type="checkbox" name="age[]" value="3" @if(isset($param['age']) && in_array('3', $param['age'])) checked @endif >
+                            <label for="check-9">35 - 45 Tahun</label>
                         </li>
                         <li>
-                            <input id="check-10" type="checkbox" name="check" value="check-10">
-                            <label for="check-10">Diatas 40 Tahun</label>
+                            <input id="check-10" type="checkbox" name="age[]" value="4" @if(isset($param['age']) && in_array('4', $param['age'])) checked @endif >
+                            <label for="check-10">Diatas 45 Tahun</label>
                         </li>
                     </ul>
 
@@ -135,6 +166,9 @@
                                 <li><i>{{\App\Helpers\GlobalHelper::getCityName($row['city'])}}</i></li>
                             </ul>
                             </a>
+                            <div class="hidden text-uppercase view-resume">
+                                <a href="{{route('worker-detail', ['workerId' => $row['id']])}}" class="btn"><span class="btn animated slideInUp align-center">Lihat Profil</span></a>
+                            </div>
                         </div>
             </div>
 

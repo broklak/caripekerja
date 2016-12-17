@@ -12,6 +12,33 @@
     <div class="title-page list-worker"></div>
     <div class="clearfix"></div>
 
+    <div class="container margin-bottom-40">
+        <div class="four columns">
+            <div class="widget">
+
+            </div>
+        </div>
+
+        <div class="twelve columns">
+            <div class="widget sort">
+                <form action="{{route('worker-list')}}" method="post">
+                    <span class="widget-sort-title">Urut Berdasarkan</span>
+                    <select data-placeholder="Pengalaman" name="gender" class="widget-sort-select">
+                        <option>Gaji</option>
+                        <option>(Gaji) Tinggi ke Rendah</option>
+                        <option>(Gaji) Rendah ke Tinggi</option>
+                    </select>
+                    <select data-placeholder="Pengalaman" name="gender" class="widget-sort-select">
+                        <option>Tanggal Posting</option>
+                        <option>(Tanggal Posting) Terbaru</option>
+                        <option>(Usia) Rendah ke Terlama</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
     <div class="container">
         <!-- Widgets -->
         <div class="four columns">
@@ -41,23 +68,23 @@
                 <div class="widget">
                     <ul class="checkboxes">
                         <li>
-                            <input id="check-6" type="checkbox" name="check" value="check-6" checked>
+                            <input id="check-6" type="checkbox" name="salary" value="0" @if((isset($param['salary']) && $param['salary'] == 0)) || !isset($param['salary'])) checked @endif>
                             <label for="check-6">Semua Rentang Gaji</label>
                         </li>
                         <li>
-                            <input id="check-7" type="checkbox" name="check" value="check-7">
+                            <input id="check-7" type="checkbox" name="salary" value="1" @if(isset($param['salary']) && $param['salary'] == 1) checked @endif>
                             <label for="check-7">Rp 500,000 - Rp 1,000,000</label>
                         </li>
                         <li>
-                            <input id="check-8" type="checkbox" name="check" value="check-8">
+                            <input id="check-8" type="checkbox" name="salary" value="2" @if(isset($param['salary']) && $param['salary'] == 2) checked @endif>
                             <label for="check-8">Rp 1,000,000 - Rp 3,000,000</label>
                         </li>
                         <li>
-                            <input id="check-9" type="checkbox" name="check" value="check-9">
+                            <input id="check-9" type="checkbox" name="salary" value="3 @if(isset($param['salary']) && $param['salary'] == 3) checked @endif">
                             <label for="check-9">Rp 3,000,000 - Rp 5,000,000</label>
                         </li>
                         <li>
-                            <input id="check-10" type="checkbox" name="check" value="check-10">
+                            <input id="check-10" type="checkbox" name="salary" value="4" @if(isset($param['salary'])&& $param['salary'] == 4) checked @endif>
                             <label for="check-10">Diatas Rp 5,000,000</label>
                         </li>
                     </ul>
@@ -82,7 +109,7 @@
 
                     @foreach ($list as $row)
 
-                        <div class=" col-md-3 text-center">
+                        <div class=" col-md-3 text-center job_listing">
                             <div class="candidate">
                                 <a href="{{route('job-detail', ['jobId' => $row['id']])}}">
                                     <h4 class="text-uppercase">{{$row['employerName']}}</h4>
@@ -90,10 +117,13 @@
                                     <span style="text-transform: uppercase" class="resume-meta-info">{{(strlen($row['title']) > 18) ? substr($row['title'],0,15).'...' : $row['title']}}</span>
                                     <ul class="list-unstyled text-center about-candidate">
                                         <li><span>{{($row['type'] == 1) ? ' FULL TIME' : 'PART TIME'}}</span></li>
-                                        <li class="text-uppercase"><span>{{\App\Helpers\GlobalHelper::moneyFormat($row['salary_min'])}}</span></li>
+                                        <li class="text-uppercase"><span>{{\App\Helpers\GlobalHelper::getAverageSalary($row['salary_min'], $row['salary_max'])}}</span></li>
                                         <li><i>{{$row['provinceName']}}</i></li>
                                     </ul>
                                 </a>
+                                <div class="hidden text-uppercase view-resume">
+                                    <a href="{{route('job-detail', ['jobId' => $row['id']])}}" class="btn"><span class="btn animated slideInUp align-center">Lihat Lowongan</span></a>
+                                </div>
                             </div>
                         </div>
 

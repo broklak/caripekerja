@@ -64,23 +64,64 @@ class User extends Authenticatable
         }
 
         if(isset($criteria['exp']) && $criteria['exp'] != 0) {
-            $exp = ['years_experience', '=', $criteria['exp']];
-            array_push($where,$exp);
+            if($criteria['exp'] == 1) {
+                $min = 0;
+                $max = 5;
+            } elseif($criteria['exp'] == 2) {
+                $min = 6;
+                $max = 10;
+            } elseif($criteria['exp'] == 3) {
+                $min = 10;
+                $max = 100;
+            } else {
+                $min = 0;
+                $max = 100;
+            }
+
+            $expMin = ['years_experience', '>=', $min];
+            $expMax = ['years_experience', '<=', $max];
+            array_push($where,$expMin);
+            array_push($where,$expMax);
         }
 
-        if(isset($criteria['min_age']) && $criteria['min_age'] != '') {
-            $yearBack = date('Y-m-d', strtotime("- ".$criteria['min_age']." years"));
+        if(isset($criteria['age'])) {
+            $count = count($criteria['age']);
+            sort($criteria['age']);
+            $start = $criteria['age'][0];
+            $end = $criteria['age'][$count - 1];
+                if($start == 1) {
+                    $ageMin = 17;
+                } elseif($start == 2) {
+                    $ageMin = 25;
+                } elseif($start == 3) {
+                    $ageMin = 35;
+                } elseif($start == 4) {
+                    $ageMin = 45;
+                } else {
+                    $ageMin = 0;
+                }
 
-            $age = ['birthdate', '<', $yearBack];
-            array_push($where,$age);
-        }
+                if($end == 1) {
+                    $ageMax = 26;
+                } elseif($end == 2) {
+                    $ageMax = 36;
+                } elseif($end == 3) {
+                    $ageMax = 46;
+                } elseif($end == 4) {
+                    $ageMax = 60;
+                } else {
+                    $ageMax = 100;
+                }
 
-        if(isset($criteria['max_age']) && $criteria['max_age'] != '') {
-            $yearBack = date('Y-m-d', strtotime("- ".$criteria['max_age']." years"));
+                $yearStart = date('Y-m-d', strtotime("- $ageMin years"));
+                $yearEnd = date('Y-m-d', strtotime("- $ageMax years"));
 
-            $age = ['birthdate', '>', $yearBack];
-            array_push($where,$age);
-        }
+                $valMin = ['birthdate', '<', $yearStart];
+                $valMax = ['birthdate', '>', $yearEnd];
+
+                array_push($where,$valMin);
+                array_push($where,$valMax);
+            }
 
         $where[] = ['photo_profile', '<>', 'null'];
 

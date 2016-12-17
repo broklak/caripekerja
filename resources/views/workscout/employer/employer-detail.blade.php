@@ -10,6 +10,8 @@
 
     <div class="container">
 
+        {!! session('displayMessage')   !!}
+
     <!-- Recent Jobs -->
     <div class="eleven columns">
         <div class="padding-right">

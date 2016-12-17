@@ -4730,6 +4730,28 @@ a.post-img:hover:before {
 	padding: 3px 0 0 0;
 }
 
+.widget-sort-title {
+	background-color: #BDBDBD;
+	padding: 15px 20px;
+	border-radius: 4px;
+	float: left;
+}
+
+.widget-sort-select {
+	width: 25%;
+	float: left;
+	/*margin-left: -5px;*/
+	border-left: none;
+	border-right: none;
+	height: 50px;
+	font-size: 16px;
+	color: #757575;
+}
+
+.widget-sort-select option {
+	text-align: center;
+}
+
 .widget-text h5 a { color: #666; }
 .widget-text h5 a:hover { color: #505050; }
 
@@ -4765,6 +4787,10 @@ a.post-img:hover:before {
 .widget h4 {
 	font-size: 20px;
 	margin-bottom: 15px;
+}
+
+.widget.sort {
+	margin-left: 15px;
 }
 
 .widget .miles,
@@ -6357,6 +6383,10 @@ label.upload-btn input[type="file"] { display: none; }
 
 	.resume-table strong {
 		font-size: 16px;
+	}
+
+	.widget.sort {
+		margin-left: 0;
 	}
 
 	.resume-table p {

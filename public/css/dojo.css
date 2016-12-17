@@ -3416,17 +3416,19 @@ margin-right: 8px;
     opacity: 1;
 }
 .view-resume a span {
+    margin-top: 15px;
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     left: 0;
-    margin-left: 30px;
+    color: #fff;
+    border-radius: 4px;
+    margin-left: 25px;
+    background-color: #4fa0ee;
     width: 100%;
-    width: -webkit-calc(100% - 60px);
-    width: calc(100% - 60px);
+    width: -webkit-calc(100% - 50px);
+    width: calc(100% - 50px);
     height: 48px;
     border: 1px solid #8e979c;
-    color: #666;
-    border-radius: 0;
     line-height: 32px;
     margin-bottom: 30px;
     -webkit-transition: background 0.2s ease-in-out;
@@ -5167,7 +5169,7 @@ footer p{margin: 0; margin-bottom: 30px;}
 .candidate.active .about-candidate{opacity: 0;}
 .candidate.active .view-resume{display: block !important}
 .view-resume a span:hover {
-    background: #666;
+    background: #252525;
     color: #fff;
     border-color: #666;
 }

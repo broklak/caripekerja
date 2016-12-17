@@ -23,6 +23,10 @@ class GlobalHelper
         return $money;
     }
 
+    public  static function getAverageSalary ($min, $max) {
+        return static::moneyFormat(round(($min + $max) / 2));
+    }
+
     public static function getAgeByBirthdate ($birthdate) {
         if($birthdate == null || empty($birthdate)) {
             return '25 Tahun';
@@ -33,7 +37,7 @@ class GlobalHelper
 
         $age = floor(($now - $birthdate) / 31536000); // value of year in seconds
 
-        $age = ($age > 40 || $age < 10) ? 25 : $age;
+        $age = ($age > 60 || $age < 10) ? 25 : $age;
         return $age.' Tahun';
     }
 

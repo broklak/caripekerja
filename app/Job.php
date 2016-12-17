@@ -41,6 +41,28 @@ class Job extends Model
             array_push($where,$salary);
         }
 
+        if(isset($criteria['salary']) && $criteria['salary'] != 0) {
+            if($criteria['salary'] == 1) {
+                $min = 500000;
+                $max = 1000000;
+            } elseif($criteria['salary'] == 2) {
+                $min = 1000001;
+                $max = 3000000;
+            } elseif($criteria['salary'] == 3) {
+                $min = 3000001;
+                $max = 5000000;
+            } elseif($criteria['salary'] == 4) {
+                $min = 5000001;
+                $max = 100000000;
+            }
+
+            $salaryMin = ['salary_min', '>=', $min];
+            $salaryMax = ['salary_max', '>=', $max];
+
+            array_push($where,$salaryMin);
+            array_push($where,$salaryMax);
+        }
+
         if(isset($criteria['employer_id']) && $criteria['employer_id'] != '') {
             $key_status = array_search('jobs.status', $where);
             unset($where[$key_status]);
