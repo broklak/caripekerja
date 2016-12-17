@@ -29,7 +29,7 @@ class HomeController extends Controller {
         $data['category'] = WorkerCategory::all();
         $data['province'] = Province::all();
         GlobalHelper::setNoBanner();
-        return view('home.index');
+        return view('home.index', $data);
     }
 
     /**

@@ -9,14 +9,14 @@
             <img src="{{asset("images")}}/user/bg-profil-kerja.jpg" alt="">
             <div class="mj_mainheading_overlay"></div>
         </div>
-        <div class="container">
+        <div class="containers">
             <div class="mj_pagetitle_inner">
                 <div class="container-mesh">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="mj_mainheading">
                                 <div class="row">
-                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-lg-offset-1 col-xs-12">
                                         <div class="mj_joblogo">
                                             <img src="{{\App\Helpers\GlobalHelper::setUserImage($detail['photo_profile'])}}" class="img-responsive" alt="">
                                         </div>
@@ -41,7 +41,7 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                         <ul class="verify-worker mj_toppadder10">
                                             <li><i class="fa fa-{{($detail['data_verified'] == 0) ? 'times' : 'check'}}"></i> Identitas {{($detail['data_verified'] == 0) ? 'Belum' : 'Sudah'}} Terverifikasi</li>
                                             <li><i class="fa fa-{{($detail['contact_verified'] == 0) ? 'times' : 'check'}}"></i> Kontak {{($detail['contact_verified'] == 0) ? 'Belum' : 'Sudah'}} Terverifikasi</li>

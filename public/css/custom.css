@@ -209,6 +209,15 @@ height:100%;
 	.on-home{
 		width: 45%;
 	}
+
+	.company-detail-title {
+		font-size: 13px;
+	}
+
+	.company-detail-content {
+		font-size: 11px;
+	}
+
 	.slider-container {
 		margin-top: 50px;
 	}

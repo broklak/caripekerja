@@ -2493,12 +2493,14 @@ ul.mj_joblist li a:hover, ul.mj_joblist.nav-tabs > li.active > a, ul.mj_joblist.
 }
 .mj_pagetitle2 .mj_pagetitleimg img {
     width: 100%;
-    min-height: 280px;
+    min-height: 200px;
+    max-height: 250px;
 }
 .mj_pagetitle2 .mj_pagetitle_inner {
     position: absolute;
     bottom: -20%;
     left: 0;
+    top: 115px;
     width: 100%;
 }
 .mj_pagetitle2 .mj_mainheading{
@@ -2507,6 +2509,7 @@ ul.mj_joblist li a:hover, ul.mj_joblist.nav-tabs > li.active > a, ul.mj_joblist.
 .mj_joblogo{
     float:left;
     width:100%;
+
 }
 .mj_joblogo img{
     max-width: 200px;
@@ -2524,7 +2527,7 @@ ul.mj_joblist li a:hover, ul.mj_joblist.nav-tabs > li.active > a, ul.mj_joblist.
     float:left;
     width:100%;
     margin-left: 20px;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
 }
 .mj_pagetitle2 .mj_pageheading h1{
     color: #ffffff;
@@ -6812,7 +6815,9 @@ a.mj_removefile {
         bottom: 0;
         padding-top: 30px;
         padding-bottom: 30px;
+        margin-bottom: 80px;
         float: left;
+        margin-top: -80px;
     }
     .mj_joblogo{
         text-align: center;
