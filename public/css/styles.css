@@ -861,9 +861,9 @@ header.transparent ul.float-right li .topup {
 /* Announce */
 .announce {
 	color: #fff;
-	font-size: 24px;
+	font-size: 30px;
 	font-weight: 300;
-	margin-top: 40px;
+	margin-top: 80px;
 	text-align: center;
 }
 

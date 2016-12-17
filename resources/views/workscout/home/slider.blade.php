@@ -1,4 +1,4 @@
-<div id="banner" class="with-transparent-header parallax background" style="background-image: url(images/baru/bgrombak.jpg);background-attachment: fixed;" data-img-width="2000" data-img-height="1330" data-diff="300">
+<div id="banner" class="with-transparent-header  background" style="background-image: url(images/baru/bgtest.jpg);background-attachment: fixed;background-position: 0 -23px" data-img-width="2000" data-img-height="1330" data-diff="300">
 <div class="container">
     <div class="sixteen columns">
 
@@ -54,7 +54,7 @@
             <!-- Announce -->
             <div class="announce">
 
-                CariPekerja adalah Mitra Pencari Pekerja untuk Usaha Anda
+                CARIPEKERJA adalah Mitra Pencari Pekerja untuk Usaha Anda
 
             </div>
 
