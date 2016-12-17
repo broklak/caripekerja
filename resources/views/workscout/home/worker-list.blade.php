@@ -30,7 +30,7 @@
                         <option value="1">Pengalaman</option>
                         <option value="2">Usia</option>
                         <option value="3">Pendidikan</option>
-                        <option value="3">Rating</option>
+                        <option value="4">Rating</option>
                     </select>
                 </form>
             </div>

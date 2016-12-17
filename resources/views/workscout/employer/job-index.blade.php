@@ -23,7 +23,7 @@
                 <a class="widget-sort-select job-list">GAJI <i class="fa fa-chevron-down"></i></a>
                 <a class="widget-sort-select job-list">TERBARU <i class="fa fa-chevron-down"></i></a>
             </div>
-            <div class="widget sort-mobile" style="margin-bottom: -30px">
+            <div class="widget sort-mobile" style="margin-bottom: 0px">
                 <form action="{{route('job-list')}}" method="post">
                     <select name="sort">
                         <option value="0">Urut Berdasarkan</option>
