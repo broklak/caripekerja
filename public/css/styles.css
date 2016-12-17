@@ -3976,15 +3976,17 @@ html[xmlns] .flexslider .slides {
 	border-right: none;
 }
 
+.pagination ul li:nth-child(2n+1){
+	border-left: 1px solid #dde0e1;
+	border-right: none;
+}
+
 .pagination ul li:last-child{
 	border-right: 1px solid #dde0e1;
 	border-left: none;
 }
 
 .pagination ul li {
-	/*border-top: 1px solid #dde0e1;*/
-	/*border-bottom: 1px solid #dde0e1;*/
-	/*border-left: 1px solid #dde0e1;*/
 	border: 1px solid #dde0e1;
 	float: left;
 	margin: 0;
