@@ -12,9 +12,9 @@
     <div class="title-page list-worker"></div>
     <div class="clearfix"></div>
 
-    <div class="container margin-bottom-10">
+    <div class="container margin-bottom-20">
         <div class="four columns">
-            <h2 style="margin-top: 0;color: #655">FILTER PEKERJA</h2>
+            <h2 style="margin-top: 0;color: #655;font-size: 28px">FILTER LOWONGAN</h2>
         </div>
 
         <div class="twelve columns">
@@ -44,9 +44,9 @@
                 {{csrf_field()}}
                 <div class="widget wrapperzz">
                     <select data-placeholder="Pilih Profesi" name="category" class="chosen-select">
-                        <option value="0">@if(!isset($param['category']) || $param['category'] == 0) &#xf0b1 &nbsp;&nbsp; @endif Semua Profesi</option>
+                        <option value="0">Semua Profesi</option>
                         @foreach($category as $key => $row)
-                            <option @if(isset($param['category']) && $param['category'] == $row['id']) selected @endif value="{{$row['id']}}">@if(isset($param['category']) && $param['category'] == $row['id']) &#xf0b1 &nbsp;&nbsp; @endif {{$row['name']}}</option>
+                            <option @if(isset($param['category']) && $param['category'] == $row['id']) selected @endif value="{{$row['id']}}">{{$row['name']}}</option>
                         @endforeach
                     </select>
 
@@ -54,9 +54,9 @@
 
                 <div class="widget">
                     <select data-placeholder="Pilih Kota Tinggal" name="city" class="chosen-select">
-                        <option value="0">@if(!isset($param['city']) || $param['city'] == 0) &nbsp;&#xf041 &nbsp;&nbsp;  @endif Semua Lokasi</option>
+                        <option value="0">Semua Lokasi</option>
                         @foreach ($province as $rowProvince)
-                            <option @if(isset($param['city']) && $param['city'] == $rowProvince['id']) selected @endif value="{{$rowProvince['id']}}">@if(isset($param['city']) && $param['city'] == $rowProvince['id']) &#xf041 &nbsp; &nbsp; @endif{{$rowProvince['name']}}</option>
+                            <option @if(isset($param['city']) && $param['city'] == $rowProvince['id']) selected @endif value="{{$rowProvince['id']}}">{{$rowProvince['name']}}</option>
                         @endforeach>
                     </select>
 
@@ -64,9 +64,9 @@
 
                 <div class="widget">
                     <select data-placeholder="Pilih Tipe Waktu" name="type" class="chosen-select">
-                        <option @if(!isset($param['type']) || $param['type'] == 0) selected  @endif value="0">@if(!isset($param['type']) || $param['type'] == 0) &#xf017 &nbsp;&nbsp;  @endif Semua Tipe Pekerjaan</option>
-                        <option @if(isset($param['type']) && $param['type'] == 1) selected  @endif value="1">@if(isset($param['type']) && $param['type'] == 1) &#xf017 &nbsp;&nbsp;  @endif Full Time</option>
-                        <option @if(isset($param['type']) && $param['type'] == 2) selected  @endif value="2">@if(isset($param['type']) && $param['type'] == 2) &#xf017 &nbsp;&nbsp;  @endif Part Time</option>
+                        <option @if(!isset($param['type']) || $param['type'] == 0) selected  @endif value="0">Semua Tipe Pekerjaan</option>
+                        <option @if(isset($param['type']) && $param['type'] == 1) selected  @endif value="1">Full Time</option>
+                        <option @if(isset($param['type']) && $param['type'] == 2) selected  @endif value="2">Part Time</option>
                     </select>
 
                 </div>
@@ -74,7 +74,7 @@
                 <div class="widget">
                     <ul class="checkboxes">
                         <li>
-                            <input id="check-6" type="checkbox" name="salary" value="0" @if((isset($param['salary']) && $param['salary'] == 0)) || !isset($param['salary'])) checked @endif>
+                            <input id="check-6" type="checkbox" name="salary" value="0" @if((isset($param['salary']) && $param['salary'] == 0) || !isset($param['salary'])) checked @endif>
                             <label for="check-6">Semua Rentang Gaji</label>
                         </li>
                         <li>

@@ -44,61 +44,57 @@
             <!-- Skills -->
             <form action="{{route('worker-list')}}" method="post">
                 {{csrf_field()}}
-                <div class="widget wrapperzz">
-                    <select data-placeholder="Pilih Profesi" name="category" class="chosen-select">
-                        <option value="0">@if(!isset($param['category']) || $param['category'] == 0) &#xf0b1 &nbsp;&nbsp; @endif Semua Profesi</option>
+                <div class="widget wrapper">
+                    <select data-placeholder="Pilih Profesi" name="category" class="chosen-select desktop-filter">
+                        <option value="0">Semua Profesi</option>
                         @foreach($category as $key => $row)
-                            <option @if(isset($param['category']) && $param['category'] == $row['id']) selected @endif value="{{$row['id']}}">@if(isset($param['category']) && $param['category'] == $row['id']) &#xf0b1 &nbsp;&nbsp; @endif {{$row['name']}}</option>
+                            <option @if(isset($param['category']) && $param['category'] == $row['id']) selected @endif value="{{$row['id']}}">{{$row['name']}}</option>
                         @endforeach
                     </select>
-
                 </div>
 
                 <div class="widget">
-                    <select data-placeholder="Pilih Kota Tinggal" name="city" class="chosen-select">
-                        <option value="0">@if(!isset($param['city']) || $param['city'] == 0) &nbsp;&#xf041 &nbsp;&nbsp; @endif Semua Lokasi</option>
+                    <select data-placeholder="Pilih Kota Tinggal" name="city" class="chosen-select desktop-filter">
+                        <option value="0">Semua Lokasi</option>
                         @foreach ($province as $rowProvince)
-                            <option @if(isset($param['city']) && $param['city'] == $rowProvince['id']) selected @endif value="{{$rowProvince['id']}}">@if(isset($param['city']) && $param['city'] == $rowProvince['id']) &#xf041 &nbsp; &nbsp; @endif{{$rowProvince['name']}}</option>
+                            <option @if(isset($param['city']) && $param['city'] == $rowProvince['id']) selected @endif value="{{$rowProvince['id']}}">{{$rowProvince['name']}}</option>
                         @endforeach>
                     </select>
-
                 </div>
 
                 <div class="widget">
-                    <select data-placeholder="Pilih Jenis Kelamin" name="gender" class="chosen-select">
-                        <option value="0">@if(!isset($param['gender']) || $param['gender'] == 0) &nbsp;&#xf224; &nbsp; @endif Semua Jenis Kelamin</option>
-                        <option @if(isset($param['gender']) && $param['gender'] == 1) selected @endif value="1">@if(isset($param['gender']) && $param['gender'] == 1) &#xf224; &nbsp; &nbsp; @endif Laki - Laki</option>
-                        <option @if(isset($param['gender']) && $param['gender'] == 2) selected @endif value="2">@if(isset($param['gender']) && $param['gender'] == 2) &#xf224; &nbsp; &nbsp; @endif Perempuan</option>
+                    <select data-placeholder="Pilih Jenis Kelamin" name="gender" class="chosen-select desktop-filter">
+                        <option value="0">Semua Jenis Kelamin</option>
+                        <option @if(isset($param['gender']) && $param['gender'] == 1) selected @endif value="1">Laki - Laki</option>
+                        <option @if(isset($param['gender']) && $param['gender'] == 2) selected @endif value="2">Perempuan</option>
                     </select>
-
                 </div>
 
                 <div class="widget">
-                    <select data-placeholder="Pilih Status" name="status" class="chosen-select">
-                        <option value="0">@if(!isset($param['status']) || $param['status'] == 0) &#xf004 &nbsp;&nbsp;@endif Semua Status</option>
-                        <option @if(isset($param['status']) && $param['status'] == 1) selected @endif value="1">@if(isset($param['status']) && $param['status'] == 1) &#xf004 &nbsp; &nbsp; @endif Sudah Menikah</option>
-                        <option @if(isset($param['status']) && $param['status'] == 2) selected @endif value="2">@if(isset($param['status']) && $param['status'] == 2) &#xf004 &nbsp; &nbsp; @endif Belum Menikah</option>
+                    <select data-placeholder="Pilih Status" name="status" class="chosen-select desktop-filter">
+                        <option value="0">Semua Status</option>
+                        <option @if(isset($param['status']) && $param['status'] == 1) selected @endif value="1">Sudah Menikah</option>
+                        <option @if(isset($param['status']) && $param['status'] == 2) selected @endif value="2">Belum Menikah</option>
                     </select>
-
                 </div>
 
                 <div class="widget">
-                    <select data-placeholder="Pilih Kota Tinggal" name="degree" class="chosen-select">
-                        <option value="0">@if(!isset($param['degree']) || $param['degree'] == 0) &#xf19d &nbsp;@endif Semua Pendidikan</option>
+                    <select data-placeholder="Pilih Kota Tinggal" name="degree" class="chosen-select desktop-filter">
+                        <option value="0">Semua Pendidikan</option>
 
                         @foreach ($degree as $key => $row)
-                            <option @if(isset($param['degree']) && $param['degree'] == $row) selected @endif>@if(isset($param['degree']) && $param['degree'] == $row) &#xf19d &nbsp; &nbsp; @endif {{$row}}</option>
+                            <option @if(isset($param['degree']) && $param['degree'] == $row) selected @endif>{$row}}</option>
                         @endforeach>
                     </select>
 
                 </div>
 
                 <div class="widget">
-                    <select data-placeholder="Pilih Status" name="exp" class="chosen-select">
-                        <option value="0">@if(!isset($param['exp']) || $param['exp'] == 0) &nbsp;&#xf017 &nbsp;&nbsp;@endif Semua Rentang Pengalaman</option>
-                        <option @if(isset($param['exp']) && $param['exp'] == 1) selected @endif value="1">@if(isset($param['exp']) && $param['exp'] == 1) &#xf017 &nbsp; &nbsp; @endif 1 - 5 Tahun</option>
-                        <option @if(isset($param['exp']) && $param['exp'] == 2) selected @endif value="2">@if(isset($param['exp']) && $param['exp'] == 2) &#xf017 &nbsp; &nbsp; @endif 5 - 10 Tahun</option>
-                        <option @if(isset($param['exp']) && $param['exp'] == 3) selected @endif value="3">@if(isset($param['exp']) && $param['exp'] == 3) &#xf017 &nbsp; &nbsp; @endif Lebih Dari 10 Tahun</option>
+                    <select data-placeholder="Pilih Status" name="exp" class="chosen-select desktop-filter">
+                        <option value="0">Semua Rentang Pengalaman</option>
+                        <option @if(isset($param['exp']) && $param['exp'] == 1) selected @endif value="1">1 - 5 Tahun</option>
+                        <option @if(isset($param['exp']) && $param['exp'] == 2) selected @endif value="2">5 - 10 Tahun</option>
+                        <option @if(isset($param['exp']) && $param['exp'] == 3) selected @endif value="3">Lebih Dari 10 Tahun</option>
                     </select>
 
                 </div>

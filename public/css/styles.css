@@ -3976,11 +3976,6 @@ html[xmlns] .flexslider .slides {
 	border-right: none;
 }
 
-.pagination ul li:nth-child(2n+1){
-	border-left: 1px solid #dde0e1;
-	border-right: none;
-}
-
 .pagination ul li:last-child{
 	border-right: 1px solid #dde0e1;
 	border-left: none;
@@ -4019,7 +4014,7 @@ html[xmlns] .flexslider .slides {
 }
 .pagination ul li.blank {
 	color: #a0a0a0;
-	padding: 0 6px;
+	padding: 12px 6px;
 }
 
 .pagination ul li a.current-page {
@@ -4900,6 +4895,10 @@ a.post-img:hover:before {
 	border: 1px solid #e0e0e0;
 	background-color: #fcfcfc;
 	border-top: 0;
+}
+
+.mobile-filter{
+	display: none;
 }
 
 .chosen-container.chosen-with-drop .chosen-drop { left: 0; }
@@ -6217,7 +6216,7 @@ ul.footer-links { margin: 0 0 15px 0; }
 /*----------------------------------- */
 /* Custom Checkbox
 ------------------------------------- */
-.checkboxes li { padding: 4px 17px; }
+.checkboxes li { padding: 4px 0; }
 .checkboxes li:last-child { margin-bottom: -8px; }
 
 .checkboxes label {
@@ -6443,6 +6442,14 @@ label.upload-btn input[type="file"] { display: none; }
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
+
+	.checkboxes li {
+		padding: 4px 0;
+	}
+
+	.mobile-icon-filter{
+		display: none;
+	}
 
 	.widget.sort{
 		display: none;
