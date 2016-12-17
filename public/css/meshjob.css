@@ -641,7 +641,7 @@ ul.mj_withoutlogin_menu li:hover a, ul.mj_withoutlogin_menu li:nth-child(2):hove
 .mj_lightgraytbg {
     float: left;
     width: 100%;
-    background: #f5f5f5;
+    background: #fff;
 }
 .mj_tabs {
     float: left;
@@ -2518,6 +2518,7 @@ ul.mj_joblist li a:hover, ul.mj_joblist.nav-tabs > li.active > a, ul.mj_joblist.
     height: 200px;
     min-height: 175px;
     border-radius: 100%;
+    border: 3px solid #fff;
 }
 .mj_joblogo {
     float: left;
@@ -2526,8 +2527,8 @@ ul.mj_joblist li a:hover, ul.mj_joblist.nav-tabs > li.active > a, ul.mj_joblist.
 .mj_pageheading{
     float:left;
     width:100%;
-    margin-left: 20px;
-    /*margin-top: 20px;*/
+    margin-left: -9px;
+    margin-top: 20px;
 }
 .mj_pagetitle2 .mj_pageheading h1{
     color: #ffffff;
@@ -4098,8 +4099,8 @@ ol.comment li:after {
     float: left;
     width: 100%;
     background-color: #fff;
-    border-radius: 13px 13px 0px 0px;
-    box-shadow: 0px 1px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 13px;
+    box-shadow: 0px 1px 35px rgba(0, 0, 0, 0.35);
     position:relative;
 }
 .mj_postdiv:before {
@@ -4367,6 +4368,8 @@ a.mj_removefile {
 .mj_social_media_section {
     float: left;
     width: 100%;
+    margin-left: 218px;
+    margin-top: -18px;
 }
 .mj_social_media_section ul {
     float: left;
@@ -6725,6 +6728,18 @@ a.mj_removefile {
     .mj_header{
         padding: 10px 0px;
     }
+
+    .mj_social_media_section {
+        float: left;
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    .mj_pageheading {
+        margin-left: 0;
+    }
+
     .navbar-toggle{
         background-color: #fecc17;
         width: auto;
@@ -6936,7 +6951,7 @@ a.mj_removefile {
         margin-bottom: 40px;
     }
     .mj_pagetitle2 .mj_pageheading h1{
-        font-size: 30px;
+        font-size: 22px;
     }
     .mj_pagetitle2 .mj_mainheading h1 span {
         font-size: 30px;
@@ -7914,3 +7929,11 @@ a.mj_removefile {
     }
 }
 /*----------- responsive css end ---------*/
+
+.container-mesh {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+

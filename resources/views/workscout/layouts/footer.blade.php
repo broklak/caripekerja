@@ -3,8 +3,8 @@
     <div class="container">
 
         <div class="seven columns">
-            <img src="{{asset("images")}}/logo-not-homepage.png" alt="CariPekerja.com">
-            <p>Caripekerja.com adalah perintis marketplace pencari kerja  untuk usaha kecil dan menengah dengan cakupan seluruh pelosok Indonesia.</p>
+            <img src="{{asset("images")}}/logocp.png" alt="CariPekerja.com">
+            <p class="footer-desc">Caripekerja.com adalah perintis marketplace pencari kerja  untuk usaha kecil dan menengah dengan cakupan seluruh pelosok Indonesia.</p>
 
 
         </div>

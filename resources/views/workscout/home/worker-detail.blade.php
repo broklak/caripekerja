@@ -9,14 +9,14 @@
             <img src="{{asset("images")}}/user/bg-profil-kerja.jpg" alt="">
             <div class="mj_mainheading_overlay"></div>
         </div>
-        <div class="containers">
+        <div class="container-mesh">
             <div class="mj_pagetitle_inner">
                 <div class="container-mesh">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="mj_mainheading">
                                 <div class="row">
-                                    <div class="col-lg-2 col-md-2 col-sm-2 col-lg-offset-1 col-xs-12">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-lg-offset-1  col-xs-12">
                                         <div class="mj_joblogo">
                                             <img src="{{\App\Helpers\GlobalHelper::setUserImage($detail['photo_profile'])}}" class="img-responsive" alt="">
                                         </div>
@@ -63,7 +63,7 @@
         <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="mj_social_media_section mj_candidatepage_media mj_toppadder40 mj_bottompadder40 align-center">
+                        <div class="mj_social_media_section mj_candidatepage_media mj_toppadder40 mj_bottompadder40">
                             @if((isset($showCallButton) && $showCallButton))
                                 <a class="contact-candidate" href="{{$callLink}}" onclick="{{$callConfirm}}" data-text="Contact Candidate">HUBUNGI PEKERJA</a>
                             @endif

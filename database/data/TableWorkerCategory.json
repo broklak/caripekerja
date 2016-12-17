@@ -15,5 +15,9 @@
   {"id":14, "name":"Kurir", "url":"kurir"},
   {"id":15, "name":"Montir", "url":"montir"},
   {"id":16, "name":"Satpam", "url":"satpam"},
-  {"id":17, "name":"Pemayet", "url":"pemayet"}
+  {"id":17, "name":"Pemayet", "url":"pemayet"},
+  {"id":18, "name":"Sales", "url":"sales"},
+  {"id":19, "name":"Customer Service", "url":"customer-service"},
+  {"id":20, "name":"Telemarketing", "url":"telemarketing"},
+  {"id":21, "name":"SPG / SPB", "url":"spg-spb"}
 ]

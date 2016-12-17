@@ -25,7 +25,7 @@
 @section("tracking")
     @include("layouts.tracking")
 @show
-<div id="wrapper" class="content-grey">
+<div id="wrapper">
 
 
     <!-- Header

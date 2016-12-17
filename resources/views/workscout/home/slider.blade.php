@@ -1,4 +1,4 @@
-<div id="banner" class="with-transparent-header parallax background" style="background-image: url(images/baru/bghomenew.jpeg);background-attachment: fixed;" data-img-width="2000" data-img-height="1330" data-diff="300">
+<div id="banner" class="with-transparent-header parallax background" style="background-image: url(images/baru/bgrombak.jpg);background-attachment: fixed;" data-img-width="2000" data-img-height="1330" data-diff="300">
 <div class="container">
     <div class="sixteen columns">
 
@@ -31,7 +31,8 @@
             <!-- Browse Jobs -->
 
 
-            <div class="browse-jobs">
+            <div class="browse-jobs" style="display: none">
+                <a href="{{route('worker-list-category', ['url' => 'sales'])}}"> Sales</a>
                 <a href="{{route('worker-list-category', ['url' => 'pelayan'])}}"> Pelayan</a>
                 <a href="{{route('worker-list-category', ['url' => 'jaga-toko'])}}"> Penjaga Toko</a>
                 <a href="{{route('worker-list-category', ['url' => 'asisten-rumah-tangga'])}}"> Asisten Rumah Tangga</a>
@@ -47,7 +48,6 @@
                 <a href="{{route('worker-list-category', ['url' => 'ob-og'])}}"> Office Boy / Girl</a>
                 <a href="{{route('worker-list-category', ['url' => 'tukang-kayu'])}}"> Tukang Kayu</a>
                 <a href="{{route('worker-list-category', ['url' => 'penjahit'])}}"> Penjahit</a>
-                <a href="{{route('worker-list-category', ['url' => 'pemayet'])}}"> Pemayet</a>
             </div>
 
 

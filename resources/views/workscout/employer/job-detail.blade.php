@@ -22,7 +22,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-                                        <div class="mj_pageheading">
+                                        <div class="mj_pageheading" style="margin-left: 20px">
                                             <h1>{{$detail['title']}}</h1>
                                             <ul>
                                                 <li><i class="fa fa-clock-o"></i> {{($detail['type'] == 1) ? ' Full Time' : 'Part Time'}}</li>
@@ -47,7 +47,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="mj_social_media_section mj_candidatepage_media mj_toppadder40 mj_bottompadder40 align-center">
+                    <div class="mj_social_media_section mj_candidatepage_media mj_toppadder40 mj_bottompadder40">
                         @if($authRole != 'employer')
                             <a class="contact-candidate" href="{{($authRole == 'worker') ? route('job-apply', ['jobId' => $detail['id']]) : route('login')}}"
                                onclick="@if($authRole == 'worker') return confirm('Anda akan melamar pekerjaan {{$detail['title']}} di {{$detail['employerName']}}. Lanjutkan Proses ?') @else alert('Silahkan login sebagai pekerja untuk melamar') @endif "

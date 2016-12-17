@@ -7,7 +7,7 @@
 /* ------------------------------------------------------------------- */
 /* Import Section
 ---------------------------------------------------------------------- */
-@import url("base.css?version2.1");				/* Default Reset, Typography, Forms, etc. */
+@import url("base.css?version2.3");				/* Default Reset, Typography, Forms, etc. */
 @import url("custom.css?version2.6");				/*  */
 @import url("responsive.css?version2.0");			/* Responsive Grid */
 @import url("font-awesome.css?version2.0");		/* Font Awesome Icons */
@@ -4048,19 +4048,18 @@ html[xmlns] .flexslider .slides {
 	font-size: 13px;
 	line-height: 18px;
 	margin-top: 10px;
-	color: # color: #767676;
-	color: #767676;
+	color: #fff;
 }
 
 /* ---------------------------------- */
 /* Infobox
 ------------------------------------- */
 .infobox {
-	background-color: #505050;
+	background-color: #fff;
 	font-size: 27px;
 	font-weight: 500;
 	line-height: 40px;
-	color: #fff;
+	color: #484848;
 	padding: 65px 0;
 	text-align: center;
 }
@@ -4070,7 +4069,7 @@ html[xmlns] .flexslider .slides {
 	font-weight: 600;
 	font-size: 14px;
 	border: 1px solid #fff;
-	background-color: transparent;
+	background-color: #4fa0ee;
 	text-transform: uppercase;
 	padding: 15px 20px;
 	margin: 0 0 0 20px;
@@ -4084,8 +4083,7 @@ html[xmlns] .flexslider .slides {
 }
 
 .infobox a:hover {
-	background-color: #fff;
-	color: #505050;
+	background-color: #252525;
 }
 
 
@@ -5868,13 +5866,13 @@ a.close-form i { margin: 0; }
 /* Footer
 ---------------------------------------------------------------------- */
 #footer {
-	background-color: white;
+	background-color: #4fa0ee;
 	padding: 50px 0 0 0;
 	color: #333;
 	border-top: solid 1px #dfdfdf;
 }
 #footer h4 {
-	color: #484848;
+	color: #fff;
 	font-size: 18px;
 	margin-bottom: 0px;
 	font-family: "CircularBold","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -5904,9 +5902,8 @@ ul.footer-links { margin: 0 0 15px 0; }
 	-o-transition: all 0.2s ease-in-out;
 	-ms-transition: all 0.2s ease-in-out;
 	/* transition: all 0.2s ease-in-out; */
-	color: #aaa;
 	line-height: 22px;
-	color: #767676;
+	color: #fff;
 	font-family: "Circular","Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 13px;
 }
@@ -5918,9 +5915,8 @@ ul.footer-links { margin: 0 0 15px 0; }
 	-o-transition: all 0.2s ease-in-out;
 	-ms-transition: all 0.2s ease-in-out;
 	/* transition: all 0.2s ease-in-out; */
-	color: #aaa;
 	line-height: 1px;
-	color: #767676;
+	color: #fff;
 	font-family: "Circular","Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 13px;
 }
@@ -5942,7 +5938,7 @@ ul.footer-links { margin: 0 0 15px 0; }
 .footer-bottom h4 { font-size: 18px !important; }
 
 .copyrights {
-	color: #777;
+	color: #fff;
 	float: none;
 	text-align: center;
 	font-size: 14px;
