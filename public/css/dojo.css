@@ -2882,7 +2882,7 @@ footer p, .resume-details .col-md-8{font-size: 16px}
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    padding: 0 8px;
+    padding: 0 5px;
     display: inline-block;
     width: auto;
     max-width: 100%;
@@ -3360,7 +3360,7 @@ margin-right: 8px;
     white-space:nowrap;
     text-overflow: ellipsis;
     font-size: 14px;
-    color: #555;
+    color: #655;
     font-weight: 600;
 }
 .candidate img{

@@ -3997,6 +3997,7 @@ html[xmlns] .flexslider .slides {
 .pagination ul li a {
 	width: 42px;
 	background-color: #fff;
+	font-family: 'Roboto Condensed', sans-serif;
 }
 .pagination ul li.blank {
 	color: #a0a0a0;
