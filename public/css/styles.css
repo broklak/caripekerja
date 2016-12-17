@@ -4834,7 +4834,7 @@ a.post-img:hover:before {
 	position: relative;
 	display: inline-block;
 	vertical-align: middle;
-	font-size: 15px;
+	font-size: 14px;
 	zoom: 1;
 	*display: inline;
 	-webkit-user-select: none;
@@ -6176,18 +6176,18 @@ ul.footer-links { margin: 0 0 15px 0; }
 /*----------------------------------- */
 /* Custom Checkbox
 ------------------------------------- */
-.checkboxes li { padding: 4px 0; }
+.checkboxes li { padding: 4px 17px; }
 .checkboxes li:last-child { margin-bottom: -8px; }
 
 .checkboxes label {
 	display: inline-block;
 	cursor: pointer;
 	position: relative;
-	padding-left: 30px;
+	padding-left: 35px;
 	margin-right: 15px;
 	color: #777;
 	font-weight: 500;
-	font-size: 15px;
+	font-size: 14px;
 }
 
 .checkboxes label span {
