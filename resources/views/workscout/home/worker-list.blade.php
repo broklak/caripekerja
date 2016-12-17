@@ -99,7 +99,7 @@
 
                 <div class="widget">
                     <select data-placeholder="Pilih Status" name="exp" class="chosen-select">
-                        <option value="0">@if(!isset($param['exp']) || $param['exp'] == 0) &#xf017 &nbsp; &nbsp;&nbsp; @endif Semua Rentang Pengalaman</option>
+                        <option value="0">@if(!isset($param['exp']) || $param['exp'] == 0) &nbsp; &#xf017 &nbsp;@endif Semua Rentang Pengalaman</option>
                         <option @if(isset($param['exp']) && $param['exp'] == 1) selected @endif value="1">@if(isset($param['exp']) && $param['exp'] == 1) &#xf017 &nbsp; &nbsp; @endif 1 - 5 Tahun</option>
                         <option @if(isset($param['exp']) && $param['exp'] == 2) selected @endif value="2">@if(isset($param['exp']) && $param['exp'] == 2) &#xf017 &nbsp; &nbsp; @endif 5 - 10 Tahun</option>
                         <option @if(isset($param['exp']) && $param['exp'] == 3) selected @endif value="3">@if(isset($param['exp']) && $param['exp'] == 3) &#xf017 &nbsp; &nbsp; @endif Lebih Dari 10 Tahun</option>
