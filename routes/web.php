@@ -83,3 +83,8 @@ Route::post('topup-process', 'PaymentController@processTopup');
 Route::post('confirm-topup', 'PaymentController@processConfirmTopup');
 Route::post('approve-process', 'PaymentController@processApproveTopup');
 
+//STATIC
+Route::get('press-release/1', 'StaticController@pressRelease');
+Route::get('blog/1', 'StaticController@blog1');
+Route::get('blog/2', 'StaticController@blog2');
+

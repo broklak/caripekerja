@@ -12,8 +12,9 @@
         <div class="three columns">
             <h4>CariPekerja.com</h4>
             <ul class="footer-links">
-                <li><a href="#">Tentang Kami</a></li>
-                <li><a href="#">Kontak Kami</a></li>
+                <li><a href="{{url('press-release/1')}}">Press Release</a></li>
+                <li><a href="{{url('blog/1')}}">Blog 1</a></li>
+                <li><a href="{{url('blog/2')}}">Blog 2</a></li>
                 <li><a href="#">Kebijakan Privasi</a></li>
                 <li><a href="#">Syarat dan Ketentuan</a></li>
 
