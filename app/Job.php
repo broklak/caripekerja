@@ -36,23 +36,37 @@ class Job extends Model
             array_push($where,$type);
         }
 
-        if(isset($criteria['salary']) && $criteria['salary'] != 0) {
-            if($criteria['salary'] == 1) {
-                $min = 500000;
-                $max = 1000000;
-            } elseif($criteria['salary'] == 2) {
-                $min = 1000001;
-                $max = 3000000;
-            } elseif($criteria['salary'] == 3) {
-                $min = 3000001;
-                $max = 5000000;
-            } elseif($criteria['salary'] == 4) {
-                $min = 5000001;
-                $max = 100000000;
+        if(isset($criteria['salary'])) {
+            $count = count($criteria['salary']);
+            sort($criteria['salary']);
+            $start = $criteria['salary'][0];
+            $end = $criteria['salary'][$count - 1];
+            if($start == 1) {
+                $salaryMin = 500000;
+            } elseif($start == 2) {
+                $salaryMin = 1000001;
+            } elseif($start == 3) {
+                $salaryMin = 3000001;
+            } elseif($start == 4) {
+                $salaryMin = 5000001;
+            } else {
+                $salaryMin = 0;
             }
 
-            $salaryMin = ['salary_min', '>=', $min];
-            $salaryMax = ['salary_max', '>=', $max];
+            if($end == 1) {
+                $salaryMax = 1000000;
+            } elseif($end == 2) {
+                $salaryMax = 3000000;
+            } elseif($end == 3) {
+                $salaryMax = 5000000;
+            } elseif($end == 4) {
+                $salaryMax = 10000000;
+            } else {
+                $salaryMax = 100000000;
+            }
+
+            $salaryMin = ['salary_min', '>=', $salaryMin];
+            $salaryMax = ['salary_min', '<=', $salaryMax];
 
             array_push($where,$salaryMin);
             array_push($where,$salaryMax);

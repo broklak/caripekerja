@@ -117,9 +117,9 @@
                                 <option>&nbsp;&nbsp;{{$row}}</option>
                             @endforeach
                         </select>
-                        <input class="search-field" style="" type="number" name="edu_start_year[]" placeholder="Tahun Masuk"/>
-                        <input class="search-field" style="" type="number" name="edu_end_year[]" placeholder="Tahun Keluar" />
-                        <textarea name="edu_desc" id="desc" cols="30" rows="10" placeholder="Deskripsi (optional)"></textarea>
+                        <input class="search-field" type="number" name="edu_start_year[]" placeholder="Tahun Masuk"/>
+                        <input class="search-field" type="number" name="edu_end_year[]" placeholder="Tahun Keluar" />
+                        <textarea name="edu_desc[]" id="desc" cols="30" rows="10" placeholder="Keterangan (Bila ada)"></textarea>
                 </div>
 
                 <a href="#" class="button gray add-education add-box"><i class="fa fa-plus-circle"></i> Tambah Pendidikan</a>
@@ -135,10 +135,10 @@
                 <div class="form boxed box-to-clone experience-box">
                     <a href="#" class="close-form remove-box button"><i class="fa fa-close"></i></a>
                     <input class="search-field" type="text" name="exp_place[]" placeholder="Nama Perusahaan" value=""/>
-                    <input class="search-field" type="text" name="exp_role" placeholder="Kerja Sebagai" value=""/>
-                    <input class="search-field" style="" type="number" name="exp_start_year[]" placeholder="Tahun Masuk"/>
-                    <input class="search-field" style="" type="number" name="exp_end_year[]" placeholder="Tahun Keluar" />
-                    <textarea name="exp_desc" id="desc1" cols="30" rows="10" placeholder="Notes (optional)"></textarea>
+                    <input class="search-field" type="text" name="exp_role[]" placeholder="Kerja Sebagai" value=""/>
+                    <input class="search-field" type="number" name="exp_start_year[]" placeholder="Tahun Masuk"/>
+                    <input class="search-field" type="number" name="exp_end_year[]" placeholder="Tahun Keluar" />
+                    <textarea name="exp_desc[]" id="desc1" cols="30" rows="10" placeholder="Deskripsi Pekerjaan"></textarea>
                 </div>
 
                 <a href="#" class="button gray add-experience add-box"><i class="fa fa-plus-circle"></i> Tambah Pengalaman</a>

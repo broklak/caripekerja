@@ -6356,9 +6356,12 @@ label.upload-btn input[type="file"] { display: none; }
 		width: 35%;
 	}
 	.widget-sort-select.worker-list{
-		width: 19%;
-		font-size: 12px;
-		padding: 15px 0px;
+		width: 15%;
+		font-size: 10px;
+	}
+	.widget-sort-title{
+		font-size: 10px;
+		padding: 14px 5px;
 	}
 	.search-container select {
 		height: 62px;

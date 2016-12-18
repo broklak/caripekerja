@@ -21,30 +21,30 @@
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="row">
-                    <div class="mj_signup_section mj_green_bg">
+                    <div class="mj_signup_section mj_blue_bg">
                         <div class="mj_mainheading mj_toppadder80 mj_bottompadder30">
-                            <h1>SAYA PEMILIK USAHA</h1>
+                            <h1>SAYA <br />PEMILIK USAHA</h1>
                         </div>
                         <div class="mj_blog_btn">
                             <a href="#" class="mj_mainbtn mj_btnblack" data-text="Masuk" data-toggle="modal" data-target="#usaha"><span>Masuk</span></a>
                         </div>
                         <div class="mj_signup_section_img">
-                            <img src="images/signup_bg1.png" class="img-responsive" alt="hire">
+                            <img src="images/signup_bg2.png" class="img-responsive" alt="hire">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="row">
-                    <div class="mj_signup_section mj_blue_bg">
+                    <div class="mj_signup_section mj_green_bg">
                         <div class="mj_mainheading mj_toppadder80 mj_bottompadder30">
-                            <h1>SAYA PENCARI KERJA</h1>
+                            <h1>SAYA <br />PENCARI KERJA</h1>
                         </div>
                         <div class="mj_blog_btn">
                             <a href="#" class="mj_mainbtn mj_btnblack" data-text="Masuk" data-toggle="modal" data-target="#pekerja"><span>Masuk</span></a>
                         </div>
                         <div class="mj_signup_section_img">
-                            <img src="images/signup_bg2.png" class="img-responsive" alt="job">
+                            <img src="images/signup_bg1.png" class="img-responsive" alt="job">
                         </div>
                     </div>
                 </div>

@@ -84,7 +84,7 @@
 
                                         <label class="header-about">PENGALAMAN KERJA</label>
                                         <!-- Resume Table -->
-                                        @if(empty($edu))
+                                        @if(empty($experience))
                                             <p class="no-desc">Belum ada data pengalaman kerja</p>
 
                                         @else
@@ -92,8 +92,8 @@
                                             <dl class="resume-table">
                                                 @foreach($experience as $rowExp)
                                                     <dt>
-                                                        <small class="date">{{$rowExp['start']}} - {{$rowExp['end']}}</small>
-                                                        <strong>{{$rowExp['role']}} di {{$rowExp['place']}}</strong>
+                                                        <small class="date">{{(isset($rowExp['start'])) ? $rowExp['start'] : 'Tahun '}} - {{(isset($rowExp['end'])) ? $rowExp['end'] : 'Tahun '}}</small>
+                                                        <strong>{{(isset($rowExp['role'])) ? $rowExp['role'] : 'Pekerja'}} di {{(isset($rowExp['place'])) ? $rowExp['place'] : 'Usaha'}}</strong>
                                                     </dt>
                                                     <dd>
                                                         <p>{{$rowExp['desc']}}</p>
@@ -124,8 +124,8 @@
                                             <dl class="resume-table">
                                                 @foreach($edu as $rowEdu)
                                                     <dt>
-                                                        <small class="date">{{$rowEdu['start']}} - {{$rowEdu['end']}}</small>
-                                                        <strong>{{$rowEdu['name']}}</strong>
+                                                        <small class="date">{{(isset($rowEdu['start'])) ? $rowEdu['start'] : 'Tahun '}} - {{(isset($rowEdu['end'])) ? $rowEdu['end'] : 'Tahun '}}</small>
+                                                        <strong>{{(isset($rowEdu['name'])) ? $rowEdu['name'] : 'Sekolah / Universitas'}}</strong>
                                                     </dt>
                                                 @endforeach
 

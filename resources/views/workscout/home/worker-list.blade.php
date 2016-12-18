@@ -18,10 +18,11 @@
         <div class="twelve columns">
             <div class="widget sort">
                     <span class="widget-sort-title">URUTKAN</span>
+                    <a href="{{route('worker-list')}}" class="widget-sort-select worker-list @if(!isset($param['sort'])) active @endif">TERBARU <i class="fa fa-chevron-down"></i></a>
                     <a href="{{route('worker-list')}}?sort=exp" class="widget-sort-select worker-list @if(isset($param['sort']) && $param['sort'] == 'exp') active @endif">PENGALAMAN <i class="fa fa-chevron-down"></i></a>
                     <a href="{{route('worker-list')}}?sort=age" class="widget-sort-select worker-list @if(isset($param['sort']) && $param['sort'] == 'age') active @endif">USIA <i class="fa fa-chevron-down"></i></a>
                     <a href="{{route('worker-list')}}?sort=degree" class="widget-sort-select worker-list @if(isset($param['sort']) && $param['sort'] == 'degree') active @endif">PENDIDIKAN <i class="fa fa-chevron-down"></i></a>
-                    <a href="" class="widget-sort-select worker-list @if(isset($param['sort']) && $param['sort'] == 'rating') active @endif">RATING <i class="fa fa-chevron-down"></i></a>
+                    <a href="{{route('worker-list')}}?sort=rating" class="widget-sort-select worker-list @if(isset($param['sort']) && $param['sort'] == 'rating') active @endif">RATING <i class="fa fa-chevron-down"></i></a>
             </div>
             <div class="widget sort-mobile" style="margin-bottom: -30px">
                 <form action="{{route('worker-list')}}" method="post">

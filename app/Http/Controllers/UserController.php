@@ -186,51 +186,49 @@ class UserController extends Controller
             $worker->birthdate = date('Y-m-d H:i:s', strtotime($request->input('birthdate')));
             $worker->category = implode(',', $request->input('category'));
 
+            $edu = array_filter($request->input('edu_name'));
+            $exp = array_filter($request->input('exp_place'));
 
-            if($request->input('exp_place') != '') {
-                $this->validate($request, [
-                    'exp_place' => 'required|max:100',
-                    'exp_role' => 'required|max:100',
-                    'exp_start_year' => 'required|max:15',
-                    'exp_desc' => 'required',
-                ]);
+            if(!empty($exp)) {
+                $exp_role = $request->input('exp_role');
+                $exp_start = $request->input('exp_start_year');
+                $exp_end = $request->input('exp_end_year');
+                $exp_notes = $request->input('exp_desc');
 
                 $experience = json_decode($worker['experiences'], true);
 
-                $new = array(
-                    'place'     => $request->input('exp_place'),
-                    'role'     => $request->input('exp_role'),
-                    'start'     => $request->input('exp_start_year'),
-                    'end'     => ($request->input('exp_end_year_now')) ? $request->input('exp_end_year_now') : $request->input('exp_end_year'),
-                    'desc'     => $request->input('exp_desc')
-                );
-                $experience[] = $new;
-
+                foreach($exp as $key => $expData){
+                    $newExp = array(
+                        'place'     => $expData,
+                        'role'     => $exp_role[$key],
+                        'start'     => $exp_start[$key],
+                        'end'     => $exp_end[$key],
+                        'desc'     => $exp_notes[$key]
+                    );
+                    $experience[] = $newExp;
+                }
                 $worker->experiences = json_encode($experience);
             }
 
-            if($request->input('edu_name') != '') {
-                $this->validate($request, [
-                    'edu_name' => 'required|max:100',
-                    'edu_level' => 'required',
-                    'edu_start_year' => 'required',
-                    'edu_end_year' => 'required',
-                ]);
+            if(!empty($edu)) {
+                $edu_level = $request->input('edu_level');
+                $edu_start = $request->input('edu_start_year');
+                $edu_end = $request->input('edu_end_year');
+                $edu_notes = $request->input('edu_desc');
 
-                $worker = User::find($workerId);
+                $eduExist = json_decode($worker['education'], true);
+                foreach($edu as $key => $eduData){
+                    $new = array(
+                        'name'     => $eduData,
+                        'level'     => $edu_level[$key],
+                        'start'     => $edu_start[$key],
+                        'end'     => $edu_end[$key],
+                        'desc'     => $edu_notes[$key],
+                    );
+                    $eduExist[] = $new;
+                }
 
-                $edu = json_decode($worker['education'], true);
-
-                $new = array(
-                    'name'     => $request->input('edu_name'),
-                    'level'     => $request->input('edu_level'),
-                    'start'     => $request->input('edu_start_year'),
-                    'end'     => $request->input('edu_end_year'),
-                    'desc'     => $request->input('edu_desc'),
-                );
-                $edu[] = $new;
-
-                $worker->education = json_encode($edu);
+                $worker->education = json_encode($eduExist);
 
             }
 

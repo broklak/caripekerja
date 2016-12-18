@@ -75,23 +75,23 @@
                 <div class="widget">
                     <ul class="checkboxes">
                         <li>
-                            <input id="check-6" type="checkbox" name="salary" value="0" @if((isset($param['salary']) && $param['salary'] == 0) || !isset($param['salary'])) checked @endif>
+                            <input id="check-6" type="checkbox" name="salary[]" value="0" @if((isset($param['salary']) && in_array('0', $param['salary'])) || !isset($param['salary'])) checked @endif>
                             <label for="check-6">Semua Rentang Gaji</label>
                         </li>
                         <li>
-                            <input id="check-7" type="checkbox" name="salary" value="1" @if(isset($param['salary']) && $param['salary'] == 1) checked @endif>
+                            <input id="check-7" type="checkbox" name="salary[]" value="1" @if(isset($param['salary']) && in_array('1', $param['salary'])) checked @endif>
                             <label for="check-7">Rp 500,000 - Rp 1,000,000</label>
                         </li>
                         <li>
-                            <input id="check-8" type="checkbox" name="salary" value="2" @if(isset($param['salary']) && $param['salary'] == 2) checked @endif>
+                            <input id="check-8" type="checkbox" name="salary[]" value="2" @if(isset($param['salary']) && in_array('2', $param['salary'])) checked @endif>
                             <label for="check-8">Rp 1,000,000 - Rp 3,000,000</label>
                         </li>
                         <li>
-                            <input id="check-9" type="checkbox" name="salary" value="3 @if(isset($param['salary']) && $param['salary'] == 3) checked @endif">
+                            <input id="check-9" type="checkbox" name="salary[]" value="3" @if(isset($param['salary']) && in_array('3', $param['salary'])) checked @endif">
                             <label for="check-9">Rp 3,000,000 - Rp 5,000,000</label>
                         </li>
                         <li>
-                            <input id="check-10" type="checkbox" name="salary" value="4" @if(isset($param['salary'])&& $param['salary'] == 4) checked @endif>
+                            <input id="check-10" type="checkbox" name="salary[]" value="4" @if(isset($param['salary']) && in_array('4', $param['salary'])) checked @endif>
                             <label for="check-10">Diatas Rp 5,000,000</label>
                         </li>
                     </ul>

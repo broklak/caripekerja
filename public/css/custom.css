@@ -12,6 +12,11 @@
 .job-profil-heading{
 	margin-left: 20px;
 }
+.widget-sort-select.worker-list{
+	width: 17%;
+	font-size: 12px;
+	padding: 15px 0px;
+}
 .job-list-img img {
 	margin-bottom: 15px;
 	border-radius: 0;
