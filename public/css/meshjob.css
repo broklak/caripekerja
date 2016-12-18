@@ -6729,6 +6729,9 @@ a.mj_removefile {
 }
 
 @media (max-width: 767px) {
+    .mj_pageheading ul li{
+        font-weight: 500;
+    }
     .mj_header{
         padding: 10px 0px;
     }
@@ -6843,6 +6846,7 @@ a.mj_removefile {
     }
     .mj_joblogo img {
         display: initial;
+        border: 2px solid #777;
     }
     .mj_pagetitle2 .mj_pageheading h1, .mj_pageheading ul li a{
         color: #000000;

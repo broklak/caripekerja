@@ -17,7 +17,7 @@
                             <div class="mj_mainheading">
                                 <div class="row">
                                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                                        <div class="mj_joblogo">
+                                        <div class="mj_joblogo employer">
                                             <img src="{{\App\Helpers\GlobalHelper::setEmployerImage($detail['employerPhoto'])}}" class="img-responsive" alt="">
                                         </div>
                                     </div>
