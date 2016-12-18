@@ -10,18 +10,18 @@
     <div class="title-page list-worker"></div>
     <div class="clearfix"></div>
 
-    <div class="container margin-bottom-40">
+    <div class="container job-filter margin-bottom-40">
         <div class="four columns">
-            <h2 style="margin-top: 0;color: #655">FILTER PEKERJA</h2>
+            <h2>FILTER PEKERJA</h2>
         </div>
 
         <div class="twelve columns">
             <div class="widget sort">
                     <span class="widget-sort-title">URUTKAN</span>
-                    <a class="widget-sort-select work">PENGALAMAN <i class="fa fa-chevron-down"></i></a>
-                    <a class="widget-sort-select work">USIA <i class="fa fa-chevron-down"></i></a>
-                    <a class="widget-sort-select work">PENDIDIKAN <i class="fa fa-chevron-down"></i></a>
-                    <a class="widget-sort-select work">RATING <i class="fa fa-chevron-down"></i></a>
+                    <a href="{{route('worker-list')}}?sort=exp" class="widget-sort-select worker-list @if(isset($param['sort']) && $param['sort'] == 'exp') active @endif">PENGALAMAN <i class="fa fa-chevron-down"></i></a>
+                    <a href="{{route('worker-list')}}?sort=age" class="widget-sort-select worker-list @if(isset($param['sort']) && $param['sort'] == 'age') active @endif">USIA <i class="fa fa-chevron-down"></i></a>
+                    <a href="{{route('worker-list')}}?sort=degree" class="widget-sort-select worker-list @if(isset($param['sort']) && $param['sort'] == 'degree') active @endif">PENDIDIKAN <i class="fa fa-chevron-down"></i></a>
+                    <a href="" class="widget-sort-select worker-list @if(isset($param['sort']) && $param['sort'] == 'rating') active @endif">RATING <i class="fa fa-chevron-down"></i></a>
             </div>
             <div class="widget sort-mobile" style="margin-bottom: -30px">
                 <form action="{{route('worker-list')}}" method="post">

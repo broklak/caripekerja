@@ -33,7 +33,7 @@ class User extends Authenticatable
     /**
      * search worker
      */
-    public static function search ($criteria = array(), $perPage = 10) {
+    public static function search ($criteria = array(), $perPage = 10, $sort = 'id') {
         $table = 'workers';
         $where = array();
         $whereRaw = '';
@@ -125,7 +125,7 @@ class User extends Authenticatable
 
         $where[] = ['photo_profile', '<>', 'null'];
 
-        $list = DB::table($table)->where($where)->orderBy('id', 'desc')->paginate($perPage);
+        $list = DB::table($table)->where($where)->orderBy($sort, 'desc')->paginate($perPage);
 
         $worker = array();
         foreach($list as $user) {

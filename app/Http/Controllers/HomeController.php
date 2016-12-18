@@ -52,8 +52,19 @@ class HomeController extends Controller {
             $categoryName = (isset($getCategoryName['id'])) ? $getCategoryName['name'] : 'all';
         }
 
+        $sort = (isset($param['sort'])) ? $param['sort'] : 'id';
+        if($sort == 'exp') {
+            $sort = 'years_experience';
+        } elseif($sort == 'age'){
+            $sort = 'birthdate';
+        } elseif($sort == 'degree') {
+            $sort = 'degree';
+        } else{
+            $sort = 'id';
+        }
+
         $perPage = 20;
-        $list = User::search($param, $perPage);
+        $list = User::search($param, $perPage, $sort);
 
         $data['categoryTitle'] = $categoryName;
         $data['category'] = WorkerCategory::all();

@@ -4781,7 +4781,10 @@ a.post-img:hover:before {
 .widget-sort-select.job-list {
 	width: 40%;
 }
-
+.widget-sort-select.job-list.active, .widget-sort-select.worker-list.active{
+	background-color: #616161;
+	color: #fff;
+}
 .widget-sort-select {
 	float: left;
 	height: 50px;
@@ -6330,6 +6333,9 @@ label.upload-btn input[type="file"] { display: none; }
 	input.ico-02,select.ico-02 { background-position: 95% 20px; }
 
 	#titlebar.single.submit-page h2, .submit-page { padding: 0; }
+	.container.job-filter{
+		margin-top: 50px;
+	}
 }
 
 
@@ -6343,6 +6349,17 @@ label.upload-btn input[type="file"] { display: none; }
 	input.ico-02,select.ico-02 { background-position: 93% 20px; }
 	.search-container { padding: 120px 0; }
 
+	.container.job-filter{
+		margin-top: 100px;
+	}
+	.widget-sort-select.job-list{
+		width: 35%;
+	}
+	.widget-sort-select.worker-list{
+		width: 19%;
+		font-size: 12px;
+		padding: 15px 0px;
+	}
 	.search-container select {
 		height: 62px;
 	}

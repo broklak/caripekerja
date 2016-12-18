@@ -30,9 +30,14 @@ class JobController extends Controller
     public function index(Request $request)
     {
         $param = $request->input();
-
         $perPage = 20;
-        $getJob = Job::getAll($param, $perPage);
+
+        $sort = 'jobs.id';
+        if(isset($param['sort']) && $param['sort'] == 'salary') {
+            $sort = 'salary_min';
+        }
+
+        $getJob = Job::getAll($param, $perPage, $sort);
 
         $getAuth = GlobalHelper::getAuthtype();
         $role = $getAuth['role'];

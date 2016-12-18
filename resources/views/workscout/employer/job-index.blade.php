@@ -12,23 +12,24 @@
     <div class="title-page list-worker"></div>
     <div class="clearfix"></div>
 
-    <div class="container margin-bottom-20">
+    <div class="container job-filter margin-bottom-20">
         <div class="four columns">
-            <h2 style="margin-top: 0;color: #655;font-size: 28px">FILTER LOWONGAN</h2>
+            <h2>FILTER LOWONGAN</h2>
         </div>
 
         <div class="twelve columns">
             <div class="widget sort">
                 <span class="widget-sort-title">URUTKAN</span>
-                <a href="{{route('job-list')}}" class="widget-sort-select job-list">GAJI TERTINGGI <i class="fa fa-chevron-down"></i></a>
-                <a class="widget-sort-select job-list">TERBARU <i class="fa fa-chevron-down"></i></a>
+                <a href="{{route('job-list')}}" class="widget-sort-select job-list @if(!isset($param['sort'])) active @endif">TERBARU <i class="fa fa-chevron-down"></i></a>
+                <a href="{{route('job-list')}}?sort=salary" class="widget-sort-select job-list @if(isset($param['sort']) && $param['sort'] == 'salary') active @endif">GAJI TERTINGGI <i class="fa fa-chevron-down"></i></a>
             </div>
             <div class="widget sort-mobile" style="margin-bottom: 0px">
                 <form action="{{route('job-list')}}" method="post">
-                    <select name="sort">
+                    {{csrf_field()}}
+                    <select name="sort" onchange="this.form.submit()">
                         <option value="0">Urut Berdasarkan</option>
-                        <option value="1">Gaji</option>
-                        <option value="2">Terbaru</option>
+                        <option value="new">Terbaru</option>
+                        <option @if(isset($param['sort']) && $param['sort'] == 'salary') selected @endif value="salary">Gaji</option>
                     </select>
                 </form>
             </div>
@@ -123,7 +124,7 @@
                                     <span style="text-transform: uppercase" class="resume-meta-info">{{(strlen($row['title']) > 18) ? substr($row['title'],0,15).'...' : $row['title']}}</span>
                                     <ul class="list-unstyled text-center about-candidate">
                                         <li><span>{{($row['type'] == 1) ? ' FULL TIME' : 'PART TIME'}}</span></li>
-                                        <li><span>{{\App\Helpers\GlobalHelper::getAverageSalary($row['salary_min'], $row['salary_max'])}}</span></li>
+                                        <li><span>{{\App\Helpers\GlobalHelper::moneyFormat($row['salary_min'])}}</span></li>
                                         <li><i>{{$row['provinceName']}}</i></li>
                                     </ul>
                                 </a>

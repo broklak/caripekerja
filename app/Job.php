@@ -16,7 +16,7 @@ class Job extends Model
         'title', 'employer_id', 'salary_min', 'salary_max', 'minimum_degree', 'gender', 'closing_date', 'type', 'status', 'description', 'city', 'age_min', 'age_max', 'start_date', 'end_date', 'category', 'exp'
     ];
 
-    public static function getAll ($criteria = array(), $perPage) {
+    public static function getAll ($criteria = array(), $perPage, $sort = 'jobs.id') {
         $where = array();
         $status = ['jobs.status', '=', 1];
         array_push($where, $status);
@@ -72,7 +72,7 @@ class Job extends Model
                 ->where($where)
                 ->join('employers', 'employers.id', '=', 'jobs.employer_id')
                 ->join('province', 'province.id', '=', 'jobs.city')
-                ->orderBy('jobs.id', 'desc')
+                ->orderBy($sort, 'desc')
                 ->paginate($perPage);
 
         $job = array();
