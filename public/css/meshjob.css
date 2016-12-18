@@ -6290,7 +6290,12 @@ a.mj_removefile {
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-
+    .mj_social_media_section {
+        float: left;
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
     .mj_navmenu ul li a{
         padding:15px 8px;
     }
@@ -6403,6 +6408,7 @@ a.mj_removefile {
     }
     .mj_pageheading{
         padding-top: 20px;
+        margin-left: 30px;
     }
 
     .mj_pagetitle2 .mj_pageheading h1{
@@ -6451,6 +6457,12 @@ a.mj_removefile {
 @media (min-width: 768px) and (max-width: 991px) {
     .mj_header{
         padding: 10px 0px;
+    }
+    .mj_social_media_section {
+        float: left;
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 0px;
     }
     .mj_logo {
         text-align: center;
@@ -6526,10 +6538,11 @@ a.mj_removefile {
         font-size: 40px;
     }
     .mj_pagetitle2 .mj_pageheading h1 {
-        font-size: 25px;
+        font-size: 24px;
         padding:0px;
         margin-bottom: 20px;
         margin-left: 10px;
+        margin-top: -20px;
     }
     .mj_pagetitle2 .mj_pagetitle_inner {
         bottom: -10%;
@@ -6647,6 +6660,8 @@ a.mj_removefile {
     }
     .mj_pageheading{
         padding-top: 10px !important;
+        margin-left: 20px;
+        font-size: ;
     }
     .mj_postdiv .woocommerce-checkout .form-group{
         margin-bottom: 0;
@@ -6731,6 +6746,7 @@ a.mj_removefile {
 @media (max-width: 767px) {
     .mj_pageheading ul li{
         font-weight: 300;
+        width: 50%;
     }
     .mj_header{
         padding: 10px 0px;
@@ -6961,6 +6977,7 @@ a.mj_removefile {
     .mj_pagetitle2 .mj_pageheading h1{
         font-size: 22px;
         font-weight: 500;
+        text-align: center;
     }
     .mj_pagetitle2 .mj_mainheading h1 span {
         font-size: 30px;
@@ -7092,16 +7109,23 @@ a.mj_removefile {
         float: none;
         display: inline-block;
     }
-
+    .mj_pageheading ul{
+        margin-left: 30px;
+    }
     .mj_jobdetail label {
         font-size: 18px;
     }
 
 }
-@media (min-width: 480px) and (max-width: 625px) {
+@media (min-width: 480px) and (max-width: 767px) {
     .mj_tabs .mj_tabcontent .table tr td:nth-child(2), .mj_tabs .mj_tabcontent .table tr td:nth-child(4), .mj_filter_section .mj_tabcontent .table tr td:nth-child(2), .mj_filter_section .mj_tabcontent .table tr td:nth-child(4), .mj_joblocation_section .mj_tabcontent .table tr td:nth-child(2), .mj_joblocation_section .mj_tabcontent .table tr td:nth-child(4), .mj_candidate_section .mj_tabcontent .table tr td:nth-child(1), .mj_candidate_section .mj_tabcontent .table tr td:nth-child(3)  {
         display: none;
     }
+
+    .mj_pageheading ul{
+        text-align: center;
+    }
+
 }
 @media (max-width: 625px){
     .mj_carttable, .mj_carttable thead, .mj_carttable tbody, .mj_carttable th, .mj_carttable td, .mj_carttable tr {
@@ -7318,7 +7342,12 @@ a.mj_removefile {
     .mj_pageheading ul li{
         padding-right: 15px;
         color: #252525;
-        font-size: 12px;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .mj_social_media_section{
+        text-align: center;
+        margin-top: 10px;
     }
     .select-wrapper select {
         width: 93%;
@@ -7579,8 +7608,8 @@ a.mj_removefile {
         right: 0;
     }
     .mj_pageheading ul li{
-        padding-right: 0;
-        width: 100%;
+        /*padding-right: 0;*/
+        /*width: 100%;*/
         padding: 5px 0px;
         color: #252525;
     }
