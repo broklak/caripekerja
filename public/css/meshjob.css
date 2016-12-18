@@ -4099,9 +4099,9 @@ ol.comment li:after {
     float: left;
     width: 100%;
     background-color: #fff;
-    border-radius: 13px;
-    box-shadow: 0px 1px 35px rgba(0, 0, 0, 0.35);
+    /*box-shadow: 0px 1px 35px rgba(0, 0, 0, 0.35);*/
     position:relative;
+    border: 1px solid #777;
 }
 .mj_postdiv:before {
     position: absolute;
@@ -4413,9 +4413,13 @@ a.mj_removefile {
     transition: all 0.3s;
 }
 .mj_jobdetail label {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 800;
     color: #484848;
+    position: absolute;
+    background-color: #fff;
+    top: -12px;
+    padding: 0 10px;
 }
 .mj_detaildiv {
     float: left;
@@ -7085,7 +7089,7 @@ a.mj_removefile {
     }
 
     .mj_jobdetail label {
-        font-size: 20px;
+        font-size: 18px;
     }
 
 }

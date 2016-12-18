@@ -82,7 +82,7 @@
                                 <div class="">
                                     <div class="padding-right">
 
-                                        <label class="header-about">Pengalaman Kerja</label>
+                                        <label class="header-about">PENGALAMAN KERJA</label>
                                         <!-- Resume Table -->
                                         @if(empty($edu))
                                             <p class="no-desc">Belum ada data pengalaman kerja</p>
@@ -114,7 +114,7 @@
                                 <div class="">
                                     <div class="padding-right">
 
-                                        <label class="header-about">Pendidikan</label>
+                                        <label class="header-about">PENDIDIKAN</label>
                                         <!-- Resume Table -->
                                         @if(empty($edu))
                                             <p class="no-desc">Belum ada data pendidikan</span>

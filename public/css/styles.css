@@ -1346,7 +1346,7 @@ table.manage-table td.action a:hover { color: #505050; }
 .resume-table {
 	padding: 0 0 0 20px;
 	margin: 0 0 20px 0;
-	border-top: 3px solid #eee;
+	/*border-top: 3px solid #eee;*/
 }
 
 .resume-table strong {
@@ -6460,7 +6460,7 @@ label.upload-btn input[type="file"] { display: none; }
 	}
 
 	.resume-table strong {
-		font-size: 16px;
+		font-size: 14px;
 	}
 
 	.search-container select {
@@ -6472,7 +6472,11 @@ label.upload-btn input[type="file"] { display: none; }
 	}
 
 	.resume-table p {
-		font-size: 14px;
+		font-size: 12px;
+	}
+
+	small.date{
+		font-size: 12px;
 	}
 
 	.one.carousel.column { width: 5%; }
