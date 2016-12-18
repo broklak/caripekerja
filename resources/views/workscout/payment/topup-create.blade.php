@@ -4,11 +4,83 @@
 
 @section('content')
 
-    <div id="titlebar" class="single submit-page tree-bg">
-        <h2>TOP UP KUOTA</h2>
-    </div>
-
     <div class="container">
+
+        <!-- Categories -->
+        <div class="container">
+
+            <div class="title-page">
+                <h3 class="margin-bottom-25">Paket Topup</h3>
+                <center><div class="kategoribox"></div></center>
+            </div>
+
+            <div class="plan color-1 four columns">
+                <div class="plan-price">
+                    <h3>BASIC</h3>
+                    <span class="plan-currency">Rp </span>
+                    <span class="value">100,000</span>
+
+                </div>
+                <div class="plan-features">
+                    <ul>
+                        <li>20 Kontak</li>
+                        <li>Rp 5000 / kontak</li>
+                    </ul>
+                    <a class="button" href="#"><i class="fa fa-shopping-cart"></i> BELI SEKARANG</a>
+                </div>
+            </div>
+
+            <!-- Plan #2 -->
+            <div class="plan color-2 four columns">
+                <div class="plan-price">
+                    <h3>BRONZE</h3>
+                    <span class="plan-currency">Rp </span>
+                    <span class="value">200,000</span>
+
+                </div>
+                <div class="plan-features">
+                    <ul>
+                        <li>80 Kontak</li>
+                        <li>Rp 2500 / kontak</li>
+                    </ul>
+                    <a class="button" href="#"><i class="fa fa-shopping-cart"></i> BELI SEKARANG</a>
+                </div>
+            </div>
+
+            <!-- Plan #3 -->
+            <div class="plan color-1 four columns">
+                <div class="plan-price">
+                    <h3>SILVER</h3>
+                    <span class="plan-currency">Rp </span>
+                    <span class="value">500,000</span>
+
+                </div>
+                <div class="plan-features">
+                    <ul>
+                        <li>250 Kontak</li>
+                        <li>Rp 2000 / kontak</li>
+                    </ul>
+                    <a class="button" href="#"><i class="fa fa-shopping-cart"></i> BELI SEKARANG</a>
+                </div>
+            </div>
+
+            <!-- Plan #4 -->
+            <div class="plan color-1 four columns">
+                <div class="plan-price">
+                    <h3>PLATINUM</h3>
+                    <span class="plan-currency">Rp </span>
+                    <span class="value">800,000</span>
+
+                </div>
+                <div class="plan-features">
+                    <ul>
+                        <li>600 Kontak</li>
+                        <li>Rp 1500 / kontak</li>
+                    </ul>
+                    <a class="button" href="#"><i class="fa fa-shopping-cart"></i> BELI SEKARANG</a>
+                </div>
+            </div>
+        </div>
 
         <!-- Submit Page -->
         <div class="sixteen columns">
