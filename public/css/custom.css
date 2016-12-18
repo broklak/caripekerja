@@ -5,7 +5,9 @@
 .footer-desc{
 	color: #fff;
 }
-
+.job-profil-heading{
+	margin-left: 20px;
+}
 .job-list-img img {
 	margin-bottom: 15px;
 	border-radius: 0;
@@ -53,6 +55,9 @@
 	padding-top: 10px;
 }
 
+.company-profile-detail li:first-child{
+	margin-top: 0;
+}
 .company-profile-detail li {
 	width: 50%;
 	float: left;
@@ -206,6 +211,9 @@ height:100%;
 		margin-left: 180px;
 		margin-top: -20px;
 	}
+	.button-lamar-job{
+		margin-left: 30px;
+	}
 }
 /*IPAD*/
 @media (min-width: 768px) and (max-width: 991px) {
@@ -222,11 +230,22 @@ height:100%;
 		margin-left: 150px;
 		margin-top: -50px;
 	}
+	.button-lamar-job{
+		margin-left: 10px;
+	}
+	.job-profil-heading{
+		margin-left: 10px;
+	}
 }
 
 /* All Mobile Sizes (devices and browser)  POTRAIT */
 @media only screen and (max-width: 767px) {
-
+	.company-profile-detail li:first-child{
+		margin-top: 10px;
+	}
+	.job-profil-heading{
+		margin-left: 0px;
+	}
 	.contact-candidate{
 		margin-left: 20px;
 	}
@@ -239,7 +258,11 @@ height:100%;
 	}
 
 	.no-desc, .company-profile-detail{
-		font-size: 12px;
+		font-size: 13px;
+	}
+	.company-profile-detail{
+		padding-top: 0;
+		margin-top: -20px;
 	}
 
 	.company-detail-content {
@@ -304,5 +327,12 @@ height:100%;
 	}
 	.contact-candidate{
 		text-align: center;
+	}
+	.company-detail-title {
+		font-size: 13px;
+	}
+
+	.company-detail-content {
+		font-size: 12px;
 	}
 }

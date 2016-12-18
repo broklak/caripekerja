@@ -7112,8 +7112,12 @@ a.mj_removefile {
     .mj_pageheading ul{
         margin-left: 30px;
     }
+    .mj_pageheading, .job-profile-heading ul{
+        margin-left: -30px;
+    }
     .mj_jobdetail label {
         font-size: 18px;
+        padding-top: 0;
     }
 
 }
