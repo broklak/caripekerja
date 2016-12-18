@@ -4,8 +4,45 @@
 
 @section('content')
 
+
+        <!-- Icon Boxes -->
+        <div class="section-background top-0">
+            <div class="title-page">
+                <h3 class="margin-bottom-25">Bagaimana Cara Kerjanya</h3>
+                <center><div class="kategoribox"></div></center>
+            </div>
+            <div class="container">
+
+                <div class="one-third column">
+                    <div class="icon-box rounded alt">
+                        <i class="ln ln-icon-Target-Market"></i>
+                        <h4>Cari Pekerja</h4>
+                        <p>Pilih profesi pekerja yang anda cari</p>
+                    </div>
+                </div>
+
+                <div class="one-third column">
+                    <div class="icon-box rounded alt">
+                        <i class="ln ln-icon-Tap"></i>
+                        <h4>Pilih Pekerja</h4>
+                        <p>Masukkan kriteria pekerja yang anda inginkan</p>
+                    </div>
+                </div>
+
+                <div class="one-third column">
+                    <div class="icon-box rounded alt">
+                        <i class="ln ln-icon-Phone-2"></i>
+                        <h4>Hubungi Pekerja</h4>
+                        <p>Dapatkan kontak pekerja dan rekrut segera</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Icon Boxes / End -->
+
     <div class="col-md-12">
-        <div class="sixteen columns">
+        <div class="sixteen columns category-worker">
             <div class="title-page">
                 <h3 class="margin-bottom-25">Kategori Pekerja</h3>
                 <center><div class="kategoribox"></div></center>

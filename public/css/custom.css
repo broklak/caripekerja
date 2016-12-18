@@ -180,15 +180,21 @@
 }
 
 .video-wrapper h3 {
-	color: #fff;
+	color: #484848;
 	margin-bottom: 30px;
+}
+
+.category-worker{
+	box-shadow: 0 1px 5px rgba(0,0,0,.08), 0 1px 1px rgba(0,0,0,0.004);
+	border-bottom: 1px solid #dfdfdf;
 }
 
 .video {
 	box-shadow: 0 1px 5px rgba(0,0,0,.08), 0 1px 1px rgba(0,0,0,0.004);
 	border-bottom: 1px solid #dfdfdf;
-	background-color: #4fa0ee;
-	color: #fff;
+	/*border-top: 1px solid #dfdfdf;*/
+	/*background-color: #4fa0ee;*/
+	/*color: #fff;*/
 	margin-top: -8px;
 }
 
