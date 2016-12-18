@@ -13,8 +13,7 @@
             <h4>CariPekerja.com</h4>
             <ul class="footer-links">
                 <li><a href="{{url('press-release/1')}}">Press Release</a></li>
-                <li><a href="{{url('blog/1')}}">Blog 1</a></li>
-                <li><a href="{{url('blog/2')}}">Blog 2</a></li>
+                <li><a href="{{url('blog/2')}}">Blog</a></li>
                 <li><a href="#">Kebijakan Privasi</a></li>
                 <li><a href="#">Syarat dan Ketentuan</a></li>
 
