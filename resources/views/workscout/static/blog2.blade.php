@@ -7,7 +7,7 @@
     <div class="container">
 
         <!-- Blog Posts -->
-        <div class="sixteen columns">
+        <div class="twelve columns">
             <div class="padding-right">
 
                 <!-- Post -->
@@ -60,6 +60,16 @@
             </div>
         </div>
         <!-- Blog Posts / End -->
+
+        <div class="four columns margin-top-30">
+            <div style="border: 1px solid #333;padding: 10px;border-radius: 5px;" class="widget">
+                <h4>Blog Lain</h4>
+                <div class="widget-text">
+                    <h5><a href="{{url('blog/1')}}">Indonesia Negara ke-3 di Asia Tenggara dengan Tingkat Pengangguran Tertinggi</a></h5>
+                    <span>December 14, 2016</span>
+                </div>
+            </div>
+        </div>
 
     </div>
 

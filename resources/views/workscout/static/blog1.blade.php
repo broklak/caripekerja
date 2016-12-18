@@ -7,7 +7,7 @@
     <div class="container">
 
         <!-- Blog Posts -->
-        <div class="sixteen columns">
+        <div class="twelve columns">
             <div class="padding-right">
 
                 <!-- Post -->
@@ -37,6 +37,16 @@
             </div>
         </div>
         <!-- Blog Posts / End -->
+
+        <div class="four columns margin-top-30">
+            <div style="border: 1px solid #333;padding: 10px;border-radius: 5px;" class="widget">
+                <h4>Blog Lain</h4>
+                <div class="widget-text">
+                    <h5><a href="{{url('blog/2')}}">Kalau Pengangguran Tinggi, Mengapa Susah Mencari Pekerja?</a></h5>
+                    <span>December 17, 2016</span>
+                </div>
+            </div>
+        </div>
 
     </div>
 

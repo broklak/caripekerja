@@ -20,7 +20,7 @@
         <div class="twelve columns">
             <div class="widget sort">
                 <span class="widget-sort-title">URUTKAN</span>
-                <a class="widget-sort-select job-list">GAJI <i class="fa fa-chevron-down"></i></a>
+                <a href="{{route('job-list')}}" class="widget-sort-select job-list">GAJI TERTINGGI <i class="fa fa-chevron-down"></i></a>
                 <a class="widget-sort-select job-list">TERBARU <i class="fa fa-chevron-down"></i></a>
             </div>
             <div class="widget sort-mobile" style="margin-bottom: 0px">
