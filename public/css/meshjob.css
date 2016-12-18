@@ -6730,7 +6730,7 @@ a.mj_removefile {
 
 @media (max-width: 767px) {
     .mj_pageheading ul li{
-        font-weight: 500;
+        font-weight: 300;
     }
     .mj_header{
         padding: 10px 0px;
@@ -6960,6 +6960,7 @@ a.mj_removefile {
     }
     .mj_pagetitle2 .mj_pageheading h1{
         font-size: 22px;
+        font-weight: 500;
     }
     .mj_pagetitle2 .mj_mainheading h1 span {
         font-size: 30px;
