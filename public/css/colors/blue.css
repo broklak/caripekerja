@@ -2,7 +2,6 @@
 /* Blue #4fa0ee
 ---------------------------------------------------------------------- */
 #current,
-.icon-box.rounded i:after,
 a.button.gray.app-link.opened,
 a.menu-trigger:hover,
 #jPanelMenu-menu li a:hover,
@@ -41,7 +40,6 @@ a.button.dark:hover,
 
 a,
 table td.title a:hover,
-.icon-box.rounded i,
 table.manage-table td.action a:hover,
 #breadcrumbs ul li a:hover,
 #titlebar span.icons a:hover,
@@ -61,8 +59,9 @@ table.manage-table td.action a:hover,
 { color: #4fa0ee; }
 
 
-.icon-box.rounded i {
-	border-color: #4fa0ee;
+.icon-box.rounded i,.icon-box.rounded i:after {
+	border-color: #fff;
+	color: #fff;
 }
 
 .resumes-list li a:before,

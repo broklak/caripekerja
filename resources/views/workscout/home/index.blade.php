@@ -4,43 +4,6 @@
 
 @section('content')
 
-
-        <!-- Icon Boxes -->
-        <div class="section-background top-0">
-            <div class="title-page">
-                <h3 class="margin-bottom-25">Bagaimana Cara Kerjanya</h3>
-                <center><div class="kategoribox"></div></center>
-            </div>
-            <div class="container">
-
-                <div class="one-third column">
-                    <div class="icon-box rounded alt">
-                        <i class="ln ln-icon-Target-Market"></i>
-                        <h4>Cari Pekerja</h4>
-                        <p>Pilih profesi pekerja yang anda cari</p>
-                    </div>
-                </div>
-
-                <div class="one-third column">
-                    <div class="icon-box rounded alt">
-                        <i class="ln ln-icon-Tap"></i>
-                        <h4>Pilih Pekerja</h4>
-                        <p>Masukkan kriteria pekerja yang anda inginkan</p>
-                    </div>
-                </div>
-
-                <div class="one-third column">
-                    <div class="icon-box rounded alt">
-                        <i class="ln ln-icon-Phone-2"></i>
-                        <h4>Hubungi Pekerja</h4>
-                        <p>Dapatkan kontak pekerja dan rekrut segera</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <!-- Icon Boxes / End -->
-
     <div class="col-md-12">
         <div class="sixteen columns category-worker">
             <div class="title-page">
@@ -75,10 +38,46 @@
         </div>
     </div>
 
+    <!-- Icon Boxes -->
+    <div class="section-background top-0">
+        <div class="title-page">
+            <h3 class="margin-bottom-25">Bagaimana Cara Kerjanya</h3>
+            <center><div class="kategoribox-white"></div></center>
+        </div>
+        <div class="container">
+
+            <div class="one-third column">
+                <div class="icon-box rounded alt">
+                    <i class="ln ln-icon-File-Search"></i>
+                    <h4>Cari Pekerja</h4>
+                    <p>Pilih profesi pekerja yang anda cari</p>
+                </div>
+            </div>
+
+            <div class="one-third column">
+                <div class="icon-box rounded alt">
+                    <i class="ln ln-icon-Tap"></i>
+                    <h4>Pilih Pekerja</h4>
+                    <p>Masukkan kriteria pekerja yang anda inginkan</p>
+                </div>
+            </div>
+
+            <div class="one-third column">
+                <div class="icon-box rounded alt">
+                    <i class="ln ln-icon-Phone"></i>
+                    <h4>Hubungi Pekerja</h4>
+                    <p>Dapatkan kontak pekerja dan rekrut segera</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Icon Boxes / End -->
+
     <div class="sixteen columns video">
         <div class="video-wrapper">
             <h3 class="margin-bottom-25">Video Pengenalan</h3>
-            <center><div style="margin-bottom: 35px" class="kategoribox-white"></div></center>
+            <center><div style="margin-bottom: 35px" class="kategoribox"></div></center>
             <div class="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/L-kbuxUkR3E" frameborder="0" allowfullscreen></iframe>
             </div>
@@ -86,7 +85,7 @@
     </div>
 
     <!-- Categories -->
-    <div class="container">
+    <div class="container" style="display: none">
 
         <div class="title-page">
             <h3 class="margin-bottom-25">Paket Topup</h3>
