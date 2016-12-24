@@ -128,7 +128,7 @@
         <!-- Description -->
         <div class="form">
             <h5>Deskripsi Pekerjaan</h5>
-            <textarea name="description" cols="40" rows="10" id="summary" spellcheck="true">{{old('description')}}</textarea>
+            <textarea id="description" name="description" cols="40" rows="10" id="summary" spellcheck="true">{{old('description')}}</textarea>
         </div>
 
             <input type="submit" class="button big margin-top-5" value="Pasang Lowongan">
