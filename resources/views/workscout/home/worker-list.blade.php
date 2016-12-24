@@ -10,9 +10,62 @@
     <div class="title-page list-worker"></div>
     <div class="clearfix"></div>
 
+    <div class="container package-worker-wrapper margin-bottom-30">
+        <div class="four columns">
+            <h4>BASIC</h4>
+            <div class="package-worker">
+                <div class="package-detail">
+                    <span class="package-contact"><strong>20</strong> kontak</span>
+                    <span class="package-price-list">Rp 100,000</span>
+                </div>
+                <div class="package-buy">
+                    <a href="{{route('topup-create')}}" class="buy-kuota">BELI</a>
+                </div>
+            </div>
+        </div>
+        <div class="four columns">
+            <h4>BRONZE</h4>
+            <div class="package-worker">
+                <div class="package-detail">
+                    <span class="package-contact"><strong>80</strong> kontak</span>
+                    <span class="package-price-list">Rp 200,000</span>
+                </div>
+                <div class="package-buy">
+                    <span class="popular-package">POPULER</span>
+                    <a href="{{route('topup-create')}}" class="buy-kuota">BELI</a>
+                </div>
+            </div>
+        </div>
+        <div class="four columns">
+            <h4>SILVER</h4>
+            <div class="package-worker">
+                <div class="package-detail">
+                    <span class="package-contact"><strong>250</strong> kontak</span>
+                    <span class="package-price-list">Rp 500,000</span>
+                </div>
+                <div class="package-buy">
+                    <a href="{{route('topup-create')}}" class="buy-kuota">BELI</a>
+                </div>
+            </div>
+        </div>
+        <div class="four columns">
+            <h4>PLATINUM</h4>
+            <div class="package-worker">
+                <div class="package-detail">
+                    <span class="package-contact"><strong>600</strong> kontak</span>
+                    <span class="package-price-list">Rp 800,000</span>
+                </div>
+                <div class="package-buy">
+                    <a href="{{route('topup-create')}}" class="buy-kuota">BELI</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container job-filter margin-bottom-40">
         <div class="four columns">
             <h2>FILTER PEKERJA</h2>
+            <div class="kategoribox"></div>
         </div>
 
         <div class="twelve columns">

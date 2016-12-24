@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------- */
-/* Blue #4fa0ee
+/* Blue #78a2cb
 ---------------------------------------------------------------------- */
 #current,
 .icon-box.rounded i:after,
@@ -21,7 +21,6 @@ a.button.dark:hover,
 .ui-accordion .ui-accordion-header-active:hover,
 .ui-accordion .ui-accordion-header-active,
 .highlight.color,
- .plan.color-2 .plan-price,
 .plan.color-2 a.button,
 .tp-leftarrow:hover,
 .tp-rightarrow:hover,
@@ -35,13 +34,12 @@ a.button.dark:hover,
 .chosen-container-multi .chosen-choices li.search-choice,
 .list-search button,
 .checkboxes input[type=checkbox]:checked + label:before 
-{ background-color: #4fa0ee; }
+{ background-color: #78a2cb; }
 
 
 
 a,
 table td.title a:hover,
-.icon-box.rounded i,
 table.manage-table td.action a:hover,
 #breadcrumbs ul li a:hover,
 #titlebar span.icons a:hover,
@@ -54,16 +52,15 @@ table.manage-table td.action a:hover,
 .resumes-list-content h4,
 .job-overview ul li i,
 .company-info span a:hover,
-.infobox a:hover,
 .meta-tags span a:hover,
 .widget-text h5 a:hover,
 .app-content .info span ,
 .app-content .info ul li a:hover
-{ color: #4fa0ee; }
+{ color: #78a2cb; }
 
 
 .icon-box.rounded i {
-	border-color: #4fa0ee;
+	border-color: #252525;
 }
 
 .resumes-list li a:before,

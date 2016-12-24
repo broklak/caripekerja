@@ -1,5 +1,5 @@
-<div id="banner" class="with-transparent-header  background" style="background-image: url(images/baru/bgtest.jpg);background-attachment: fixed;background-position: 0 -23px" data-img-width="2000" data-img-height="1330" data-diff="300">
-<div class="container">
+<div id="banner" class="background" style="background-image: url(images/baru/homefix.jpg)">
+<div class="container-mesh">
     <div class="sixteen columns">
 
         <div class="search-container">
@@ -7,23 +7,25 @@
             <form method="post" action="{{route('worker-list')}}">
                 {{csrf_field()}}
             <div class="bottomline slider-container"></div>
-            <h2 style="text-align: center">DAPATKAN PEKERJA BERKUALITAS <br />DAN TERVERIFIKASI UNTUK USAHA ANDA</h2>
+                <h2 style="text-align: center">DAPATKAN PEKERJA BERKUALITAS DAN TERVERIFIKASI UNTUK USAHA ANDA</h2>
+                <div class="container" style="text-align: center">
+                    <select name="category" class="ico-01">
+                        <option disabled selected>Kategori pekerja yang dicari</option>
+                        @foreach($category as $key => $row)
+                            <option @if(old('category') == $row['id']) selected="selected" @endif value="{{$row['id']}}">{{$row['name']}}</option>
+                        @endforeach
+                    </select>
 
-                <select name="category" class="ico-01">
-                    <option disabled selected>Kategori pekerja yang dicari</option>
-                    @foreach($category as $key => $row)
-                        <option @if(old('category') == $row['id']) selected="selected" @endif value="{{$row['id']}}">{{$row['name']}}</option>
-                    @endforeach
-                </select>
+                    <select name="city" class="ico-02">
+                        <option disabled selected>Kota atau Provinsi</option>
+                        @foreach ($province as $rowProvince)
+                            <option @if(old('city') == $rowProvince['id']) selected="selected" @endif value="{{$rowProvince['id']}}">{{$rowProvince['name']}}</option>
+                        @endforeach
+                    </select>
 
-                <select name="city" class="ico-02">
-                    <option disabled selected>Kota atau Provinsi</option>
-                    @foreach ($province as $rowProvince)
-                        <option @if(old('city') == $rowProvince['id']) selected="selected" @endif value="{{$rowProvince['id']}}">{{$rowProvince['name']}}</option>
-                    @endforeach
-                </select>
+                    <button>Cari</button>
+                </div>
 
-            <button>Cari</button>
             </form>
 
             <div class="clearfix"></div>
@@ -48,14 +50,6 @@
                 <a href="{{route('worker-list-category', ['url' => 'ob-og'])}}"> Office Boy / Girl</a>
                 <a href="{{route('worker-list-category', ['url' => 'tukang-kayu'])}}"> Tukang Kayu</a>
                 <a href="{{route('worker-list-category', ['url' => 'penjahit'])}}"> Penjahit</a>
-            </div>
-
-
-            <!-- Announce -->
-            <div class="announce">
-
-                CARIPEKERJA adalah Mitra Pencari Pekerja untuk Usaha Anda
-
             </div>
 
         </div>

@@ -12,9 +12,18 @@
     <div class="title-page list-worker"></div>
     <div class="clearfix"></div>
 
+
+    <div class="job-title">
+        <div class="container">
+            <h1>TEMUKAN PEKERJAAN YANG SESUAI DENGAN MINATMU DISINI!</h1>
+            <p>Tidak seperti mencari lowongan di portal kerja lainnya, <span style="color: #558ec1">CARIPEKERJA</span> mebantu kamu mendapatkan peluang kerja yang layak dan membantu profil kamu dilihat oleh banyak Pemilik Usaha</p>
+        </div>
+    </div>
+
     <div class="container job-filter margin-bottom-20">
         <div class="four columns">
             <h2>FILTER LOWONGAN</h2>
+            <div class="kategoribox"></div>
         </div>
 
         <div class="twelve columns">

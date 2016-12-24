@@ -1,9 +1,143 @@
+.job-title{
+	background-color: #F3F3F3;
+	padding: 30px 20px;
+	margin-bottom: 50px;
+}
+.job-title h1{
+	color: #252525;
+	font-weight: 600;
+}
+.job-title p{
+	font-size: 16px;
+	color: #464646;
+	margin-bottom: 0;
+	letter-spacing: 1px;
+	width: 87%;
+}
+.package-worker{
+	border: 1px solid #BDBDBD;
+	border-radius: 4px;
+}
+.package-worker-wrapper h4{
+	color: #636363;
+	font-weight: 600;
+}
+.package-detail{
+	padding: 10px 10px 10px;
+}
+.package-contact{
+	float: left;
+	color: #464646;
+	font-size: 16px;
+}
+.popular-package{
+	background-color: #FF6E40;
+	padding: 2px 4px;
+	color: #fff;
+	float: left;
+	margin-top: -3px;
+}
+.package-contact strong{
+	color: #636363;
+	font-size: 26px;
+}
+.package-price-list{
+	color: #464646;
+	font-size: 18px;
+	float: right;
+	font-weight: 600;
+	margin-top: 8px;
+}
+.package-buy{
+	clear: both;
+	margin-top: 10px;
+	background-color: #F3F3F3;
+	padding: 10px 10px 25px;
+}
+.buy-kuota{
+	float: right;
+	color: #558ec1;
+	font-weight: 600;
+	font-size: 16px;
+}
+.buy-kuota:hover{
+	text-decoration: none;
+}
+.newsletter{
+	padding: 40px 0;
+	color: #fff;
+	margin-top: 15px;
+}
+.newsletter-title{
+	font-size: 16px;
+	font-weight: 600;
+	float: left;
+	margin-right: 20px;
+}
+.newsletter input{
+	background-color: #d0d3db;
+	color: #636363;
+	width: 50%;
+	margin-top: -17px;
+	float: left;
+	position: relative;
+}
+.newsletter-submit{
+	color: #636363;
+	margin-left: -20px;
+	margin-top: -10px;
+	font-size: 30px;
+	position: absolute;
+	cursor: pointer;
+}
+.footer-head{
+	background-color: #979fae;
+}
+.semi-footer{
+	padding: 40px 0;
+	color: #fff;
+	border-right: solid 1px #BDBDBD;
+}
+.semi-footer i{
+	font-size: 40px;
+	float: left;
+	margin-right: 25px;
+	margin-top: 3px;
+}
+.bold-footer{
+	font-weight: 600;
+	display: block;
+}
+.desc-home h1, .category-worker h1, .video-title h1{
+	font-size: 36px;
+	line-height: 40px;
+	color: #252525;
+	letter-spacing: 1px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+.desc-home p{
+	color: #464646;
+	line-height: 20px;
+	font-size: 15px;
+}
+.category-worker{
+	background-color: #F3F3F3;
+	padding: 30px 0 0;
+}
+.category-worker h1{
+	text-align: right;
+}
+.category-worker .kategoribox{
+	float: right;
+}
 .content-grey {
 	background-color: #f5f5f5;
 }
 .job-filter h2{
-	margin-top: 15px;
-	color: #655;
+	margin-top: 0px;
+	font-weight: 600;
+	color: #252525;
 	font-size: 28px
 }
 .footer-desc{
@@ -15,7 +149,7 @@
 .widget-sort-select.worker-list{
 	width: 17%;
 	font-size: 12px;
-	padding: 15px 0px;
+	padding: 16px 0px;
 }
 .job-list-img img {
 	margin-bottom: 15px;
@@ -136,10 +270,12 @@
 
 .title-page h1, .title-page h3 {
 	text-align: center;
+	font-size: 30px;
+	color: #252525;
 }
 
 .title-page {
-	margin: 30px 0;
+	margin: 0 0 20px;
 }
 
 .call-worker {
@@ -170,9 +306,11 @@
 .float-left {
 	float: left;
 }
-
+.video-title{
+	margin-top: 60px;
+}
 .video-wrapper {
-	padding: 40px 0;
+	float: right;
 	text-align: center;
 	width: 80%;
 	max-width: 640px;
@@ -185,17 +323,18 @@
 }
 
 .category-worker{
-	box-shadow: 0 1px 5px rgba(0,0,0,.08), 0 1px 1px rgba(0,0,0,0.004);
-	border-bottom: 1px solid #dfdfdf;
+	/*box-shadow: 0 1px 5px rgba(0,0,0,.08), 0 1px 1px rgba(0,0,0,0.004);*/
+	/*border-bottom: 1px solid #dfdfdf;*/
 }
 
 .video {
 	box-shadow: 0 1px 5px rgba(0,0,0,.08), 0 1px 1px rgba(0,0,0,0.004);
 	border-bottom: 1px solid #dfdfdf;
 	/*border-top: 1px solid #dfdfdf;*/
-	background-color: #4fa0ee;
+	background: linear-gradient(180deg, transparent 41%, #eef1f3 0%);
 	color: #fff;
-	margin-top: -8px;
+	margin-top: 20px;
+
 }
 
 .video-container {
@@ -204,7 +343,7 @@
 	padding-top:30px;
 	height:0;
 	overflow:hidden;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
 
 .video-container iframe, .video-container object, .video-container embed {
@@ -258,8 +397,93 @@ height:100%;
 
 /* All Mobile Sizes (devices and browser)  POTRAIT */
 @media only screen and (max-width: 767px) {
+	.job-title h1{
+		font-size: 18px;
+	}
+	.job-title p{
+		font-size: 12px;
+		letter-spacing: 0;
+	}
+	.newsletter{
+		padding: 20px 0;
+		margin-bottom: 10px;
+	}
+	.newsletter-title{
+		font-size: 12px;
+		margin-top: -10px;
+	}
+	.newsletter input{
+		width: 30%;
+		font-size: 10px;
+		padding: 5px 10px;
+	}
+	.newsletter-submit{
+		font-size: 20px;
+		margin-top: -17px;
+		margin-left: -10px
+	}
+	.semi-footer{
+		padding: 20px 0;
+		border-right: none;
+		border-bottom: solid 1px #BDBDBD;
+	}
+
+	.video-wrapper{
+		float: none;
+	}
+	.video-title{
+		margin-left: 15%;
+		margin-top: 10px;
+	}
+	.buy-kuota{
+		font-size: 12px;
+	}
+	.kategoribox.center{
+		margin-right: 0;
+	}
+	.topup-title h3{
+		font-size: 26px;
+	}
+	.popular-package{
+		font-size: 10px;
+		margin-top: -1px;
+	}
+	.package-detail{
+		padding: 5px 10px 5px;
+	}
+	.package-contact{
+		float: left;
+		color: #464646;
+		font-size: 14px;
+	}
+	.package-contact strong{
+		font-size: 18px;
+	}
+	.package-price-list{
+		font-size: 14px;
+		margin-top: 4px;
+	}
+	.package-buy{
+		padding: 5px 10px 20px;
+	}
+	.buy-kuota{
+		font-size: 14px;
+	}
+	.category-worker h1{
+		text-align: left;
+	}
+	.category-worker{
+		float: none;
+	}
 	.company-profile-detail li:first-child{
 		margin-top: 10px;
+	}
+	.desc-home h1, .category-worker h1, .video-title h1{
+		font-size: 26px;
+	}
+	.category-worker h1{
+		float: none;
+		text-align: center;
 	}
 	.job-profil-heading{
 		margin-left: 0px;
@@ -288,7 +512,7 @@ height:100%;
 	}
 
 	.slider-container {
-		margin-top: 50px;
+		margin-top: -60px;
 	}
 
 	.call-worker {

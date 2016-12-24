@@ -1,10 +1,10 @@
-<header style="@if($view_name != 'home.index') border-bottom: 1px solid #dfdfdf;border-top: 4px solid #4fa0ee;  @endif" class="@if($view_name == 'home.index') transparent @endif sticky-header full-width">
+<header style="border-top: 4px solid #78a2cb;border-bottom: 1px solid #efefef" class="sticky-header full-width">
 <div class="container">
     <div class="sixteen columns">
 
         <!-- Logo -->
         <div id="logo">
-            <h1><a href="{{route('home')}}"><img src="{{asset("images")}}/{{($view_name == 'home.index') ? 'logocp.png' : 'logo-not-homepage.png'}}" alt="CariPekerja.com" /></a></h1>
+            <h1><a href="{{route('home')}}"><img src="{{asset("images")}}/{{'logo-not-homepage.png'}}" alt="CariPekerja.com" /></a></h1>
         </div>
 
         <!-- Menu -->
@@ -32,7 +32,7 @@
                     @else
                         <li><a href="{{route('login')}}">Masuk</a></li>
                     @endif
-                    <li><a href="{{route('topup-create')}}" style="background-color: #4fa0ee;color: #fff;border-radius: 4px;padding: 10px 15px" class="topup">Top Up</a></li>
+                    <li><a href="{{route('topup-create')}}" style="background-color: #78a2cb;color: #fff;border-radius: 4px;padding: 10px 15px" class="topup">Top Up</a></li>
                 </ul>
         </nav>
 
