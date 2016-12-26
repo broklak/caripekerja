@@ -1,3 +1,75 @@
+.testimonial{
+	background-color: #F3F3F3;
+	padding: 30px 0 0;
+}
+.testi-desc{
+	font-size: 16px;
+	color: #464646;
+}
+.testi-user{
+	margin-top: 20px;
+	margin-left: 20%;
+}
+.testi-user i{
+	font-size: 50px;
+	color: #252525;
+	margin-left: 50px;
+}
+.testi-left{
+	margin-bottom: 70px;
+	width: 50%;
+	float: left;
+	border-right: 1px solid #E0E0E0;
+}
+.testi-right{
+	width: 50%;
+	float: right;
+}
+.testi-content{
+	padding: 30px;
+}
+.testi-content p{
+	color: #464646;
+	font-style: italic;
+	line-height: 20px;
+	margin-top: -30px;
+}
+.testi-maker{
+	color: #636363;
+	font-size: 22px;
+}
+.quot{
+	color: #464646;
+	font-size: 100px;
+}
+.testi-user img{;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	float: left;
+	margin-right: 10px;
+}
+.testi-image{margin-top: -30px;
+}
+.testi-semi-head{
+	font-size: 30px;
+	color: #252525;
+	font-weight: 600;
+}
+.testimonial h1{
+	color: #252525;
+	font-weight: 600;
+	font-size: 36px;
+	letter-spacing: 2px;
+	margin-top: -12px;
+}
+.testi-head-left{
+	border-bottom: 1px solid #E0E0E0;
+	padding-bottom: 30px;
+}
+.testi-head-left .eight{
+	margin-left: 20%;
+}
 .job-title{
 	background-color: #F3F3F3;
 	padding: 30px 20px;
@@ -357,6 +429,24 @@ height:100%;
 
 /*IPAD LANDSCAPE*/
 @media (min-width: 992px) and (max-width: 1199px) {
+	.newsletter input{
+		width: 35%;
+	}
+	.semi-footer i{
+		font-size: 30px;
+		margin-right: 10px;
+	}
+	.semi-footer{
+		padding: 30px 0;
+		font-size: 12px;
+	}
+	.bold-footer{
+		font-size: 13px;
+	}
+	.newsletter-title{
+		font-size: 14px;
+		margin-right: 15px
+	}
 	.verify-worker{
 		margin-top: -20px;
 	}
@@ -374,6 +464,24 @@ height:100%;
 }
 /*IPAD PORTRAIT*/
 @media (min-width: 768px) and (max-width: 991px) {
+	.semi-footer i{
+		font-size: 30px;
+		margin-right: 10px;
+	}
+	.semi-footer{
+		padding: 30px 0;
+		font-size: 12px;
+	}
+	.bold-footer{
+		font-size: 13px;
+	}
+	.newsletter-title{
+		font-size: 14px;
+		margin-right: 15px
+	}
+	.newsletter input{
+		width: 35%;
+	}
 	.verify-worker li {
 		font-size: 14px;
 	}
@@ -397,6 +505,25 @@ height:100%;
 
 /* All Mobile Sizes (devices and browser)  POTRAIT */
 @media only screen and (max-width: 767px) {
+	.testi-semi-head{
+		font-size: 14px;
+	}
+	.testimonial h1{
+		font-size: 16px;
+	}
+	.testi-content p{
+		font-size: 14px;
+	}
+	.testi-maker{
+		font-size: 18px;
+	}
+	.testi-user i{
+		margin-left: 30px;
+		margin-top: 10px;
+	}
+	.testi-user img{
+		margin-bottom: 20px;
+	}
 	.job-title h1{
 		font-size: 18px;
 	}
@@ -564,6 +691,9 @@ height:100%;
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+	.testi-user i{
+		margin-left: 40px;
+	}
 	.verify-worker {
 		margin-left: 35%;
 	}

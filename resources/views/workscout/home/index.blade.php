@@ -192,8 +192,43 @@
     <!-- Infobox -->
     <div class="infobox">
         <div class="container">
-            <div class="sixteen columns">Dapatkan Pekerja Untuk Usaha Anda Segera <a href="#">Daftar</a></div>
+            <div class="sixteen columns">Dapatkan Pekerja Untuk Usaha Anda Segera <a href="{{route('register')}}">Daftar</a></div>
         </div>
     </div>
+
+    <div class="testimonial">
+        <div class="container">
+            <div class="testi-image">
+                <img src="{{asset('images')}}/testimonial.png">
+            </div>
+        </div>
+        <div class="testi-left">
+            <div class="testi-head-left">
+                <div class="eight">
+                    <span class="testi-semi-head">APA</span>
+                    <h1>KATA MEREKA</h1>
+                    <div class="kategoribox margin-bottom-10"></div>
+                    <span class="testi-desc">TESTIMONIAL DARI KLIEN KAMI</span>
+                </div>
+            </div>
+            <div class="testi-user">
+                <img src="{{asset('images')}}/testi/testi4.png" />
+                <img src="{{asset('images')}}/testi/testi1.jpg" />
+                <img src="{{asset('images')}}/testi/testi2.jpg" />
+                <img src="{{asset('images')}}/testi/testi3.jpg" />
+                <i class="fa fa-angle-left"></i>
+                <i class="fa fa-angle-right"></i>
+            </div>
+        </div>
+        <div class="testi-right">
+            <div class="testi-content">
+                <span class="quot">&rdquo;</span>
+                <p>Mencari satpam untuk tempat futsal  biasanya sulit dan harus melalui penyedia layanan keamanan yang mahal. CARIPEKERJA memudahkan saya mendapatkan satpam dengan usaha dan biaya yang ringan.</p>
+                <span class="testi-maker">JAMES WAHAB, PEMILIK AYO FUTSAL</span>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
 
 @endsection
