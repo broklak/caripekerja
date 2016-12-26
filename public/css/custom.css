@@ -1,3 +1,53 @@
+.step-left{
+	background-color: #749fbc;
+	padding: 0 20px;
+	border-right: solid 1px #4DD0E1;
+	width: 60%;
+	float: left;
+}
+.need-help{
+	width: 40%;
+	float: right;
+	background-color: #6e94af;
+	padding: 4px 15px;;
+}
+.need-help label{
+	color: #fff;
+	font-weight: 600;
+	font-size: 16px;
+	float: left;
+	margin: 23px 10px 0 8%;
+}
+.worker-step{
+	margin-bottom: 30px;
+}
+.arrow-step{
+	float: left;
+	height: 80px;
+}
+.steps{
+	width: 25%;
+	color: #fff;
+	float: left;
+}
+.steps label{
+	font-weight: 600;
+	font-size: 18px;
+	margin-top: 10px;
+}
+.topup-step{
+	padding-top: 15px;
+	float: left;
+}
+.kontak-step{
+	margin-top: 10px;
+}
+.other-step{
+	padding-top: 5px;
+}
+.steps img{
+	float: left;
+}
 .testimonial{
 	background-color: #F3F3F3;
 	padding: 30px 0 0;
@@ -429,6 +479,31 @@ height:100%;
 
 /*IPAD LANDSCAPE*/
 @media (min-width: 992px) and (max-width: 1199px) {
+	.widget-sort-select.worker-list{
+		width: 16%;
+	}
+	.steps img{
+		height: 40px;
+	}
+	.steps label{
+		font-size: 14px;
+		margin-top: 0;
+	}
+	.steps{
+		width: 15%;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.need-help label{
+		font-size: 14px;
+		margin: 5px 10px 0 5%;
+	}
+	.need-help{
+		padding: 35px 0;
+	}
+	.need-help img{
+		height: 30px;
+	}
 	.newsletter input{
 		width: 35%;
 	}
@@ -464,6 +539,38 @@ height:100%;
 }
 /*IPAD PORTRAIT*/
 @media (min-width: 768px) and (max-width: 991px) {
+	.widget-sort-select.worker-list, .widget-sort-select.job-list{
+		height: 44px;
+	}
+	.steps img{
+		height: 40px;
+	}
+	.steps label{
+		font-size: 14px;
+		margin-top: 0;
+	}
+	.steps{
+		width: 15%;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.need-help label{
+		font-size: 12px;
+		margin: 5px 10px 0 5%;
+	}
+	.need-help{
+		padding: 35px 0;
+	}
+	.need-help img{
+		height: 30px;
+	}
+	.list-worker {
+		margin-top: 135px;
+	}
+	.worker-step{
+		clear: both;
+		margin-top: 100px;
+	}
 	.semi-footer i{
 		font-size: 30px;
 		margin-right: 10px;
@@ -505,6 +612,37 @@ height:100%;
 
 /* All Mobile Sizes (devices and browser)  POTRAIT */
 @media only screen and (max-width: 767px) {
+	.step-left{
+		width: 100%;
+		padding: 0 10px;
+	}
+	.need-help{
+		float: none;
+		width: 100%;
+	}
+	.need-help label{
+		font-size: 12px;
+		margin: 5px 10px 0 7%;
+	}
+	.need-help img{
+		height: 20px;
+	}
+	.steps img{
+		height: 30px;
+		margin-top: 10px;
+	}
+	.steps label{
+		font-size: 12px;
+		margin-top: 0;
+	}
+	.topup-step{
+		padding-top: 5px;
+	}
+	.steps{
+		width: 10%;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
 	.testi-semi-head{
 		font-size: 14px;
 	}

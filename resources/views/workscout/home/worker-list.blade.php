@@ -10,6 +10,30 @@
     <div class="title-page list-worker"></div>
     <div class="clearfix"></div>
 
+    <div class="container worker-step">
+        <div class="step-left">
+            <div class="steps">
+                <img src="{{asset('images')}}/top-up-pic.png" />
+                <label class="topup-step">TOP UP</label>
+            </div>
+            <img class="arrow-step" src="{{asset('images')}}/arrow-pic.png">
+            <div class="steps">
+                <img src="{{asset('images')}}/pilih-pekerja-pic.png" />
+                <label class="other-step">PILIH <br/> pekerja</label>
+            </div>
+            <img class="arrow-step" src="{{asset('images')}}/arrow-pic.png">
+            <div class="steps">
+                <img class="kontak-step" src="{{asset('images')}}/kontak-pic.png" />
+                <label class="other-step">HUBUNGI <br /> pekerja</label>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="need-help">
+            <label>Anda butuh bantuan? &nbsp; 0877 8023 3123</label>
+            <img src="{{asset('images')}}/whatsapp-pic.png">
+        </div>
+        <div style="clear: both"></div>
+    </div>
     <div class="container package-worker-wrapper margin-bottom-30">
         <div class="four columns">
             <h4>BASIC</h4>

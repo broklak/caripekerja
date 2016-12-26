@@ -8,7 +8,7 @@
 /* Import Section
 ---------------------------------------------------------------------- */
 @import url("base.css?version2.4");				/* Default Reset, Typography, Forms, etc. */
-@import url("custom.css?version4.5");				/*  */
+@import url("custom.css?version4.6");				/*  */
 @import url("responsive.css?version2.0");			/* Responsive Grid */
 @import url("font-awesome.css?version2.0");		/* Font Awesome Icons */
 @import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
@@ -264,7 +264,6 @@ header.transparent #logo { border-bottom: none; }
 
 /* Tablets */
 @media only screen and (max-width: 990px) {
-
 	header.transparent.alternative #navigation ul.float-right a {
 		color: #fff;
 		background: transparent;
@@ -6375,7 +6374,7 @@ label.upload-btn input[type="file"] { display: none; }
 		width: 35%;
 	}
 	.widget-sort-select.worker-list{
-		width: 15%;
+		width: 16%;
 		font-size: 10px;
 	}
 	.widget-sort-title{
