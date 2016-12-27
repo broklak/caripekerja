@@ -434,6 +434,7 @@
             e.preventDefault();
             var newElem = $(this).parent().find('.box-to-clone:first').clone();
             newElem.find('input').val('');
+            newElem.find('select').val('0');
             newElem.appendTo($('#form-skill')).show();
             var height = $(this).next('.box-to-clone').outerHeight(true) + 600;
             
@@ -444,6 +445,7 @@
             e.preventDefault();
             var newElem = $(this).parent().find('.box-to-clone:first').clone();
             newElem.find('input').val('');
+            newElem.find('textarea').val('');
             newElem.appendTo($('#form-exp')).show();
             var height = $(this).next('.box-to-clone').outerHeight(true) + 600;
             $("html, body").stop().animate({ scrollTop: $(this).offset().top-height}, 600);
@@ -453,6 +455,8 @@
             e.preventDefault();
             var newElem = $(this).parent().find('.box-to-clone:first').clone();
             newElem.find('input').val('');
+            newElem.find('textarea').val('');
+            newElem.find('select').val('0');
             newElem.appendTo($('#form-edu')).show();
             var height = $(this).next('.box-to-clone').outerHeight(true) + 600;
 
