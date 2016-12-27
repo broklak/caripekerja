@@ -81,8 +81,9 @@
         <div class="form">
             <h5>Profesi Pekerja</h5>
             <select name="category[]" data-placeholder="Pilih Profesi (Bisa Lebih Dari Satu)" class="chosen-select-no-single" multiple>
+                @php $myCategory = explode(',',$authData['category']) @endphp
                 @foreach($category as $key => $row)
-                    <option @if($authData['category'] == $row['id']) selected="selected" @endif value="{{$row['id']}}">{{$row['name']}}</option>
+                    <option @if(in_array($row['id'], $myCategory)) selected="selected" @endif value="{{$row['id']}}">{{$row['name']}}</option>
                 @endforeach
             </select>
         </div>
@@ -105,44 +106,70 @@
         <!-- Education -->
         <div class="form with-line">
             <h5>Riwayat Pendidikan</h5>
-            <div class="form-inside">
-
+            <div class="form-inside" id="form-edu">
+                @php $edu = json_decode($authData['education'], true); @endphp
                 <!-- Add Education -->
-                <div class="form boxed box-to-clone education-box">
+                @foreach($edu as $key => $val)
+                    <div class="form boxed box-to-clone educations-box">
                         <a href="#" class="close-form remove-box button"><i class="fa fa-close"></i></a>
-                        <input class="search-field" type="text" name="edu_name[]" placeholder="Nama Sekolah / Universitas"/>
+                        <input class="search-field" value="{{$val['name']}}" type="text" name="edu_name[]" placeholder="Nama Sekolah / Universitas"/>
                         <select name="edu_level[]" class="margin-bottom-15" style="height: 45px">
                             <option selected disabled>&nbsp;&nbsp;Tingkat Pendidikan</option>
                             @foreach ($degree as $key => $row)
-                                <option>&nbsp;&nbsp;{{$row}}</option>
+                                <option @if($val['level'] == $row) selected @endif value="{{$row}}" >&nbsp;&nbsp;{{$row}}</option>
                             @endforeach
                         </select>
-                        <input class="search-field" type="number" name="edu_start_year[]" placeholder="Tahun Masuk"/>
-                        <input class="search-field" type="number" name="edu_end_year[]" placeholder="Tahun Keluar" />
-                        <textarea name="edu_desc[]" id="desc" cols="30" rows="10" placeholder="Keterangan (Bila ada)"></textarea>
-                </div>
-
-                <a href="#" class="button gray add-education add-box"><i class="fa fa-plus-circle"></i> Tambah Pendidikan</a>
+                        <input class="search-field" value="{{$val['start']}}" type="number" name="edu_start_year[]" placeholder="Tahun Masuk"/>
+                        <input class="search-field" value="{{$val['end']}}" type="number" name="edu_end_year[]" placeholder="Tahun Keluar" />
+                        <textarea name="edu_desc[]" id="desc" cols="30" rows="10" placeholder="Keterangan (Bila ada)">{{$val['desc']}}</textarea>
+                    </div>
+                @endforeach
             </div>
+            <a href="#" id="add-edu" class="button gray add-educations add-box"><i class="fa fa-plus-circle"></i> Tambah Pendidikan</a>
         </div>
 
         <!-- Experience  -->
         <div class="form with-line">
             <h5>Pengalaman Kerja</h5>
-            <div class="form-inside">
-
+            <div class="form-inside" id="form-exp">
+                @php $exp = json_decode($authData['experiences'], true); @endphp
                 <!-- Add Experience -->
-                <div class="form boxed box-to-clone experience-box">
-                    <a href="#" class="close-form remove-box button"><i class="fa fa-close"></i></a>
-                    <input class="search-field" type="text" name="exp_place[]" placeholder="Nama Perusahaan" value=""/>
-                    <input class="search-field" type="text" name="exp_role[]" placeholder="Kerja Sebagai" value=""/>
-                    <input class="search-field" type="number" name="exp_start_year[]" placeholder="Tahun Masuk"/>
-                    <input class="search-field" type="number" name="exp_end_year[]" placeholder="Tahun Keluar" />
-                    <textarea name="exp_desc[]" id="desc1" cols="30" rows="10" placeholder="Deskripsi Pekerjaan"></textarea>
-                </div>
-
-                <a href="#" class="button gray add-experience add-box"><i class="fa fa-plus-circle"></i> Tambah Pengalaman</a>
+                @foreach($exp as $key => $val)
+                    <div class="form boxed box-to-clone experience-box">
+                        <a href="#" class="close-form remove-box button"><i class="fa fa-close"></i></a>
+                        <input class="search-field" type="text" value="{{$val['place']}}" name="exp_place[]" placeholder="Nama Perusahaan" value=""/>
+                        <input class="search-field" type="text" name="exp_role[]" value="{{$val['role']}}" placeholder="Kerja Sebagai" value=""/>
+                        <input class="search-field" type="number" name="exp_start_year[]" value="{{$val['start']}}" placeholder="Tahun Masuk"/>
+                        <input class="search-field" type="number" name="exp_end_year[]" value="{{$val['end']}}" placeholder="Tahun Keluar" />
+                        <textarea name="exp_desc[]" id="desc1" cols="30" rows="10" placeholder="Deskripsi Pekerjaan">{{$val['desc']}}</textarea>
+                    </div>
+                @endforeach
             </div>
+            <a href="#" id="add-exp" class="button gray add-experience add-box"><i class="fa fa-plus-circle"></i> Tambah Pengalaman</a>
+        </div>
+
+        <!-- Skills -->
+        <div class="form with-line">
+            <h5>Keahlian</h5>
+            <div class="form-inside" id="form-skill">
+                @php $skill = json_decode($authData['skills'], true); @endphp
+
+                @foreach($skill as $key => $val)
+                <!-- Add Skill -->
+                <div class="form boxed box-to-clone education-box">
+                    <a href="#" class="close-form remove-box button"><i class="fa fa-close"></i></a>
+                    <input class="search-field" type="text" name="skill_name[]" value="{{$val['name']}}" placeholder="Nama Keahlian (Contoh : Memasak, Menyetir, Menjahit)"/>
+                    <select name="skill_level[]" class="margin-bottom-15" style="height: 45px">
+                        <option selected disabled>&nbsp;&nbsp;Tingkat Keahlian</option>
+                        <option @if($val['level'] == '25') selected @endif value="25">Pemula</option>
+                        <option @if($val['level'] == '50') selected @endif value="50">Terbiasa</option>
+                        <option @if($val['level'] == '75') selected @endif value="75">Mahir</option>
+                        <option @if($val['level'] == '100') selected @endif value="100">Ahli</option>
+                    </select>
+                </div>
+                @endforeach
+            </div>
+            <a href="#" id="add-skills" class="button gray add-education add-box"><i class="fa fa-plus-circle"></i> Tambah Keahlian</a>
         </div>
 
         <input type="hidden" name="role" value="worker">

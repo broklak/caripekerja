@@ -4368,7 +4368,7 @@ a.mj_removefile {
 .mj_social_media_section {
     float: left;
     width: 100%;
-    margin-left: 218px;
+    text-align: center;
     margin-top: -18px;
 }
 .mj_social_media_section ul {

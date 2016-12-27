@@ -188,6 +188,7 @@ class UserController extends Controller
 
             $edu = array_filter($request->input('edu_name'));
             $exp = array_filter($request->input('exp_place'));
+            $skill = array_filter($request->input('skill_name'));
 
             if(!empty($exp)) {
                 $exp_role = $request->input('exp_role');
@@ -195,7 +196,7 @@ class UserController extends Controller
                 $exp_end = $request->input('exp_end_year');
                 $exp_notes = $request->input('exp_desc');
 
-                $experience = json_decode($worker['experiences'], true);
+                $experience = array();
 
                 foreach($exp as $key => $expData){
                     $newExp = array(
@@ -216,7 +217,7 @@ class UserController extends Controller
                 $edu_end = $request->input('edu_end_year');
                 $edu_notes = $request->input('edu_desc');
 
-                $eduExist = json_decode($worker['education'], true);
+                $eduExist = array();
                 foreach($edu as $key => $eduData){
                     $new = array(
                         'name'     => $eduData,
@@ -227,9 +228,21 @@ class UserController extends Controller
                     );
                     $eduExist[] = $new;
                 }
-
                 $worker->education = json_encode($eduExist);
+            }
 
+            if(!empty($skill)) {
+                $skill_level = $request->input('skill_level');
+
+                $skillExist = array();
+                foreach($skill as $key => $skillData){
+                    $newSkill = array(
+                        'name'     => $skillData,
+                        'level'     => $skill_level[$key],
+                    );
+                    $skillExist[] = $newSkill;
+                }
+                $worker->skills = json_encode($skillExist);
             }
 
             if($request->photo) {

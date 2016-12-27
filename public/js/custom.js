@@ -429,14 +429,33 @@
     /*----------------------------------------------------*/
     /*  Add Resume 
     /*----------------------------------------------------*/   
-        $('.box-to-clone').hide();
-        $('.add-box').on('click', function(e) {
+        //$('.box-to-clone').hide();
+        $('#add-skills').on('click', function(e) {
             e.preventDefault();
             var newElem = $(this).parent().find('.box-to-clone:first').clone();
             newElem.find('input').val('');
-            newElem.prependTo($(this).parent()).show();
-            var height = $(this).prev('.box-to-clone').outerHeight(true);
+            newElem.appendTo($('#form-skill')).show();
+            var height = $(this).next('.box-to-clone').outerHeight(true) + 600;
             
+            $("html, body").stop().animate({ scrollTop: $(this).offset().top-height}, 600);
+        });
+
+        $('#add-exp').on('click', function(e) {
+            e.preventDefault();
+            var newElem = $(this).parent().find('.box-to-clone:first').clone();
+            newElem.find('input').val('');
+            newElem.appendTo($('#form-exp')).show();
+            var height = $(this).next('.box-to-clone').outerHeight(true) + 600;
+            $("html, body").stop().animate({ scrollTop: $(this).offset().top-height}, 600);
+        });
+
+        $('#add-edu').on('click', function(e) {
+            e.preventDefault();
+            var newElem = $(this).parent().find('.box-to-clone:first').clone();
+            newElem.find('input').val('');
+            newElem.appendTo($('#form-edu')).show();
+            var height = $(this).next('.box-to-clone').outerHeight(true) + 600;
+
             $("html, body").stop().animate({ scrollTop: $(this).offset().top-height}, 600);
         });
 
