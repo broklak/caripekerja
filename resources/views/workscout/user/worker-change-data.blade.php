@@ -152,7 +152,7 @@
         <div class="form with-line">
             <h5>Keahlian</h5>
             <div class="form-inside" id="form-skill">
-                @php $skill = = (empty($authData['skills'])) ? array() : json_decode($authData['skills'], true); @endphp
+                @php $skill = (empty($authData['skills'])) ? array() : json_decode($authData['skills'], true); @endphp
 
                 @foreach($skill as $key => $val)
                 <!-- Add Skill -->
