@@ -107,7 +107,7 @@
         <div class="form with-line">
             <h5>Riwayat Pendidikan</h5>
             <div class="form-inside" id="form-edu">
-                @php $edu = json_decode($authData['education'], true); @endphp
+                @php $edu = (empty($authData['education'])) ? array() : json_decode($authData['education'], true); @endphp
                 <!-- Add Education -->
                 @foreach($edu as $key => $val)
                     <div class="form boxed box-to-clone educations-box">
@@ -132,7 +132,7 @@
         <div class="form with-line">
             <h5>Pengalaman Kerja</h5>
             <div class="form-inside" id="form-exp">
-                @php $exp = json_decode($authData['experiences'], true); @endphp
+                @php $exp = (empty($authData['experiences'])) ? array() : json_decode($authData['experiences'], true); @endphp
                 <!-- Add Experience -->
                 @foreach($exp as $key => $val)
                     <div class="form boxed box-to-clone experience-box">
@@ -152,7 +152,7 @@
         <div class="form with-line">
             <h5>Keahlian</h5>
             <div class="form-inside" id="form-skill">
-                @php $skill = json_decode($authData['skills'], true); @endphp
+                @php $skill = = (empty($authData['skills'])) ? array() : json_decode($authData['skills'], true); @endphp
 
                 @foreach($skill as $key => $val)
                 <!-- Add Skill -->
