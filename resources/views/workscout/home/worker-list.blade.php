@@ -220,32 +220,32 @@
                         @foreach ($list as $row)
 
                         <div class=" col-md-3 text-center">
-                        <div class="candidate candidate-list-img">
-                            <a href="{{route('worker-detail', ['workerId' => $row['id']])}}">
-                            <h4 class="text-uppercase">{{\App\Helpers\GlobalHelper::simplifyName($row['name'])}}</h4>
-                            <img src="{{\App\Helpers\GlobalHelper::setUserImage($row['photo_profile'])}}" alt="{{$row['name']}}"  class="img-responsive">
-                            <span style="text-transform: uppercase" class="resume-meta-info">
-                                {{\App\Helpers\GlobalHelper::getAgeByBirthdate($row['birthdate'])}}
-                            </span>
-                            <ul class="list-unstyled text-center about-candidate">
-                                @php
-                                $category = explode(',',\App\Helpers\GlobalHelper::getWorkerCategory($row['category']));
-                                @endphp
-                                <li><span style="text-transform: uppercase;font-weight: 600">{{(!empty($category[0])) ? $category[0] : 'Admin'}}</span></li>
-                                <li class="text-uppercase"><span>
-                                        <div class="rating no-stars">
-                                            <div class="star-rating"></div>
-                                            <div class="star-bg"></div>
-                                        </div>
-                                    </span></li>
-                                <li><i>{{\App\Helpers\GlobalHelper::getCityName($row['city'])}}</i></li>
-                            </ul>
-                            </a>
-                            <div class="hidden text-uppercase view-resume">
-                                <a href="{{route('worker-detail', ['workerId' => $row['id']])}}" class="btn"><span class="btn animated slideInUp align-center">Lihat Profil</span></a>
+                            <div class="candidate candidate-list-img">
+                                <a href="{{route('worker-detail', ['workerId' => $row['id']])}}">
+                                <h4 class="text-uppercase">{{\App\Helpers\GlobalHelper::simplifyName($row['name'])}}</h4>
+                                <img src="{{\App\Helpers\GlobalHelper::setUserImage($row['photo_profile'])}}" alt="{{$row['name']}}"  class="img-responsive">
+                                <span style="text-transform: uppercase" class="resume-meta-info">
+                                    {{\App\Helpers\GlobalHelper::getAgeByBirthdate($row['birthdate'])}}
+                                </span>
+                                <ul class="list-unstyled text-center about-candidate">
+                                    @php
+                                    $category = explode(',',\App\Helpers\GlobalHelper::getWorkerCategory($row['category']));
+                                    @endphp
+                                    <li><span style="text-transform: uppercase;font-weight: 600">{{(!empty($category[0])) ? $category[0] : 'Admin'}}</span></li>
+                                    <li class="text-uppercase"><span>
+                                            <div class="rating no-stars">
+                                                <div class="star-rating"></div>
+                                                <div class="star-bg"></div>
+                                            </div>
+                                        </span></li>
+                                    <li><i>{{\App\Helpers\GlobalHelper::getCityName($row['city'])}}</i></li>
+                                </ul>
+                                </a>
+                                <div class="hidden text-uppercase view-resume">
+                                    <a href="{{route('worker-detail', ['workerId' => $row['id']])}}" class="btn"><span class="btn animated slideInUp align-center">Lihat Profil</span></a>
+                                </div>
                             </div>
                         </div>
-            </div>
 
                         @endforeach
                     @else

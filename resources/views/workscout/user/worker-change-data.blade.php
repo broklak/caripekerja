@@ -201,7 +201,7 @@
                         <a href="#" class="close-form remove-box button"><i class="fa fa-close"></i></a>
                         <input class="search-field" type="text" name="skill_name[]" value="{{$val['name']}}" placeholder="Nama Keahlian (Contoh : Memasak, Menyetir, Menjahit)"/>
                         <select name="skill_level[]" class="margin-bottom-15" style="height: 45px">
-                            <option value="0" selected disabled>&nbsp;&nbsp;Tingkat Keahlian</option>
+                            <option value="0" selected disabled>&nbsp;&nbsp;Tingkat Keterampilan</option>
                             <option @if($val['level'] == '25') selected @endif value="25">&nbsp;&nbsp;Pemula</option>
                             <option @if($val['level'] == '50') selected @endif value="50">&nbsp;&nbsp;Terbiasa</option>
                             <option @if($val['level'] == '75') selected @endif value="75">&nbsp;&nbsp;Mahir</option>

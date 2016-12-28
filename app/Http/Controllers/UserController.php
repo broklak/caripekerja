@@ -186,64 +186,56 @@ class UserController extends Controller
             $worker->birthdate = date('Y-m-d H:i:s', strtotime($request->input('birthdate')));
             $worker->category = implode(',', $request->input('category'));
 
-            $edu = array_filter($request->input('edu_name'));
-            $exp = array_filter($request->input('exp_place'));
-            $skill = array_filter($request->input('skill_name'));
+            $edu = (is_array($request->input('edu_name'))) ? array_filter($request->input('edu_name')) : array();
+            $exp = (is_array($request->input('exp_place'))) ? array_filter($request->input('exp_place')) : array();
+            $skill = (is_array($request->input('skill_name'))) ? array_filter($request->input('skill_name')) : array();
 
-            if(!empty($exp)) {
-                $exp_role = $request->input('exp_role');
-                $exp_start = $request->input('exp_start_year');
-                $exp_end = $request->input('exp_end_year');
-                $exp_notes = $request->input('exp_desc');
+            $exp_role = $request->input('exp_role');
+            $exp_start = $request->input('exp_start_year');
+            $exp_end = $request->input('exp_end_year');
+            $exp_notes = $request->input('exp_desc');
 
-                $experience = array();
-
-                foreach($exp as $key => $expData){
-                    $newExp = array(
-                        'place'     => $expData,
-                        'role'     => $exp_role[$key],
-                        'start'     => $exp_start[$key],
-                        'end'     => $exp_end[$key],
-                        'desc'     => $exp_notes[$key]
-                    );
-                    $experience[] = $newExp;
-                }
-                $worker->experiences = json_encode($experience);
+            $experience = array();
+            foreach($exp as $key => $expData){
+                $newExp = array(
+                    'place'     => $expData,
+                    'role'     => $exp_role[$key],
+                    'start'     => $exp_start[$key],
+                    'end'     => $exp_end[$key],
+                    'desc'     => $exp_notes[$key]
+                );
+                $experience[] = $newExp;
             }
+            $worker->experiences = json_encode($experience);
 
-            if(!empty($edu)) {
-                $edu_level = $request->input('edu_level');
-                $edu_start = $request->input('edu_start_year');
-                $edu_end = $request->input('edu_end_year');
-                $edu_notes = $request->input('edu_desc');
+            $edu_level = $request->input('edu_level');
+            $edu_start = $request->input('edu_start_year');
+            $edu_end = $request->input('edu_end_year');
+            $edu_notes = $request->input('edu_desc');
 
-                $eduExist = array();
-                foreach($edu as $key => $eduData){
-                    $new = array(
-                        'name'     => $eduData,
-                        'level'     => $edu_level[$key],
-                        'start'     => $edu_start[$key],
-                        'end'     => $edu_end[$key],
-                        'desc'     => $edu_notes[$key],
-                    );
-                    $eduExist[] = $new;
-                }
-                $worker->education = json_encode($eduExist);
+            $eduExist = array();
+            foreach($edu as $key => $eduData){
+                $new = array(
+                    'name'     => $eduData,
+                    'level'     => $edu_level[$key],
+                    'start'     => $edu_start[$key],
+                    'end'     => $edu_end[$key],
+                    'desc'     => $edu_notes[$key],
+                );
+                $eduExist[] = $new;
             }
+            $worker->education = json_encode($eduExist);
 
-            if(!empty($skill)) {
-                $skill_level = $request->input('skill_level');
-
-                $skillExist = array();
-                foreach($skill as $key => $skillData){
-                    $newSkill = array(
-                        'name'     => $skillData,
-                        'level'     => $skill_level[$key],
-                    );
-                    $skillExist[] = $newSkill;
-                }
-                $worker->skills = json_encode($skillExist);
+            $skill_level = $request->input('skill_level');
+            $skillExist = array();
+            foreach($skill as $key => $skillData){
+                $newSkill = array(
+                    'name'     => $skillData,
+                    'level'     => $skill_level[$key],
+                );
+                $skillExist[] = $newSkill;
             }
+            $worker->skills = json_encode($skillExist);
 
             if($request->photo) {
                 $imageName = $this->_role . '-' . $this->_authData['id'] .'.'.strtolower($request->photo->getClientOriginalExtension());

@@ -1,3 +1,35 @@
+.other-worker{
+	background-color: #efefef;
+	padding-top: 45px;
+	clear: both;
+}
+.city-other{
+	margin-top: -10px;
+}
+.other-worker .title{
+	float: left;
+	margin-left: 5%;
+	margin-right: 15px;
+	width: 15%;
+}
+.other-worker .title h1{
+	font-size: 30px;
+	text-align: right;
+	font-weight: 600;
+	margin-top: 0;
+	color: #252525;
+}
+.skill-box{
+	margin-top: 40px;
+}
+.skill-box ul{
+	margin-left: 50px;
+	list-style-type: disc;
+	color: #707070;
+}
+.skill-box ul li{
+	padding: 5px 0;
+}
 .step-left{
 	background-color: #749fbc;
 	padding: 0 20px;
@@ -539,6 +571,20 @@ height:100%;
 }
 /*IPAD PORTRAIT*/
 @media (min-width: 768px) and (max-width: 991px) {
+	.other-worker{
+		padding-bottom: 20px;
+	}
+	.other-worker .title{
+		float: none;
+		margin: 0;
+		width: 100%;
+		text-align: center;
+	}
+	.other-worker .title h1{
+		float: none;
+		text-align: center;
+		font-size: 18px;
+	}
 	.widget-sort-select.worker-list, .widget-sort-select.job-list{
 		height: 44px;
 	}
@@ -612,6 +658,20 @@ height:100%;
 
 /* All Mobile Sizes (devices and browser)  POTRAIT */
 @media only screen and (max-width: 767px) {
+	.other-worker{
+		padding-bottom: 20px;
+	}
+	.other-worker .title{
+		float: none;
+		margin: 0;
+		width: 100%;
+		text-align: center;
+	}
+	.other-worker .title h1{
+		float: none;
+		text-align: center;
+		font-size: 18px;
+	}
 	.step-left{
 		width: 100%;
 		padding: 0 10px;
@@ -785,7 +845,7 @@ height:100%;
 	}
 
 	.list-worker {
-		margin-top: 135px;
+		/*margin-top: 135px;*/
 	}
 
 	.verify-worker {

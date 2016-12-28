@@ -96,7 +96,7 @@
                                                         <strong>{{(isset($rowExp['role'])) ? $rowExp['role'] : 'Pekerja'}} di {{(isset($rowExp['place'])) ? $rowExp['place'] : 'Usaha'}}</strong>
                                                     </dt>
                                                     <dd>
-                                                        <p>{{$rowExp['desc']}}</p>
+                                                        <p>{{(!empty($rowExp['desc'])) ? $rowExp['desc'] : 'Tidak ada deskripsi'}}</p>
                                                     </dd>
                                                 @endforeach
 
@@ -117,7 +117,7 @@
                                         <label class="header-about">PENDIDIKAN</label>
                                         <!-- Resume Table -->
                                         @if(empty($edu))
-                                            <p class="no-desc">Belum ada data pendidikan</span>
+                                            <p class="no-desc">Belum ada data pendidikan</p>
 
                                         @else
 
@@ -127,6 +127,9 @@
                                                         <small class="date">{{(isset($rowEdu['start'])) ? $rowEdu['start'] : 'Tahun '}} - {{(isset($rowEdu['end'])) ? $rowEdu['end'] : 'Tahun '}}</small>
                                                         <strong>{{(isset($rowEdu['name'])) ? $rowEdu['name'] : 'Sekolah / Universitas'}}</strong>
                                                     </dt>
+                                                    <dd>
+                                                       <p>{{(!empty($rowEdu['desc'])) ? $rowEdu['desc'] : 'Tidak ada deskripsi'}}</p>
+                                                    </dd>
                                                 @endforeach
 
                                             </dl>
@@ -136,13 +139,64 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="mj_postdiv mj_jobdetail mj_toppadder20 mj_bottompadder50 skill-box">
+                                <div class="padding-right">
+                                    <label class="header-about">KETERAMPILAN</label>
+                                    <!-- Resume Table -->
+                                    @if(empty($skill))
+                                        <p class="no-desc">Belum ada keterampilan</p>
+                                    @else
+                                        <ul>
+                                            @foreach($skill as $rowSKill)
+                                                <li>{{$rowSKill['name']}}</li>
+                                            @endforeach
+                                            </ul>
+                                        @endif
+                                    </div>
+                                </div>
                         </div>
-
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="container-mesh other-worker">
+        <div class="title">
+            <h1>LIHAT PEKERJA LAIN</h1>
+            <div class="kategoribox detail"></div>
+        </div>
+
+        @foreach($otherWorker as $key => $row)
+            <div class=" col-md-2 text-center">
+                <div class="candidate candidate-list-img">
+                    <a href="{{route('worker-detail', ['workerId' => $row->id])}}">
+                        <h4 class="text-uppercase">{{\App\Helpers\GlobalHelper::simplifyName($row->name)}}</h4>
+                        <img src="{{\App\Helpers\GlobalHelper::setUserImage($row->photo_profile)}}" alt="{{$row->name}}"  class="img-responsive">
+                                <span style="text-transform: uppercase" class="resume-meta-info">
+                                    {{\App\Helpers\GlobalHelper::getAgeByBirthdate($row->birthdate)}}
+                                </span>
+                        <ul class="list-unstyled text-center about-candidate">
+                            @php
+                            $category = explode(',',\App\Helpers\GlobalHelper::getWorkerCategory($row->category));
+                            @endphp
+                            <li><span style="text-transform: uppercase;font-weight: 600">{{(!empty($category[0])) ? $category[0] : 'Admin'}}</span></li>
+                            <li class="text-uppercase"><span>
+                                            <div class="rating no-stars">
+                                                <div class="star-rating"></div>
+                                                <div class="star-bg"></div>
+                                            </div>
+                                        </span></li>
+                            <li><i class="city-other">{{\App\Helpers\GlobalHelper::getCityName($row->city)}}</i></li>
+                        </ul>
+                    </a>
+                    <div class="hidden text-uppercase view-resume">
+                        <a href="{{route('worker-detail', ['workerId' => $row->id])}}" class="btn"><span class="btn animated slideInUp align-center">Lihat Profil</span></a>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+        <div style="clear: both"></div>
+    </div>
     <div class="container"></div>
 
 @endsection

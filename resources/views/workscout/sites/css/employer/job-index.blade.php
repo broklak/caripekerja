@@ -1,1 +1,1 @@
-<link rel="stylesheet" href="{{ asset("css") }}/dojo.css?version=1.1" id="colors">
+<link rel="stylesheet" href="{{ asset("css") }}/dojo.css?version=1.5" id="colors">

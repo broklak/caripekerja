@@ -137,4 +137,13 @@ class User extends Authenticatable
 
         return $data;
     }
+
+    public static function getOtherWorker($workerId,$limit = 4){
+        $table = 'workers';
+        $where[] = ['photo_profile', '<>', 'null'];
+        $where[] = ['id', '<>', $workerId];
+
+        $list = DB::table($table)->where($where)->inRandomOrder()->limit($limit)->get();
+        return $list;
+    }
 }

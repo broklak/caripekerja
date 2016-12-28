@@ -94,6 +94,9 @@ class HomeController extends Controller {
         $ownedByEmployer = (isset($getWorkerTransaction['id'])) ? true : false;
         $quota = ($authDataGlobal['role'] == 'employer') ? $authDataGlobal['authData']['quota'] : 0;
 
+        $getOtherWorker = User::getOtherWorker($workerId, $limit = 4);
+
+        $data['otherWorker']    = $getOtherWorker;
         $data['ownedByEmployer'] = $ownedByEmployer;
         $data['callLink'] = ($quota > 0) ? route('contact-worker', ['workerId' => $workerId]) : route('topup-create');
         $data['callConfirm'] = ($quota > 0) ? "return confirm('Kuota anda akan dikurangi 1 untuk mendapatkan data kontak ".$authData['name'].", lanjutkan?')" : "alert('Anda tidak memiliki sisa kuota untuk mendapatkan data kontak pekerja. Silahkan melakukan Top Up.')";

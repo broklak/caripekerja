@@ -8,7 +8,7 @@
 /* Import Section
 ---------------------------------------------------------------------- */
 @import url("base.css?version2.4");				/* Default Reset, Typography, Forms, etc. */
-@import url("custom.css?version4.6");				/*  */
+@import url("custom.css?version5.0");				/*  */
 @import url("responsive.css?version2.0");			/* Responsive Grid */
 @import url("font-awesome.css?version2.0");		/* Font Awesome Icons */
 @import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
@@ -5935,6 +5935,9 @@ a.close-form i { margin: 0; }
 	width: 50px;
 	background: #fff;
 }
+.kategoribox.detail{
+	float: right;
+}
 
 #footer a.button { margin-top: 12px; }
 #footer a.button:hover { background-color: #fff; color: #333; }
@@ -6354,6 +6357,11 @@ label.upload-btn input[type="file"] { display: none; }
 	.container.job-filter{
 		margin-top: 50px;
 	}
+	.kategoribox.detail{
+		float: none;
+		margin-bottom: 30px;
+		margin-left: 50%;
+	}
 }
 
 
@@ -6366,6 +6374,12 @@ label.upload-btn input[type="file"] { display: none; }
 	input.ico-01,select.ico-01 { background-position: 95% 20px; }
 	input.ico-02,select.ico-02 { background-position: 93% 20px; }
 	.search-container { padding: 120px 0; }
+
+	.kategoribox.detail{
+		float: none;
+		margin-bottom: 30px;
+		margin-left: 46%;
+	}
 
 	.container.job-filter{
 		margin-top: 100px;
@@ -6486,7 +6500,11 @@ label.upload-btn input[type="file"] { display: none; }
 	.checkboxes li {
 		padding: 4px 0;
 	}
-
+	.kategoribox.detail{
+		float: none;
+		margin-bottom: 30px;
+		margin-left: 35%;
+	}
 	.mobile-icon-filter{
 		display: none;
 	}
