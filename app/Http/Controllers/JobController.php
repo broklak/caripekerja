@@ -62,6 +62,25 @@ class JobController extends Controller
     public function detail($id)
     {
         $detail = Job::getDetail($id);
+
+        if($detail->gender == 0){
+            $detail->gender = 'Pria atau Wanita';
+        } elseif($detail->gender == 1){
+            $detail->gender = 'Pria';
+        } else{
+            $detail->gender = 'Wanita';
+        }
+
+        if($detail->age_min == 0 && $detail->age_max == 0){
+            $detail->age = 'Tidak ada batasan usia';
+        } elseif($detail->age_min == 0){
+            $detail->age = 'Usia dibawah '.$detail->age_max.' tahun';
+        } elseif($detail->age_max == 0){
+            $detail->age = 'Usia diatas '.$detail->age_mix.' tahun';
+        } else{
+            $detail->age = 'Usia '.$detail->age_min.' - '.$detail->age_max.' tahun';
+        }
+
         $data['detail'] = (array) $detail;
         return view('employer.job-detail', $data);
     }

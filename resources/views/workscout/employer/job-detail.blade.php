@@ -74,10 +74,10 @@
                                         <h4>KRITERIA PEKERJA</h4>
                                         <div class="kategoribox"></div>
                                         <ul>
-                                            <li>Perempuan</li>
-                                            <li>Usia 18 - 25 Tahun</li>
-                                            <li>Pendidikan Minimal SMK</li>
-                                            <li>Pengalaman Kerja Minimal 1 Tahun</li>
+                                            <li>{{$detail['gender']}}</li>
+                                            <li>{{$detail['age']}}</li>
+                                            <li>Pendidikan Minimal {{$detail['minimum_degree']}}</li>
+                                            <li>Pengalaman Kerja Minimal {{$detail['exp']}} Tahun</li>
                                         </ul>
                                     </div>
                                 </div>

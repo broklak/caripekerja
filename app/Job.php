@@ -105,7 +105,7 @@ class Job extends Model
         $list = DB::table($table)
             ->select('jobs.id', 'employers.name as employerName', 'employers.photo_profile as employerPhoto', 'employers.ukm_category', 'employers.name_owner', 'title', 'jobs.description',
                 'province.name as provinceName', 'start_date', 'end_date', 'age_min', 'age_max', 'salary_min', 'salary_max', 'jobs.type', 'jobs.created_at', 'jobs.status', 'exp',
-                'employers.website', 'employers.description as employerDescription')
+                'employers.website', 'employers.description as employerDescription', 'jobs.gender', 'jobs.minimum_degree')
             ->where('jobs.id', $jobId)
             ->join('employers', 'employers.id', '=', 'jobs.employer_id')
             ->join('province', 'province.id', '=', 'jobs.city')
