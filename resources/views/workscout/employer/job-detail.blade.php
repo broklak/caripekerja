@@ -68,8 +68,18 @@
                         <div class="mj_postdiv mj_jobdetail mj_toppadder20 mj_bottompadder50">
                             <div class="">
                                 <div class="padding-right">
-                                    <label class="header-about">Deskripsi Pekerjaan</label>
+                                    <label class="header-about">DESKRIPSI PEKERJAAN</label>
                                     <p class="no-desc">{{empty($detail['description']) ? 'Tidak ada deskripsi' : htmlspecialchars($detail['description'])}}</p>
+                                    <div class="job-desc">
+                                        <h4>KRITERIA PEKERJA</h4>
+                                        <div class="kategoribox"></div>
+                                        <ul>
+                                            <li>Perempuan</li>
+                                            <li>Usia 18 - 25 Tahun</li>
+                                            <li>Pendidikan Minimal SMK</li>
+                                            <li>Pengalaman Kerja Minimal 1 Tahun</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -79,8 +89,16 @@
                         <div class="mj_postdiv mj_jobdetail mj_toppadder20 mj_bottompadder50">
                             <div class="">
                                 <div class="padding-right">
+                                    <label class="header-about">TENTANG PERUSAHAAN</label>
+                                    <p class="no-desc">{{empty($detail['employerDescription']) ? 'Tidak ada deskripsi' : htmlspecialchars($detail['employerDescription'])}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mj_postdiv mj_jobdetail mj_toppadder20 mj_bottompadder50 skill-box">
+                            <div class="">
+                                <div class="padding-right">
 
-                                    <label class="header-about">Profil Usaha</label>
+                                    <label class="header-about">PROFIL USAHA</label>
                                     <ul class="company-profile-detail">
                                         <li>
                                             <span class="company-detail-title">Nama Usaha</span>

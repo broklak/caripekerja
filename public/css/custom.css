@@ -1,3 +1,22 @@
+.job-desc{
+	margin-top: 20px;
+	margin-left: 15px;
+}
+.job-desc h4{
+	font-size: 22px;
+	color: #484848;
+}
+.job-desc ul{
+	margin-top: 15px;
+	list-style-type: disc;
+	margin-left: 18px;
+}
+.job-desc .kategoribox{
+	height: 7px;
+}
+.job-desc ul li{
+	padding-bottom: 5px;
+}
 .other-worker{
 	background-color: #efefef;
 	padding-top: 45px;
@@ -350,10 +369,6 @@
 	/*border-top: 3px solid #D7CCC8;*/
 	padding-top: 10px;
 }
-
-.company-profile-detail li:first-child{
-	margin-top: 0;
-}
 .company-profile-detail li {
 	width: 50%;
 	float: left;
@@ -418,7 +433,7 @@
 	border-radius: 4px;
 }
 
-.contact-candidate a:hover {
+.contact-candidate:hover {
 	color: #fff;
 }
 
