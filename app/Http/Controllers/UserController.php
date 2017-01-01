@@ -7,6 +7,7 @@ use App\Job;
 use App\JobApply;
 use App\Mail\JobApplied;
 use App\User;
+use App\VerificationCodes;
 use App\WorkerCategory;
 use Illuminate\Http\Request;
 use App\Referral;
@@ -53,6 +54,12 @@ class UserController extends Controller
         $workerId = $this->_authData['id'];
         $auth = GlobalHelper::getAuthtype();
         $authData = $auth['authData'];
+        $getFirstCategory = explode(',',$authData['category']);
+        $first = (is_array($getFirstCategory)) ? $getFirstCategory[0] : null;
+        $getImage = GlobalHelper::getWorkerCoverImage($first);
+
+        $data['coverImage']     = $getImage;
+        $data['otherWorker']    = null;
         $data['isOwner'] = ($auth['role'] == 'worker' && $workerId == $authData['id']) ? true : false;
         $data['detail'] = User::find($workerId);
         $data['experience'] = (empty($authData['experiences'])) ? array() : json_decode($authData['experiences'], true);
@@ -107,7 +114,7 @@ class UserController extends Controller
 
         if($submit != null) {
             $this->validate($request, [
-                'oldpass' => 'required:s',
+                'oldpass' => 'required',
                 'newpass' => 'required|min:6',
                 'conpass' => 'required|same:newpass',
             ]);
@@ -286,114 +293,6 @@ class UserController extends Controller
     }
 
     /**
-     * Add worker experience
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function addExperience (Request $request) {
-        $workerId = $this->_authData['id'];
-
-        $this->validate($request, [
-            'exp_place' => 'required|max:100',
-            'exp_role' => 'required|max:100',
-            'exp_start_year' => 'required|max:15',
-            'exp_end_year' => 'required|max:15',
-            'exp_desc' => 'required',
-        ]);
-
-        $worker = User::find($workerId);
-
-        $experience = json_decode($worker['experiences'], true);
-
-        $new = array(
-            'place'     => $request->input('exp_place'),
-            'role'     => $request->input('exp_role'),
-            'start'     => $request->input('exp_start_year'),
-            'end'     => $request->input('exp_end_year'),
-            'desc'     => $request->input('exp_desc')
-        );
-        $experience[] = $new;
-
-        $worker->experiences = json_encode($experience);
-
-        $worker->save();
-
-        $message = GlobalHelper::setDisplayMessage('success', 'Sukses menambah pengalaman anda');
-        return redirect(route('myaccount-index'))->with('displayMessage', $message);
-    }
-
-    /**
-     * Add worker skill
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function addSkill (Request $request) {
-        $workerId = $this->_authData['id'];
-
-        $this->validate($request, [
-            'skill_name' => 'required|max:100',
-            'skill_level' => 'required',
-        ]);
-
-        $worker = User::find($workerId);
-
-        $skill = json_decode($worker['skills'], true);
-
-        $new = array(
-            'name'     => $request->input('skill_name'),
-            'level'     => $request->input('skill_level'),
-        );
-        $skill[] = $new;
-
-        $worker->skills = json_encode($skill);
-
-        $worker->save();
-
-        $message = GlobalHelper::setDisplayMessage('success', 'Sukses menambah keahlian anda');
-        return redirect(route('myaccount-profile'))->with('displayMessage', $message);
-    }
-
-    /**
-     * Add worker education
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function addEdu (Request $request) {
-        die('oi');
-        $workerId = $this->_authData['id'];
-
-        $this->validate($request, [
-            'edu_name' => 'required|max:100',
-            'edu_level' => 'required',
-            'edu_start_year' => 'required',
-            'edu_end_year' => 'required',
-        ]);
-
-        $worker = User::find($workerId);
-
-        $edu = json_decode($worker['education'], true);
-
-        $new = array(
-            'name'     => $request->input('edu_name'),
-            'level'     => $request->input('edu_level'),
-            'start'     => $request->input('edu_start_year'),
-            'end'     => $request->input('edu_end_year'),
-            'desc'     => $request->input('edu_desc'),
-        );
-        $edu[] = $new;
-
-        $worker->education = json_encode($edu);
-
-        $worker->save();
-
-        $message = GlobalHelper::setDisplayMessage('success', 'Sukses menambah pendidikan anda');
-        return redirect(route('myaccount-profile'))->with('displayMessage', $message);
-    }
-
-    /**
      * Display the specified resource.
      *
      * @param  int  $jobId
@@ -459,5 +358,50 @@ class UserController extends Controller
         $data['link'] = $getAppliedJob['link'];
 
         return view('user.worker-applied-job', $data);
+    }
+
+    /**
+     * Display verification code page for worker
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function verifyContact(Request $request){
+        $authData = $this->_authData;
+
+        if($authData['contact_verified'] == 1){
+            return redirect(route('myaccount-profile'));
+        }
+
+        $submit = $request->input('submit');
+
+        if($submit != null) {
+            $this->validate($request, [
+                'code' => 'required',
+            ]);
+
+            $code = $request->input('code');
+            $getCode = VerificationCodes::where('worker_id', $authData['id'])
+                                ->where('code', $code)
+                                ->where('status', 0)
+                                ->first();
+
+            if(!$getCode) {
+                $message = GlobalHelper::setDisplayMessage('error', 'Kode verifikasi tidak sesuai');
+                return redirect(route('worker-verify-contact'))->with('displayMessage', $message);
+            }
+
+            // UPDATE STATUS VERIFICATION CODE
+            VerificationCodes::where('worker_id', $authData['id'])
+                            ->update(['status' => 1]);
+
+            // UPDATE CONTACT VERIFIED OF WORKER
+            $worker = User::find($authData['id']);
+            $worker->contact_verified = 1;
+            $worker->save();
+
+            $message = GlobalHelper::setDisplayMessage('success', 'Selamat! Kontak anda sudah terverifikasi sebagai pekerja.');
+            return redirect(route('myaccount-profile'))->with('displayMessage', $message);
+        }
+        return view('user.worker-verify-contact');
     }
 }

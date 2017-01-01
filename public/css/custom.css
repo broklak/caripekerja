@@ -1,3 +1,20 @@
+.custom-link{
+	background-color: #5f6d81;
+	padding: 14px 18px;
+	color: #fff;
+	font-weight: 600;
+	font-size: 14px;
+}
+.custom-link:hover{
+	background-color: #000;
+	color: #fff;
+}
+.send-code{
+	background-color: #5f6d81;
+}
+.skip-verify{
+	background-color: #979fae;
+}
 .job-desc{
 	margin-top: 20px;
 	margin-left: 15px;

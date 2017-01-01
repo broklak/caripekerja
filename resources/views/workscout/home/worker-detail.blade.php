@@ -5,6 +5,9 @@
 @section('content')
 
     <div class="mj_pagetitle2">
+        <div class="align-center">
+        {!! session('displayMessage') !!}
+        </div>
         <div class="mj_pagetitleimg">
             <img src="{{asset("images")}}/coverpekerja/{{$coverImage}}" alt="">
             <div class="mj_mainheading_overlay"></div>
@@ -54,9 +57,6 @@
                     </div>
                 </div>
             </div>
-
-
-
         </div>
     </div>
     <div class="mj_lightgraytbg mj_bottompadder80">
@@ -73,7 +73,6 @@
                         </div>
                     </div>
                 </div>
-
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
@@ -160,43 +159,45 @@
         </div>
     </div>
 
-    <div class="container-mesh other-worker">
-        <div class="title">
-            <h1>LIHAT PEKERJA LAIN</h1>
-            <div class="kategoribox detail"></div>
-        </div>
+    @if(count($otherWorker) > 0)
+        <div class="container-mesh other-worker">
+            <div class="title">
+                <h1>LIHAT PEKERJA LAIN</h1>
+                <div class="kategoribox detail"></div>
+            </div>
 
-        @foreach($otherWorker as $key => $row)
-            <div class=" col-md-2 text-center">
-                <div class="candidate candidate-list-img">
-                    <a href="{{route('worker-detail', ['workerId' => $row->id])}}">
-                        <h4 class="text-uppercase">{{\App\Helpers\GlobalHelper::simplifyName($row->name)}}</h4>
-                        <img src="{{\App\Helpers\GlobalHelper::setUserImage($row->photo_profile)}}" alt="{{$row->name}}"  class="img-responsive">
-                                <span style="text-transform: uppercase" class="resume-meta-info">
-                                    {{\App\Helpers\GlobalHelper::getAgeByBirthdate($row->birthdate)}}
-                                </span>
-                        <ul class="list-unstyled text-center about-candidate">
-                            @php
-                            $category = explode(',',\App\Helpers\GlobalHelper::getWorkerCategory($row->category));
-                            @endphp
-                            <li><span style="text-transform: uppercase;font-weight: 600">{{(!empty($category[0])) ? $category[0] : 'Admin'}}</span></li>
-                            <li class="text-uppercase"><span>
-                                            <div class="rating no-stars">
-                                                <div class="star-rating"></div>
-                                                <div class="star-bg"></div>
-                                            </div>
-                                        </span></li>
-                            <li><i class="city-other">{{\App\Helpers\GlobalHelper::getCityName($row->city)}}</i></li>
-                        </ul>
-                    </a>
-                    <div class="hidden text-uppercase view-resume">
-                        <a href="{{route('worker-detail', ['workerId' => $row->id])}}" class="btn"><span class="btn animated slideInUp align-center">Lihat Profil</span></a>
+            @foreach($otherWorker as $key => $row)
+                <div class=" col-md-2 text-center">
+                    <div class="candidate candidate-list-img">
+                        <a href="{{route('worker-detail', ['workerId' => $row->id])}}">
+                            <h4 class="text-uppercase">{{\App\Helpers\GlobalHelper::simplifyName($row->name)}}</h4>
+                            <img src="{{\App\Helpers\GlobalHelper::setUserImage($row->photo_profile)}}" alt="{{$row->name}}"  class="img-responsive">
+                                    <span style="text-transform: uppercase" class="resume-meta-info">
+                                        {{\App\Helpers\GlobalHelper::getAgeByBirthdate($row->birthdate)}}
+                                    </span>
+                            <ul class="list-unstyled text-center about-candidate">
+                                @php
+                                $category = explode(',',\App\Helpers\GlobalHelper::getWorkerCategory($row->category));
+                                @endphp
+                                <li><span style="text-transform: uppercase;font-weight: 600">{{(!empty($category[0])) ? $category[0] : 'Admin'}}</span></li>
+                                <li class="text-uppercase"><span>
+                                                <div class="rating no-stars">
+                                                    <div class="star-rating"></div>
+                                                    <div class="star-bg"></div>
+                                                </div>
+                                            </span></li>
+                                <li><i class="city-other">{{\App\Helpers\GlobalHelper::getCityName($row->city)}}</i></li>
+                            </ul>
+                        </a>
+                        <div class="hidden text-uppercase view-resume">
+                            <a href="{{route('worker-detail', ['workerId' => $row->id])}}" class="btn"><span class="btn animated slideInUp align-center">Lihat Profil</span></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        @endforeach
-        <div style="clear: both"></div>
-    </div>
+            @endforeach
+            <div style="clear: both"></div>
+        </div>
+    @endif
     <div class="container"></div>
 
 @endsection

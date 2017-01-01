@@ -191,6 +191,9 @@
                                         <form method="POST" action="{{ url('/register') }}">
                                             {{ csrf_field() }}
                                             <div class="mj_freelancer_form">
+                                                <div class="alert alert-info" style="margin-bottom: 10px;">
+                                                    Harap masukkan nomor handphone yang valid. Kami akan mengirimkan sms ke nomor anda untuk aktifasi akun pekerja.
+                                                </div>
                                                 <div class="form-group">
                                                     <input name="name" required value="{{old('name')}}" type="text" placeholder="Nama Lengkap" class="form-control">
                                                 </div>
@@ -204,7 +207,7 @@
                                                     <input name="password_confirmation" required type="password" placeholder="Ketik Ulang Kata Sandi" class="form-control">
                                                 </div>
                                                 <div class="form-group">
-                                                    <input name="referral_code" required type="text" value="{{old('referral_code')}}" placeholder="Kode referral (bila ada)" class="form-control">
+                                                    <input name="referral_code" type="text" value="{{old('referral_code')}}" placeholder="Kode referral (bila ada)" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="mj_pricing_footer">

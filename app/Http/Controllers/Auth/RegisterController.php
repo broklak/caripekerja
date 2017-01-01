@@ -9,6 +9,7 @@ use App\Referral;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Libraries\SendVerificationCode;
 
 class RegisterController extends Controller
 {
@@ -30,7 +31,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/profil-saya';
+    protected $redirectTo = '/verifikasi-kontak';
 
     /**
      * Create a new controller instance.
@@ -77,6 +78,7 @@ class RegisterController extends Controller
         ]);
 
         if($createUser) {
+            $sendVerificationCode = new SendVerificationCode($createUser->id);
             // CREATE REFERRAL IF USER IS INSERTED
             Referral::create([
                 'user_id'   => $createUser->id,
