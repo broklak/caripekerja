@@ -6,7 +6,7 @@
 
     <div class="mj_pagetitle2">
         <div class="mj_pagetitleimg">
-            <img src="{{asset("images")}}/user/bg-profil-kerja.jpg" alt="">
+            <img src="{{asset("images")}}/coverpekerja/{{$coverImage}}" alt="">
             <div class="mj_mainheading_overlay"></div>
         </div>
         <div class="container-mesh">

@@ -161,5 +161,43 @@ class GlobalHelper
 
         return implode(', ', $arrCategory);
     }
+
+    public static function getWorkerCoverImage($categoryId){
+        if($categoryId == 1){
+            return 'babysitter.jpg';
+        } elseif($categoryId == 2){
+            return 'asistenrumah.jpg';
+        } elseif($categoryId == 3){
+            return 'sopir.jpg';
+        } elseif($categoryId == 4){
+            return 'koki.jpg';
+        } elseif($categoryId == 5){
+            return 'pelayan.jpg';
+        } elseif($categoryId == 6){
+            return 'jagatoko.jpg';
+        } elseif($categoryId == 8){
+            return 'admin.jpg';
+        } elseif($categoryId == 9){
+            return 'jahit.jpg';
+        } elseif($categoryId == 10){
+            return 'office.jpg';
+        } elseif($categoryId == 11){
+            return 'buruh.jpg';
+        } elseif($categoryId == 12){
+            return 'kuli.jpg';
+        } elseif($categoryId == 13){
+            return 'kayu.jpg';
+        } elseif($categoryId == 14){
+            return 'kurir.jpg';
+        } elseif($categoryId == 15){
+            return 'montir.jpg';
+        } elseif($categoryId == 16){
+            return 'satpam.jpg';
+        } elseif($categoryId == 17){
+            return 'payet.jpg';
+        } else{
+            return 'bg-profil-kerja.jpg';
+        }
+    }
 }
 

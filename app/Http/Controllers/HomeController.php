@@ -96,6 +96,11 @@ class HomeController extends Controller {
 
         $getOtherWorker = User::getOtherWorker($workerId, $limit = 4);
 
+        $getFirstCategory = explode(',',$authData['category']);
+        $first = (is_array($getFirstCategory)) ? $getFirstCategory[0] : null;
+        $getImage = GlobalHelper::getWorkerCoverImage($first);
+
+        $data['coverImage']     = $getImage;
         $data['otherWorker']    = $getOtherWorker;
         $data['ownedByEmployer'] = $ownedByEmployer;
         $data['callLink'] = ($quota > 0) ? route('contact-worker', ['workerId' => $workerId]) : route('topup-create');
