@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use App\Mail\OrderShipped;
 use Illuminate\Support\Facades\Mail;
+use App\Libraries\SendVerificationCode;
 
 class UserController extends Controller
 {
@@ -403,5 +404,29 @@ class UserController extends Controller
             return redirect(route('myaccount-profile'))->with('displayMessage', $message);
         }
         return view('user.worker-verify-contact');
+    }
+
+    public function sendSMS(){
+        $authData = $this->_authData;
+        $workerId = $authData['id'];
+        if($this->_role == 'employer'){
+            return 'No Access';
+        }
+
+        $getTodayCode = VerificationCodes::where('worker_id',$workerId)
+                                            ->where('created_at', '>', date('Y-m-d 00:00:00'))->count();
+
+        if($getTodayCode >= 3){
+            $message = GlobalHelper::setDisplayMessage('error', 'Anda telah melewati batas kirim kode verifikasi dalam sehari (Maksimal 3 kali dalam sehari).');
+            return redirect(route('worker-verify-contact'))->with('displayMessage', $message);
+        }
+        $user = array(
+                'worker_id' => $workerId,
+                'phone'     => $authData['phone']
+        );
+        $sendSMS = new SendVerificationCode($user);
+
+        $message = GlobalHelper::setDisplayMessage('success', 'Kode verifikasi sudah dikirim melalui sms ke nomor anda.');
+        return redirect(route('worker-verify-contact'))->with('displayMessage', $message);;
     }
 }

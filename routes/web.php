@@ -58,6 +58,7 @@ Route::get('profil-pekerja/{workerId}', 'HomeController@workerDetail')->name('wo
 Route::get('lamaran-saya', 'UserController@getAppliedJob')->name('worker-job');
 Route::get('verifikasi-kontak', 'UserController@verifyContact')->name('worker-verify-contact');
 Route::post('verifikasi-kontak', 'UserController@verifyContact')->name('worker-verify-contact');
+Route::get('kirim-verifikasi-sms', 'UserController@sendSMS')->name('worker-resend-code');
 
 //EMPLOYER
 Route::get('pekerja-saya', 'JobController@getShortlistedWorker')->name('owned-worker');
@@ -71,9 +72,6 @@ Route::get('profil-saya', 'UserController@myProfile')->name('myaccount-profile')
 Route::post('update-profile', 'UserController@update');
 Route::get('ganti-password', 'UserController@changePassword')->name('change-password');
 Route::post('ganti-password', 'UserController@changePassword')->name('change-password');
-Route::post('add-exp', 'UserController@addExperience');
-Route::post('add-skill', 'UserController@addSkill');
-Route::post('add-edu', 'UserController@addEdu');
 
 //PAYMENT
 Route::get('topup', 'PaymentController@index')->name('topup-create');

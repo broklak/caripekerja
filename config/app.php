@@ -231,6 +231,20 @@ return [
 
     ],
 
-    'template'  => 'workscout'
+    'template'  => 'workscout',
 
+    /*
+    |--------------------------------------------------------------------------
+    | SMS API CONFIG
+    |--------------------------------------------------------------------------
+    |
+    |SMS API for worker contact verification
+    |
+    */
+
+    'sms_host'  => env('SMS_API_HOST', '182.253.1.245'),
+    'sms_type'  => env('SMS_API_TYPE', 'HTTP'),
+    'sms_port'  => env('SMS_API_PORT', '9095'),
+    'sms_user'  => env('SMS_API_USER', 'CP3S4'),
+    'sms_password' => env('SMS_API_PASSWORD', 'tubhr9n5vd')
 ];

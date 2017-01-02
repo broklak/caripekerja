@@ -78,7 +78,11 @@ class RegisterController extends Controller
         ]);
 
         if($createUser) {
-            $sendVerificationCode = new SendVerificationCode($createUser->id);
+            $user = array(
+                'worker_id' => $createUser->id,
+                'phone'     => $createUser->phone
+            );
+            $sendVerificationCode = new SendVerificationCode($user);
             // CREATE REFERRAL IF USER IS INSERTED
             Referral::create([
                 'user_id'   => $createUser->id,
