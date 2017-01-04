@@ -35,7 +35,6 @@ class SendVerificationCode {
         $message = $this->smsFormat($this->code);
 
         $url = "http://$host:$port/?User=$user&Password=$pass&PhoneNumber=$phone&Text=$message";
-        die($url);
         $send = file_get_contents($url);
     }
 
