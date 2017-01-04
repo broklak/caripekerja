@@ -35,7 +35,8 @@ class SendVerificationCode {
         $message = $this->smsFormat($this->code);
 
         $url = "http://$host:$port/?User=$user&Password=$pass&PhoneNumber=$phone&Text=$message";
-//        $send = file_get_contents($url);
+        die($url);
+        $send = file_get_contents($url);
     }
 
     public function createVerificationCode (){
@@ -50,7 +51,7 @@ class SendVerificationCode {
     }
 
     public function smsFormat($code){
-        return "Kode+verifikasi+CariPekerja+anda+$code.+Silahkan+masukkan+kode+untuk+verifikasi+kontak+pekerja+anda.";
+        return "Kode+verifikasi+CARIPEKERJA+anda+$code.+Silahkan+masukkan+kode+untuk+verifikasi+kontak+anda+sebagai+pekerja.";
     }
 
 }
