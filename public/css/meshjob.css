@@ -807,7 +807,7 @@ ul.mj_joblist li a:hover, ul.mj_joblist.nav-tabs > li.active > a, ul.mj_joblist.
     text-align: center;
 }
 .mj_mainheading h1 {
-    font-size: 65px;
+    font-size: 50px;
     text-transform: uppercase;
     font-weight: 100;
     color: #000000;
@@ -5158,8 +5158,8 @@ a.mj_removefile {
     float:left;
     width:100%;
     text-align: center;
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 40px;
+    padding-right: 40px;
     position:relative;
     min-height:750px;
 }

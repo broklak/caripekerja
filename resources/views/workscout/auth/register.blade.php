@@ -23,7 +23,7 @@
                 <div class="row">
                     <div class="mj_signup_section mj_blue_bg">
                         <div class="mj_mainheading mj_toppadder80 mj_bottompadder30">
-                            <h1>SAYA <br />PEMILIK USAHA</h1>
+                            <h1>SAYA<br />PEMILIK USAHA</h1>
                         </div>
                         <div class="mj_blog_btn">
                             <a href="#" class="mj_mainbtn mj_btnblack" data-text="Masuk" data-toggle="modal" data-target="#usaha"><span>Masuk</span></a>
@@ -38,7 +38,7 @@
                 <div class="row">
                     <div class="mj_signup_section mj_green_bg">
                         <div class="mj_mainheading mj_toppadder80 mj_bottompadder30">
-                            <h1>SAYA <br />PENCARI KERJA</h1>
+                            <h1>SAYA<br />PENCARI KERJA</h1>
                         </div>
                         <div class="mj_blog_btn">
                             <a href="#" class="mj_mainbtn mj_btnblack" data-text="Masuk" data-toggle="modal" data-target="#pekerja"><span>Masuk</span></a>

@@ -161,7 +161,7 @@
                         <option value="0">Semua Pendidikan</option>
 
                         @foreach ($degree as $key => $row)
-                            <option @if(isset($param['degree']) && $param['degree'] == $row) selected @endif>{$row}}</option>
+                            <option @if(isset($param['degree']) && $param['degree'] == $row) selected @endif>{{$row}}</option>
                         @endforeach>
                     </select>
 

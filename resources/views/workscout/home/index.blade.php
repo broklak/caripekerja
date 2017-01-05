@@ -165,7 +165,7 @@
                 <div class="icon-box rounded alt">
                     <i class="fa fa-clock-o"></i>
                     <h4>HEMAT WAKTU</h4>
-                    <p>Dapatkan pekerjaan dalam waktu yang singkat</p>
+                    <p>Dapatkan pekerja dalam waktu yang singkat</p>
                 </div>
             </div>
 
