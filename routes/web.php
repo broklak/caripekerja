@@ -59,6 +59,8 @@ Route::get('lamaran-saya', 'UserController@getAppliedJob')->name('worker-job');
 Route::get('verifikasi-kontak', 'UserController@verifyContact')->name('worker-verify-contact');
 Route::post('verifikasi-kontak', 'UserController@verifyContact')->name('worker-verify-contact');
 Route::get('kirim-verifikasi-sms', 'UserController@sendSMS')->name('worker-resend-code');
+Route::get('verifikasi-identitas', 'UserController@verifyIdentity')->name('verify-identity');
+Route::post('verifikasi-identitas', 'UserController@verifyIdentity')->name('verify-identity');
 
 //EMPLOYER
 Route::get('pekerja-saya', 'JobController@getShortlistedWorker')->name('owned-worker');

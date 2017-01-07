@@ -9,6 +9,7 @@ use App\Mail\JobApplied;
 use App\User;
 use App\VerificationCodes;
 use App\WorkerCategory;
+use App\WorkerVerificationLog;
 use Illuminate\Http\Request;
 use App\Referral;
 use App\Province;
@@ -427,6 +428,60 @@ class UserController extends Controller
         $sendSMS = new SendVerificationCode($user);
 
         $message = GlobalHelper::setDisplayMessage('success', 'Kode verifikasi sudah dikirim melalui sms ke nomor anda.');
-        return redirect(route('worker-verify-contact'))->with('displayMessage', $message);;
+        return redirect(route('worker-verify-contact'))->with('displayMessage', $message);
+    }
+
+    /**
+     * Display verification data page for worker
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function verifyIdentity(Request $request){
+        $authData = $this->_authData;
+        $submit = $request->input('submit');
+
+        if($submit != null) {
+            $this->validate($request, [
+                'imageKTP' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg|max:2030',
+                'imageSKCK' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg|max:2030'
+            ]);
+            $worker = User::find($authData['id']);
+            $imageName = $this->_authData['id'] .'.jpg';
+            if($request->imageKTP) {
+                $request->imageKTP->move(public_path('images/identity/'), $imageName);
+
+                // INSERT TO LOG
+                WorkerVerificationLog::create([
+                    'worker_id' => $authData['id'],
+                    'type'      => 1, // KTP
+                    'status'    => 0, // NEW
+                ]);
+                // UPDATE IDENTITY VERIFIED (UNTIL BACKEND APPROVAL)
+                $worker->data_verified = 1;
+                $worker->photo_ktp = $imageName;
+            }
+
+            if($request->imageSKCK) {
+                $request->imageSKCK->move(public_path('images/police/'), $imageName);
+
+                // INSERT TO LOG
+                WorkerVerificationLog::create([
+                    'worker_id' => $authData['id'],
+                    'type'      => 2, // SKCK
+                    'status'    => 0, // NEW
+                ]);
+                // UPDATE IDENTITY VERIFIED (UNTIL BACKEND APPROVAL)
+                $worker->exp_verified = 1;
+                $worker->photo_ref = $imageName;
+            }
+
+            $worker->save();
+
+            $message = GlobalHelper::setDisplayMessage('success', 'Identitas anda telah terverifikasi.');
+            return redirect(route('verify-identity'))->with('displayMessage', $message);
+        }
+        $data['imageKTP'] = ($this->_authData['photo_ktp'] == null) ? asset('images').'/user/noimagefound.jpg' : asset('images') . '/identity/'.$this->_authData['photo_ktp'];
+        $data['imageSKCK'] = ($this->_authData['photo_ref'] == null) ? asset('images').'/user/noimagefound.jpg' : asset('images') . '/police/'.$this->_authData['photo_ref'];
+        return view('user.worker-verify-identity', $data);
     }
 }
