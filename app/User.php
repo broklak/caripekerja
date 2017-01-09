@@ -36,11 +36,31 @@ class User extends Authenticatable
     public static function search ($criteria = array(), $perPage = 10, $sort = 'id') {
         $table = 'workers';
         $where = array();
-        $whereRaw = '';
 
         if(isset($criteria['category']) && $criteria['category'] != 0){
             $category = [DB::raw('CONCAT(",", category, ",")'), "like", "%,".$criteria['category'].",%"];
             array_push($where,$category);
+        }
+
+        if(isset($criteria['verified']) && $criteria['verified'] != 0){
+            $verified = $criteria['verified'];
+            if($verified == 1){
+                $filter = ['data_verified', '=', 1];
+                array_push($where,$filter);
+            } else if($verified == 2){
+                $filter = ['contact_verified', '=', 1];
+                array_push($where,$filter);
+            } else if($verified == 3){
+                $filter = ['exp_verified', '=', 1];
+                array_push($where,$filter);
+            } else if($verified == 100){
+                $filter = ['contact_verified', '=', 1];
+                array_push($where,$filter);
+                $filter = ['data_verified', '=', 1];
+                array_push($where,$filter);
+                $filter = ['exp_verified', '=', 1];
+                array_push($where,$filter);
+            }
         }
 
         if(isset($criteria['gender']) && $criteria['gender'] != 0) {

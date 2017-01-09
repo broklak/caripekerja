@@ -178,6 +178,16 @@
                 </div>
 
                 <div class="widget">
+                    <select data-placeholder="Pilih Status Verifikasi" name="verified" class="chosen-select desktop-filter">
+                        <option value="0">Semua Pekerja</option>
+                        <option @if(isset($param['verified']) && $param['verified'] == 100) selected @endif value="100">Semua Data Terverifikasi</option>
+                        <option @if(isset($param['verified']) && $param['verified'] == 1) selected @endif value="1">Identitas Terverifikasi</option>
+                        <option @if(isset($param['verified']) && $param['verified'] == 2) selected @endif value="2">Kontak Terverifikasi</option>
+                        <option @if(isset($param['verified']) && $param['verified'] == 3) selected @endif value="3">Pengalaman Terverifikasi</option>
+                    </select>
+                </div>
+
+                <div class="widget">
                     <ul class="checkboxes">
                         <li>
                             <input id="check-6" type="checkbox" name="age[]" value="0" @if((isset($param['age']) && in_array('0', $param['age'])) || !isset($param['age'])) checked @endif >
