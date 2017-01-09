@@ -1,6 +1,8 @@
 /node_modules
 /public/storage
 /public/images/profil
+/public/images/identity
+/public/images/police
 /vendor
 /.idea
 Homestead.json
