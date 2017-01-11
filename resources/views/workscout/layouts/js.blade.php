@@ -2,6 +2,7 @@
 
 <script src="{{ asset("js") }}/jquery-2.1.3.min.js"></script>
 <script src="{{ asset("js") }}/bootstrap.js"></script>
+<script src="{{ asset("js") }}/slider.js?version=1.2"></script>
 <script src="{{ asset("js") }}/custom.js?version1.3"></script>
 <script src="{{ asset("js") }}/jquery.superfish.js"></script>
 <script src="{{ asset("js") }}/jquery.themepunch.tools.min.js"></script>

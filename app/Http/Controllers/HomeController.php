@@ -13,6 +13,7 @@ use App\Helpers\GlobalHelper;
 use App\Http\Controllers\Controller;
 use App\Libraries\LayoutManager;
 use App\Province;
+use App\Subscriber;
 use App\WorkerCategory;
 
 use App\WorkerTransaction;
@@ -112,6 +113,32 @@ class HomeController extends Controller {
         $data['skill'] = ($authData['skills'] != null || $authData['skills'] != '') ? json_decode($authData['skills'], true) : array();
         $data['edu'] = ($authData['education'] != null || $authData['education'] != '') ? json_decode($authData['education'], true) : array();
         return view('home.worker-detail', $data);
+    }
+
+    /**
+     * Submit new subscriber
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function addSubscriber(Request $request){
+        $this->validate($request, [
+            'email' => 'required',
+        ]);
+
+        $email = $request->input('email');
+        $validateEmail = Subscriber::where('email', $email)->first();
+
+        if($validateEmail){ // EMAIL IS EXIST
+            $message = GlobalHelper::setDisplayMessage('error', "Email $email sudah terdaftar di sistem kami sebagai pelanggan newsletter");
+            return redirect(route('home'))->with('displayMessage', '<div class="align-center">'.$message.'</div>');
+        }
+
+        Subscriber::create([
+           'email'  => $email
+        ]);
+
+        $message = GlobalHelper::setDisplayMessage('success', "Selamat! Email $email sudah terdaftar. Anda akan mendapatkan berita terbaru tentang Caripekerja");
+        return redirect(route('home'))->with('displayMessage', '<div class="align-center">'.$message.'</div>');
     }
 
 }

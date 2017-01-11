@@ -4,7 +4,6 @@
 
 @section('content')
 
-
     <div class="container margin-top-40">
         <div class="sixteen columns">
             <div class="seven columns">
@@ -230,5 +229,20 @@
         <div class="clearfix"></div>
     </div>
 
+    <!-- Sliding div starts here -->
+    <div id="slider-newsletter" style="right:-342px;">
+        <div id="sidebar-newsletter" onclick="open_panel()">
+            <img src="{{asset('images')}}/contact.png"/>
+        </div>
+        <div id="header-newsletter">
+            <form method="post" action="{{route('post-subscriber')}}">
+                {{csrf_field()}}
+                <h3>Langganan Newsletter</h3>
+                <input type="email" name="email" placeholder="Masukkan Email"/>
+                <button>Berlangganan</button>
+            </form>
+        </div>
+    </div>
+    <!-- Sliding div ends here -->
 
 @endsection

@@ -72,29 +72,37 @@
 
                     <!-- First Tab -->
                     <div class="app-tab-content" id="one-1">
+                        <form class="form-rate" id="rate-worker-{{$row->id}}" method="post">
+                            <div class="select-grid">
+                                <select data-placeholder="Application Status" class="chosen-select-no-single">
+                                    <option value="0" disabled selected>Status Pekerja</option>
+                                    <option value="1">Baru</option>
+                                    <option value="2">Cocok</option>
+                                    <option value="3">Tidak Cocok</option>
+                                    <option value="4">Sudah Dipekerjakan</option>
+                                    <option value="5">Blacklist</option>
+                                </select>
+                            </div>
 
-                        <div class="select-grid">
-                            <select data-placeholder="Application Status" class="chosen-select-no-single">
-                                <option value="">Status Pekerja</option>
-                                <option value="1">Baru</option>
-                                <option value="2">Cocok</option>
-                                <option value="3">Tidak Cocok</option>
-                                <option value="4">Sudah Dipekerjakan</option>
-                                <option value="5">Blacklist</option>
-                            </select>
-                        </div>
+                            <div class="select-grid">
+                                <select data-placeholder="AWorker Rating" class="chosen-select-no-single">
+                                    <option value="0" disabled selected>Rating Pekerja</option>
+                                    <option value="1">Sangat Buruk</option>
+                                    <option value="2">Buruk</option>
+                                    <option value="3">Biasa</option>
+                                    <option value="4">Baik</option>
+                                    <option value="5">Sangat Baik</option>
+                                </select>
+                            </div>
 
-                        <div class="select-grid">
-                            <input type="number" min="1" max="5" placeholder="Rating (isi 1 - 5)">
-                        </div>
-
-                        <div class="clearfix"></div>
-                        <a href="#" class="button margin-top-15">Simpan</a>
+                            <div class="clearfix"></div>
+                            <button type="submit" class="button margin-top-15">Simpan</button>
+                        </form>
 
                     </div>
 
                     <!-- Second Tab -->
-                    <div class="app-tab-content"  id="two-1">
+                    <div class="app-tab-content" id="two-1">
                         <textarea placeholder="Catatan Tentang Pekerja"></textarea>
                         <a href="#" class="button margin-top-15">Simpan</a>
                     </div>

@@ -27,12 +27,12 @@
 @show
 <div id="wrapper">
 
-
     <!-- Header
     ================================================== -->
     @section("header")
         @include("layouts.header")
     @show
+
 
     <!-- Banner
     ================================================== -->
@@ -53,11 +53,8 @@
     @section("footer")
         @include("layouts.footer")
     @show
-
-
 </div>
 <!-- Wrapper / End -->
-
 
 <!-- Scripts
 ================================================== -->

@@ -89,6 +89,13 @@
         </div>
 
         <div class="form">
+            <h5>Gaji yang diharapkan</h5>
+            <input class="search-field" name="salary_min" style="width: 48%;margin-right: 15px;float: left" value="{{$authData['salary_min']}}" type="text" placeholder="Gaji minimal. Isi dengan angka">
+
+            <input class="search-field" name="salary_max" style="width: 48%" value="{{$authData['salary_max']}}" type="text" placeholder="Gaji maksimal. Isi dengan angka">
+        </div>
+
+        <div class="form">
             <h5>Tanggal Lahir</h5>
             <input class="search-field" name="birthdate" id="datepicker" value="{{empty($authData['birthdate']) ? '' : date('m/d/Y', strtotime($authData['birthdate']))}}" type="text" placeholder="Tanggal Lahir" />
         </div>

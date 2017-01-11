@@ -13,6 +13,7 @@
 
 Route::get('/', 'HomeController@index', 'home')->name('home');
 Route::get('/home', 'HomeController@index');
+Route::post('langganan-newsletter', 'HomeController@addSubscriber')->name('post-subscriber');
 
 // AUTHENTICATION
 Auth::routes();

@@ -1,3 +1,4 @@
+{!! session('displayMessage') !!}
 <div id="banner" class="background" style="background-image: url(images/baru/homefix.jpg)">
 <div class="container-mesh">
     <div class="sixteen columns">

@@ -123,7 +123,6 @@ class UserController extends Controller
 
             $oldpass = $request->input('oldpass');
             $newpass = $request->input('newpass');
-            $conpass = $request->input('conpass');
 
             if($role == 'worker') {
                 $checkPass = Hash::check($oldpass, $authData['password']);
@@ -181,6 +180,8 @@ class UserController extends Controller
                 'birthdate' => 'required',
                 'exp'       => 'required',
                 'category'   => 'required',
+                'salary_min'   => 'required|numeric',
+                'salary_max'   => 'required|numeric',
                 'photo' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg|max:5020'
             ]);
 
@@ -189,6 +190,8 @@ class UserController extends Controller
             $worker->degree = $request->input('degree');
             $worker->gender = $request->input('gender');
             $worker->city = $request->input('city');
+            $worker->salary_min = $request->input('salary_min');
+            $worker->salary_max = $request->input('salary_max');
             $worker->marital = $request->input('marital');
             $worker->years_experience = $request->input('exp');
             $worker->email = $request->input('email');
