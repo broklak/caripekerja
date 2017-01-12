@@ -134,16 +134,16 @@
                     @foreach($edu as $key => $val)
                         <div class="form boxed box-to-clone educations-box">
                             <a href="#" class="close-form remove-box button"><i class="fa fa-close"></i></a>
-                            <input class="search-field" value="{{$val['name']}}" type="text" name="edu_name[]" placeholder="Nama Sekolah / Universitas"/>
+                            <input class="search-field" value="{{isset($val['name']) ? $val['name'] : ''}}" type="text" name="edu_name[]" placeholder="Nama Sekolah / Universitas"/>
                             <select name="edu_level[]" class="margin-bottom-15" style="height: 45px">
                                 <option value="0" selected disabled>&nbsp;&nbsp;Tingkat Pendidikan</option>
                                 @foreach ($degree as $key => $row)
-                                    <option @if($val['level'] == $row) selected @endif value="{{$row}}" >&nbsp;&nbsp;{{$row}}</option>
+                                    <option @if(isset($val['level']) && $val['level'] == $row) selected @endif value="{{$row}}" >&nbsp;&nbsp;{{$row}}</option>
                                 @endforeach
                             </select>
-                            <input class="search-field" value="{{$val['start']}}" type="number" name="edu_start_year[]" placeholder="Tahun Masuk"/>
-                            <input class="search-field" value="{{$val['end']}}" type="number" name="edu_end_year[]" placeholder="Tahun Keluar" />
-                            <textarea name="edu_desc[]" id="desc" cols="30" rows="10" placeholder="Keterangan (Bila ada)">{{$val['desc']}}</textarea>
+                            <input class="search-field" value="{{isset($val['start']) ? $val['start'] : ''}}" type="number" name="edu_start_year[]" placeholder="Tahun Masuk"/>
+                            <input class="search-field" value="{{isset($val['end']) ? $val['end'] : ''}}" type="number" name="edu_end_year[]" placeholder="Tahun Keluar" />
+                            <textarea name="edu_desc[]" id="desc" cols="30" rows="10" placeholder="Keterangan (Bila ada)">{{isset($val['desc']) ? $val['desc'] : ''}}</textarea>
                         </div>
                     @endforeach
                 @endif
@@ -160,8 +160,8 @@
                 @if(count($exp) == 0)
                     <div class="form boxed box-to-clone experience-box">
                         <a href="#" class="close-form remove-box button"><i class="fa fa-close"></i></a>
-                        <input class="search-field" type="text" value="" name="exp_place[]" placeholder="Nama Perusahaan" value=""/>
-                        <input class="search-field" type="text" name="exp_role[]" value="" placeholder="Kerja Sebagai" value=""/>
+                        <input class="search-field" type="text" value="" name="exp_place[]" placeholder="Nama Perusahaan" />
+                        <input class="search-field" type="text" name="exp_role[]" value="" placeholder="Kerja Sebagai" />
                         <input class="search-field" type="number" name="exp_start_year[]" value="" placeholder="Tahun Masuk"/>
                         <input class="search-field" type="number" name="exp_end_year[]" value="" placeholder="Tahun Keluar" />
                         <textarea name="exp_desc[]" id="desc1" cols="30" rows="10" placeholder="Deskripsi Pekerjaan"></textarea>
@@ -171,11 +171,11 @@
                     @foreach($exp as $key => $val)
                         <div class="form boxed box-to-clone experience-box">
                             <a href="#" class="close-form remove-box button"><i class="fa fa-close"></i></a>
-                            <input class="search-field" type="text" value="{{$val['place']}}" name="exp_place[]" placeholder="Nama Perusahaan" value=""/>
-                            <input class="search-field" type="text" name="exp_role[]" value="{{$val['role']}}" placeholder="Kerja Sebagai" value=""/>
-                            <input class="search-field" type="number" name="exp_start_year[]" value="{{$val['start']}}" placeholder="Tahun Masuk"/>
-                            <input class="search-field" type="number" name="exp_end_year[]" value="{{$val['end']}}" placeholder="Tahun Keluar" />
-                            <textarea name="exp_desc[]" id="desc1" cols="30" rows="10" placeholder="Deskripsi Pekerjaan">{{$val['desc']}}</textarea>
+                            <input class="search-field" type="text" value="{{isset($val['place']) ? $val['place'] : ''}}" name="exp_place[]" placeholder="Nama Perusahaan"/>
+                            <input class="search-field" type="text" name="exp_role[]" value="{{isset($val['role']) ? $val['role'] : ''}}" placeholder="Kerja Sebagai"/>
+                            <input class="search-field" type="number" name="exp_start_year[]" value="{{isset($val['start']) ? $val['start'] : ''}}" placeholder="Tahun Masuk"/>
+                            <input class="search-field" type="number" name="exp_end_year[]" value="{{isset($val['end']) ? $val['end'] : ''}}" placeholder="Tahun Keluar" />
+                            <textarea name="exp_desc[]" id="desc1" cols="30" rows="10" placeholder="Deskripsi Pekerjaan">{{isset($val['desc']) ? $val['desc'] : ''}}</textarea>
                         </div>
                     @endforeach
                 @endif
@@ -206,13 +206,13 @@
                     <!-- Add Skill -->
                     <div class="form boxed box-to-clone education-box">
                         <a href="#" class="close-form remove-box button"><i class="fa fa-close"></i></a>
-                        <input class="search-field" type="text" name="skill_name[]" value="{{$val['name']}}" placeholder="Nama Keahlian (Contoh : Memasak, Menyetir, Menjahit)"/>
+                        <input class="search-field" type="text" name="skill_name[]" value="{{isset($val['name']) ? $val['name'] : ''}}" placeholder="Nama Keahlian (Contoh : Memasak, Menyetir, Menjahit)"/>
                         <select name="skill_level[]" class="margin-bottom-15" style="height: 45px">
                             <option value="0" selected disabled>&nbsp;&nbsp;Tingkat Keterampilan</option>
-                            <option @if($val['level'] == '25') selected @endif value="25">&nbsp;&nbsp;Pemula</option>
-                            <option @if($val['level'] == '50') selected @endif value="50">&nbsp;&nbsp;Terbiasa</option>
-                            <option @if($val['level'] == '75') selected @endif value="75">&nbsp;&nbsp;Mahir</option>
-                            <option @if($val['level'] == '100') selected @endif value="100">&nbsp;&nbsp;Ahli</option>
+                            <option @if(isset($val['level']) && $val['level'] == '25') selected @endif value="25">&nbsp;&nbsp;Pemula</option>
+                            <option @if(isset($val['level']) && $val['level'] == '50') selected @endif value="50">&nbsp;&nbsp;Terbiasa</option>
+                            <option @if(isset($val['level']) && $val['level'] == '75') selected @endif value="75">&nbsp;&nbsp;Mahir</option>
+                            <option @if(isset($val['level']) && $val['level'] == '100') selected @endif value="100">&nbsp;&nbsp;Ahli</option>
                         </select>
                     </div>
                     @endforeach
