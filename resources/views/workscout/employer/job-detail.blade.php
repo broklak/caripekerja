@@ -51,10 +51,14 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="mj_social_media_section mj_candidatepage_media mj_toppadder40 mj_bottompadder40">
                         <div class="button-lamar-job">
-                            @if($authRole != 'employer')
+                            @if($authRole != 'employer' && !$isApplied)
                                 <a class="contact-candidate" href="{{($authRole == 'worker') ? route('job-apply', ['jobId' => $detail['id']]) : route('login')}}"
                                    onclick="@if($authRole == 'worker') return confirm('Anda akan melamar pekerjaan {{$detail['title']}} di {{$detail['employerName']}}. Lanjutkan Proses ?') @else alert('Silahkan login sebagai pekerja untuk melamar') @endif "
                                    data-text="Contact Candidate">LAMAR PEKERJAAN</a>
+                            @endif
+
+                            @if($isApplied)
+                                <a class="contact-candidate" STYLE="background-color: #252525;">ANDA SUDAH MELAMAR</a>
                             @endif
                         </div>
                     </div>

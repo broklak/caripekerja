@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Job;
+use App\JobApply;
 use App\WorkerTransaction;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -62,6 +63,15 @@ class JobController extends Controller
     public function detail($id)
     {
         $detail = Job::getDetail($id);
+        $getAuth = GlobalHelper::getAuthtype();
+        $role = $getAuth['role'];
+        $authData = $getAuth['authData'];
+
+        $isApplied = false;
+        if($role == 'worker'){
+            $getJobApply = JobApply::where('job_id', $id)->where('worker_id', $authData['id'])->first();
+            $isApplied = ($getJobApply) ? true : false;
+        }
 
         if($detail->gender == 0){
             $detail->gender = 'Pria atau Wanita';
@@ -81,6 +91,7 @@ class JobController extends Controller
             $detail->age = 'Usia '.$detail->age_min.' - '.$detail->age_max.' tahun';
         }
 
+        $data['isApplied'] = $isApplied;
         $data['detail'] = (array) $detail;
         return view('employer.job-detail', $data);
     }
@@ -155,7 +166,10 @@ class JobController extends Controller
      */
     public function getShortlistedWorker () {
         $employerId = $this->_employer['id'];
-        $data['worker'] = WorkerTransaction::getOwned($employerId);
+        $perPage = 10;
+        $getWorker = WorkerTransaction::getOwned($employerId, $perPage);
+        $data['worker'] = $getWorker['worker'];
+        $data['link'] = $getWorker['link'];
         return view('employer.owned-worker', $data);
     }
 

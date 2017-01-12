@@ -18,7 +18,7 @@ class WorkerTransaction extends Model
         'employer_id', 'worker_id', 'status'
     ];
 
-    public static function getOwned ($employerId) {
+    public static function getOwned ($employerId, $perPage, $sort = 'worker_transaction.id') {
         $owned = DB::table('worker_transaction')
             ->select('worker_transaction.id', 'workers.name', 'workers.phone', 'workers.email', 'worker_id',
                     'worker_transaction.status', 'worker_transaction.created_at', 'worker_transaction.updated_at',
@@ -26,8 +26,17 @@ class WorkerTransaction extends Model
             ->where('employer_id', $employerId)
             ->orderBy('worker_transaction.id', 'desc')
             ->join('workers', 'workers.id', '=', 'worker_transaction.worker_id')
-            ->get();
+            ->orderBy($sort, 'desc')
+            ->paginate($perPage);
 
-        return $owned;
+        $worker = array();
+        foreach($owned as $user) {
+            $worker[] = (object) $user;
+        }
+
+        $data['worker'] = $worker;
+        $data['link'] = $owned->links();
+
+        return $data;
     }
 }

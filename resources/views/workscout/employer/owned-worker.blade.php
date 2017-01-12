@@ -145,7 +145,7 @@
             </div>
         @endforeach
 
-
+        {{$link}}
     </div>
     </div>
 @endsection

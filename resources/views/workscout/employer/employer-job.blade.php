@@ -60,12 +60,10 @@
             @endif
 
         </table>
-
+        {{$link}}
     </div>
 
     </div>
-
-    {{$link}}
 
     <div class="margin-bottom-25"></div>
 
