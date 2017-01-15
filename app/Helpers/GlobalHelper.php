@@ -73,7 +73,7 @@ class GlobalHelper
 
     public static function setEmployerImage ($image) {
         if($image == null || '') {
-            return asset('images/user/no-image.png');
+            return asset('images/user/ukm-no-pic.png');
         }
 
         return self::getEmployerProfilPath($image);
