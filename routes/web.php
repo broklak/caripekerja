@@ -66,6 +66,7 @@ Route::post('verifikasi-identitas', 'UserController@verifyIdentity')->name('veri
 //EMPLOYER
 Route::get('pekerja-saya', 'JobController@getShortlistedWorker')->name('owned-worker');
 Route::get('lowongan-saya', 'JobController@getEmployerJob')->name('employer-job');
+Route::get('lihat-pelamar', 'JobController@getAppliedWorker')->name('employer-notification');
 Route::get('ganti-status-pekerja/{id}/{status}', 'JobController@processChangeStatusWorker')->name('change-worker-status');
 Route::get('ganti-status-lowongan/{id}/{status}', 'JobController@processChangeStatusApplication')->name('change-application-status');
 

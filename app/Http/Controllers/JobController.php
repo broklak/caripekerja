@@ -174,6 +174,19 @@ class JobController extends Controller
     }
 
     /**
+     * Show worker who applied to the job
+     * @return \Illuminate\Http\Response
+     */
+    public function getAppliedWorker () {
+        $employerId = $this->_employer['id'];
+        $perPage = 10;
+        $getWorker = JobApply::getWorkerAppliedJob($employerId, $perPage);
+        $data['worker'] = $getWorker['worker'];
+        $data['link'] = $getWorker['link'];
+        return view('employer.applied-worker', $data);
+    }
+
+    /**
      * Show owned worker
      * @return \Illuminate\Http\Response
      */
