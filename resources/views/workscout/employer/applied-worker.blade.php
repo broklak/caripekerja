@@ -35,12 +35,12 @@
                 @if(!empty($worker))
                     @foreach ($worker as $row)
                         <tr>
-                            <td class="title"><a href="{{route('job-detail', ['jobId' => $row['id']])}}">{{$row['title']}}</a></td>
+                            <td class="title"><a href="{{route('job-detail', ['jobId' => $row['jobId']])}}">{{$row['title']}}</a></td>
                             <td class="title">{{$row['workersName']}}</td>
                             <td>{{\App\Helpers\GlobalHelper::getAgeByBirthdate($row['birthdate'])}}</td>
                             <td>{{$row['degree']}}</td>
                             <td class="action">
-                                <a href="{{route('worker-detail', ['workerId' => $row['id']])}}"><i class="fa fa-user"></i> Lihat Profil</a>
+                                <a href="{{route('worker-detail', ['workerId' => $row['workerId']])}}"><i class="fa fa-user"></i> Lihat Profil</a>
                             </td>
                         </tr>
                     @endforeach

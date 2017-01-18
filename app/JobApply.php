@@ -45,7 +45,7 @@ class JobApply extends Model
     public static function getWorkerAppliedJob ($employerId, $perPage) {
         $table = 'job_apply';
         $list = DB::table($table)
-            ->select('job_apply.id as id','workers.id as workerId', 'workers.name as workersName','jobs.title',
+            ->select('job_apply.id as id', 'jobs.id as jobId','workers.id as workerId', 'workers.name as workersName','jobs.title',
                 'workers.birthdate', 'workers.degree')
             ->where('jobs.employer_id', $employerId)
             ->join('workers', 'workers.id', '=', 'job_apply.worker_id')
