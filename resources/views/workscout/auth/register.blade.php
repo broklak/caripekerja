@@ -93,6 +93,7 @@
                                                     <input type="password" required placeholder="Password" id="ur_password" name="password" class="form-control">
                                                 </div>
                                             </div>
+                                            <a class="forget-password" href="{{route('employer-forget-password')}}">Lupa Password</a>
                                             <div class="mj_pricing_footer">
                                                 <input type="submit" style="display: none">
                                                 <a href="#" onclick="parentNode.parentNode.submit()">Masuk</a>

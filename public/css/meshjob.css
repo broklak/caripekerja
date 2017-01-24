@@ -5247,6 +5247,7 @@ a.mj_removefile {
     box-shadow:none;
     background-color:#f5f5f5;
     border:1px solid transparent;
+    padding: 20px;
 }
 .mj_freelancer_form .form-control:focus{
     background-color:transparent;
@@ -5296,6 +5297,7 @@ a.mj_removefile {
     box-shadow:none;
     background-color:#f5f5f5;
     border:1px solid transparent;
+    padding: 20px;
 }
 .mj_createaccount_form .form-control:focus{
     background-color:transparent;

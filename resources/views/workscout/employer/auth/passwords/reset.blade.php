@@ -25,20 +25,20 @@
                 <form id="employer-login" action="{{url('/employer/password/reset')}}" method="post">
                     {{ csrf_field() }}
 
-                    <div class="input-box"> <i class="fa fa-lock"></i>
+                    <div class="input-box">
                         <input type="hidden" name="token" value="{{ $token }}">
 
                         <input type="text" name="email" value="{{ $email or old('email') }}" placeholder="Email">
 
                     </div>
 
-                    <div class="input-box"> <i class="fa fa-lock"></i>
+                    <div class="input-box">
 
                         <input type="password" name="password" placeholder="Password Baru">
 
                     </div>
 
-                    <div class="input-box"> <i class="fa fa-lock"></i>
+                    <div class="input-box">
 
                         <input type="password" name="password_confirmation" placeholder="Ketik Ulang Password Baru">
 

@@ -4,7 +4,7 @@
 
 <!--SIGNUP SECTION START-->
 
-<section class="signup-section">
+<section class="signup-section" style="margin-top: 30px">
 
     <div class="container">
         <div class="holder">
@@ -26,7 +26,7 @@
                 <form id="employer-login" action="{{url('/employer/password/email')}}" method="post">
                     {{ csrf_field() }}
 
-                    <div class="input-box"> <i class="fa fa-user"></i>
+                    <div class="input-box" style="padding: 30px 0">
 
                         <input type="text" name="email" value="{{old('email')}}" placeholder="Email">
 
@@ -40,6 +40,8 @@
         </div>
 
     </div>
+
+    <div class="margin-bottom-30"></div>
 
 </section>
 @endsection

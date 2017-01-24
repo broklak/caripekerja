@@ -21,7 +21,7 @@ Route::get('/keluar', 'Auth\LoginController@logout')->name('logout');
 Route::get('/masuk', 'Auth\RegisterController@showRegistrationForm')->name('login');
 Route::get('/login', 'Auth\RegisterController@showRegistrationForm')->name('login');
 Route::get('/daftar', 'Auth\RegisterController@showRegistrationForm')->name('register');
-Route::get('/lupa-password', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('forget-password');
+Route::get('/lupa-password-pekerja', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('forget-password');
 
 
 //Employer Login
@@ -37,7 +37,7 @@ Route::post('employer/register', 'EmployerAuth\RegisterController@register');
 Route::post('employer/password/email', 'EmployerAuth\ForgotPasswordController@sendResetLinkEmail');
 Route::post('employer/password/reset', 'EmployerAuth\ResetPasswordController@reset');
 Route::get('employer/password/reset', 'EmployerAuth\ForgotPasswordController@showLinkRequestForm');
-Route::get('ukm-lupa-password', 'EmployerAuth\ForgotPasswordController@showLinkRequestForm')->name('employer-forget-password');
+Route::get('lupa-password-usaha', 'EmployerAuth\ForgotPasswordController@showLinkRequestForm')->name('employer-forget-password');
 Route::get('employer/password/reset/{token}', 'EmployerAuth\ResetPasswordController@showResetForm');
 
 // JOB
