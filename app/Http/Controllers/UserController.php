@@ -19,9 +19,8 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
-use App\Mail\OrderShipped;
 use Illuminate\Support\Facades\Mail;
-use App\Libraries\SendVerificationCode;
+use App\Libraries\SMS\SendVerificationCode;
 
 class UserController extends Controller
 {
@@ -426,7 +425,7 @@ class UserController extends Controller
         }
         $user = array(
                 'worker_id' => $workerId,
-                'phone'     => $authData['phone']
+                'phone'     => $authData['phone'],
         );
         $sendSMS = new SendVerificationCode($user);
 

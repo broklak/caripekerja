@@ -5,7 +5,7 @@
  * Date: 1/1/17
  * Time: 10:52 PM
  */
-namespace App\Libraries;
+namespace App\Libraries\SMS;
 
 use App\VerificationCodes;
 

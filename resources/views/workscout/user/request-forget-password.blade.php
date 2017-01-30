@@ -2,14 +2,14 @@
 
 @section('content')
 
-<!--SIGNUP SECTION START-->
+        <!--SIGNUP SECTION START-->
 
 <section class="signup-section" style="margin-top: 30px">
 
     <div class="container">
         <div class="holder">
 
-            <h2 class="login-as">Masukkan Email Anda</h2>
+            <h2 class="login-as">Masukkan Nomor Handphone Anda</h2>
 
             {!! session('displayMessage') !!}
 
@@ -19,20 +19,21 @@
                         <p>{{ $error }}</p>
                     @endforeach
                 </div>
-                @endif
+            @endif
 
-                <form id="employer-login" action="{{url('/employer/password/email')}}" method="post">
-                    {{ csrf_field() }}
+            <form action="{{route('request-change-password')}}" method="post">
+                {{ csrf_field() }}
 
-                    <div class="input-box" style="padding: 30px 0">
+                <div class="input-box" style="padding: 30px 0">
 
-                        <input type="text" name="email" value="{{old('email')}}" placeholder="Email">
+                    <input type="text" name="phone" placeholder="Nomor Handphone">
 
-                    </div>
+                </div>
 
-                    <input type="submit" value="Masuk">
+                <input type="hidden" name="submit" value="1">
+                <input type="submit" value="Masuk">
 
-                </form>
+            </form>
 
         </div>
 

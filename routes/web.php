@@ -62,6 +62,12 @@ Route::post('verifikasi-kontak', 'UserController@verifyContact')->name('worker-v
 Route::get('kirim-verifikasi-sms', 'UserController@sendSMS')->name('worker-resend-code');
 Route::get('verifikasi-identitas', 'UserController@verifyIdentity')->name('verify-identity');
 Route::post('verifikasi-identitas', 'UserController@verifyIdentity')->name('verify-identity');
+Route::get('lupa-kata-sandi', 'Auth\LoginController@requestTokenChangePassword')->name('request-change-password');
+Route::post('lupa-kata-sandi', 'Auth\LoginController@requestTokenChangePassword')->name('request-change-password');
+Route::get('verifikasi-ganti-password/{token}', 'Auth\LoginController@applyTokenChangePassword')->name('change-password-forget');
+Route::post('verifikasi-ganti-password/{token}', 'Auth\LoginController@applyTokenChangePassword')->name('change-password-forget');
+Route::get('reset-password/{token}', 'Auth\LoginController@resetPassword')->name('worker-reset-password');
+Route::post('reset-password/{token}', 'Auth\LoginController@resetPassword')->name('worker-reset-password');
 
 //EMPLOYER
 Route::get('pekerja-saya', 'JobController@getShortlistedWorker')->name('owned-worker');

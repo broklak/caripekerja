@@ -4,9 +4,11 @@
 
 @section('content')
 
+    <div class="row" style="margin-bottom: 0;text-align: center">
+    {!! session('displayMessage') !!}
+    </div>
     @if (count($errors) > 0)
         <div class="row" style="margin-bottom: 0">
-
                 <div class="alert alert-danger" style="margin-bottom: 0;">
                     <ul style="padding: 20px">
                         @foreach ($errors->all() as $error)
@@ -119,13 +121,6 @@
                                                 <div class="form-group">
                                                     <input name="referral_code" type="text" value="{{old('referral_code')}}" placeholder="Kode referral (bila ada)" class="form-control">
                                                 </div>
-                                                <div class="form-group mj_toppadder20 hide">
-                                                    <div class="mj_checkbox">
-                                                        <input type="checkbox" value="1" id="check3" name="checkbox">
-                                                        <label for="check3"></label>
-                                                    </div>
-                                                    <span> I have read, understand and agree to the meshjobs Terms of Service, including the <a href="#">User Agreement</a> and <a href="#">Privacy Policy</a>.</span>
-                                                </div>
                                             </div>
                                             <div class="mj_pricing_footer">
                                                 <input type="submit" style="display: none">
@@ -168,7 +163,6 @@
                                     <li role="presentation"><a href="#daftarPekerja" aria-controls="individual" role="tab" data-toggle="tab">Buat Akun</a>
                                     </li>
                                 </ul>
-                                <p class="mj_toppadder40 hide">You can also sign up with <a href="#">Facebook</a>, <a href="#">Linkedin</a>, or <a href="#">Google</a>.</p>
                                 <!-- Tab panes -->
                                 <div class="tab-content">
                                     <div role="tabpanel" class="tab-pane fade in active" id="masukPekerja">
@@ -182,6 +176,7 @@
                                                     <input type="password" required placeholder="Kata Sandi" id="ur_password" name="password" class="form-control">
                                                 </div>
                                             </div>
+                                            <a class="forget-password" href="{{route('request-change-password')}}">Lupa Password</a>
                                             <div class="mj_pricing_footer">
                                                 <input type="submit" style="display: none">
                                                 <a href="#" onclick="parentNode.parentNode.submit()">Masuk</a>
