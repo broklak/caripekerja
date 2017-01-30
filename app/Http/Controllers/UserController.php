@@ -406,6 +406,20 @@ class UserController extends Controller
             $message = GlobalHelper::setDisplayMessage('success', 'Selamat! Kontak anda sudah terverifikasi sebagai pekerja.');
             return redirect(route('myaccount-profile'))->with('displayMessage', $message);
         }
+
+        $getTodayCode = VerificationCodes::where('worker_id',$authData['id'])
+            ->where('created_at', '>', date('Y-m-d 00:00:00'))->count();
+
+        if($getTodayCode >= 3){
+            $message = GlobalHelper::setDisplayMessage('error', 'Anda telah melewati batas kirim kode verifikasi dalam sehari (Maksimal 3 kali dalam sehari).');
+            return redirect(route('myaccount-profile'))->with('displayMessage', $message);
+        }
+        $user = array(
+            'worker_id' => $authData['id'],
+            'phone'     => $authData['phone'],
+        );
+        $sendSMS = new SendVerificationCode($user);
+
         return view('user.worker-verify-contact');
     }
 
