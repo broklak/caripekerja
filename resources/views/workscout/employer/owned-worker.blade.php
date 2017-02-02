@@ -123,6 +123,9 @@
 
                         <i>Pengalaman Kerja:</i>
                         <span>{{$row->years_experience}} Tahun</span>
+
+                        <i>Foto KTP:</i>
+                        <img src="{{\App\Helpers\GlobalHelper::setWorkerIDImage($row->photo_ktp)}}" alt="">
                     </div>
 
                 </div>

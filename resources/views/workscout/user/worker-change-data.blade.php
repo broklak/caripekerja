@@ -89,11 +89,13 @@
         </div>
 
         <div class="form">
-            <h5>Gaji yang diharapkan</h5>
-            <label>Minimal</label>
-            <input class="search-field" name="salary_min" style="width: 48%;margin-right: 15px;float: left" value="{{$authData['salary_min']}}" type="text" placeholder="Gaji minimal. Isi dengan angka">
-            <label>Maksimal</label>
-            <input class="search-field" name="salary_max" style="width: 48%" value="{{$authData['salary_max']}}" type="text" placeholder="Gaji maksimal. Isi dengan angka">
+            <h5>Gaji minimal yang diharapkan</h5>
+            <input class="search-field" name="salary_min" value="{{$authData['salary_min']}}" type="text" placeholder="Gaji minimal. Isi dengan angka">
+        </div>
+
+        <div class="form">
+            <h5>Gaji maksimal yang diharapkan</h5>
+            <input class="search-field" name="salary_max" value="{{$authData['salary_max']}}" type="text" placeholder="Gaji maksimal. Isi dengan angka">
         </div>
 
         <div class="form">

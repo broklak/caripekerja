@@ -42,7 +42,7 @@
                         <input type="file" name="imageKTP" accept="image/*">
                     </div>
 
-                    <div class="form">
+                    <div class="form" style="display: none">
                         <h5>Surat Keterangan Catatan Kepolisian</h5>
                         <div class="frame"><img style="width: 250px;height: 200px" src="{{$imageSKCK}}" alt="img"></div>
 

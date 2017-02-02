@@ -63,6 +63,14 @@ class GlobalHelper
         });
     }
 
+    public static function setWorkerIDImage ($image) {
+        if($image == null || '') {
+            return asset('images/user/no-image.png');
+        }
+
+        return self::getWorkerIDPath($image);
+    }
+
     public static function setUserImage ($image) {
         if($image == null || '') {
             return asset('images/user/no-image.png');
@@ -93,6 +101,10 @@ class GlobalHelper
 
     public static function getEmployerProfilPath($image) {
         return asset('images/profil/employer/'.$image);
+    }
+
+    public static function getWorkerIDPath($image) {
+        return asset('images/identity/'.$image);
     }
 
     public static function getHowLongTime ($date) {

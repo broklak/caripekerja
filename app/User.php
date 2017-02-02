@@ -42,25 +42,26 @@ class User extends Authenticatable
             array_push($where,$category);
         }
 
-        if(isset($criteria['verified']) && $criteria['verified'] != 0){
-            $verified = $criteria['verified'];
+        if(isset($criteria['identity-verified']) && $criteria['identity-verified'] != 0){
+            $verified = $criteria['identity-verified'];
+
             if($verified == 1){
-                $filter = ['data_verified', '=', 1];
-                array_push($where,$filter);
-            } else if($verified == 2){
-                $filter = ['contact_verified', '=', 1];
-                array_push($where,$filter);
-            } else if($verified == 3){
-                $filter = ['exp_verified', '=', 1];
-                array_push($where,$filter);
-            } else if($verified == 100){
-                $filter = ['contact_verified', '=', 1];
-                array_push($where,$filter);
-                $filter = ['data_verified', '=', 1];
-                array_push($where,$filter);
-                $filter = ['exp_verified', '=', 1];
-                array_push($where,$filter);
+                $identity = ['data_verified', '=', 1];
+            } else {
+                $identity = ['data_verified', '=', 0];
             }
+            array_push($where,$identity);
+        }
+
+        if(isset($criteria['contact-verified']) && $criteria['contact-verified'] != 0){
+            $contact = $criteria['contact-verified'];
+
+            if($contact == 1){
+                $con = ['contact_verified', '=', 1];
+            } else {
+                $con = ['contact_verified', '=', 0];
+            }
+            array_push($where,$con);
         }
 
         if(isset($criteria['gender']) && $criteria['gender'] != 0) {

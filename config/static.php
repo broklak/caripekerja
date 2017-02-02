@@ -8,7 +8,7 @@
 
 return [
 
-  'educationDegree' => ['SD', 'SMP', 'SMA / SMK', 'S1'],
+  'educationDegree' => ['SD', 'SMP', 'SMA / SMK', 'D3', 'S1'],
 
   'adminEmail'  => 'rivan.kurniawan88@gmail.com'
 

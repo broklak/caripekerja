@@ -178,12 +178,18 @@
                 </div>
 
                 <div class="widget">
-                    <select data-placeholder="Pilih Status Verifikasi" name="verified" class="chosen-select desktop-filter">
-                        <option value="0">Semua Pekerja</option>
-                        <option @if(isset($param['verified']) && $param['verified'] == 100) selected @endif value="100">Semua Data Terverifikasi</option>
-                        <option @if(isset($param['verified']) && $param['verified'] == 1) selected @endif value="1">Identitas Terverifikasi</option>
-                        <option @if(isset($param['verified']) && $param['verified'] == 2) selected @endif value="2">Kontak Terverifikasi</option>
-                        <option @if(isset($param['verified']) && $param['verified'] == 3) selected @endif value="3">Pengalaman Terverifikasi</option>
+                    <select data-placeholder="Pilih Status Identitas" name="identity-verified" class="chosen-select desktop-filter">
+                        <option value="0">Semua Status Identitas</option>
+                        <option @if(isset($param['identity-verified']) && $param['identity-verified'] == 1) selected @endif value="1">Identitas Terverifikasi</option>
+                        <option @if(isset($param['identity-verified']) && $param['identity-verified'] == 2) selected @endif value="2">Identitas Belum Terverifikasi</option>
+                    </select>
+                </div>
+
+                <div class="widget">
+                    <select data-placeholder="Pilih Status Kontak" name="contact-verified" class="chosen-select desktop-filter">
+                        <option value="0">Semua Status Kontak</option>
+                        <option @if(isset($param['contact-verified']) && $param['contact-verified'] == 1) selected @endif value="1">Kontak Terverifikasi</option>
+                        <option @if(isset($param['contact-verified']) && $param['contact-verified'] == 2) selected @endif value="2">Kontak Belum Terverifikasi</option>
                     </select>
                 </div>
 

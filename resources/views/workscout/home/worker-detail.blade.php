@@ -48,7 +48,6 @@
                                         <ul class="verify-worker mj_toppadder10">
                                             <li><i class="fa fa-{{($detail['data_verified'] == 0) ? 'times' : 'check'}}"></i> Identitas {{($detail['data_verified'] == 0) ? 'Belum' : 'Sudah'}} Terverifikasi</li>
                                             <li><i class="fa fa-{{($detail['contact_verified'] == 0) ? 'times' : 'check'}}"></i> Kontak {{($detail['contact_verified'] == 0) ? 'Belum' : 'Sudah'}} Terverifikasi</li>
-                                            <li><i class="fa fa-{{($detail['exp_verified'] == 0) ? 'times' : 'check'}}"></i> Pengalaman {{($detail['exp_verified'] == 0) ? 'Belum' : 'Sudah'}} Terverifikasi</li>
                                         </ul>
                                     </div>
                                 </div>
